@@ -1,0 +1,62 @@
+[
+  {
+    "id": "e60eb77f-691a-4fce-92a5-cf2125698f71",
+    "name": "Ubuntu",
+    "icon": "skills/ubuntu.svg",
+    "status": true
+  },
+  {
+    "id": "b8a75463-bfd5-4658-98a6-bd21840c9754",
+    "name": "Python",
+    "icon": "skills/python.svg",
+    "status": true
+  },
+  {
+    "id": "50d68493-68ad-4279-b748-e0b1ac1bd293",
+    "name": "Django",
+    "icon": "skills/django.svg",
+    "status": true
+  },
+  {
+    "id": "569a645a-1d65-4752-894b-a2f109b2678d",
+    "name": "JavaScript",
+    "icon": "skills/javascript.svg",
+    "status": true
+  },
+  {
+    "id": "a0fe5a40-1539-4243-827c-532f033b1c97",
+    "name": "React",
+    "icon": "skills/react.svg",
+    "status": true
+  },
+  {
+    "id": "3812b063-d0df-4903-9c54-7b76089f1c06",
+    "name": "Next.js",
+    "icon": "skills/nextjs.svg",
+    "status": true
+  },
+  {
+    "id": "257e43e6-6151-427a-b3fc-f201937c7468",
+    "name": "Postman",
+    "icon": "skills/postman.svg",
+    "status": true
+  },
+  {
+    "id": "3b8de80d-5cf4-4863-8583-cc5b77062073",
+    "name": "Prometheus",
+    "icon": "skills/prometheus.svg",
+    "status": true
+  },
+  {
+    "id": "520dfb6d-8d09-4dd8-b75b-c91d834cc542",
+    "name": "Grafana",
+    "icon": "skills/grafana.svg",
+    "status": true
+  },
+  {
+    "id": "926f0018-ed27-4a5f-99b0-c67b7c200ad8",
+    "name": "Terraform",
+    "icon": "skills/terraform.svg",
+    "status": true
+  }
+]

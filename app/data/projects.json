@@ -1,0 +1,88 @@
+[
+  {
+    "id": "396d4fad-0638-4e34-a424-d2051d61741d",
+    "name": "New Store sssssssss",
+    "description": "Is a Django-based ecommerce platform with PostgreSQL and an appealing design using Tailwind CSS. Effortlessly create and manage your online store.",
+    "image": "projects/fandom.webp",
+    "repository": "https://github.com/tyronejosee/project_new_store",
+    "website": "https://new-store-8vlz.onrender.com/",
+    "skills": [
+      "Python",
+      "Django",
+      "JQuery",
+      "Posgres",
+      "PayPal"
+    ],
+    "status": true
+  },
+  {
+    "id": "db694f8b-3a45-4529-a943-aa485b6186b0",
+    "name": "Awesome App",
+    "description": "An awesome mobile application.",
+    "image": "projects/fandom.webp",
+    "repository": "https://github.com/awesome-app",
+    "website": "https://www.awesome-app.com",
+    "skills": [
+      "React Native",
+      "Firebase",
+      "PayPal"
+    ],
+    "status": false
+  },
+  {
+    "id": "724ce7c4-97c7-4ff4-928a-45382e2e04f4",
+    "name": "Cool Website",
+    "description": "A cool website for a client.",
+    "image": "projects/fandom.webp",
+    "repository": "https://github.com/cool-website",
+    "website": "https://www.cool-website.com",
+    "skills": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "status": false
+  },
+  {
+    "id": "cac4aa91-5f39-4dad-b941-3d3f5d103ac4",
+    "name": "E-commerce Platform",
+    "description": "An e-commerce platform for selling products online.",
+    "image": "projects/fandom.webp",
+    "repository": "https://github.com/e-commerce-platform",
+    "website": "https://www.e-commerce-platform.com",
+    "skills": [
+      "React",
+      "Redux",
+      "Node.js",
+      "MongoDB"
+    ],
+    "status": true
+  },
+  {
+    "id": "db69b5d6-2cb4-4967-8d17-514c886d5e04",
+    "name": "Blog Website",
+    "description": "A blog website for sharing articles and stories.",
+    "image": "projects/fandom.webp",
+    "repository": "https://github.com/blog-website",
+    "website": "https://www.blog-website.com",
+    "skills": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ],
+    "status": false
+  },
+  {
+    "id": "3291d677-8994-4bd6-92ae-1d69fbccace2",
+    "name": "Portfolio Website",
+    "description": "A portfolio website showcasing projects and skills.",
+    "image": "projects/fandom.webp",
+    "repository": "https://github.com/portfolio-website",
+    "website": "https://www.portfolio-website.com",
+    "skills": [
+      "React",
+      "TypeScript"
+    ],
+    "status": true
+  }
+]

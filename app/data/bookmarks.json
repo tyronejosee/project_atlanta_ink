@@ -1,0 +1,1731 @@
+[
+  {
+    "id": "8a4cdc34-4f21-4efb-87c0-d0b264cc0687",
+    "title": "Roadmap.sh",
+    "website": "https://roadmap.sh/roadmaps",
+    "image": "bookmarks/roadmapsh.webp",
+    "category": "Learning",
+    "tags": [
+      "Roadmaps",
+      "Guides",
+      "Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "06ec739e-fb55-43cb-9adb-fb2c99fc1b66",
+    "title": "Leonardo AI",
+    "website": "https://app.leonardo.ai/",
+    "image": "bookmarks/leonardoai.webp",
+    "category": "AI Tools",
+    "tags": [
+      "AI",
+      "Art",
+      "Creative"
+    ],
+    "status": true
+  },
+  {
+    "id": "1955fda7-ea34-45c9-a28b-89af6f7e743d",
+    "title": "LinkedIn",
+    "website": "https://www.linkedin.com/",
+    "image": "bookmarks/linkedin.webp",
+    "category": "Social Media",
+    "tags": [
+      "Networking",
+      "Jobs",
+      "Professional"
+    ],
+    "status": true
+  },
+  {
+    "id": "b8e95164-b2b3-46df-8cdb-9ffc54f8990f",
+    "title": "Notion",
+    "website": "https://www.notion.so/",
+    "image": "bookmarks/notion.webp",
+    "category": "Productivity",
+    "tags": [
+      "Notes",
+      "Organization",
+      "Collaboration"
+    ],
+    "status": true
+  },
+  {
+    "id": "45ce8d79-b1a2-4a60-9618-0a44479f9bb8",
+    "title": "Shields.io",
+    "website": "https://shields.io/",
+    "image": "bookmarks/shieldsio.webp",
+    "category": "Development",
+    "tags": [
+      "Badges",
+      "API",
+      "Open Source"
+    ],
+    "status": true
+  },
+  {
+    "id": "96c5e7a5-24b4-4818-9aea-f23d7fcdba3b",
+    "title": "Figma",
+    "website": "https://www.figma.com/",
+    "image": "bookmarks/figma.webp",
+    "category": "Design",
+    "tags": [
+      "UI/UX",
+      "Design",
+      "Collaboration"
+    ],
+    "status": true
+  },
+  {
+    "id": "036ea659-03d2-4fb2-8232-8ecef8e1cdcc",
+    "title": "Flowbite",
+    "website": "https://flowbite.com/",
+    "image": "bookmarks/flowbite.webp",
+    "category": "Development",
+    "tags": [
+      "Components",
+      "Tailwind",
+      "UI"
+    ],
+    "status": true
+  },
+  {
+    "id": "e54a4f14-d5a8-4fe1-860a-d6578504841e",
+    "title": "Excalidraw",
+    "website": "https://excalidraw.com/",
+    "image": "bookmarks/excalidraw.webp",
+    "category": "Design",
+    "tags": [
+      "Sketching",
+      "Collaboration",
+      "Whiteboard"
+    ],
+    "status": true
+  },
+  {
+    "id": "e56aabdb-0a36-44d2-a9e9-dd3aa6a70a47",
+    "title": "OPENVPN",
+    "website": "https://openvpn.net/",
+    "image": "https://i.imgur.com/zsFrF3T.jpg",
+    "category": "Software",
+    "tags": [
+      "VPN"
+    ],
+    "status": true
+  },
+  {
+    "id": "69d145e2-d25c-443a-8aa5-750e46ee0a51",
+    "title": "Robo 3T",
+    "website": "https://robomongo.org/",
+    "image": "https://i.imgur.com/ZoZAEry.jpg",
+    "category": "Softwares",
+    "tags": [
+      "Databases",
+      "MongoDB"
+    ],
+    "status": true
+  },
+  {
+    "id": "2380eeeb-92c1-4921-80a7-9dec5aa9ab15",
+    "title": "Freesets",
+    "website": "https://freesets.vercel.app/",
+    "image": "https://i.imgur.com/nwx4xFg.jpg",
+    "category": "Resources",
+    "tags": [
+      "Icons",
+      "Illustrations",
+      "Photos",
+      "Fonts",
+      "Videos"
+    ],
+    "status": true
+  },
+  {
+    "id": "aa45a7ae-1503-4ce0-a1ba-666b7fb1d072",
+    "title": "DBeaver Community",
+    "website": "https://dbeaver.io/",
+    "image": "https://i.imgur.com/PYNcd1l.jpg",
+    "category": "Softwares",
+    "tags": [
+      "Databases",
+      "GUI"
+    ],
+    "status": true
+  },
+  {
+    "id": "03d175d5-8bef-4f46-a537-c7244a83f344",
+    "title": "Dexie.js",
+    "website": "https://dexie.org/",
+    "image": "bookmarks/dexie.webp",
+    "category": "Database",
+    "tags": [
+      "Web Storage",
+      "JavaScript",
+      "Library"
+    ],
+    "status": true
+  },
+  {
+    "id": "454e6401-79d5-46ee-a28c-33119b2395e9",
+    "title": "Webflow",
+    "website": "https://webflow.com/",
+    "image": "bookmarks/webflow.webp",
+    "category": "Web",
+    "tags": [
+      "Design",
+      "Builder",
+      "No-Code"
+    ],
+    "status": true
+  },
+  {
+    "id": "2e56607f-e0ae-4f1d-ac3f-63368ae5f967",
+    "title": "The Algorithms",
+    "website": "https://the-algorithms.com/",
+    "image": "bookmarks/thealgorithms.webp",
+    "category": "Programming",
+    "tags": [
+      "Data Structures",
+      "Algorithms"
+    ],
+    "status": true
+  },
+  {
+    "id": "6bddc01b-bd33-4aef-9266-900788ada1ba",
+    "title": "Story Book",
+    "website": "https://storybook.js.org/",
+    "image": "bookmarks/storybook.webp",
+    "category": "UI",
+    "tags": [
+      "Component Library",
+      "Design Systems",
+      "Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "f97aa121-2189-4bed-a86b-0e876fda9c44",
+    "title": "Warp",
+    "website": "https://www.warp.dev/",
+    "image": "bookmarks/warp.webp",
+    "category": "Programming",
+    "tags": [
+      "Terminal",
+      "Web Development",
+      "AI"
+    ],
+    "status": true
+  },
+  {
+    "id": "d5e0a965-bda6-4f79-a2c0-24337f7ad19a",
+    "title": "Trading View",
+    "website": "https://www.tradingview.com/lightweight-charts/",
+    "image": "bookmarks/tradingview.webp",
+    "category": "Library",
+    "tags": [
+      "Components",
+      "Trading",
+      "UI"
+    ],
+    "status": true
+  },
+  {
+    "id": "6b62dc00-ad7c-455b-b578-3815e3c76e3f",
+    "title": "Gitbook",
+    "website": "https://www.gitbook.com/",
+    "image": "bookmarks/gitbook.webp",
+    "category": "Documentation",
+    "tags": [
+      "Writing",
+      "Collaboration"
+    ],
+    "status": true
+  },
+  {
+    "id": "1c1dd615-d71b-40df-b479-443b52e6c42b",
+    "title": "Serverless",
+    "website": "https://www.serverless.com/",
+    "image": "bookmarks/serverless.webp",
+    "category": "Cloud",
+    "tags": [
+      "Serverless",
+      "AWS",
+      "Azure"
+    ],
+    "status": true
+  },
+  {
+    "id": "7c798b4e-8a7e-4767-ba49-27fbca9d0ace",
+    "title": "CodePen",
+    "website": "https://codepen.io/",
+    "image": "bookmarks/codepen.webp",
+    "category": "Web",
+    "tags": [
+      "Frontend",
+      "CSS",
+      "JavaScript"
+    ],
+    "status": true
+  },
+  {
+    "id": "b0666cab-16d8-4026-aac4-e42167552045",
+    "title": "JSON Data AI",
+    "website": "https://www.jsondataai.com/",
+    "image": "bookmarks/jsondataai.webp",
+    "category": "AI",
+    "tags": [
+      "Frontend",
+      "CSS",
+      "JavaScript"
+    ],
+    "status": true
+  },
+  {
+    "id": "76c6533d-32bd-4d50-bbd1-3fd33c84342f",
+    "title": "GeeksforGeeks",
+    "website": "https://www.geeksforgeeks.org/",
+    "image": "bookmarks/geeksforgeeks.webp",
+    "category": "Python",
+    "tags": [
+      "Modules",
+      "Python",
+      "Programming"
+    ],
+    "status": true
+  },
+  {
+    "id": "541e1c77-5093-41c1-955e-af64f490b28f",
+    "title": "Google Maps Style Wizard",
+    "website": "https://mapstyle.withgoogle.com/",
+    "image": "bookmarks/stylingwizard.webp",
+    "category": "Maps",
+    "tags": [
+      "Google Maps",
+      "Design",
+      "Map Styling"
+    ],
+    "status": true
+  },
+  {
+    "id": "530a14d3-0a4f-4a6d-af58-e1c886fc451c",
+    "title": "Component Party",
+    "website": "https://component-party.dev/",
+    "image": "bookmarks/componentparty.webp",
+    "category": "Web Development",
+    "tags": [
+      "Components",
+      "Web",
+      "Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "bff56c8a-3204-41b3-80df-1901868899d0",
+    "title": "Deta",
+    "website": "https://deta.space/",
+    "image": "bookmarks/deta.webp",
+    "category": "Cloud",
+    "tags": [
+      "Serverless",
+      "Database",
+      "Cloud Services"
+    ],
+    "status": true
+  },
+  {
+    "id": "37fd10fc-1ba6-4dfa-9b13-1ba4c1c349e7",
+    "title": "draw.io",
+    "website": "https://www.drawio.com/",
+    "image": "bookmarks/drawio.webp",
+    "category": "Productivity",
+    "tags": [
+      "Diagram",
+      "Flowchart",
+      "Productivity"
+    ],
+    "status": true
+  },
+  {
+    "id": "fc64d879-a5ee-4a9d-a92f-fed730210495",
+    "title": "Patterns.dev",
+    "website": "https://www.patterns.dev/",
+    "image": "bookmarks/pattersdev.webp",
+    "category": "Design",
+    "tags": [
+      "Patterns",
+      "Design",
+      "Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "a73d488e-117a-47b5-b0ef-7badadaffe34",
+    "title": "Fullstack Cafe",
+    "website": "https://www.fullstack.cafe/",
+    "image": "bookmarks/fullstackcafe.webp",
+    "category": "Web Development",
+    "tags": [
+      "Interviews",
+      "Questions",
+      "Web"
+    ],
+    "status": true
+  },
+  {
+    "id": "5fc221a8-ed16-48a3-bdbd-aaba0a497753",
+    "title": "Lucidchart",
+    "website": "https://www.drawio.com/",
+    "image": "bookmarks/lucid.webp",
+    "category": "Productivity",
+    "tags": [
+      "Diagram",
+      "Flowchart",
+      "Collaboration"
+    ],
+    "status": true
+  },
+  {
+    "id": "6c8fd5f3-64fc-4473-af80-f8144a289d15",
+    "title": "Tana Inc.",
+    "website": "https://tana.inc/",
+    "image": "bookmarks/tana.webp",
+    "category": "Company",
+    "tags": [
+      "Business",
+      "Consulting",
+      "Services"
+    ],
+    "status": true
+  },
+  {
+    "id": "52fde9de-9287-4967-bfd0-9a1548d60d02",
+    "title": "FullPage.js",
+    "website": "https://alvarotrigo.com/fullPage/",
+    "image": "bookmarks/fullpagejs.webp",
+    "category": "Web Development",
+    "tags": [
+      "JavaScript",
+      "Plugin",
+      "Web"
+    ],
+    "status": true
+  },
+  {
+    "id": "d309f20f-242d-4bbe-a935-8eb806cc7172",
+    "title": "Goalkicker",
+    "website": "https://books.goalkicker.com/",
+    "image": "bookmarks/goalkicker.webp",
+    "category": "Books",
+    "tags": [
+      "Programming",
+      "Development",
+      "Learning"
+    ],
+    "status": true
+  },
+  {
+    "id": "4db5e4e6-7123-4f09-8e69-f461e2144b67",
+    "title": "React Keepdesign",
+    "website": "https://react.keepdesign.io/",
+    "image": "bookmarks/keepreact.webp",
+    "category": "React",
+    "tags": [
+      "Components",
+      "UI",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "21336d46-46f8-4a42-85c4-5ba97a84c45b",
+    "title": "Tailwind UI",
+    "website": "https://tailwindui.com/",
+    "image": "bookmarks/tailwindui.webp",
+    "category": "UI Design",
+    "tags": [
+      "Tailwind CSS",
+      "UI",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "c0e61984-10fd-4d46-8bfe-dd7bd3bfcafb",
+    "title": "Adobe Color Wheel",
+    "website": "https://color.adobe.com/",
+    "image": "bookmarks/adobecolor.webp",
+    "category": "Design",
+    "tags": [
+      "Colors",
+      "Design",
+      "Palette"
+    ],
+    "status": true
+  },
+  {
+    "id": "5450023f-c716-4d67-bee3-88a86b21ba06",
+    "title": "Refactoring Guru",
+    "website": "https://refactoring.guru/",
+    "image": "bookmarks/refactoringguru.webp",
+    "category": "Programming",
+    "tags": [
+      "Refactoring",
+      "Design Patterns",
+      "Programming"
+    ],
+    "status": true
+  },
+  {
+    "id": "f7d266ae-e365-46aa-b08d-9edb1c87a36d",
+    "title": "Daily.dev",
+    "website": "https://daily.dev/",
+    "image": "bookmarks/dailydev.webp",
+    "category": "Development",
+    "tags": [
+      "News",
+      "Articles",
+      "Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "94ab741d-dcd2-4af8-88d9-f9ddce90335f",
+    "title": "UUID Generator",
+    "website": "https://www.uuidgenerator.net/",
+    "image": "bookmarks/uuidgenerator.webp",
+    "category": "Development",
+    "tags": [
+      "UUID",
+      "Generator",
+      "Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "3ce1d12a-674d-45e7-b78a-60d8bf2f520b",
+    "title": "Flow",
+    "website": "https://www.flow.cl/",
+    "image": "bookmarks/flow.webp",
+    "category": "Finance",
+    "tags": [
+      "Payments",
+      "Finance",
+      "Business"
+    ],
+    "status": true
+  },
+  {
+    "id": "ed3e8dab-ef77-4d03-b1cc-e06dd41ce22c",
+    "title": "Curator",
+    "website": "https://curator.io/",
+    "image": "bookmarks/curatorio.webp",
+    "category": "Social Media",
+    "tags": [
+      "Social Media",
+      "Marketing",
+      "Curator"
+    ],
+    "status": true
+  },
+  {
+    "id": "345f2387-002b-4094-b40d-986dbd4c6065",
+    "title": "DigitalOcean",
+    "website": "https://www.digitalocean.com/",
+    "image": "bookmarks/digitalocean.webp",
+    "category": "Cloud",
+    "tags": [
+      "Cloud Services",
+      "Hosting",
+      "Infrastructure"
+    ],
+    "status": true
+  },
+  {
+    "id": "a451e27a-cf2d-4773-ae91-37b876ea6f53",
+    "title": "Ibelick Background Generator",
+    "website": "https://bg.ibelick.com/",
+    "image": "bookmarks/backgroundsnippets.webp",
+    "category": "Design",
+    "tags": [
+      "Backgrounds",
+      "Design",
+      "Generator"
+    ],
+    "status": true
+  },
+  {
+    "id": "4c397089-742e-401e-b58d-038090cc318c",
+    "title": "ReadMe Templates",
+    "website": "https://www.readme-templates.com/",
+    "image": "bookmarks/readmetemplates.webp",
+    "category": "Documentation",
+    "tags": [
+      "ReadMe",
+      "Templates",
+      "Documentation"
+    ],
+    "status": true
+  },
+  {
+    "id": "c5ca8162-0699-441c-972e-5d8b9f767804",
+    "title": "GNU Emacs Download",
+    "website": "https://www.gnu.org/software/emacs/download.html",
+    "image": "bookmarks/gnuemacs.webp",
+    "category": "Software",
+    "tags": [
+      "GNU",
+      "Emacs",
+      "Download"
+    ],
+    "status": true
+  },
+  {
+    "id": "10d0c7e5-f466-4edb-9fc4-8da5df4cd266",
+    "title": "Popper.js Documentation",
+    "website": "https://popper.js.org/docs/v2/",
+    "image": "bookmarks/popperjs.webp",
+    "category": "Web Development",
+    "tags": [
+      "JavaScript",
+      "Popper.js",
+      "Library"
+    ],
+    "status": true
+  },
+  {
+    "id": "bcd29402-2623-43f6-a73f-6a47f8008eb5",
+    "title": "Logobook",
+    "website": "http://www.logobook.com/",
+    "image": "bookmarks/logobook.webp",
+    "category": "Design",
+    "tags": [
+      "Logos",
+      "Design",
+      "Inspiration"
+    ],
+    "status": true
+  },
+  {
+    "id": "9ece3094-e641-4440-9534-78d4c000582a",
+    "title": "Mantine",
+    "website": "https://mantine.dev/",
+    "image": "bookmarks/mantine.webp",
+    "category": "UI Library",
+    "tags": [
+      "React",
+      "Components",
+      "UI"
+    ],
+    "status": true
+  },
+  {
+    "id": "0142cad6-b78d-4b5d-b452-30ae1c7f3b5b",
+    "title": "Resend",
+    "website": "https://resend.com/",
+    "image": "bookmarks/resend.webp",
+    "category": "Email",
+    "tags": [
+      "Email",
+      "API",
+      "Service"
+    ],
+    "status": true
+  },
+  {
+    "id": "7fef776e-b39a-46d2-b0e8-71cb9371be57",
+    "title": "Ansible",
+    "website": "https://www.ansible.com/",
+    "image": "bookmarks/ansible.webp",
+    "category": "DevOps",
+    "tags": [
+      "Automation",
+      "DevOps",
+      "Ansible"
+    ],
+    "status": true
+  },
+  {
+    "id": "9d87224e-8f87-4fd8-af1c-0a9d03a412f5",
+    "title": "PostgreSQL Documentation",
+    "website": "https://www.postgresql.org/docs/devel/index.html",
+    "image": "bookmarks/postgresql.webp",
+    "category": "Database",
+    "tags": [
+      "PostgreSQL",
+      "Database",
+      "Documentation"
+    ],
+    "status": true
+  },
+  {
+    "id": "241fe915-6ea9-4ce8-824d-61f46f8b665d",
+    "title": "DaisyUI",
+    "website": "https://daisyui.com/",
+    "image": "bookmarks/daisyui.webp",
+    "category": "UI Components",
+    "tags": [
+      "Tailwind CSS",
+      "UI",
+      "Components"
+    ],
+    "status": true
+  },
+  {
+    "id": "86e38757-b695-4c09-a8a3-8e38fbcfc9d9",
+    "title": "Terraform",
+    "website": "https://www.terraform.io/",
+    "image": "bookmarks/terraform.webp",
+    "category": "Infrastructure",
+    "tags": [
+      "Infrastructure as Code",
+      "DevOps",
+      "Cloud"
+    ],
+    "status": true
+  },
+  {
+    "id": "1f161ca7-24b2-4473-8a39-07b3049415be",
+    "title": "Fl0",
+    "website": "https://www.fl0.com/",
+    "image": "bookmarks/fl0.webp",
+    "category": "Development",
+    "tags": [
+      "Web Development",
+      "Tools",
+      "Platform"
+    ],
+    "status": true
+  },
+  {
+    "id": "76ebf736-302b-4244-958a-b3c3446c006e",
+    "title": "Envato Elements",
+    "website": "https://elements.envato.com/es/",
+    "image": "bookmarks/envatoelements.webp",
+    "category": "Design",
+    "tags": [
+      "Assets",
+      "Templates",
+      "Graphics"
+    ],
+    "status": true
+  },
+  {
+    "id": "4ebe7b67-be12-4776-b823-227d23444b13",
+    "title": "Park UI",
+    "website": "https://park-ui.com/",
+    "image": "bookmarks/parkui.webp",
+    "category": "UI Components",
+    "tags": [
+      "UI",
+      "Components",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "2db8278d-329f-4fe5-97e7-5a7bb59d5984",
+    "title": "Imgur",
+    "website": "https://imgur.com/",
+    "image": "bookmarks/imgur.webp",
+    "category": "Images",
+    "tags": [
+      "Hosting",
+      "Images",
+      "Community"
+    ],
+    "status": true
+  },
+  {
+    "id": "7cc65f98-257b-4866-894d-41b5c340fc73",
+    "title": "NextUI",
+    "website": "https://nextui.org/",
+    "image": "bookmarks/nextui.webp",
+    "category": "UI Library",
+    "tags": [
+      "UI",
+      "Components",
+      "React"
+    ],
+    "status": true
+  },
+  {
+    "id": "f25dcbd4-3517-4c1c-a35f-c83d7e67fb1e",
+    "title": "Material Tailwind",
+    "website": "https://www.material-tailwind.com/",
+    "image": "bookmarks/materialtailwind.webp",
+    "category": "CSS Framework",
+    "tags": [
+      "Tailwind",
+      "CSS",
+      "UI Components"
+    ],
+    "status": true
+  },
+  {
+    "id": "194e14de-08e9-480f-9c26-c6442c7819c9",
+    "title": "Miro",
+    "website": "https://miro.com/",
+    "image": "bookmarks/miro.webp",
+    "category": "Collaboration",
+    "tags": [
+      "Board",
+      "Collaboration",
+      "Productivity"
+    ],
+    "status": true
+  },
+  {
+    "id": "5c0399c9-f6d2-479e-ba26-04aa4602c22c",
+    "title": "Google Trends",
+    "website": "https://trends.google.com/",
+    "image": "bookmarks/googletrends.webp",
+    "category": "Analytics",
+    "tags": [
+      "Trends",
+      "Data",
+      "Google"
+    ],
+    "status": true
+  },
+  {
+    "id": "5ddd6872-b0b3-44f2-a34d-17c9daa3f2b0",
+    "title": "Hostinger",
+    "website": "https://www.hostinger.com/",
+    "image": "bookmarks/hostinger.webp",
+    "category": "Hosting",
+    "tags": [
+      "Web Hosting",
+      "Domains",
+      "Cloud"
+    ],
+    "status": true
+  },
+  {
+    "id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    "title": "PlanetScale",
+    "website": "https://planetscale.com/",
+    "image": "bookmarks/planetscale.webp",
+    "category": "Database",
+    "tags": [
+      "Database",
+      "MySQL",
+      "Cloud"
+    ],
+    "status": true
+  },
+  {
+    "id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+    "title": "VuePress",
+    "website": "https://vuepress.vuejs.org/",
+    "image": "bookmarks/vuepress.webp",
+    "category": "Documentation",
+    "tags": [
+      "Vue",
+      "Static Site",
+      "Generator"
+    ],
+    "status": true
+  },
+  {
+    "id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+    "title": "Land Book",
+    "website": "https://land-book.com/",
+    "image": "bookmarks/landbook.webp",
+    "category": "Design",
+    "tags": [
+      "Inspiration",
+      "Web Design",
+      "Landing Pages"
+    ],
+    "status": true
+  },
+  {
+    "id": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+    "title": "Landing Love",
+    "website": "https://www.landing.love/",
+    "image": "bookmarks/landinglove.webp",
+    "category": "Design",
+    "tags": [
+      "Inspiration",
+      "Web Design",
+      "Landing Pages"
+    ],
+    "status": true
+  },
+  {
+    "id": "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+    "title": "Ecomm Design",
+    "website": "https://ecomm.design/",
+    "image": "bookmarks/ecommdesign.webp",
+    "category": "Design",
+    "tags": [
+      "Inspiration",
+      "E-commerce",
+      "Web Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "3db29914-6dcc-4ced-be29-87a943f70057",
+    "title": "Lapa Ninja",
+    "website": "https://www.lapa.ninja/",
+    "image": "bookmarks/lapa.webp",
+    "category": "Design",
+    "tags": [
+      "Inspiration",
+      "Web Design",
+      "Landing Pages"
+    ],
+    "status": true
+  },
+  {
+    "id": "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+    "title": "One Page Love",
+    "website": "https://onepagelove.com/",
+    "image": "bookmarks/onepagelove.webp",
+    "category": "Design",
+    "tags": [
+      "Inspiration",
+      "Web Design",
+      "One Page"
+    ],
+    "status": true
+  },
+  {
+    "id": "7bf7fb73-b9b4-445e-8cb8-699bc288aabb",
+    "title": "VSCode Themes",
+    "website": "https://vscodethemes.com/",
+    "image": "bookmarks/vscodethemes.webp",
+    "category": "Development",
+    "tags": [
+      "VSCode",
+      "Themes",
+      "Extensions"
+    ],
+    "status": true
+  },
+  {
+    "id": "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+    "title": "Apache Solr",
+    "website": "https://solr.apache.org/",
+    "image": "bookmarks/solr.webp",
+    "category": "Search",
+    "tags": [
+      "Search",
+      "Indexing",
+      "Open Source"
+    ],
+    "status": true
+  },
+  {
+    "id": "6d92063b-bcc8-4145-b7fb-6ee8ba883c5c",
+    "title": "Docusaurus",
+    "website": "https://docusaurus.io/",
+    "image": "bookmarks/docusaurus.webp",
+    "category": "Documentation",
+    "tags": [
+      "Documentation",
+      "Static Site",
+      "Generator"
+    ],
+    "status": true
+  },
+  {
+    "id": "c4a8a1a1-9130-4c84-8b67-fd7d5e636a5c",
+    "title": "Hugo",
+    "website": "https://gohugo.io/",
+    "image": "bookmarks/hugo.webp",
+    "category": "Static Site Generator",
+    "tags": [
+      "Static Site Generator",
+      "Web Development"
+    ],
+    "status": true
+  },
+  {
+    "id": "ae3b9c15-5b70-4e22-a349-546f2069b0df",
+    "title": "MkDocs",
+    "website": "https://www.mkdocs.org/",
+    "image": "bookmarks/mkdocs.webp",
+    "category": "Documentation",
+    "tags": [
+      "Static Site Generator",
+      "Documentation"
+    ],
+    "status": true
+  },
+  {
+    "id": "1d7685ff-330f-4703-b8c1-7c79a08f7647",
+    "title": "UmiJS",
+    "website": "https://v3.umijs.org/docs",
+    "image": "bookmarks/umijs.webp",
+    "category": "JavaScript Framework",
+    "tags": [
+      "JavaScript",
+      "Framework",
+      "React"
+    ],
+    "status": true
+  },
+  {
+    "id": "2c8a8b42-df5f-43a4-9c12-8d8bb6489e0d",
+    "title": "Material Icons for GitHub",
+    "website": "https://chromewebstore.google.com/detail/material-icons-for-github/bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc",
+    "image": "bookmarks/materialiconsfg.webp",
+    "category": "Browser Extension",
+    "tags": [
+      "Browser Extension",
+      "GitHub",
+      "Icons"
+    ],
+    "status": true
+  },
+  {
+    "id": "5c86e94f-7c0e-40e8-bb97-cc6c03c9a8f4",
+    "title": "FlutterFlow",
+    "website": "https://flutterflow.io/",
+    "image": "bookmarks/flutterflow.webp",
+    "category": "App Development",
+    "tags": [
+      "Flutter",
+      "App Development",
+      "No Code"
+    ],
+    "status": true
+  },
+  {
+    "id": "4f9b8e5a-7d09-4c7c-845e-0fb7b12a4e6d",
+    "title": "Happy Hues",
+    "website": "https://www.happyhues.co/",
+    "image": "bookmarks/happyhues.webp",
+    "category": "Design",
+    "tags": [
+      "Color Palettes",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "8ae5d55e-1c9f-4f14-b5c4-f739b7874b58",
+    "title": "Coolors",
+    "website": "https://coolors.co/",
+    "image": "bookmarks/coolors.webp",
+    "category": "Design",
+    "tags": [
+      "Color Palettes",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "9d0d8e15-71e0-4e29-9f9f-01f4aebc2d2b",
+    "title": "Color Hunt",
+    "website": "https://colorhunt.co/",
+    "image": "bookmarks/colorhunt.webp",
+    "category": "Design",
+    "tags": [
+      "Color Palettes",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "0d5a29a5-4c4d-4d9f-b06e-86bfc5c6a47b",
+    "title": "Pigment",
+    "website": "https://pigment.shapefactory.co/",
+    "image": "bookmarks/pigment.webp",
+    "category": "Design",
+    "tags": [
+      "Color Palettes",
+      "Design"
+    ],
+    "status": true
+  },
+  {
+    "id": "72b7d7e5-4b3f-41b7-9dbd-7c1b5587f2c6",
+    "title": "Hypercolor",
+    "website": "https://hypercolor.dev/",
+    "image": "bookmarks/hypercolor.webp",
+    "category": "Design",
+    "tags": [
+      "Color Palettes",
+      "CSS",
+      "Tailwind"
+    ],
+    "status": true
+  },
+  {
+    "id": "029350b8-3dc8-40a5-8567-48d3c9a2380d",
+    "title": "Tailwind Shades",
+    "website": "https://www.tailwindshades.com/",
+    "image": "bookmarks/tailwindshades.webp",
+    "category": "Design Tools",
+    "tags": [
+      "Colors",
+      "Tailwind CSS"
+    ],
+    "status": true
+  },
+  {
+    "id": "4fd7dd9e-09d9-423b-9a1a-1595302822d2",
+    "title": "Color Name",
+    "website": "https://www.color-name.com/",
+    "image": "bookmarks/colorname.webp",
+    "category": "Design Tools",
+    "tags": [
+      "Colors",
+      "Naming"
+    ],
+    "status": true
+  },
+  {
+    "id": "912fa20e-a973-4539-8e95-324e80ac44f3",
+    "title": "Iconscout",
+    "website": "https://iconscout.com/",
+    "image": "bookmarks/iconscout.webp",
+    "category": "Icons",
+    "tags": [
+      "Icons",
+      "Illustrations"
+    ],
+    "status": true
+  },
+  {
+    "id": "7060f39e-4005-4a8c-823b-81e030b53847",
+    "title": "Simple Icons",
+    "website": "https://simpleicons.org/",
+    "image": "bookmarks/simpleicons.webp",
+    "category": "Icons",
+    "tags": [
+      "Icons",
+      "Brand Icons"
+    ],
+    "status": true
+  },
+  {
+    "id": "a38411ac-df1b-42dd-96fa-78e705236037",
+    "title": "Heroicons",
+    "website": "https://heroicons.com/",
+    "image": "bookmarks/heroicons.webp",
+    "category": "Icons",
+    "tags": [
+      "Icons",
+      "Tailwind CSS"
+    ],
+    "status": true
+  },
+  {
+    "id": "ec66bc40-de5f-43d0-b47b-7cda249b6564",
+    "title": "Boxicons",
+    "website": "https://boxicons.com/",
+    "image": "bookmarks/boxicons.webp",
+    "category": "Icons",
+    "tags": [
+      "Icons",
+      "Web Icons"
+    ],
+    "status": true
+  },
+  {
+    "id": "8ac8e355-0891-4bfd-8d56-0350abd45627",
+    "title": "UX Tools",
+    "website": "https://uxtools.co/",
+    "image": "bookmarks/uxtools.webp",
+    "category": "UX Design",
+    "tags": [
+      "UX",
+      "Design Tools"
+    ],
+    "status": true
+  },
+  {
+    "id": "a6671e06-dba5-434d-bd7a-4df37cf5a64d",
+    "title": "Free Faces Gallery",
+    "website": "https://www.freefaces.gallery/",
+    "image": "bookmarks/freefaces.webp",
+    "category": "Typography",
+    "tags": [
+      "Fonts",
+      "Free Fonts"
+    ],
+    "status": true
+  },
+  {
+    "id": "4a2c722e-ff20-4887-a75e-ddb4a77cc9be",
+    "title": "Nerd Fonts",
+    "website": "https://www.nerdfonts.com/",
+    "image": "bookmarks/nerdfonts.webp",
+    "category": "Typography",
+    "tags": [
+      "Fonts",
+      "Developer Fonts"
+    ],
+    "status": true
+  },
+  {
+    "id": "4466e8df-387f-4cfe-9b8a-4533e8af2c05",
+    "title": "Product Hunt",
+    "website": "https://www.producthunt.com/",
+    "image": "bookmarks/producthunt.webp",
+    "category": "Productivity",
+    "tags": [
+      "Products",
+      "Startups"
+    ],
+    "status": true
+  },
+  {
+    "id": "1a8df1f4-1b4a-47f1-9bc6-7d4b6e364bd4",
+    "title": "Dribbble",
+    "website": "https://dribbble.com/",
+    "image": "bookmarks/dribbble.webp",
+    "category": "Design Inspiration",
+    "tags": [
+      "Design",
+      "Inspiration",
+      "Graphics"
+    ],
+    "status": true
+  },
+  {
+    "id": "5b9a8c9e-1a6b-4e1f-9f92-bc8e3d0dc22e",
+    "title": "Abduzeedo",
+    "website": "https://abduzeedo.com/",
+    "image": "bookmarks/abduzeedo.webp",
+    "category": "Design Inspiration",
+    "tags": [
+      "Design",
+      "Inspiration",
+      "Art"
+    ],
+    "status": true
+  },
+  {
+    "id": "2fcd23c6-92a9-45fa-82e6-5c8b57c6a9b5",
+    "title": "Designspiration",
+    "website": "https://www.designspiration.com/",
+    "image": "bookmarks/designspiration.webp",
+    "category": "Design Inspiration",
+    "tags": [
+      "Design",
+      "Inspiration",
+      "Art"
+    ],
+    "status": true
+  },
+  {
+    "id": "7f8b5a8e-0a59-4c5b-8e10-fd5e5a8a2b3a",
+    "title": "Adobe Firefly",
+    "website": "https://firefly.adobe.com/",
+    "image": "bookmarks/adobefirefly.webp",
+    "category": "Design Tools",
+    "tags": [
+      "Design",
+      "Tools",
+      "Graphics"
+    ],
+    "status": true
+  },
+  {
+    "id": "9a0e1b6a-5c6d-4b4b-8d45-f9e7e5b8e9f8",
+    "title": "Blue Vertigo",
+    "website": "https://bluevertigo.com.ar/",
+    "image": "bookmarks/bluevertigo.webp",
+    "category": "Design Resources",
+    "tags": [
+      "Resources",
+      "Design",
+      "Graphics"
+    ],
+    "status": true
+  },
+  {
+    "id": "3a5f1e4e-9b8a-4c5b-8e0a-6c8b57c6a9e7",
+    "title": "Mockuuups Studio",
+    "website": "https://mockuuups.studio/",
+    "image": "bookmarks/mockuuupsstudio.webp",
+    "category": "Mockup Tools",
+    "tags": [
+      "Mockups",
+      "Design",
+      "Tools"
+    ],
+    "status": true
+  },
+  {
+    "id": "4c7e2a3d-1f4a-45f1-9c4e-6e8e4f8b7d8e",
+    "title": "Tailwind CSS Animated",
+    "website": "https://www.tailwindcss-animated.com/",
+    "image": "bookmarks/tailwindanimated.webp",
+    "category": "CSS Tools",
+    "tags": [
+      "CSS",
+      "Animation",
+      "Tools"
+    ],
+    "status": true
+  },
+  {
+    "id": "5d9e6a4f-3b5a-45f1-9d8e-7f8b57d6a9d6",
+    "title": "Reflex",
+    "website": "https://reflex.dev/",
+    "image": "bookmarks/reflex.webp",
+    "category": "Python Framework",
+    "tags": [
+      "Web",
+      "Python"
+    ],
+    "status": true
+  },
+  {
+    "id": "6b8f4c9e-2a5d-4e1f-8c4d-8f9e4f6b7e9a",
+    "title": "MUI",
+    "website": "https://mui.com/",
+    "image": "bookmarks/materialui.webp",
+    "category": "UI Framework",
+    "tags": [
+      "UI",
+      "React",
+      "Components"
+    ],
+    "status": true
+  },
+  {
+    "id": "7a9d4e2f-5b6a-4f1f-9c8e-9e7d5f6b7d7b",
+    "title": "DistroSea",
+    "website": "https://distrosea.com/",
+    "image": "bookmarks/distrosea.webp",
+    "category": "Tools",
+    "tags": [
+      "Linux",
+      "Distros"
+    ],
+    "status": true
+  },
+  {
+    "id": "71d7a308-058c-48eb-9e38-14a8e46c597c",
+    "title": "isort",
+    "website": "https://pycqa.github.io/isort/",
+    "image": "bookmarks/isort.webp",
+    "category": "Development Tools",
+    "tags": [
+      "Python",
+      "Code Formatting",
+      "Linting"
+    ],
+    "status": true
+  },
+  {
+    "id": "64d25da1-187d-4a41-978c-2b3f4cc8bf36",
+    "title": "Buy Me a Coffee - Setup Payout",
+    "website": "https://buymeacoffee.com/setup-payout",
+    "image": "bookmarks/buymeacoffee.webp",
+    "category": "Funding",
+    "tags": [
+      "Donations",
+      "Monetization",
+      "Support"
+    ],
+    "status": true
+  },
+  {
+    "id": "1403f3f2-7517-4edf-ad06-a2f0d16a9701",
+    "title": "Meraki UI",
+    "website": "https://merakiui.com/",
+    "image": "bookmarks/merakiui.webp",
+    "category": "UI Components",
+    "tags": [
+      "Tailwind CSS",
+      "UI",
+      "Components"
+    ],
+    "status": true
+  },
+  {
+    "id": "f227e75e-a3a5-4b7f-b437-ae9c5dd79c8b",
+    "title": "Tailblocks",
+    "website": "https://tailblocks.cc/",
+    "image": "bookmarks/tailblocks.webp",
+    "category": "UI Components",
+    "tags": [
+      "Tailwind CSS",
+      "Blocks",
+      "Templates"
+    ],
+    "status": true
+  },
+  {
+    "id": "2fdd1f3a-07c7-4346-b141-1501aceaeed4",
+    "title": "Algolia",
+    "website": "https://www.algolia.com/es/",
+    "image": "bookmarks/algolia.webp",
+    "category": "Search",
+    "tags": [
+      "Search Engine",
+      "API",
+      "Instant Search"
+    ],
+    "status": true
+  },
+  {
+    "id": "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+    "title": "Google Mesop",
+    "website": "https://google.github.io/mesop/getting_started/installing/",
+    "image": "bookmarks/mesop.webp",
+    "category": "Python Framework",
+    "tags": [
+      "Python",
+      "Web"
+    ],
+    "status": true
+  },
+  {
+    "id": "80d211b2-31ae-44c4-820f-fdaa9b533b37",
+    "title": "Nextra",
+    "website": "https://nextra.site/",
+    "image": "bookmarks/nextra.webp",
+    "category": "Documentation",
+    "tags": [
+      "Next.js",
+      "Docs",
+      "Site Generator"
+    ],
+    "status": true
+  },
+  {
+    "id": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+    "title": "Redmine",
+    "website": "https://www.redmine.org/",
+    "image": "bookmarks/redmine.webp",
+    "category": "Management",
+    "tags": [
+      "Issue Tracking",
+      "Open Source"
+    ],
+    "status": true
+  },
+  {
+    "id": "3324d67e-786c-40f6-abb8-aec435f6febe",
+    "title": "Sphinx",
+    "website": "https://www.sphinx-doc.org/en/master/",
+    "image": "bookmarks/sphinx.webp",
+    "category": "Documentation",
+    "tags": [
+      "Python",
+      "Docs",
+      "Generator"
+    ],
+    "status": true
+  },
+  {
+    "id": "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
+    "title": "Hugging Face Spaces",
+    "website": "https://huggingface.co/spaces",
+    "image": "bookmarks/huggingface.webp",
+    "category": "Machine Learning",
+    "tags": [
+      "AI",
+      "Models",
+      "Community"
+    ],
+    "status": true
+  },
+  {
+    "id": "6086cbb3-fda8-4ddd-8e27-576433e1dbcc",
+    "title": "Runebook",
+    "website": "https://runebook.dev/",
+    "image": "bookmarks/runebook.webp",
+    "category": "Documentation",
+    "tags": [
+      "Django",
+      "Python",
+      "Tutorials"
+    ],
+    "status": true
+  },
+  {
+    "id": "64ab6b3d-3ec2-4474-b029-cc1e2b00955e",
+    "title": "CDRF",
+    "website": "https://www.cdrf.co/",
+    "image": "bookmarks/cdrf.webp",
+    "category": "API",
+    "tags": [
+      "Django",
+      "REST",
+      "Framework"
+    ],
+    "status": true
+  },
+  {
+    "id": "5debc621-313e-4327-8126-a0b52b3c95bb",
+    "title": "CCBV",
+    "website": "https://ccbv.co.uk/",
+    "image": "bookmarks/ccbv.webp",
+    "category": "Documentation",
+    "tags": [
+      "Django",
+      "Class-Based Views",
+      "Tutorials"
+    ],
+    "status": true
+  },
+  {
+    "id": "81640a3b-163f-4c90-a163-f675787ca060",
+    "title": "Django REST Framework",
+    "website": "https://www.django-rest-framework.org/",
+    "image": "bookmarks/djangorestframework.webp",
+    "category": "Framework",
+    "tags": [
+      "Django",
+      "REST",
+      "API"
+    ],
+    "status": true
+  },
+  {
+    "id": "bbf481ce-6944-4154-bfdd-65e47c3cc8b0",
+    "title": "VitePress",
+    "website": "https://vitepress.dev/",
+    "image": "bookmarks/vitepress.webp",
+    "category": "Documentation",
+    "tags": [
+      "Vite",
+      "SSG"
+    ],
+    "status": true
+  },
+  {
+    "id": "4101d641-ce89-4e4e-9d16-36d398b0f6a1",
+    "title": "Shadcn UI",
+    "website": "https://ui.shadcn.com/",
+    "image": "bookmarks/shadcn.webp",
+    "category": "UI",
+    "tags": [
+      "Components",
+      "Design",
+      "React"
+    ],
+    "status": true
+  },
+  {
+    "id": "1e0759ff-70d6-44e6-8c29-0acb7d376629",
+    "title": "Django Documentation",
+    "website": "https://docs.djangoproject.com/",
+    "image": "bookmarks/django.webp",
+    "category": "Documentation",
+    "tags": [
+      "Django",
+      "Tutorials",
+      "Reference"
+    ],
+    "status": true
+  },
+  {
+    "id": "450329da-9875-4df2-9620-91a9e2f02977",
+    "title": "FastAPI",
+    "website": "https://fastapi.tiangolo.com/",
+    "image": "bookmarks/fastapi.webp",
+    "category": "Framework",
+    "tags": [
+      "Python",
+      "API"
+    ],
+    "status": true
+  },
+  {
+    "id": "cff8a353-ba6d-4656-af6b-5f7ff106f346",
+    "title": "React Documentation",
+    "website": "https://es.react.dev/",
+    "image": "bookmarks/react.webp",
+    "category": "Documentation",
+    "tags": [
+      "React",
+      "Tutorials",
+      "Framework"
+    ],
+    "status": true
+  },
+  {
+    "id": "f22e8f75-70cf-44c0-8a4c-4395f291a48b",
+    "title": "Next.js",
+    "website": "https://nextjs.org/",
+    "image": "bookmarks/nextjs.webp",
+    "category": "Framework",
+    "tags": [
+      "React",
+      "Server-Side Rendering",
+      "Static Site Generation"
+    ],
+    "status": true
+  },
+  {
+    "id": "a1a45abc-24f0-4fec-b429-517f8a936d3b",
+    "title": "Tailwind CSS",
+    "website": "https://tailwindcss.com/",
+    "image": "bookmarks/tailwindcss.webp",
+    "category": "Framework",
+    "tags": [
+      "CSS",
+      "Design",
+      "Utility-First"
+    ],
+    "status": true
+  },
+  {
+    "id": "2fc7b6e7-ddff-4f62-a633-2efa22ef8ca1",
+    "title": "Prometheus",
+    "website": "https://prometheus.io/",
+    "image": "bookmarks/prometheus.webp",
+    "category": "Monitoring",
+    "tags": [
+      "Metrics",
+      "Monitoring",
+      "Open Source"
+    ],
+    "status": true
+  },
+  {
+    "id": "10a1f059-41bb-40df-85eb-b80931a5a210",
+    "title": "JWT",
+    "website": "https://jwt.io/",
+    "image": "bookmarks/jwt.webp",
+    "category": "Authentication",
+    "tags": [
+      "Security",
+      "JWT",
+      "Tokens"
+    ],
+    "status": true
+  },
+  {
+    "id": "2375f491-6c5b-44a4-b202-64a4343a36ee",
+    "title": "Redis",
+    "website": "https://redis.io/",
+    "image": "bookmarks/redis.webp",
+    "category": "Database",
+    "tags": [
+      "Cache",
+      "In-Memory",
+      "Database"
+    ],
+    "status": true
+  },
+  {
+    "id": "b416736d-bd07-46a8-a527-c5e9f09c0e6f",
+    "title": "Railway",
+    "website": "https://railway.app/",
+    "image": "bookmarks/railway.webp",
+    "category": "Platform",
+    "tags": [
+      "Deployment",
+      "Hosting",
+      "Infrastructure"
+    ],
+    "status": true
+  },
+  {
+    "id": "92a504c8-6a4d-4fbd-be7f-45e1c644257f",
+    "title": "Render",
+    "website": "https://render.com/",
+    "image": "bookmarks/render.webp",
+    "category": "Platform",
+    "tags": [
+      "Hosting",
+      "Deployment",
+      "Infrastructure"
+    ],
+    "status": true
+  },
+  {
+    "id": "ada6209b-45b3-4ac6-8604-40d49225a9a9",
+    "title": "Netlify",
+    "website": "https://www.netlify.com/",
+    "image": "bookmarks/netlify.webp",
+    "category": "Platform",
+    "tags": [
+      "Deployment",
+      "Hosting",
+      "Continuous Deployment"
+    ],
+    "status": true
+  },
+  {
+    "id": "ef7d94ed-ca49-4ef5-b4da-b00f83a15e3f",
+    "title": "SVG Lab",
+    "website": "https://svgl.app/",
+    "image": "bookmarks/svglab.webp",
+    "category": "Tools",
+    "tags": [
+      "SVG",
+      "Design",
+      "Editor"
+    ],
+    "status": true
+  },
+  {
+    "id": "a84aa195-c7f5-45e7-9630-b561ee30bed9",
+    "title": "UI Colors",
+    "website": "https://uicolors.app/create",
+    "image": "bookmarks/uicolors.webp",
+    "category": "Design",
+    "tags": [
+      "Color Palettes",
+      "Design Tools",
+      "UI"
+    ],
+    "status": true
+  },
+  {
+    "id": "6a937f0d-f4e7-4888-9f44-ab7f0d820a2f",
+    "title": "Aiohttp Docs",
+    "website": "https://docs.aiohttp.org/",
+    "image": "bookmarks/aiohttp.webp",
+    "category": "Documentation",
+    "tags": [
+      "Framework",
+      "Python",
+      "Asynchronous"
+    ],
+    "status": true
+  },
+  {
+    "id": "1d17f955-7978-4454-ab2b-75216c121610",
+    "title": "Cloudflare Dashboard",
+    "website": "https://dash.cloudflare.com/",
+    "image": "bookmarks/cloudflare.webp",
+    "category": "Infrastructure",
+    "tags": [
+      "Cloudflare",
+      "Dashboard",
+      "DNS"
+    ],
+    "status": true
+  },
+  {
+    "id": "ff4275bf-86e4-4c67-ae6d-2d9f492bb0d2",
+    "title": "Ruff Docs",
+    "website": "https://docs.astral.sh/ruff/",
+    "image": "bookmarks/ruff.webp",
+    "category": "Documentation",
+    "tags": [
+      "Python",
+      "Ruff",
+      "Static Analysis"
+    ],
+    "status": true
+  },
+  {
+    "id": "8a5fbce4-ce7b-4f33-9a56-101437616e0d",
+    "title": "Koyeb",
+    "website": "https://www.koyeb.com/",
+    "image": "bookmarks/koyeb.webp",
+    "category": "Cloud Services",
+    "tags": [
+      "Cloud",
+      "Hosting",
+      "Deployment"
+    ],
+    "status": true
+  }
+]
