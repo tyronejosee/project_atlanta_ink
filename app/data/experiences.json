@@ -1,5 +1,20 @@
 [
   {
-    "datetime": "12-12-2012"
+    "id": "3f68719d-8811-4818-8e4f-c5624be6da26",
+    "company": "",
+    "position": "",
+    "start_date": "2015-05-01",
+    "end_date": "2017-12-31",
+    "location": "Chile",
+    "responsibilities": [
+      "Example responsibilities 1",
+      "Example responsibilities 2",
+      "Example responsibilities 3"
+    ],
+    "achievements": [
+      "Example achievements 1",
+      "Example achievements 2",
+      "Example achievements 3"
+    ]
   }
 ]

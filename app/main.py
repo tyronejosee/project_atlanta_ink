@@ -20,12 +20,7 @@ tags_metadata = [
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    description=(
-        "API for managing and accessing various services, "
-        "including strategy cards, projects, team members, "
-        "and user testimonials.\n"
-        "\nAccess the API documentation at `/docs` or `/redoc`."
-    ),
+    description=("\nAccess the API documentation at `/docs` or `/redoc`."),
     version="1.0.0",
     # terms_of_service="http://example.com/terms/",
     contact={
