@@ -3,7 +3,7 @@
 import environ
 
 env = environ.Env()
-environ.Env.read_env(".env")
+environ.Env.read_env("backend/.env")
 
 ENVIRONMENT = env("ENVIRONMENT", default="local")
 

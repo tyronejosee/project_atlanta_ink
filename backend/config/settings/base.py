@@ -25,11 +25,14 @@ BASE_APPS = [
 ]
 
 PROJECT_APPS = [
+    "apps.users",
     "apps.utils",
 ]
 
 THIRD_APPS = [
-    # ...
+    "rest_framework",
+    "drf_spectacular",
+    "drf_spectacular_sidecar",
 ]
 
 INSTALLED_APPS = BASE_APPS + PROJECT_APPS + THIRD_APPS
@@ -138,7 +141,7 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_CONTENT_LANGUAGE": "en",
-    # "DEFAULT_PAGINATION_CLASS": "apps.utilities.pagination.LimitSetPagination",
+    "DEFAULT_PAGINATION_CLASS": "apps.utils.pagination.LimitSetPagination",
     "DEFAULT_FILTER_BACKENDS": [
         "rest_framework.filters.SearchFilter",
         "django_filters.rest_framework.DjangoFilterBackend",
@@ -154,7 +157,7 @@ REST_FRAMEWORK = {
     "ORDERING_PARAM": "order",
 }
 
-# AUTH_USER_MODEL = "users.User" # Update
+AUTH_USER_MODEL = "users.User"
 
 CORS_ALLOW_HEADERS = [
     "Authorization",
@@ -180,7 +183,26 @@ SPECTACULAR_SETTINGS = {
         "name": env("CONTACT_NAME"),
         "url": env("CONTACT_URL"),
     },
-    # "SCHEMA_PATH_PREFIX": r"^/api/v\d+",
-    "SCHEMA_PATH_PREFIX_TRIM": True,
     "SERVE_INCLUDE_SCHEMA": False,
+    "SWAGGER_UI_DIST": "SIDECAR",
+    "SWAGGER_UI_FAVICON_HREF": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724775927/Drop%20Dash%20API/fb9ai97yagzqsimsdg4q.png",
+    "REDOC_DIST": "SIDECAR",
+    "REDOC_UI_SETTINGS": {
+        "hideHostname": True,
+        "theme": {
+            "colors": {"primary": {"main": "#16FF00"}},
+        },
+    },
+    "EXTENSIONS_INFO": {
+        "x-logo": {
+            "url": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724788246/Drop%20Dash%20API/pyqqdznrcqofiuxd4l4e.png",
+            "altText": "API Logo",
+        },
+    },
+    "TAGS": [
+        {
+            "name": "artists",
+            "description": "Operations related to artists",
+        },
+    ],
 }
