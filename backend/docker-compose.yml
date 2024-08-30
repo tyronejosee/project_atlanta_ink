@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:16.4
+    container_name: black_needle_studio_db
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - 5600:5432
+    volumes:
+      - .data:/var/lib/postgresql
+
+  web:
+    container_name: black_needle_studio_web
+    restart: always
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8100:8100"
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8100/ || exit 1"]
+      interval: 30s
+      retries: 3
+      start_period: 10s
+      timeout: 10s

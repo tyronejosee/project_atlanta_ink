@@ -1,0 +1,16 @@
+* text=auto
+
+*.py text
+*.pyx text
+*.pyd text
+*.cfg text
+*.md text
+*.rst text
+*.txt text
+*.json text
+*.yml text
+*.yaml text
+*.html text
+*.csv text
+*.xls binary
+*.xlsx binary

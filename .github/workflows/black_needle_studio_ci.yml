@@ -1,0 +1,66 @@
+name: Black Needle Studio CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.7"
+      - name: Install dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements/local.txt
+      - name: Lint with flake8
+        run: |
+          cd backend
+          pip install flake8
+          flake8 --config .flake8
+#       # TODO: Add secrets in github for tests
+#       # - name: Django testing
+#       #   run: |
+#       #     python manage.py test
+#       #   env:
+#       #     SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
+  frontend:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm install
+          
+      - name: Run frontend build
+        run: |
+          cd frontend
+          npm run build
+          
+      - name: Run frontend lint
+        run: |
+          cd frontend
+          npm run lint
