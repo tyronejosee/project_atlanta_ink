@@ -25,6 +25,9 @@ BASE_APPS = [
 ]
 
 PROJECT_APPS = [
+    "apps.artists",
+    "apps.company",
+    "apps.tattoos",
     "apps.users",
     "apps.utils",
 ]

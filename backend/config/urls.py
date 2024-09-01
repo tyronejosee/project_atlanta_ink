@@ -2,7 +2,7 @@
 
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
 from drf_spectacular.views import (
@@ -27,10 +27,15 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path(
+        "api/schema/",
+        SpectacularAPIView.as_view(),
+        name="schema",
+    ),
     # Apps urls
-    # path("", include("apps.users.urls")),
-    # path("", include("apps.utils.urls")), # TODO: Add view and uncomment
+    path("api/", include("apps.artists.urls")),
+    path("api/", include("apps.company.urls")),
+    path("api/", include("apps.tattoos.urls")),
 ]
 
 
@@ -41,6 +46,6 @@ if settings.DEBUG:
 
 
 # AdminSite props.
-admin.site.site_header = "Example Header"
-admin.site.site_title = "Example Title"
+admin.site.site_header = "Black Needle Studio Header"
+admin.site.site_title = "Black Needle Studio Title"
 admin.site.index_title = "Admin"
