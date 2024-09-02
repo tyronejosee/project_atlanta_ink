@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button, } from "@nextui-org/react";
-// import {AcmeLogo} from "./AcmeLogo.jsx";
+import Link from "next/link";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button, } from "@nextui-org/react";
+import { MainLogo } from "../icons";
 
 export const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,31 +16,33 @@ export const MenuBar = () => {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" position="sticky">
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          {/* <AcmeLogo /> */}
-          <p className="font-bold text-inherit">ACME</p>
-        </NavbarBrand>
+        <Link color="foreground" href={"/"}>
+          <NavbarBrand>
+            <MainLogo />
+            <p className="font-bold text-inherit">DST</p>
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="#artists">
             Artists
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link href="#contact" aria-current="page">
             Price
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href={"/contact"}>
             Contact
           </Link>
         </NavbarItem>
