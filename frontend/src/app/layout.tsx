@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
-import { MenuBar } from '@/components/layout/menu-bar';
+import { MenuBar } from '@/components/layout/MenuBar';
 import "./globals.css";
 
 const space = Space_Grotesk({ subsets: ["latin"] });
