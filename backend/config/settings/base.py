@@ -144,7 +144,7 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_CONTENT_LANGUAGE": "en",
-    "DEFAULT_PAGINATION_CLASS": "apps.utils.pagination.LimitSetPagination",
+    # "DEFAULT_PAGINATION_CLASS": "apps.utils.pagination.LimitSetPagination",
     "DEFAULT_FILTER_BACKENDS": [
         "rest_framework.filters.SearchFilter",
         "django_filters.rest_framework.DjangoFilterBackend",
@@ -155,7 +155,7 @@ REST_FRAMEWORK = {
         "daily": "1000/day",
     },
     "NUM_PROXIES": None,
-    "PAGE_SIZE": 25,
+    # "PAGE_SIZE": 25,
     "SEARCH_PARAM": "q",
     "ORDERING_PARAM": "order",
 }

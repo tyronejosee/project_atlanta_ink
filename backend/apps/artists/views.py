@@ -7,7 +7,7 @@ from .serializers import ArtistSerializer
 
 
 class ArtistListView(ListAPIView):
-    """Pending."""
+    """View to list all available artists."""
 
     serializer_class = ArtistSerializer
 
@@ -20,7 +20,7 @@ class ArtistListView(ListAPIView):
 
 
 class ArtistDetailView(RetrieveAPIView):
-    """Pending."""
+    """View to retrieve a specific artist by ID."""
 
     serializer_class = ArtistSerializer
 
