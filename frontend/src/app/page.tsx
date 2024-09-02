@@ -1,8 +1,10 @@
 import { Footer } from '@/components/layout';
-import { BackToTop } from '@/components/ui/backToTop';
-import { Artists, FAQs, FinalCTA, Hero, Location, Pricing, Products, Testimonials } from '@/components/sections';
 
-export default function Home() {
+import { Artists, FAQs, FinalCTA, Hero, Location, Pricing, Products, Testimonials } from '@/components/sections';
+import { BackToTop } from '@/components/ui';
+
+export default function HomePage() {
+
   return (
     <main>
       <Hero />
