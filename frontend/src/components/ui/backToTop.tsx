@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { Button } from "@nextui-org/react";
 import { cn } from "@/lib/utils";
+import { ChevronUp } from 'lucide-react';
 
 export const BackToTop = () => {
   const { scrollYProgress } = useScroll();
@@ -67,12 +68,12 @@ export const BackToTop = () => {
           duration: 0.2,
         }}
         className={cn(
-          "text-neutral-950 flex max-w-fit fixed top-16 inset-x-0 mx-auto rounded-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[10] mt-2",
+          "flex max-w-fit fixed top-16 inset-x-0 mx-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[10] mt-2",
         )}
       >
-        <Button radius="none" onClick={scrollToTop}>
-          °°
-          <span className="ml-2">Back to top</span>
+        <Button onClick={scrollToTop} className="dark:bg-primary dark:text-neutral-dark rounded-none">
+          <ChevronUp />
+          Back to top
         </Button>
       </motion.div>
     </AnimatePresence>

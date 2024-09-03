@@ -10,6 +10,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#FF4200',
+        secondary: '#FF9100',
+        neutral: {
+          light: '#fafafa',
+          lightgray: '#f5f5f5',
+          gray: '#737373',
+          darkgrey: '#171717',
+          dark: '#0a0a0a',
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -8,10 +8,12 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      {/* <Services /> */}
+      {/* <Works /> */}
       <Artists />
+      <Testimonials />
       <Pricing />
       <Products />
-      <Testimonials />
       <FAQs />
       <Location />
       <FinalCTA />

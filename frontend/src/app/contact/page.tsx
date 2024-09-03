@@ -9,7 +9,7 @@ export default function ContactPage() {
         <title>Contact Us</title>
         <meta name="description" content="Contact us for more information." />
       </Head>
-      <main className="container mx-auto px-4 py-8">
+      <main className="max-w-screen-xl mx-auto mt-20">
         <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
         <form className="space-y-4">
           <div>

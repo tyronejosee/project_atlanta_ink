@@ -15,9 +15,11 @@
     "@nextui-org/theme": "^2.2.9",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.31",
+    "lucide-react": "^0.438.0",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.13.0",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {

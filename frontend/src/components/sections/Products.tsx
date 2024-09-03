@@ -26,13 +26,15 @@ export const Products = () => {
   return (
     <section id="products" className="py-16" ref={ref}>
       <div className="max-w-screen-xl mx-auto">
-        <p className="text-center text-xl font-bold mb-8">Our products</p>
-        <h2 className="text-6xl font-bold mb-8 text-center">PRODUCTS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <header className="space-y-4 mb-8 text-center">
+          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
+          <h2 className="text-6xl font-bold">PRODUCTS</h2>
+        </header>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Array(5).fill('').map((_, index) => (
             <motion.div
               key={index}
-              className="p-2 border rounded-lg shadow-md bg-neutral-800"
+              className="p-2 border shadow-md bg-neutral-800"
               variants={itemVariants}
               initial="hidden"
               animate={controls}
@@ -47,10 +49,10 @@ export const Products = () => {
                 alt={`Artist ${index + 1}`}
                 width={300}
                 height={300}
-                className="w-full h-48 object-cover rounded mb-4"
+                className="w-full h-48 object-cover mb-4"
               />
-              <h3 className="text-xl font-bold text-white">Artist {index + 1}</h3>
-              <p className="text-gray-400">$5USD</p>
+              <h3 className="text-xl font-bold">Artist {index + 1}</h3>
+              <p className="text-primary">$5USD</p>
             </motion.div>
           ))}
         </div>

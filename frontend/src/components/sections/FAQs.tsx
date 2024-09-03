@@ -22,15 +22,21 @@ export const FAQs = () => {
       question: "Can I exercise after getting a tattoo?",
       answer: "It's best to avoid intense exercise that causes heavy sweating for a few days.",
     },
+    {
+      question: "Can I exercise after getting a tattoo?",
+      answer: "It's best to avoid intense exercise that causes heavy sweating for a few days.",
+    },
   ];
 
   return (
-    <section className="py-16 bg-neutral-900">
-      <div className="container mx-auto text-center">
-        <h2 className="text-6xl font-bold mb-8 text-white">Frequently Asked Questions</h2>
-        <div className="space-y-4">
+    <section className="py-16">
+      <div className="max-w-screen-xl mx-auto text-center">
+        <header className="space-y-4 mb-8">
+          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
+          <h2 className="text-6xl font-bold">Frequently Asked Questions</h2>
+        </header>
+        <div className="grid grid-cols-2 gap-4">
           {faqItems.map((faq, index) => {
-            // Configurar `useInView` para cada elemento FAQ
             const { ref, inView } = useInView({
               triggerOnce: true,
               threshold: 0.1,
@@ -44,10 +50,11 @@ export const FAQs = () => {
                 animate={inView ? "visible" : "hidden"}
                 variants={variants}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-neutral-800 p-6 rounded-lg shadow-md"
               >
-                <h4 className="font-bold text-white">{faq.question}</h4>
-                <p className="text-gray-400">{faq.answer}</p>
+                <article className="bg-neutral-darkgrey p-6">
+                  <h4 className="font-bold text-primary">{faq.question}</h4>
+                  <p className="text-neutral-gray">{faq.answer}</p>
+                </article>
               </motion.div>
             );
           })}
