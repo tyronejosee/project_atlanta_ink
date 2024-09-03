@@ -1,3 +1,5 @@
+import { Contact } from "lucide-react"
+
 export const Location = () => {
   return (
     <section className="py-16">
@@ -7,12 +9,13 @@ export const Location = () => {
           <h2 className="text-6xl font-bold">Our Location</h2>
         </header>
         <div className="flex h-64 md:h-96">
-          <div className="md:w-1/2 flex flex-col justify-center items-center bg-neutral-darkgrey">
+          <div className="relative md:w-1/2 flex flex-col justify-center items-center bg-neutral-darkgrey overflow-x-hidden">
             <h3 className="text-3xl mb-4 text-primary font-bold">Contact Information</h3>
             <p className=""><strong>Address:</strong> 123 Fake Street, Santiago, Chile</p>
             <p className=""><strong>Hours:</strong> Monday to Saturday, 10:00 AM - 8:00 PM</p>
             <p className=""><strong>Phone:</strong> +56 9 1234 5678</p>
             <p className=""><strong>Email:</strong> contact@madnesstattooart.cl</p>
+            <Contact className="rotate-12 size-40 opacity-5 absolute -top-10 -right-10" />
           </div>
           <iframe
             className="md:w-1/2"
@@ -26,7 +29,6 @@ export const Location = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-
         </div>
       </div>
     </section>

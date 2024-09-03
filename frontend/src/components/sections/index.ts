@@ -5,5 +5,6 @@ export { Hero } from './Hero';
 export { Location } from './Location';
 export { Pricing } from './Pricing';
 export { Products } from './Products';
+export { Promotion } from './Promotion';
 export { Services } from './Services';
 export { Testimonials } from './Testimonials';

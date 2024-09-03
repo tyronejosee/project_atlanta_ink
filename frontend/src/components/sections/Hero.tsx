@@ -2,10 +2,11 @@
 
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
+import { Bird } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="bg-cover bg-center h-[calc(100vh)] relative overflow-hidden">
+    <section className="bg-cover bg-center h-screen relative overflow-hidden">
       <video
         className="absolute inset-0 object-cover h-full w-full"
         src="/hero.mp4"
@@ -36,9 +37,14 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
         >
-          <p className="text-neutral-light relative animate-pulse">Explore</p>
         </motion.div>
       </motion.div>
+      <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-neutral-light animate-pulse">Explore</span>
+      <div className="hidden md:block">
+        <div className="bg-neutral-light size-14 absolute bottom-20 left-20 inline-flex items-center justify-center">
+          <Bird className="size-10 stroke-black" />
+        </div>
+      </div>
     </section>
   )
 }
