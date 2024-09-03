@@ -1,8 +1,9 @@
-export { Hero } from './Hero';
 export { Artists } from './Artists';
-export { Pricing } from './Pricing';
-export { FinalCTA } from './FinalCTA';
-export { Location } from './Location';
 export { FAQs } from './FAQs';
-export { Testimonials } from './Testimonials';
+export { FinalCTA } from './FinalCTA';
+export { Hero } from './Hero';
+export { Location } from './Location';
+export { Pricing } from './Pricing';
 export { Products } from './Products';
+export { Services } from './Services';
+export { Testimonials } from './Testimonials';
