@@ -1,4 +1,3 @@
-import { FC } from "react";
 import Head from "next/head";
 import { Button, Input, Textarea } from "@nextui-org/react";
 

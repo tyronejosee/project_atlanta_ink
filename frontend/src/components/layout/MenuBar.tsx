@@ -1,23 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button, } from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Button
+} from "@nextui-org/react";
 import { Bird } from 'lucide-react';
+
+import { menuItems, socialLinks } from "@/utils/constants";
 import { Instagram, YouTube, Twitch } from "../icons";
 
 export const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const menuItems = [
-    "Artists",
-    "Price",
-    "Products",
-    "Contact",
-  ];
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 0);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="xl" className="fixed z-50">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="xl"
+      isBlurred={isScrolled}
+      className={`fixed z-50 transition-colors duration-300 ${isScrolled ? "" : "bg-transparent blur-0"
+        }`}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -26,7 +48,9 @@ export const MenuBar = () => {
         <Link color="foreground" href={"/"}>
           <NavbarBrand>
             <Bird />
-            <p className="font-bold ml-2">DST</p>
+            <span className="font-bold ml-2">
+              DST
+            </span>
           </NavbarBrand>
         </Link>
       </NavbarContent>
@@ -48,10 +72,11 @@ export const MenuBar = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <a
-            href="https://www.youtube.com/#"
+            href={socialLinks.youtube}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +85,7 @@ export const MenuBar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <a
-            href="https://www.twitch.tv/#"
+            href={socialLinks.twitch}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -69,35 +94,47 @@ export const MenuBar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <a
-            href="https://www.instagram.com/#"
+            href={socialLinks.instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Instagram />
           </a>
         </NavbarItem>
+
         <NavbarItem>
-          <Button as={Link} href="#" variant="flat" className="dark:bg-primary dark:text-neutral-dark rounded-none">
+          <Button
+            as={Link}
+            href="/contact"
+            className="dark:bg-primary dark:text-neutral-dark rounded-none"
+          >
             Contact Us
           </Button>
         </NavbarItem>
       </NavbarContent>
+
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {menuItems.map((item) => (
+          <NavbarMenuItem key={item.id}>
             <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
               className="w-full"
-              href="#"
-              size="lg"
+              href={item.href}
             >
-              {item}
+              {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
-    </Navbar>
+    </Navbar >
   );
 }
+
+// ! TODO: Review, pass to props
+// export async function getServerSideProps() {
+//   const res = await fetch('http://localhost:8000/company/');
+//   const socialLinks = await res.json();
+
+//   return {
+//     props: { socialLinks },
+//   };
+// }

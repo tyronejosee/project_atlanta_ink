@@ -40,7 +40,7 @@ export const Artists = () => {
               animate={controls}
               transition={{
                 duration: 0.5,
-                delay: index * 0.2,
+                delay: index * 2,
                 ease: "easeOut",
               }}
             >
