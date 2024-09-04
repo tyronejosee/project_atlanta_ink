@@ -12,7 +12,7 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[*.{html,css,scss,js,json,yml,yaml,xml,svg}]
+[*.{html,css,scss,js,jsx,ts,tsx,json,yml,yaml,xml,svg}]
 indent_style = space
 indent_size = 2
 

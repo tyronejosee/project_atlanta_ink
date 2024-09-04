@@ -57,7 +57,7 @@ export const MenuBar = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#artists">
+          <Link href={"/artists"}>
             Artists
           </Link>
         </NavbarItem>
@@ -67,7 +67,7 @@ export const MenuBar = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href={"/contact"}>
+          <Link href={"/contact"}>
             Contact
           </Link>
         </NavbarItem>
