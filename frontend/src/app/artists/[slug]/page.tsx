@@ -1,29 +1,56 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-
-import { getBySlug } from '@/lib/api';
+import { getBySlug, getTattoosByArtist } from '@/lib/api';
 import { IArtist } from '@/types';
 import { Instagram } from '@/components/icons';
 import { Badge, ParallaxScroll } from '@/components/ui';
-import { images } from '@/utils/constants';
 
 interface Props {
   params: { slug: string };
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+
+  try {
+    const artist = await getBySlug<IArtist>('artists', slug);
+
+    if (!artist) {
+      return {
+        title: 'Artist Not Found',
+        description: 'The artist you are looking for does not exist.',
+      };
+    }
+
+    return {
+      title: `${artist.name} - Atlanta Ink`,
+      description: `Explore tattoos by ${artist.name} at Atlanta Ink.`,
+    };
+  } catch {
+    return {
+      title: 'Error',
+      description: 'An error occurred while loading the artist data.',
+    };
+  }
 }
 
 export default async function ArtistDetailPage({ params }: Props) {
   const { slug } = params;
 
   try {
-    const artist = await getBySlug<IArtist>('artists', slug);
+    const [artist, tattoos] = await Promise.all([
+      getBySlug<IArtist>('artists', slug),
+      getTattoosByArtist<[]>(slug),
+    ]);
 
-    if (!artist) { notFound(); }
+    if (!artist) { return notFound(); }
+    if (!tattoos) { return notFound(); }
 
     return (
       <section className="bg-neutral-dark max-w-screen-xl mx-auto flex mt-16 min-h-screen">
         <section className="w-96 flex flex-col p-4 space-y-4">
           <Image
-            src={artist.profile}
+            src={artist.image}
             alt={artist.name}
             width={300}
             height={300}
@@ -57,7 +84,7 @@ export default async function ArtistDetailPage({ params }: Props) {
           </div>
         </section>
         <section className="w-full p-4">
-          <ParallaxScroll images={images} />
+          <ParallaxScroll images={tattoos} />
         </section>
       </section>
     );

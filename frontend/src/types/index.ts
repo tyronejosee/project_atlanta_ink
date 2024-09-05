@@ -1,3 +1,4 @@
+import Image from 'next/image';
 interface IStyle {
   id: string;
   name: string;
@@ -8,7 +9,7 @@ interface IStyle {
 export interface IArtist {
   id: string;
   name: string;
-  profile: string;
+  image: string;
   instagram: string;
   whatsapp: string;
   description: string;

@@ -1,8 +1,12 @@
-import { GetServerSideProps } from 'next';
-
+import type { Metadata } from "next";
 import { getData } from '@/lib/api';
 import { IArtist } from '@/types';
 import { ArtistList } from '@/components/artists';
+
+export const metadata: Metadata = {
+  title: "Artists - Atlanta Ink",
+  description: "Artist List",
+};
 
 export default async function ArtistsPage() {
   const artists = await getData<IArtist[]>('artists');
