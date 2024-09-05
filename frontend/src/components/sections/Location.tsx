@@ -19,7 +19,7 @@ export const Location = () => {
           </div>
           <iframe
             className="md:w-1/2"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41840.404680117914!2d-122.34491178889505!3d49.04814267642056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54844bdc9eb95697%3A0x73a48d3f92b3193e!2sDesigner%20Ink%20Tattoo!5e0!3m2!1ses!2scl!4v1725241544253!5m2!1ses!2scl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6636.66036172617!2d-84.38647250642092!3d33.7262772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f503115b8f1a9b%3A0xb75d1994ec7d096b!2sAtlanta Ink%3A Tattoo and Piercing!5e0!3m2!1ses!2scl!4v1725552961038!5m2!1ses!2scl"
             width="100%"
             height="100%"
             style={{

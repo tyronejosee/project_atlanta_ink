@@ -7,8 +7,8 @@ import "./globals.css";
 const space = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Black Needle Studio",
-  description: "Black Needle Studio",
+  title: "Atlanta Ink - Tattoo Studio",
+  description: "Tattoo Studio",
 };
 
 export default function RootLayout({

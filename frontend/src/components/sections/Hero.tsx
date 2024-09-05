@@ -30,7 +30,7 @@ export const Hero = () => {
         className="max-w-screen-xl mx-auto flex flex-col items-center justify-center h-full text-center relative z-10 space-y-4"
       >
         <span className="text-primary text-xl font-bold">Tattoo Studio</span>
-        <h2 className="text-7xl font-bold">DESIGNER STUDIO TATTOO</h2>
+        <h2 className="text-7xl font-bold">ATLANTA INK</h2>
         <p className="max-w-screen-lg text-lg mb-6">Trust our experts for your next tattoo. With years of experience and a passion for detail, we’re here to bring your vision to life with precision and professionalism. Experience the difference of well-crafted art.</p>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
