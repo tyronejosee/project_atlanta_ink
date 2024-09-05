@@ -19,3 +19,16 @@ class TattooSerializer(serializers.ModelSerializer):
             "artist",
         ]
         read_only_fields = fields
+
+
+class TattooImageSerializer(serializers.ModelSerializer):
+    """Serializer for Tattoo model (only image field)."""
+
+    image = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Tattoo
+        fields = ["image"]
+
+    def get_image(self, obj):
+        return obj.image.url

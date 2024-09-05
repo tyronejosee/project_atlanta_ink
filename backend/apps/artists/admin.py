@@ -26,5 +26,5 @@ class ArtistAdmin(admin.ModelAdmin):
     list_display = ["name", "is_team"]
     list_filter = ["is_team"]
     list_editable = ["is_team"]
-    readonly_fields = ["pk", "created_at", "updated_at"]
+    readonly_fields = ["pk", "slug", "created_at", "updated_at"]
     ordering = ["pk"]

@@ -2,20 +2,24 @@
 
 from django.db import models
 from django.utils.text import slugify
+from cloudinary.models import CloudinaryField
 
 from apps.utils.models import BaseModel
 from apps.artists.models import Artist
-
 from .managers import TattooManager
 
 
 class Tattoo(BaseModel):
     """Model definition for Tattoo."""
 
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=50, unique=True, blank=True)
-    image = models.ImageField(upload_to="tattoos/")
-    artist_id = models.ForeignKey(Artist, on_delete=models.CASCADE)
+    image = CloudinaryField()
+    artist_id = models.ForeignKey(
+        Artist,
+        related_name="tattoos",
+        on_delete=models.CASCADE,
+    )
 
     objects = TattooManager()
 
@@ -23,11 +27,15 @@ class Tattoo(BaseModel):
         ordering = ["pk"]
         verbose_name = "tattoo"
         verbose_name_plural = "tattoos"
+        indexes = [
+            models.Index(fields=["slug"]),
+            models.Index(fields=["artist_id"]),
+        ]
 
     def __str__(self):
         return str(self.name)
 
     def save(self, *args, **kwargs):
-        if not self.slug:
+        if not self.slug or self.slug != slugify(self.name):
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)

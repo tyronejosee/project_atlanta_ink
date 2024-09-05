@@ -2,7 +2,7 @@
 
 from django.urls import path
 
-from .views import ArtistListView, ArtistDetailView
+from .views import ArtistListView, ArtistDetailView, ArtistTattooListView
 
 
 urlpatterns = [
@@ -12,8 +12,13 @@ urlpatterns = [
         name="artist-list",
     ),
     path(
-        "artists/<uuid:pk>/",
+        "artists/<str:slug>/",
         ArtistDetailView.as_view(),
         name="artist-detail",
+    ),
+    path(
+        "artists/<str:slug>/tattoos/",
+        ArtistTattooListView.as_view(),
+        name="artist-tattoo-list",
     ),
 ]

@@ -22,6 +22,7 @@ class StyleSerializer(serializers.ModelSerializer):
 class ArtistSerializer(serializers.ModelSerializer):
     """Serializer for Artist model."""
 
+    image = serializers.SerializerMethodField()
     styles = StyleSerializer(many=True, read_only=True)
 
     class Meta:
@@ -29,7 +30,7 @@ class ArtistSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
-            "profile",
+            "image",
             "instagram",
             "whatsapp",
             "description",
@@ -40,3 +41,6 @@ class ArtistSerializer(serializers.ModelSerializer):
             "created_at",
         ]
         read_only_fields = fields
+
+    def get_image(self, obj):
+        return obj.image.url
