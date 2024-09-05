@@ -1,9 +1,9 @@
 """Settings for config project (Production)."""
 
 import os
-import environ
 
 from .base import *
+from .base import BASE_DIR
 
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

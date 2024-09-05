@@ -3,7 +3,11 @@
 import os
 from pathlib import Path
 import sys
+
 import environ
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -13,7 +17,7 @@ environ.Env.read_env("backend/.env")
 
 SECRET_KEY = env("SECRET_KEY")
 
-DEBUG = env("DEBUG", default=False)
+DEBUG = env.bool("DEBUG", default=False)
 
 BASE_APPS = [
     "django.contrib.admin",
@@ -34,6 +38,7 @@ PROJECT_APPS = [
 
 THIRD_APPS = [
     "rest_framework",
+    "cloudinary",
     "drf_spectacular",
     "drf_spectacular_sidecar",
 ]
@@ -106,7 +111,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
 
 INTERNAL_IPS = env.list("INTERNAL_IPS")
 
@@ -173,6 +178,13 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+
+cloudinary.config(
+    cloud_name=env("CLOUDINARY_CLOUD_NAME"),
+    api_key=env("CLOUDINARY_API_KEY"),
+    api_secret=env("CLOUDINARY_API_SECRET"),
+    secure=True,
+)
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Example API",

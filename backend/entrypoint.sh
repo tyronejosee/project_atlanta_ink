@@ -10,6 +10,7 @@ red="\033[31m"
 green="\033[32m"
 yellow="\033[33m"
 blue="\033[34m"
+orange="\033[38;2;255;66;0m"
 
 # # Apply database migrations using Django's manage.py script
 # echo -e "${bold}${green}Check database migrations...${normal}"
@@ -23,8 +24,8 @@ echo -e "${bold}${yellow}Collecting static files...${normal}"
 # python manage.py collectstatic --noinput
 
 # Start the Django development server on all network interfaces, listening on port 8100
-echo -e "${bold}${blue}Starting Django development server...${normal}"
-echo -e "${bold}${blue}Access the application at${normal} ${bold}${red}http://127.0.0.1:8100/${normal}"
+echo -e "${bold}${orange}Starting Atlanta Ink backend...${normal}"
+echo -e "${bold}${blue}Access at${normal} ${bold}${red}http://127.0.0.1:8100/${normal}"
 python manage.py runserver 0.0.0.0:8100
 
 # Start the Gunicorn server, which is a production WSGI HTTP server for Django,

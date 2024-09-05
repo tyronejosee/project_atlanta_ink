@@ -1,7 +1,7 @@
 services:
   db:
     image: postgres:16.4
-    container_name: black_needle_studio_db
+    container_name: atlanta_ink_db
     restart: always
     env_file:
       - ./.env
@@ -11,7 +11,7 @@ services:
       - .data:/var/lib/postgresql
 
   web:
-    container_name: black_needle_studio_web
+    container_name: atlanta_ink_web
     restart: always
     build: .
     volumes:

@@ -1,5 +1,5 @@
 <d align="center">
-  <h1><strong>Black Needle Studio API</strong></h1>
+  <h1><strong>Atlanta Ink API</strong></h1>
 </d>
 
 ## ⚙️ Installation
@@ -7,7 +7,7 @@
 Clone the repository.
 
 ```bash
-git clone git@github.com:tyronejosee/template_django.git
+git clone git@github.com:tyronejosee/project_atlanta_ink.git
 ```
 
 Create a virtual environment (Optional, only if you have Python installed).
@@ -150,8 +150,10 @@ docker compose exec web python manage.py makemigrations users
 Access the PostgreSQL console.
 
 ```bash
-docker compose exec db psql -U postgres -d example_db
+docker compose exec db psql -U <database_user> -d <database_name>
 ```
+
+> Note: `-U` User, `-d` Database
 
 List all the tables in the database.
 
@@ -179,4 +181,4 @@ docker compose exec web python manage.py loaddata
 
 ## ⚖️ License
 
-This project is under the [Apache-2.0 license](https://github.com/tyronejosee/template_django/blob/main/LICENSE).
+This project is under the [Creative Commons Zero v1.0 Universal](https://github.com/tyronejosee/project_atlanta_ink/blob/main/LICENSE) Licence.

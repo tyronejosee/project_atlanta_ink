@@ -46,6 +46,6 @@ if settings.DEBUG:
 
 
 # AdminSite props.
-admin.site.site_header = "Black Needle Studio Header"
-admin.site.site_title = "Black Needle Studio Title"
+admin.site.site_header = "Atlanta Ink Header"
+admin.site.site_title = "Atlanta Ink Title"
 admin.site.index_title = "Admin"
