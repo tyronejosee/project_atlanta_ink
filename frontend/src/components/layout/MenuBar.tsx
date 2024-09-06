@@ -106,7 +106,7 @@ export const MenuBar = () => {
           <Button
             as={Link}
             href="/contact"
-            className="dark:bg-primary dark:text-neutral-dark rounded-none"
+            className="bg-primary text-neutral-light font-medium rounded-none"
           >
             Contact Us
           </Button>

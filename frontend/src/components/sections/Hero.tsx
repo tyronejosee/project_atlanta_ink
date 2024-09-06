@@ -1,8 +1,7 @@
 "use client";
-
-import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
-import { Bird } from 'lucide-react';
+import { Logo } from "../icons";
+
 
 export const Hero = () => {
   return (
@@ -40,10 +39,8 @@ export const Hero = () => {
         </motion.div>
       </motion.div>
       <span className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-neutral-light animate-pulse">Explore</span>
-      <div className="hidden md:block">
-        <div className="bg-neutral-light size-14 absolute bottom-20 left-20 inline-flex items-center justify-center">
-          <Bird className="size-10 stroke-black" />
-        </div>
+      <div className="hidden md:block absolute bottom-20 left-20">
+        <Logo />
       </div>
     </section>
   )

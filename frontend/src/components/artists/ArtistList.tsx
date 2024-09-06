@@ -1,25 +1,14 @@
-"use client"
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { IArtist } from '@/types';
-import Loading from '@/app/loading';
 
 interface Props {
   artists: IArtist[];
 }
 
 export const ArtistList = ({ artists }: Props) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 8000); // Simula un tiempo de carga
-    return () => clearTimeout(timer);
-  }, []);
-
 
   return (
     <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {loading && <Loading />}
       {artists.map((artist) => (
         <Link
           key={artist.id}

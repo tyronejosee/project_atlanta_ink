@@ -10,12 +10,12 @@ export const Location = () => {
         </header>
         <div className="flex h-64 md:h-96">
           <div className="relative md:w-1/2 flex flex-col justify-center items-center bg-neutral-darkgrey overflow-x-hidden">
-            <h3 className="text-3xl mb-4 text-primary font-bold">Contact Information</h3>
-            <p className=""><strong>Address:</strong> 123 Fake Street, Santiago, Chile</p>
-            <p className=""><strong>Hours:</strong> Monday to Saturday, 10:00 AM - 8:00 PM</p>
-            <p className=""><strong>Phone:</strong> +56 9 1234 5678</p>
-            <p className=""><strong>Email:</strong> contact@madnesstattooart.cl</p>
-            <Contact className="rotate-12 size-40 opacity-5 absolute -top-10 -right-10" />
+            <h3 className="text-3xl text-primary font-bold mb-2">Contact Information</h3>
+            <span className="text-lg text-neutral-gray font-bold mb-4">Don't wait any longer contact us</span>
+            <p><strong>Address:</strong> 1039 Grant St SE A10, Atlanta, GA 30315, US</p>
+            <p><strong>Hours:</strong> Monday to Saturday, 12:00 PM - 20:00 PM</p>
+            <p><strong>Phone:</strong> +1 404-123-1234</p>
+            <p><strong>Email:</strong> contact@atlantaink.com</p>
           </div>
           <iframe
             className="md:w-1/2"
