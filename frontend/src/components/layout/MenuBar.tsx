@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import {
   Navbar,
   NavbarBrand,
@@ -13,13 +14,15 @@ import {
   Button
 } from "@nextui-org/react";
 import { Bird } from 'lucide-react';
-
-import { menuItems, socialLinks } from "@/utils/constants";
+import { menuItems, navItems, socialLinks, navCTA, navBrand } from "@/utils/constants";
 import { Instagram, YouTube, Twitch } from "../icons";
 
 export const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const pathname = usePathname()
+  console.log(pathname)
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 0);
@@ -45,32 +48,30 @@ export const MenuBar = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <Link color="foreground" href={"/"}>
+        <Link color="foreground" href="/">
           <NavbarBrand>
             <Bird />
             <span className="font-bold ml-2">
-              DST
+              {navBrand}
             </span>
           </NavbarBrand>
         </Link>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link href={"/artists"}>
-            Artists
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#contact" aria-current="page">
-            Price
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href={"/contact"}>
-            Contact
-          </Link>
-        </NavbarItem>
+        {navItems.map((item) => {
+          const isActive = pathname === item.href;
+          return (
+            <NavbarItem key={item.id}>
+              <Link
+                href={item.href}
+                className={isActive ? 'font-bold text-primary' : 'hover:font-bold'}
+              >
+                {item.label}
+              </Link>
+            </NavbarItem>
+          );
+        })}
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -105,36 +106,30 @@ export const MenuBar = () => {
         <NavbarItem>
           <Button
             as={Link}
-            href="/contact"
+            href={navCTA.href}
             className="bg-primary text-neutral-light font-medium rounded-none"
           >
-            Contact Us
+            {navCTA.label}
           </Button>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu>
-        {menuItems.map((item) => (
-          <NavbarMenuItem key={item.id}>
-            <Link
-              className="w-full"
-              href={item.href}
-            >
-              {item.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+      <NavbarMenu >
+        {menuItems.map((item) => {
+          const isActive = pathname === item.href;
+
+          return (
+            <NavbarMenuItem key={item.id}>
+              <Link
+                href={item.href}
+                className={isActive ? 'font-bold text-primary' : 'hover:font-bold'}
+              >
+                {item.label}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
       </NavbarMenu>
     </Navbar >
   );
 }
-
-// ! TODO: Review, pass to props
-// export async function getServerSideProps() {
-//   const res = await fetch('http://localhost:8000/company/');
-//   const socialLinks = await res.json();
-
-//   return {
-//     props: { socialLinks },
-//   };
-// }
