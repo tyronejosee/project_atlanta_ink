@@ -1,28 +1,42 @@
-import Head from "next/head";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { ContactForm, FormCard } from "@/components/forms";
+
+import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <>
-      <Head>
-        <title>Contact Us</title>
-        <meta name="description" content="Contact us for more information." />
-      </Head>
-      <main className="max-w-screen-xl mx-auto mt-20">
-        <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-        <form className="space-y-4">
-          <div>
-            <Input label="Name" placeholder="Your Name" required />
+    <section className="max-w-screen-xl mx-auto mt-16">
+      <div className="grid grid-cols-2 gap-4 p-4">
+        <section className="space-y-8">
+          <header>
+            <span className="text-primary">Contact Us</span>
+            <h1 className="text-7xl">Get in Touch</h1>
+            <p className="text-neutral-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit.</p>
+          </header>
+          <div className="grid grid-cols-2 gap-4">
+            <FormCard
+              title="Phone"
+              text="+123123123"
+              icon={<Phone className="size-10" />}
+            />
+            <FormCard
+              title="Website"
+              text="atlantaink.com"
+              icon={<WholeWord />}
+            />
+            <FormCard
+              title="Email"
+              text="support@atlantaink.com"
+              icon={<Mail />}
+            />
+            <FormCard
+              title="Address"
+              text="Example"
+              icon={<LocateFixedIcon />}
+            />
           </div>
-          <div>
-            <Input label="Email" type="email" placeholder="Your Email" required />
-          </div>
-          <div>
-            <Textarea label="Message" placeholder="Your Message" required />
-          </div>
-          <Button type="submit" color="primary">Send Message</Button>
-        </form>
-      </main>
-    </>
+        </section>
+        <ContactForm />
+      </div>
+    </section >
   );
 };

@@ -1,4 +1,3 @@
-import { Footer } from '@/components/layout';
 import {
   Artists,
   FAQs,
@@ -28,7 +27,6 @@ export default function HomePage() {
       <FAQs />
       <Location />
       <FinalCTA />
-      <Footer />
       <BackToTop />
     </main>
   );

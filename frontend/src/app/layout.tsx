@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import { MenuBar } from '@/components/layout/MenuBar';
 import "./globals.css";
+import { Footer } from "@/components/layout";
 
 const space = Space_Grotesk({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <NextUIProvider>
           <MenuBar />
           {children}
+          <Footer />
         </NextUIProvider>
       </body>
     </html>
