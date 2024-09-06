@@ -7,7 +7,7 @@ export const Works = () => {
     <section className="py-16">
       <div className="text-center">
         <header className="space-y-4 mb-8">
-          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
+          <span className="text-xl font-bold text-primary">Check out our</span>
           <h2 className="text-6xl font-bold text-white">Works</h2>
         </header>
         <div>

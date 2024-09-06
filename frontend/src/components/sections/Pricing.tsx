@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Button } from "@nextui-org/react";
+
 export const Pricing = () => {
   return (
     <section id="pricing" className="py-16 bg-primary">
@@ -22,6 +25,15 @@ export const Pricing = () => {
             <p className="text-4xl font-bold text-primary">$50</p>
             <p className="text-neutral-gray mt-2">Tattoos up to 5cm.</p>
           </article>
+        </div>
+        <div className="mx-auto mt-4">
+          <Button
+            as={Link}
+            href="/prices"
+            className="bg-neutral-darkgrey text-neutral-light font-medium rounded-none"
+          >
+            See more
+          </Button>
         </div>
       </div>
     </section>
