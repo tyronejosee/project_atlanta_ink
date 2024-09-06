@@ -1,29 +1,38 @@
 "use client";
 
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-interface GlobalErrorProps {
+interface Props {
   error: Error;
   reset: () => void;
 }
 
-export default function GlobalError({ error, reset }: GlobalErrorProps) {
+export default function GlobalError({ error, reset }: Props) {
   useEffect(() => {
     console.error('Error:', error);
   }, [error]);
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen px-4 py-16 space-y-8">
-      <header className="text-center">
-        <h1 className="text-4xl font-bold text-primary mb-4">An unexpected error occurred</h1>
-        <p className="text-lg text-neutral-light mb-4">{error.message}</p>
-        <button
-          onClick={() => reset()}
-          className="px-4 py-2 bg-primary text-white rounded hover:bg-blue-600 transition-colors"
-        >
-          Retry
-        </button>
-      </header>
+      <motion.header
+        className="flex flex-col justify-center items-center"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <h1 className="text-7xl font-bold text-primary mb-4">500</h1>
+        <p>{error.message}</p>
+      </motion.header>
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        onClick={() => reset()}
+        className="px-4 py-2 bg-primary hover:bg-primary/50 text-neutral-light rounded transition-colors"
+      >
+        Retry
+      </motion.button>
     </section>
   );
 }
