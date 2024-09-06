@@ -8,7 +8,8 @@ import {
   Products,
   Promotion,
   Services,
-  Testimonials
+  Testimonials,
+  Works
 } from '@/components/sections';
 import { BackToTop } from '@/components/ui';
 
@@ -19,7 +20,7 @@ export default function HomePage() {
       <Hero />
       <Promotion />
       <Services />
-      {/* <Works /> */}
+      <Works />
       <Artists />
       <Testimonials />
       <Pricing />

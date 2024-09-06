@@ -8,3 +8,4 @@ export { Products } from './Products';
 export { Promotion } from './Promotion';
 export { Services } from './Services';
 export { Testimonials } from './Testimonials';
+export { Works } from './Works';

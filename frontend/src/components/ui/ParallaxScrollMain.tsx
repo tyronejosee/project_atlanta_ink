@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export const ParallaxScroll = ({
+export const ParallaxScrollMain = ({
   images,
   className,
 }: {
@@ -18,26 +18,32 @@ export const ParallaxScroll = ({
     offset: ["start start", "end start"], // remove this if your container is not fixed height
   });
 
+  // Define transformations for each of the five sections
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const translateFourth = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const translateFifth = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
-  const third = Math.ceil(images.length / 3);
+  // Divide images into 5 equal parts
+  const partSize = Math.ceil(images.length / 5);
 
-  const firstPart = images.slice(0, third);
-  const secondPart = images.slice(third, 2 * third);
-  const thirdPart = images.slice(2 * third);
+  const firstPart = images.slice(0, partSize);
+  const secondPart = images.slice(partSize, 2 * partSize);
+  const thirdPart = images.slice(2 * partSize, 3 * partSize);
+  const fourthPart = images.slice(3 * partSize, 4 * partSize);
+  const fifthPart = images.slice(4 * partSize);
 
   return (
     <div
-      className={cn("h-[40rem] items-start overflow-y-auto w-full", className)}
+      className={cn("h-[40rem] items-start overflow-y-auto w-full px-4", className)}
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 items-start mx-auto gap-4"
         ref={gridRef}
       >
-        <div className="grid gap-10">
+        <div className="grid gap-4">
           {firstPart.map((el, idx) => (
             <motion.div
               style={{ y: translateFirst }}
@@ -53,7 +59,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-4">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <Image
@@ -66,9 +72,35 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-4">
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+              <Image
+                src={el}
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                height="400"
+                width="400"
+                alt="thumbnail"
+              />
+            </motion.div>
+          ))}
+        </div>
+        <div className="grid gap-4">
+          {fourthPart.map((el, idx) => (
+            <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
+              <Image
+                src={el}
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                height="400"
+                width="400"
+                alt="thumbnail"
+              />
+            </motion.div>
+          ))}
+        </div>
+        <div className="grid gap-4">
+          {fifthPart.map((el, idx) => (
+            <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
               <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
