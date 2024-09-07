@@ -41,11 +41,17 @@ urlpatterns = [
 
 # Debug config
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT,
+    )
+    urlpatterns += static(
+        settings.STATIC_URL,
+        document_root=settings.STATIC_ROOT,
+    )
 
 
 # AdminSite props.
-admin.site.site_header = "Atlanta Ink Header"
-admin.site.site_title = "Atlanta Ink Title"
+admin.site.site_header = "Atlanta Ink"
+admin.site.site_title = "Atlanta Ink"
 admin.site.index_title = "Admin"
