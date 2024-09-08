@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { getBySlug, getTattoosByArtist } from '@/lib/api';
 import { IArtist } from '@/types';
-import { Instagram } from '@/components/icons';
+import { Instagram, YouTube } from '@/components/icons';
 import { Badge, ParallaxScroll } from '@/components/ui';
 
 interface Props {
@@ -78,7 +78,7 @@ export default async function ArtistDetailPage({ params }: Props) {
             )}
             {artist.whatsapp && (
               <a href={`https://wa.me/${artist.whatsapp}`} target="_blank" rel="noopener noreferrer">
-                <Instagram />
+                <YouTube />
               </a>
             )}
           </div>

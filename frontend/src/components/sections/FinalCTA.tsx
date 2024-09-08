@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import Link from "next/link";
 import { Button } from "@nextui-org/react";
 
 export const FinalCTA = () => {
@@ -11,15 +11,13 @@ export const FinalCTA = () => {
         </header>
         <form className="max-w-screen-sm mx-auto flex flex-col space-y-4">
           <input type="text" placeholder="example@example.com" className="bg-primary border-2 border-neutral-dark py-2.5 px-4 placeholder-neutral-darkgrey" />
-          <Link href="/contact">
-            <Button
-              as={Link}
-              href="/contact"
-              className="bg-neutral-dark w-full text-neutral-light font-medium rounded-none"
-            >
-              Book Now
-            </Button>
-          </Link>
+          <Button
+            as={Link}
+            href="/contact"
+            className="bg-neutral-dark w-full text-neutral-light font-medium rounded-none"
+          >
+            Book Now
+          </Button>
         </form>
       </div>
     </section>

@@ -22,7 +22,6 @@ export const MenuBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const pathname = usePathname()
-  console.log(pathname)
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 0);
