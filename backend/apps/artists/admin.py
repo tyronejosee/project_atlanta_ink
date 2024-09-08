@@ -28,3 +28,12 @@ class ArtistAdmin(admin.ModelAdmin):
     list_editable = ["is_team"]
     readonly_fields = ["pk", "slug", "created_at", "updated_at"]
     ordering = ["pk"]
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(user_id=request.user)
+
+    def has_delete_permission(self, request, obj=None):
+        return request.user.is_superuser

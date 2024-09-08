@@ -2,6 +2,7 @@
 
 from django.contrib.auth.models import BaseUserManager
 
+
 from .choices import RoleChoices
 
 
@@ -18,7 +19,6 @@ class UserManager(BaseUserManager):
         kwargs.setdefault("role", RoleChoices.ARTIST)
         user.set_password(password)
         user.save()
-
         return user
 
     def create_superuser(self, email, password, **kwargs):
@@ -32,5 +32,4 @@ class UserManager(BaseUserManager):
         if kwargs.get("is_superuser") is not True:
             raise ValueError("Superuser must have is_superuser=True.")
         user = self.create_user(email, password=password, **kwargs)
-
         return user

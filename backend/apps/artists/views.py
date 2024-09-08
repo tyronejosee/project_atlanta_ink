@@ -53,4 +53,12 @@ class ArtistTattooListView(APIView):
         tattoos = Tattoo.objects.filter(artist_id=artist)
         serializer = self.serializer_class(tattoos, many=True)
         image_urls = [tattoo["image"] for tattoo in serializer.data]
-        return Response(image_urls)
+        # return Response(image_urls)
+
+        # ! TODO: Remove this
+        # Repeat images to reach 25 items
+        required_length = 25
+        repeated_images = (
+            image_urls * (required_length // len(image_urls))
+        ) + image_urls[: (required_length % len(image_urls))]
+        return Response(repeated_images)

@@ -6,7 +6,7 @@ from .views import CompanyDataView
 
 urlpatterns = [
     path(
-        "company/",
+        "company",
         CompanyDataView.as_view(),
         name="company-data",
     ),

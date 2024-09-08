@@ -186,6 +186,8 @@ cloudinary.config(
     secure=True,
 )
 
+APPEND_SLASH = False
+
 SPECTACULAR_SETTINGS = {
     "TITLE": "Example API",
     "DESCRIPTION": "Example decription.",

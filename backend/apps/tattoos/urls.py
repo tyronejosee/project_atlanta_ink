@@ -7,7 +7,7 @@ from .views import TattooListView
 
 urlpatterns = [
     path(
-        "tattoos/",
+        "tattoos",
         TattooListView.as_view(),
         name="tattoo-list",
     ),

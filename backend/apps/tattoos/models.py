@@ -12,7 +12,11 @@ from .managers import TattooManager
 class Tattoo(BaseModel):
     """Model definition for Tattoo."""
 
-    name = models.CharField(max_length=50, unique=True)
+    name = models.CharField(
+        max_length=50,
+        unique=True,
+        help_text="Use a descriptive and precise name, avoid generic names.",
+    )
     slug = models.SlugField(max_length=50, unique=True, blank=True)
     image = CloudinaryField()
     artist_id = models.ForeignKey(
