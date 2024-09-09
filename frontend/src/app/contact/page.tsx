@@ -1,5 +1,4 @@
 import { ContactForm, FormCard } from "@/components/forms";
-
 import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 
 export default function ContactPage() {

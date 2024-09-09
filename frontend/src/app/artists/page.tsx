@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { getData } from '@/lib/api';
-import { IArtist } from '@/types';
-import { ArtistList } from '@/components/artists';
+import { getData } from "@/lib/api";
+import { IArtist } from "@/types";
+import { ArtistList } from "@/components/artists";
 
 export const metadata: Metadata = {
   title: "Artists - Atlanta Ink",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ArtistsPage() {
-  const artists = await getData<IArtist[]>('artists');
+  const artists = await getData<IArtist[]>("artists");
 
   return (
     <main className="px-4 py-8 mx-auto max-w-7xl">

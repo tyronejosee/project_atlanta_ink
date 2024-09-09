@@ -4,7 +4,7 @@ export const Promotion = () => {
   return (
     <section
       className="relative flex justify-center items-center h-72 bg-cover bg-no-repeat md:bg-fixed"
-      style={{ backgroundImage: `url('/images/hero.webp')` }}
+      style={{ backgroundImage: `url("/images/hero.webp")` }}
     >
       <header className="flex flex-col justify-center items-center space-y-4 z-40">
         <h2 className="text-6xl font-bold">Get <span className="text-primary font-black">15%</span> discount for your first tattoo</h2>

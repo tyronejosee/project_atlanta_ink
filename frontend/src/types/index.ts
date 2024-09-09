@@ -1,5 +1,4 @@
-import Image from 'next/image';
-interface IStyle {
+export interface IStyle {
   id: string;
   name: string;
   updated_at: string;
@@ -18,4 +17,11 @@ export interface IArtist {
   is_team: boolean;
   updated_at: string;
   created_at: string;
+}
+
+
+export interface IFaq {
+  id: string;
+  question: string;
+  answer: string;
 }

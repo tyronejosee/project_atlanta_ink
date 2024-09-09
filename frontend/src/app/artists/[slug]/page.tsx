@@ -1,9 +1,9 @@
-import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import { getBySlug, getTattoosByArtist } from '@/lib/api';
-import { IArtist } from '@/types';
-import { Instagram, YouTube } from '@/components/icons';
-import { Badge, ParallaxScroll } from '@/components/ui';
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import { getBySlug, getTattoosByArtist } from "@/lib/api";
+import { IArtist } from "@/types";
+import { Instagram, YouTube } from "@/components/icons";
+import { Badge, ParallaxScroll } from "@/components/ui";
 
 interface Props {
   params: { slug: string };
@@ -13,12 +13,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { slug } = params;
 
   try {
-    const artist = await getBySlug<IArtist>('artists', slug);
+    const artist = await getBySlug<IArtist>("artists", slug);
 
     if (!artist) {
       return {
-        title: 'Artist Not Found',
-        description: 'The artist you are looking for does not exist.',
+        title: "Artist Not Found",
+        description: "The artist you are looking for does not exist.",
       };
     }
 
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   } catch {
     return {
-      title: 'Error',
-      description: 'An error occurred while loading the artist data.',
+      title: "Error",
+      description: "An error occurred while loading the artist data.",
     };
   }
 }
@@ -39,7 +39,7 @@ export default async function ArtistDetailPage({ params }: Props) {
 
   try {
     const [artist, tattoos] = await Promise.all([
-      getBySlug<IArtist>('artists', slug),
+      getBySlug<IArtist>("artists", slug),
       getTattoosByArtist<[]>(slug),
     ]);
 
@@ -90,8 +90,8 @@ export default async function ArtistDetailPage({ params }: Props) {
     );
   } catch (error) {
     return (
-      <main className="px-4 py-8 mx-auto max-w-4xl">
-        <p>Error loading artist data.</p>
+      <main className="bg-neutral-dark max-w-screen-xl mx-auto flex mt-16">
+        <p>Error load</p>
       </main>
     );
   }

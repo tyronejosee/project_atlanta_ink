@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import { Button } from "@nextui-org/react";
 import { cn } from "@/lib/utils";
-import { ChevronUp } from 'lucide-react';
+import { ChevronUp } from "lucide-react";
 
 export const BackToTop = () => {
   const { scrollYProgress } = useScroll();

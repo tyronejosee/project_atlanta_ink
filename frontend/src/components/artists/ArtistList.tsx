@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { IArtist } from '@/types';
+import Link from "next/link";
+import { IArtist } from "@/types";
 
 interface Props {
   artists: IArtist[];
@@ -8,12 +8,12 @@ interface Props {
 export const ArtistList = ({ artists }: Props) => {
 
   return (
-    <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-16">
       {artists.map((artist) => (
         <Link
           key={artist.id}
           href={`/artists/${artist.slug}`}
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="bg-neutral-darkgrey rounded-lg shadow-lg overflow-hidden"
         >
           <div className="w-full h-48 relative">
             <img

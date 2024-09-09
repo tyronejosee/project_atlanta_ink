@@ -1,9 +1,9 @@
 "use client";
 
-import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 export const Products = () => {
   const controls = useAnimation();
@@ -14,7 +14,7 @@ export const Products = () => {
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [inView, controls]);
 
@@ -31,7 +31,7 @@ export const Products = () => {
           <h2 className="text-6xl font-bold">PRODUCTS</h2>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Array(5).fill('').map((_, index) => (
+          {Array(5).fill("").map((_, index) => (
             <motion.div
               key={index}
               className="p-2 border shadow-md bg-neutral-800"

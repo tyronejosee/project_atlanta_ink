@@ -2,10 +2,10 @@ export const navCTA = { label: "Contact Us", href: "/contact" }
 export const navBrand = "Atlanta Ink"
 
 export const navItems = [
-  { id: 1, href: '/artists', label: 'Artists' },
-  { id: 2, href: '/prices', label: 'Prices' },
-  { id: 3, href: '/contact', label: 'Contact' },
-  { id: 4, href: '/test', label: 'Test' },
+  { id: 1, href: "/artists", label: "Artists" },
+  { id: 2, href: "/prices", label: "Prices" },
+  { id: 3, href: "/contact", label: "Contact" },
+  { id: 4, href: "/test", label: "Test" },
 ];
 
 export const menuItems = [

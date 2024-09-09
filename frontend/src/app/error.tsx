@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   error: Error;
@@ -10,7 +10,7 @@ interface Props {
 
 export default function GlobalError({ error, reset }: Props) {
   useEffect(() => {
-    console.error('Error:', error);
+    console.error("Error:", error);
   }, [error]);
 
   return (

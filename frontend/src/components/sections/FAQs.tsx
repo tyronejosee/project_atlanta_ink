@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { CircleHelp } from 'lucide-react';
+import { CircleHelp } from "lucide-react";
 
 export const FAQs = () => {
   const variants = {

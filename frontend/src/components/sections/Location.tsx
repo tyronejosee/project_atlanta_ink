@@ -24,7 +24,7 @@ export const Location = () => {
             height="100%"
             style={{
               border: 0,
-              filter: 'invert(1) brightness(1) grayscale(100%)'
+              filter: "invert(1) brightness(1) grayscale(100%)"
             }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

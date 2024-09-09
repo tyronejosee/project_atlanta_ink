@@ -8,19 +8,19 @@ export const Testimonials = () => {
         </header>
         <div className="space-y-4">
           <article className="bg-neutral-darkgrey p-6 shadow-md">
-            <p className="text-gray">"Excellent service, the tattoo artist understood exactly what I wanted. I will return!"</p>
+            <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
           <article className="bg-neutral-darkgrey p-6 shadow-md">
-            <p className="text-gray">"Excellent service, the tattoo artist understood exactly what I wanted. I will return!"</p>
+            <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
           <article className="bg-neutral-darkgrey p-6 shadow-md">
-            <p className="text-gray">"Excellent service, the tattoo artist understood exactly what I wanted. I will return!"</p>
+            <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
           <article className="bg-neutral-darkgrey p-6 shadow-md">
-            <p className="text-gray">"Excellent service, the tattoo artist understood exactly what I wanted. I will return!"</p>
+            <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
         </div>

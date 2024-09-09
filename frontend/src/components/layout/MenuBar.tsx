@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 import {
   Navbar,
   NavbarBrand,
@@ -13,7 +13,7 @@ import {
   NavbarMenuItem,
   Button
 } from "@nextui-org/react";
-import { Bird } from 'lucide-react';
+import { Bird } from "lucide-react";
 import { menuItems, navItems, socialLinks, navCTA, navBrand } from "@/utils/constants";
 import { Instagram, YouTube, Twitch } from "../icons";
 
@@ -64,7 +64,7 @@ export const MenuBar = () => {
             <NavbarItem key={item.id}>
               <Link
                 href={item.href}
-                className={isActive ? 'font-bold text-primary' : 'hover:font-bold'}
+                className={isActive ? "font-bold text-primary" : "hover:font-bold"}
               >
                 {item.label}
               </Link>
@@ -121,7 +121,7 @@ export const MenuBar = () => {
             <NavbarMenuItem key={item.id}>
               <Link
                 href={item.href}
-                className={isActive ? 'font-bold text-primary' : 'hover:font-bold'}
+                className={isActive ? "font-bold text-primary" : "hover:font-bold"}
               >
                 {item.label}
               </Link>

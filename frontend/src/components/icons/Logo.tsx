@@ -1,4 +1,4 @@
-import { Bird } from 'lucide-react';
+import { Bird } from "lucide-react";
 
 export const Logo = () => {
   return (

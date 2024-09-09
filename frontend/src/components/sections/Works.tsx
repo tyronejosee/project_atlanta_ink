@@ -1,6 +1,6 @@
-import React from 'react'
-import { tattoosExample } from '@/utils/constants'
-import { ParallaxScrollMain } from '../ui/ParallaxScrollMain'
+import React from "react"
+import { tattoosExample } from "@/utils/constants"
+import { ParallaxScrollMain } from "../ui/ParallaxScrollMain"
 
 export const Works = () => {
   return (

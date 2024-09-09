@@ -10,8 +10,8 @@ import {
   Services,
   Testimonials,
   Works
-} from '@/components/sections';
-import { BackToTop } from '@/components/ui';
+} from "@/components/sections";
+import { BackToTop } from "@/components/ui";
 
 export default function HomePage() {
   return (

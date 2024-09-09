@@ -1,15 +1,15 @@
 "use client"
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function NotFoundPage() {
   const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push('/');
+      router.push("/");
     }, 5000);
 
     return () => clearTimeout(timer);
