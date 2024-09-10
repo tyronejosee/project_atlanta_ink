@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getBySlug, getTattoosByArtist } from "@/lib/api";
 import { IArtist } from "@/types/global";
 import { Badge, ParallaxScroll, Instagram, YouTube } from "@/components";
+import { DEFAULT_IMAGE } from "@/utils/constants";
 
 interface Props {
   params: { slug: string };
@@ -47,7 +48,7 @@ export default async function ArtistDetailPage({ params }: Props) {
     <section className="bg-neutral-dark max-w-screen-xl mx-auto flex mt-16 min-h-screen">
       <section className="w-96 flex flex-col p-4 space-y-4">
         <Image
-          src={artist.image}
+          src={artist.image || DEFAULT_IMAGE}
           alt={artist.name}
           width={300}
           height={300}
