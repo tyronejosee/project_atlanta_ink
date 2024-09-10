@@ -29,8 +29,9 @@ BASE_APPS = [
 ]
 
 PROJECT_APPS = [
-    "apps.artists",
     "apps.applicants",
+    "apps.artists",
+    "apps.bookings",
     "apps.company",
     "apps.tattoos",
     "apps.users",
@@ -188,6 +189,8 @@ cloudinary.config(
 )
 
 APPEND_SLASH = False
+
+VALID_IMAGE_EXTENSIONS = [".webp", ".jpg", ".jpeg", ".png"]
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Example API",
