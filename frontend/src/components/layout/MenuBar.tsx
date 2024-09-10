@@ -15,7 +15,7 @@ import {
 } from "@nextui-org/react";
 import { Bird } from "lucide-react";
 import { menuItems, navItems, socialLinks, navCTA, navBrand } from "@/utils/constants";
-import { Instagram, YouTube, Twitch } from "../icons";
+import { Instagram, YouTube, Twitch } from "@/components";
 
 export const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

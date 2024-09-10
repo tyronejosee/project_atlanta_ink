@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getData } from "@/lib/api";
-import { IArtist } from "@/types";
-import { ArtistList } from "@/components/artists";
+import { IArtist } from "@/types/global";
+import { ArtistList } from "@/components";
 
 export const metadata: Metadata = {
   title: "Artists - Atlanta Ink",

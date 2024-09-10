@@ -1,5 +1,3 @@
-import { Contact } from "lucide-react"
-
 export const Location = () => {
   return (
     <section className="py-16">
@@ -11,7 +9,7 @@ export const Location = () => {
         <div className="flex h-64 md:h-96">
           <div className="relative md:w-1/2 flex flex-col justify-center items-center bg-neutral-darkgrey overflow-x-hidden">
             <h3 className="text-3xl text-primary font-bold mb-2">Contact Information</h3>
-            <span className="text-lg text-neutral-gray font-bold mb-4">Don't wait any longer contact us</span>
+            <span className="text-lg text-neutral-gray font-bold mb-4">Dont wait any longer contact us</span>
             <p><strong>Address:</strong> 1039 Grant St SE A10, Atlanta, GA 30315, US</p>
             <p><strong>Hours:</strong> Monday to Saturday, 12:00 PM - 20:00 PM</p>
             <p><strong>Phone:</strong> +1 404-123-1234</p>

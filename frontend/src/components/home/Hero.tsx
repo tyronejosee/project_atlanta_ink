@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
-import { Logo } from "../icons";
 
+import { motion } from "framer-motion";
+import { Logo } from "@/components";
 
 export const Hero = () => {
   return (

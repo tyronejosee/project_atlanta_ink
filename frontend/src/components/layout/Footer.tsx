@@ -1,6 +1,3 @@
-import { Logo, Instagram, YouTube, Twitch } from "../icons";
-import { socialLinks } from "@/utils/constants";
-
 export const Footer = () => {
   return (
     <footer className="mt-auto bg-neutral-darkgrey">

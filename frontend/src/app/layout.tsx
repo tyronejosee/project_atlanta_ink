@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
-import "./globals.css";
-import { MenuBar, Footer } from "@/components/layout";
-import { WhatsAppButton } from "@/components/ui";
+import "../styles/globals.css";
+import { MenuBar, Footer, WhatsAppButton } from "@/components";
 
 const space = Space_Grotesk({ subsets: ["latin"] });
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IArtist } from "@/types";
+import { IArtist } from "@/types/global";
 
 interface Props {
   artists: IArtist[];

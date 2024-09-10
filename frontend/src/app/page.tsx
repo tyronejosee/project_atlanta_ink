@@ -9,9 +9,9 @@ import {
   Promotion,
   Services,
   Testimonials,
-  Works
-} from "@/components/sections";
-import { BackToTop } from "@/components/ui";
+  Works,
+  BackToTop
+} from "@/components";
 
 export default function HomePage() {
   return (
