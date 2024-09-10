@@ -4,6 +4,7 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
+from rest_framework import status
 
 from apps.tattoos.models import Tattoo
 from apps.tattoos.serializers import TattooImageSerializer
@@ -51,14 +52,13 @@ class ArtistTattooListView(APIView):
             raise NotFound("Artist not found.")
 
         tattoos = Tattoo.objects.filter(artist_id=artist)
+
+        if not tattoos.exists():
+            return Response(
+                {"detail": "No tattoos found."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
         serializer = self.serializer_class(tattoos, many=True)
         image_urls = [tattoo["image"] for tattoo in serializer.data]
-        # return Response(image_urls)
-
-        # ! TODO: Remove this
-        # Repeat images to reach 25 items
-        required_length = 25
-        repeated_images = (
-            image_urls * (required_length // len(image_urls))
-        ) + image_urls[: (required_length % len(image_urls))]
-        return Response(repeated_images)
+        return Response(image_urls)
