@@ -22,14 +22,14 @@ class CreateBookingView(APIView):
     def post(self, request, *args, **kwargs):
         try:
             serializer = self.serializer_class(data=request.data)
-            if serializer.is_valid:
+            if serializer.is_valid():
                 serializer.save()
                 return Response(
                     {"detail": "Record created successfully."},
                     status=status.HTTP_201_CREATED,
                 )
             return Response(
-                serializer.data,
+                serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST,
             )
         except Exception as e:

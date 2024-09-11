@@ -6,8 +6,6 @@ from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
 
 from apps.utils.models import BaseModel
-
-# from apps.utils.validators import validate_phone
 from .managers import ArtistManager, StyleManager
 
 User = settings.AUTH_USER_MODEL

@@ -6,8 +6,8 @@ from cloudinary.models import CloudinaryField
 from apps.utils.models import BaseModel
 from apps.artists.models import Artist
 from apps.utils.validators import validate_phone
-from .managers import ReservationManager
-from .choices import StatusReservationChoices, PlacementChoices
+from .managers import BookingManager
+from .choices import StatusBookingChoices, PlacementChoices
 
 
 class Booking(BaseModel):
@@ -26,7 +26,7 @@ class Booking(BaseModel):
     )
     artist_id = models.ForeignKey(
         Artist,
-        related_name="reservations",
+        related_name="bookings",
         blank=True,
         null=True,
         on_delete=models.PROTECT,
@@ -45,8 +45,8 @@ class Booking(BaseModel):
     )
     status = models.CharField(
         max_length=10,
-        choices=StatusReservationChoices,
-        default=StatusReservationChoices.PENDING,
+        choices=StatusBookingChoices,
+        default=StatusBookingChoices.PENDING,
     )
     is_first_time = models.BooleanField(
         default=False, help_text="Is this your first tattoo?"
@@ -56,12 +56,12 @@ class Booking(BaseModel):
         help_text="Indicate whether you have a work in progress tattoo",
     )
 
-    objects = ReservationManager()
+    objects = BookingManager()
 
     class Meta:
         ordering = ["pk"]
-        verbose_name = "reservation"
-        verbose_name_plural = "reservations"
+        verbose_name = "booking"
+        verbose_name_plural = "bookings"
 
     def __str__(self):
         return str(f"{self.first_name} {self.last_name}")

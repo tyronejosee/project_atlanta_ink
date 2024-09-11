@@ -33,8 +33,9 @@ urlpatterns = [
         name="schema",
     ),
     # Apps urls
-    path("api/", include("apps.artists.urls")),
     path("api/", include("apps.applicants.urls")),
+    path("api/", include("apps.artists.urls")),
+    path("api/", include("apps.bookings.urls")),
     path("api/", include("apps.company.urls")),
     path("api/", include("apps.tattoos.urls")),
 ]
