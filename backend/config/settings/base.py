@@ -41,6 +41,7 @@ PROJECT_APPS = [
 THIRD_APPS = [
     "rest_framework",
     "cloudinary",
+    "corsheaders",
     "drf_spectacular",
     "drf_spectacular_sidecar",
 ]
@@ -50,6 +51,7 @@ INSTALLED_APPS = BASE_APPS + PROJECT_APPS + THIRD_APPS
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -139,11 +141,8 @@ else:
     }
 
 REST_FRAMEWORK = {
-    # "DEFAULT_AUTHENTICATION_CLASSES": [
-    #     "rest_framework_simplejwt.authentication.JWTAuthentication",
-    # ],
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticatedOrReadOnly"
+        "rest_framework.permissions.AllowAny",
     ],
     "DEFAULT_THROTTLE_CLASSES": [
         "rest_framework.throttling.AnonRateThrottle",
@@ -151,7 +150,6 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_CONTENT_LANGUAGE": "en",
-    # "DEFAULT_PAGINATION_CLASS": "apps.utils.pagination.LimitSetPagination",
     "DEFAULT_FILTER_BACKENDS": [
         "rest_framework.filters.SearchFilter",
         "django_filters.rest_framework.DjangoFilterBackend",
@@ -162,24 +160,38 @@ REST_FRAMEWORK = {
         "daily": "1000/day",
     },
     "NUM_PROXIES": None,
-    # "PAGE_SIZE": 25,
     "SEARCH_PARAM": "q",
     "ORDERING_PARAM": "order",
 }
 
 AUTH_USER_MODEL = "users.User"
 
-CORS_ALLOW_HEADERS = [
-    "Authorization",
-    "Content-Type",
-    "accept",
-    "accept-encoding",
-    "content-disposition",
-    "origin",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
+# CORS_ALLOW_HEADERS = [
+#     "Authorization",
+#     "Content-Type",
+#     "accept",
+#     "accept-encoding",
+#     "content-disposition",
+#     "origin",
+#     "user-agent",
+#     "x-csrftoken",
+#     "x-requested-with",
+# ]
+
+CORS_ALLOW_HEADERS = ["*"]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://0.0.0.0:3000",
 ]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 cloudinary.config(
     cloud_name=env("CLOUDINARY_CLOUD_NAME"),
