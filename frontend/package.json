@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "atlanta_ink_frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/badge": "^2.0.31",
+    "@nextui-org/checkbox": "^2.1.4",
     "@nextui-org/navbar": "^2.0.36",
     "@nextui-org/react": "^2.4.6",
+    "@nextui-org/select": "^2.2.5",
     "@nextui-org/system": "^2.2.5",
     "@nextui-org/theme": "^2.2.9",
     "class-variance-authority": "^0.7.0",
@@ -20,6 +23,7 @@
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
     "react-intersection-observer": "^9.13.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"

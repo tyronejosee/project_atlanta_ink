@@ -1,3 +1,25 @@
+export const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+if (!API_URL) {
+  throw new Error("API base URL is not defined in .env");
+}
+
+
+export const PLACEMENT_CHOICES = [
+  { key: "arm", label: "Arm" },
+  { key: "leg", label: "Leg" },
+  { key: "back", label: "Back" },
+  { key: "chest", label: "Chest" },
+  { key: "abdomen", label: "Abdomen" },
+  { key: "side", label: "Side" },
+  { key: "foot", label: "Foot" },
+  { key: "hand", label: "Hand" },
+  { key: "neck", label: "Neck" },
+  { key: "other", label: "Other" },
+];
+
+export const DEFAULT_IMAGE = "/images/no-image.webp";
+
 export const navCTA = { label: "Contact Us", href: "/contact" }
 export const navBrand = "Atlanta Ink"
 

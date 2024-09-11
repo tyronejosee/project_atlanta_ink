@@ -8,10 +8,10 @@ export interface IStyle {
 export interface IArtist {
   id: string;
   name: string;
-  image: string;
-  instagram: string;
-  whatsapp: string;
-  description: string;
+  image?: string;
+  instagram?: string;
+  whatsapp?: string;
+  description?: string;
   slug: string;
   styles: IStyle[];
   is_team: boolean;
@@ -24,4 +24,16 @@ export interface IFaq {
   id: string;
   question: string;
   answer: string;
+}
+
+export interface IBookingValues {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  notes: string;
+  budget: string;
+  placement: string;
+  hasWorkInProgress: boolean;
+  firstTimeSession: boolean;
+  file: FileList;
 }
