@@ -1,4 +1,6 @@
 import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { BookingForm, FormCard } from "@/components";
 
 export default function BookingsPage() {
@@ -36,6 +38,7 @@ export default function BookingsPage() {
         </section>
         <BookingForm />
       </div>
+      <ToastContainer />
     </section >
   );
 };

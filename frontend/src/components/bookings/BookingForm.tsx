@@ -1,16 +1,18 @@
 "use client"
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { API_URL, PLACEMENT_CHOICES } from "@/utils/constants";
 import { Button, Checkbox, Input, Select, SelectItem, Textarea } from "@nextui-org/react";
-import { IBookingValues } from "@/types/global";
-import { validateBudget, validatePhone } from "@/utils/validators";
+import { toast } from "react-toastify";
+
 import { FormErrors } from "@/components";
+import { API_URL, PLACEMENT_CHOICES } from "@/utils/constants";
+import { validateBudget, validatePhone } from "@/utils/validators";
+import { IBookingValues } from "@/types/global";
 
 
 
 export const BookingForm = () => {
-  const { register, handleSubmit, formState: { errors }, watch } = useForm<IBookingValues>();
+  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<IBookingValues>();
 
   const onSubmit: SubmitHandler<IBookingValues> = async (data) => {
     const formData = new FormData();
@@ -36,9 +38,11 @@ export const BookingForm = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
-      console.log("Booking created successfully.");
+      toast.success("Booking created successfully.");
+      reset();
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
+      toast.error("There was a problem with the submission. Please try again.");
     }
   };
 
