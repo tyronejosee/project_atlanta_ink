@@ -14,6 +14,23 @@ import { IBookingValues } from "@/types/global";
 export const BookingForm = () => {
   const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<IBookingValues>();
 
+  const notify = () => toast.success("Wow so easy!", {
+    theme: "dark",
+    position: "top-center",
+    hideProgressBar: true,
+    closeButton: false,
+    icon: false,
+    pauseOnFocusLoss: false,
+    style: {
+      backgroundColor: "#FF4200",
+      color: "#fafafa",
+      border: "none",
+      textAlign: "center",
+      padding: "16px 24px",
+      borderRadius: "8px"
+    }
+  });
+
   const onSubmit: SubmitHandler<IBookingValues> = async (data) => {
     const formData = new FormData();
 
@@ -38,53 +55,60 @@ export const BookingForm = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
-      toast.success("Booking created successfully.");
+      toast.success("Booking created successfully.", {
+        theme: "dark",
+        style: { backgroundColor: "#333", color: "#fff" }
+      });
       reset();
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
-      toast.error("There was a problem with the submission. Please try again.");
+      toast.error("There was a problem with the submission. Please try again.", {
+        theme: "dark",
+        style: { backgroundColor: "#333", color: "#fff" }
+      });
     }
   };
 
   return (
     <section className="w-full p-4">
       <h1 className="text-3xl font-bold mb-4">Send your message</h1>
+      <button onClick={notify}>Notify!</button>
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         <Input
           label="First Name"
           type="text"
-          radius="none"
+          radius="md"
           required
           {...register("firstName", { required: "First name is required" })}
         />
 
-        {errors.firstName && <FormErrors>* {errors.firstName.message}</FormErrors>}
+        {errors.firstName?.message && <FormErrors>* {errors.firstName?.message}</FormErrors>}
 
         <Input
           label="Last Name"
           type="text"
-          radius="none"
+          radius="md"
           required
           {...register("lastName", { required: "Last name is required" })}
         />
-        {errors.lastName && <FormErrors>* {errors.lastName.message}</FormErrors>}
+        {errors.lastName?.message && <FormErrors>* {errors.lastName?.message}</FormErrors>}
 
         <Input
           label="Phone"
           type="phone"
-          radius="none"
+          radius="md"
           required
           isClearable
-          {...register("phone", { required: "Phone number is required" })}
+          {...register("phone", { validate: validatePhone })}
         />
-        {errors.phone && <FormErrors>* {errors.phone.message}</FormErrors>}
+        {errors.phone?.message && <FormErrors>* {errors.phone?.message}</FormErrors>}
 
         <Textarea
           label="Notes"
-          radius="none"
+          radius="md"
           {...register("notes", { required: "Notes are required" })}
         />
-        {errors.notes && <FormErrors>* {errors.notes.message}</FormErrors>}
+        {errors.notes?.message && <FormErrors>* {errors.notes?.message}</FormErrors>}
 
         <div>
           <input
@@ -107,15 +131,15 @@ export const BookingForm = () => {
         <Input
           label="Estimated Budget"
           type="decimal"
-          radius="none"
+          radius="md"
           {...register("budget", { validate: validateBudget })}
         />
-        {errors.budget && <FormErrors>* {errors.budget.message}</FormErrors>}
+        {errors.budget?.message && <FormErrors>* {errors.budget?.message}</FormErrors>}
 
         <Select
           label="Select a tattoo placement"
           className="max-w-xs"
-          placeholder="Select a placement"
+          radius="md"
           {...register("placement", { required: "Tattoo placement is required" })}
         >
           {PLACEMENT_CHOICES.map((choice) => (
@@ -124,7 +148,7 @@ export const BookingForm = () => {
             </SelectItem>
           ))}
         </Select>
-        {errors.placement && <FormErrors>* {errors.placement.message}</FormErrors>}
+        {errors.placement?.message && <FormErrors>* {errors.placement?.message}</FormErrors>}
 
         <div className="flex flex-col space-y-2">
           <Checkbox
@@ -141,7 +165,7 @@ export const BookingForm = () => {
         <Button
           type="submit"
           color="primary"
-          radius="none"
+          radius="md"
           className="font-medium"
         >
           Create Booking

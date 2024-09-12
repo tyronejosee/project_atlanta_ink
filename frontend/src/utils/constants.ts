@@ -4,7 +4,6 @@ if (!API_URL) {
   throw new Error("API base URL is not defined in .env");
 }
 
-
 export const PLACEMENT_CHOICES = [
   { key: "arm", label: "Arm" },
   { key: "leg", label: "Leg" },
@@ -20,21 +19,20 @@ export const PLACEMENT_CHOICES = [
 
 export const DEFAULT_IMAGE = "/images/no-image.webp";
 
-export const navCTA = { label: "Contact Us", href: "/contact" }
+export const navCTA = { label: "Book Now", href: "/bookings" }
 export const navBrand = "Atlanta Ink"
 
 export const navItems = [
   { id: 1, href: "/artists", label: "Artists" },
   { id: 2, href: "/prices", label: "Prices" },
-  { id: 3, href: "/contact", label: "Contact" },
-  { id: 4, href: "/test", label: "Test" },
+  { id: 1, href: "/products", label: "Products" },
 ];
 
 export const menuItems = [
   { id: 1, label: "Artists", href: "/artists" },
   { id: 2, label: "Prices", href: "/prices" },
   { id: 3, label: "Products", href: "/products" },
-  { id: 4, label: "Contact", href: "/contact" },
+  { id: 4, label: "Bookings", href: "/bookings" },
 ];
 
 export const socialLinks = {

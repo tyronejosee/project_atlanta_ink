@@ -1,5 +1,5 @@
 export const validatePhone = (value: string) => {
-  const phonePattern = /^[0-9]{10,15}$/;
+  const phonePattern = /^\+1404\d{7}$/;
   return phonePattern.test(value) || "Invalid phone number";
 };
 

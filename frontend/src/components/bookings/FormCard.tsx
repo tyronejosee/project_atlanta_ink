@@ -8,7 +8,7 @@ interface Props {
 
 export const FormCard = ({ title, text, icon }: Props) => {
   return (
-    <div className="group flex bg-neutral-darkgrey p-4 hover:bg-primary">
+    <div className="group flex bg-neutral-darkgrey p-4 hover:bg-primary rounded-xl">
       <div className="size-12 inline-flex justify-center items-center">
         {icon}
       </div>

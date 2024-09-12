@@ -16,7 +16,7 @@ export const Services = () => {
       <div className="max-w-screen-xl mx-auto text-center">
         <header className="space-y-4 mb-8">
           <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
-          <h2 className="text-6xl font-bold text-white">SERVICES</h2>
+          <h2 className="text-6xl font-bold text-white">Services</h2>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {serviceItems.map((service) => {
@@ -33,7 +33,7 @@ export const Services = () => {
                 variants={variants}
                 transition={{ duration: 0.5 }}
               >
-                <article className="relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden">
+                <article className="relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl">
                   <div className="absolute inset-0 bg-primary"></div>
                   <div className="absolute inset-0 bg-neutral-dark">
                     <Image

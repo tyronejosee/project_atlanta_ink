@@ -10,7 +10,7 @@ export const WhatsAppButton = () => {
 
   return (
     <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
-      <button className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 hover:bg-green-600">
+      <button className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 hover:bg-green-600 rounded-xl">
         <WhatsApp />
       </button>
     </Link>

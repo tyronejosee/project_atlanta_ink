@@ -7,19 +7,19 @@ export const Testimonials = () => {
           <h2 className="text-6xl font-bold">Testimonials</h2>
         </header>
         <div className="space-y-4">
-          <article className="bg-neutral-darkgrey p-6 shadow-md">
+          <article className="bg-neutral-darkgrey p-6 shadow-md rounded-xl">
             <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
-          <article className="bg-neutral-darkgrey p-6 shadow-md">
+          <article className="bg-neutral-darkgrey p-6 shadow-md rounded-xl">
             <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
-          <article className="bg-neutral-darkgrey p-6 shadow-md">
+          <article className="bg-neutral-darkgrey p-6 shadow-md rounded-xl">
             <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>
-          <article className="bg-neutral-darkgrey p-6 shadow-md">
+          <article className="bg-neutral-darkgrey p-6 shadow-md rounded-xl">
             <p className="text-gray">Excellent service, the tattoo artist understood exactly what I wanted. I will return!</p>
             <h3 className="mt-4 font-bold text-primary">Satisfied Customer</h3>
           </article>

@@ -52,7 +52,7 @@ export const FAQs = () => {
                 variants={variants}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <article className="relative bg-neutral-darkgrey p-6 flex flex-col items-center justify-center overflow-hidden">
+                <article className="relative bg-neutral-darkgrey p-6 flex flex-col items-center justify-center overflow-hidden rounded-xl">
                   <h4 className="font-bold text-primary">{faq.question}</h4>
                   <p className="text-neutral-gray">{faq.answer}</p>
                   <CircleHelp className="rotate-12 size-14 opacity-10 absolute -top-2 -right-2" />

@@ -21,7 +21,7 @@ export const Location = () => {
             width="100%"
             height="100%"
             style={{
-              border: 0,
+              border: "16px",
               filter: "invert(1) brightness(1) grayscale(100%)"
             }}
             loading="lazy"

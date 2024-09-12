@@ -106,7 +106,7 @@ export const MenuBar = () => {
           <Button
             as={Link}
             href={navCTA.href}
-            className="bg-primary text-neutral-light font-medium rounded-none"
+            className="bg-primary text-neutral-light font-medium rounded-xl"
           >
             {navCTA.label}
           </Button>

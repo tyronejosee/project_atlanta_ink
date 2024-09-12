@@ -1,38 +1,40 @@
-"use client";
+"use client"
 
-import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 interface Props {
-  error: Error;
-  reset: () => void;
+  content: string
 }
 
-export default function GlobalError({ error, reset }: Props) {
-  useEffect(() => {
-    console.error("Error:", error);
-  }, [error]);
+export const EmptyList = ({ content = "content" }: Props) => {
+  const router = useRouter();
+
+  const goBackToHome = () => {
+    router.push("/");
+  };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-4 py-16 space-y-8">
+    <section className="flex flex-col items-center justify-center h-[450px] px-4 py-16 space-y-8">
       <motion.header
         className="flex flex-col justify-center items-center"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <h1 className="text-7xl font-bold text-primary mb-4">500</h1>
-        <p>{error.message}</p>
+        <p className="text-7xl font-bold text-primary mb-4">Upps!</p>
+        <p>No {content} available at the moment.</p>
       </motion.header>
       <motion.button
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        onClick={() => reset()}
+        onClick={goBackToHome}
         className="px-4 py-2 bg-primary hover:bg-primary/50 text-neutral-light rounded-xl transition-colors"
       >
-        Retry
+        Go back to home
       </motion.button>
     </section>
-  );
+  )
 }
+

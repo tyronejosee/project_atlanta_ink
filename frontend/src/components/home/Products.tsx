@@ -28,13 +28,13 @@ export const Products = () => {
       <div className="max-w-screen-xl mx-auto">
         <header className="space-y-4 mb-8 text-center">
           <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
-          <h2 className="text-6xl font-bold">PRODUCTS</h2>
+          <h2 className="text-6xl font-bold">Products</h2>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Array(5).fill("").map((_, index) => (
             <motion.div
               key={index}
-              className="p-2 border shadow-md bg-neutral-800"
+              className="p-2 border shadow-md bg-neutral-800 rounded-xl"
               variants={itemVariants}
               initial="hidden"
               animate={controls}
@@ -49,7 +49,7 @@ export const Products = () => {
                 alt={`Artist ${index + 1}`}
                 width={300}
                 height={300}
-                className="w-full h-48 object-cover mb-4"
+                className="w-full h-48 object-cover mb-4 rounded-xl"
               />
               <h3 className="text-xl font-bold">Artist {index + 1}</h3>
               <p className="text-primary">$5USD</p>

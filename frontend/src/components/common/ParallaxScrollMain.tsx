@@ -52,7 +52,7 @@ export const ParallaxScrollMain = ({
             >
               <Image
                 src={el}
-                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -65,7 +65,7 @@ export const ParallaxScrollMain = ({
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <Image
                 src={el}
-                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -78,7 +78,7 @@ export const ParallaxScrollMain = ({
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <Image
                 src={el}
-                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -91,7 +91,7 @@ export const ParallaxScrollMain = ({
             <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
               <Image
                 src={el}
-                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -104,7 +104,7 @@ export const ParallaxScrollMain = ({
             <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
               <Image
                 src={el}
-                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
