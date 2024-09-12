@@ -17,6 +17,13 @@ export const PLACEMENT_CHOICES = [
   { key: "other", label: "Other" },
 ];
 
+export const PRODUCT_FILTER_CHOICES = [
+  { key: 1, value: "popularity", label: "Popularity" },
+  { key: 2, value: "latest", label: "Latest" },
+  { key: 3, value: "price_low", label: "Price: Low to high" },
+  { key: 4, value: "price_high", label: "Pprice: Hight to low" },
+];
+
 export const DEFAULT_IMAGE = "/images/no-image.webp";
 
 export const navCTA = { label: "Book Now", href: "/bookings" }
