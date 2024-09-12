@@ -8,7 +8,6 @@ import {
   Products,
   Promotion,
   Services,
-  Testimonials,
   Works,
   BackToTop
 } from "@/components";
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Services />
       <Works />
       <Artists />
-      <Testimonials />
       <Pricing />
       <Products />
       <FAQs />
