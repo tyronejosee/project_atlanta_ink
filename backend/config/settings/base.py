@@ -33,6 +33,7 @@ PROJECT_APPS = [
     "apps.artists",
     "apps.bookings",
     "apps.company",
+    "apps.products",
     "apps.tattoos",
     "apps.users",
     "apps.utils",
