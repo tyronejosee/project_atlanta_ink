@@ -19,6 +19,24 @@ export interface IArtist {
   created_at: string;
 }
 
+export interface IProduct {
+  id: string;
+  name: string;
+  slug: string;
+  description?: string;
+  price: number;
+  currency: string;
+  image?: string;
+  category: string;
+  stock: number;
+  updated_at: string;
+  created_at: string;
+}
+
+export interface ICategory {
+  id: string;
+  name: string;
+}
 
 export interface IFaq {
   id: string;

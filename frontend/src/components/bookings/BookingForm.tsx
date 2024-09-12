@@ -113,6 +113,7 @@ export const BookingForm = () => {
         <div>
           <input
             type="file"
+            className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
             {...register("file")}
           />
         </div>
