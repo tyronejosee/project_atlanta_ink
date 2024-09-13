@@ -1,45 +1,33 @@
-"use client"
+import { ProductHeader, ProductList, ProductPagination, Sidebar } from "@/components";
+import { API_URL } from "@/utils/constants";
 
-import { Select, SelectItem, Pagination } from "@nextui-org/react";
-import { Headline, ProductList, Sidebar } from "@/components";
-import { PRODUCT_FILTER_CHOICES } from "@/utils/constants";
-import { products } from "@/utils/data";
+async function getProducts() {
+  const res = await fetch(`${API_URL}/products`, {
+    next: { revalidate: 10 },
+  });
 
-export default function ProductsPage() {
+  if (!res.ok) {
+    throw new Error("Failed to fetch products");
+  }
+
+  return res.json();
+}
+
+export default async function ProductsPage() {
+  const products = await getProducts();
+
   return (
     <>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-16">
         <div className="flex">
           <Sidebar />
           <section className="pl-56 ml-4">
-            <nav className="flex justify-between py-4">
-              <Headline title="Products" />
-              <Select
-                size="sm"
-                label="Sort by"
-                className="w-60"
-              >
-                {PRODUCT_FILTER_CHOICES.map((choices) => (
-                  <SelectItem key={choices.key}>
-                    {choices.label}
-                  </SelectItem>
-                ))}
-              </Select>
-            </nav>
+            <ProductHeader />
             <ProductList products={products} />
-            <nav className="flex justify-center items-center py-4">
-              <Pagination
-                loop
-                showControls
-                color={"primary"}
-                total={5}
-                initialPage={1}
-              />
-            </nav>
+            <ProductPagination />
           </section>
         </div>
       </div>
     </>
   )
 }
-

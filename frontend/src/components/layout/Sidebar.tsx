@@ -7,7 +7,7 @@ import { categories } from "@/utils/data"
 
 export const Sidebar = () => {
   return (
-    <aside className="bg-neutral-dark fixed top-16 w-56 h-[620px] border-r border-r-neutral-darkgrey z-20 space-y-4 p-4 overflow-y-auto rounded-br-3xl">
+    <aside className="fixed top-16 w-56 h-[620px] border-r border-r-neutral-darkgrey z-20 space-y-4 p-4 overflow-y-auto">
       <nav className="space-y-8">
         <Input
           label="Search"

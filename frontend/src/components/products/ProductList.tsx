@@ -18,7 +18,7 @@ export const ProductList = ({ products }: Props) => {
         >
           <div className="w-full h-60 relative">
             <Image
-              src={DEFAULT_IMAGE}
+              src={product.image || DEFAULT_IMAGE}
               alt={product.name}
               fill
               style={{ objectFit: "cover" }}

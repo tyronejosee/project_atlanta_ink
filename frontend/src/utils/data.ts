@@ -1,22 +1,4 @@
-import { ICategory, IProduct } from "@/types/global";
-
-export const products: IProduct[] = [
-  {
-    id: "cfe0e91c-63c0-49b7-acc2-be42f6de1fc2",
-    name: "Temporary Dragon Tattoo",
-    slug: "temporary-dragon-tattoo",
-    sku: "TEM-192ASD",
-    description: "Temporary dragon tattoo with vibrant details and long-lasting colors.",
-    price: 15.99,
-    currency: "usd",
-    image: "/images/temporary-dragon-tattoo.jpg",
-    category: "Temporary Tattoos",
-    stock: 50,
-    is_featured: false,
-    updated_at: new Date().toISOString(),
-    created_at: new Date().toISOString()
-  },
-]
+import { ICategory } from "@/types/global";
 
 export const categories: ICategory[] = [
   {
