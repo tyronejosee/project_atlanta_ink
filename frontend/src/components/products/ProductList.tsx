@@ -13,7 +13,7 @@ export const ProductList = ({ products }: Props) => {
       {products.map((product) => (
         <Link
           key={product.id}
-          href={`/artists/${product.slug}`}
+          href={`/products/${product.slug}`}
           className="bg-neutral-darkgrey shadow-lg rounded-xl overflow-hidden"
         >
           <div className="w-full h-60 relative">

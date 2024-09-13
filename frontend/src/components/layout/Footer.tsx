@@ -1,6 +1,15 @@
+"use client"
+
+import { usePathname } from "next/navigation";
 import { HR } from "@/components";
 
 export const Footer = () => {
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/products")) {
+    return null;
+  }
+
   return (
     <footer className="mt-auto bg-neutral-darkgrey">
       <div className="max-w-screen-xl mx-auto text-center py-8 space-y-4">

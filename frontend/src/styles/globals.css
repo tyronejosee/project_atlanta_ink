@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   @apply font-sans dark:bg-neutral-dark dark:text-neutral-100 dark:selection:bg-primary dark:selection:text-neutral-light;
 }
 
