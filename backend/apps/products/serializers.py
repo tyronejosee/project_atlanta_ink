@@ -5,8 +5,8 @@ from rest_framework import serializers
 from .models import Category, Product
 
 
-class CategorySerializer(serializers.ModelSerializer):
-    """Serializer for Category model."""
+class CategoryReadSerializer(serializers.ModelSerializer):
+    """Serializer for Category model (List/retrieve)."""
 
     class Meta:
         model = Category
@@ -14,10 +14,13 @@ class CategorySerializer(serializers.ModelSerializer):
             "id",
             "name",
         ]
+        extra_kwargs = {
+            field.name: {"read_only": True} for field in Category._meta.fields
+        }
 
 
-class ProductSerializer(serializers.ModelSerializer):
-    """Serializer for Product model."""
+class ProductReadSerializer(serializers.ModelSerializer):
+    """Serializer for Product model (List/retrieve)."""
 
     category = serializers.PrimaryKeyRelatedField(
         source="category_id",
@@ -40,6 +43,9 @@ class ProductSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         ]
+        extra_kwargs = {
+            field.name: {"read_only": True} for field in Product._meta.fields
+        }
 
 
 class ProductMinimalSerializer(serializers.ModelSerializer):
@@ -59,3 +65,6 @@ class ProductMinimalSerializer(serializers.ModelSerializer):
             "image",
             "category",
         ]
+        extra_kwargs = {
+            field.name: {"read_only": True} for field in Product._meta.fields
+        }
