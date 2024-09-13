@@ -2,12 +2,27 @@
 
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 
-from .models import Category, Product
+from .models import Brand, Category, Product
 from .serializers import (
+    BrandReadSerializer,
     CategoryReadSerializer,
     ProductReadSerializer,
     ProductMinimalSerializer,
 )
+
+
+class BrandListView(ListAPIView):
+    """
+    View for listing all brands.
+
+    Endpoints:
+    - GET /api/brands
+    """
+
+    serializer_class = BrandReadSerializer
+
+    def get_queryset(self):
+        return Brand.objects.get_list()
 
 
 class CategoryListView(ListAPIView):

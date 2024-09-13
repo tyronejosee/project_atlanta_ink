@@ -2,7 +2,18 @@
 
 from django.contrib import admin
 
-from .models import Category, Product
+from .models import Brand, Category, Product
+
+
+@admin.register(Brand)
+class BrandAdmin(admin.ModelAdmin):
+    """Admin for Brand model."""
+
+    list_per_page = 25
+    search_fields = ["name"]
+    list_display = ["name", "is_available"]
+    list_editable = ["is_available"]
+    readonly_fields = ["pk", "created_at", "updated_at"]
 
 
 @admin.register(Category)

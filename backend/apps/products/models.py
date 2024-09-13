@@ -5,8 +5,24 @@ from cloudinary.models import CloudinaryField
 
 from apps.utils.mixins import SlugMixin
 from apps.utils.models import BaseModel
-from .managers import CategoryManager, ProductManager
+from .managers import BrandManager, CategoryManager, ProductManager
 from .choices import CurrencyTypeChoices
+
+
+class Brand(BaseModel):
+    """Model definition for Brand model."""
+
+    name = models.CharField(max_length=50, unique=True)
+
+    objects = BrandManager()
+
+    class Meta:
+        ordering = ["pk"]
+        verbose_name = "brand"
+        verbose_name_plural = "brands"
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Category(BaseModel):
@@ -41,6 +57,11 @@ class Product(SlugMixin, BaseModel):
     )
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    brand_id = models.ForeignKey(
+        Brand,
+        related_name="products",
+        on_delete=models.PROTECT,
+    )
     currency = models.CharField(
         max_length=3,
         choices=CurrencyTypeChoices.choices,

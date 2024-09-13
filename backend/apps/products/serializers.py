@@ -2,7 +2,21 @@
 
 from rest_framework import serializers
 
-from .models import Category, Product
+from .models import Brand, Category, Product
+
+
+class BrandReadSerializer(serializers.ModelSerializer):
+    """Serializer for Brand model (List/retrieve)."""
+
+    class Meta:
+        model = Brand
+        fields = [
+            "id",
+            "name",
+        ]
+        extra_kwargs = {
+            field.name: {"read_only": True} for field in Brand._meta.fields
+        }
 
 
 class CategoryReadSerializer(serializers.ModelSerializer):
@@ -22,19 +36,20 @@ class CategoryReadSerializer(serializers.ModelSerializer):
 class ProductReadSerializer(serializers.ModelSerializer):
     """Serializer for Product model (List/retrieve)."""
 
-    category = serializers.PrimaryKeyRelatedField(
-        source="category_id",
-        read_only=True,
-    )
+    image = serializers.SerializerMethodField()
+    brand = serializers.StringRelatedField(source="brand_id")
+    category = serializers.StringRelatedField(source="category_id")
 
     class Meta:
         model = Product
         fields = [
             "id",
             "name",
+            "slug",
             "sku",
             "description",
             "price",
+            "brand",
             "currency",
             "image",
             "category",
@@ -47,24 +62,31 @@ class ProductReadSerializer(serializers.ModelSerializer):
             field.name: {"read_only": True} for field in Product._meta.fields
         }
 
+    def get_image(self, obj):
+        return obj.image.url
+
 
 class ProductMinimalSerializer(serializers.ModelSerializer):
     """Serializer for Product model (Minimal)."""
 
-    category = serializers.PrimaryKeyRelatedField(
-        source="category_id",
-        read_only=True,
-    )
+    image = serializers.SerializerMethodField()
+    brand = serializers.StringRelatedField(source="brand_id")
+    category = serializers.StringRelatedField(source="category_id")
 
     class Meta:
         model = Product
         fields = [
             "id",
             "name",
+            "slug",
             "price",
+            "brand",
             "image",
             "category",
         ]
         extra_kwargs = {
             field.name: {"read_only": True} for field in Product._meta.fields
         }
+
+    def get_image(self, obj):
+        return obj.image.url
