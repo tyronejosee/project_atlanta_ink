@@ -1,7 +1,7 @@
 import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BookingForm, FormCard } from "@/components";
+import { BookingForm, FormCard, Hours } from "@/components";
 
 export default function BookingsPage() {
   return (
@@ -35,6 +35,7 @@ export default function BookingsPage() {
               icon={<LocateFixedIcon />}
             />
           </div>
+          <Hours />
         </section>
         <BookingForm />
       </div>

@@ -8,8 +8,7 @@ import {
   Products,
   Promotion,
   Services,
-  Works,
-  BackToTop
+  Works
 } from "@/components";
 
 export default function HomePage() {
@@ -25,7 +24,6 @@ export default function HomePage() {
       <FAQs />
       <Location />
       <FinalCTA />
-      <BackToTop />
     </main>
   );
 }

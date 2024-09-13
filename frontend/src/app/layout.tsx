@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import "../styles/globals.css";
-import { MenuBar, Footer, WhatsAppButton } from "@/components";
+import { MenuBar, Footer, WhatsAppButton, BackToTop } from "@/components";
 
 const space = Space_Grotesk({ subsets: ["latin"] });
 
@@ -24,6 +24,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <WhatsAppButton />
+          <BackToTop />
         </NextUIProvider>
       </body>
     </html>
