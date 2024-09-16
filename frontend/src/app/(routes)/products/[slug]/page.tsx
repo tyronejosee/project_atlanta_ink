@@ -1,18 +1,9 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { Truck } from "lucide-react";
+import { getProduct } from "@/lib/api";
 import { ProductCounter } from "@/components";
-import { API_URL, DEFAULT_IMAGE } from "@/utils/constants";
-
-async function getProduct(slug: string) {
-  const res = await fetch(`${API_URL}/products/${slug}`);
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch product");
-  }
-
-  return res.json();
-}
+import { DEFAULT_IMAGE } from "@/utils/constants";
 
 interface Props {
   params: { slug: string };
@@ -30,21 +21,21 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="grid grid-rows-3 gap-4 pr-4">
               <Image
                 src={product?.image || DEFAULT_IMAGE}
-                alt="pending"
+                alt={product.name}
                 width={200}
                 height={200}
                 className="rounded-xl"
               />
               <Image
                 src={product?.image || DEFAULT_IMAGE}
-                alt="pending"
+                alt={product.name}
                 width={200}
                 height={200}
                 className="rounded-xl"
               />
               <Image
                 src={product?.image || DEFAULT_IMAGE}
-                alt="pending"
+                alt={product.name}
                 width={200}
                 height={200}
                 className="rounded-xl"

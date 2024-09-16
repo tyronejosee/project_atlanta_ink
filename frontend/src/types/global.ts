@@ -35,6 +35,19 @@ export interface IProduct {
   created_at: string;
 }
 
+export interface IService {
+  id: string;
+  name: string;
+  image?: string;
+  description: string;
+}
+
+export interface IFaqs {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 export interface ICategory {
   id: string;
   name: string;

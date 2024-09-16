@@ -1,17 +1,5 @@
 import { ProductHeader, ProductList, ProductPagination, Sidebar } from "@/components";
-import { API_URL } from "@/utils/constants";
-
-async function getProducts() {
-  const res = await fetch(`${API_URL}/products`, {
-    next: { revalidate: 10 },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
-
-  return res.json();
-}
+import { getProducts } from "@/lib/api";
 
 export default async function ProductsPage() {
   const products = await getProducts();

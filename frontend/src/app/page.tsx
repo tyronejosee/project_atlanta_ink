@@ -10,18 +10,25 @@ import {
   Services,
   Works
 } from "@/components";
+import { getArtists, getFaqs, getServices } from "@/lib/api";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [services, artists, faqs] = await Promise.all([
+    getServices(),
+    getArtists(),
+    getFaqs(),
+  ]);
+
   return (
     <main>
       <Hero />
       <Promotion />
-      <Services />
+      <Services services={services} />
       <Works />
-      <Artists />
+      <Artists artists={artists} />
       <Pricing />
       <Products />
-      <FAQs />
+      <FAQs faqs={faqs} />
       <Location />
       <FinalCTA />
     </main>

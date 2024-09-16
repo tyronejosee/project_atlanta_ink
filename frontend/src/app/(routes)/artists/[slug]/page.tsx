@@ -1,19 +1,19 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getBySlug, getTattoosByArtist } from "@/lib/api";
-import { IArtist } from "@/types/global";
+import { getArtist, getTattoosByArtist } from "@/lib/api";
 import { Badge, ParallaxScroll, Instagram, YouTube } from "@/components";
 import { DEFAULT_IMAGE } from "@/utils/constants";
+import { IStyle } from "@/types/global";
 
 interface Props {
   params: { slug: string };
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: Props) {
   const { slug } = params;
 
   try {
-    const artist = await getBySlug<IArtist>("artists", slug);
+    const artist = await getArtist(slug);
 
     if (!artist) {
       return {
@@ -37,12 +37,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function ArtistDetailPage({ params }: Props) {
   const { slug } = params;
   const [artist, tattoos] = await Promise.all([
-    getBySlug<IArtist>("artists", slug),
-    getTattoosByArtist<[]>(slug),
+    getArtist(slug),
+    getTattoosByArtist(slug),
   ]);
 
-  if (!artist) return notFound()
-  if (!tattoos) return notFound()
+  if (!artist) return notFound();
+  const hasTattoos = tattoos && tattoos.length > 0;
 
   return (
     <section className="bg-neutral-dark max-w-screen-xl mx-auto flex mt-16 min-h-screen">
@@ -61,7 +61,7 @@ export default async function ArtistDetailPage({ params }: Props) {
         <div>
           <h2 className="text-2xl font-semibold">Styles:</h2>
           <ul className="flex space-x-1">
-            {artist.styles.map((style) => (
+            {artist.styles.map((style: IStyle) => (
               <li key={style.id}>
                 <Badge>{style.name}</Badge>
               </li>
@@ -82,7 +82,11 @@ export default async function ArtistDetailPage({ params }: Props) {
         </div>
       </section>
       <section className="w-full p-4">
-        <ParallaxScroll images={tattoos} />
+        {hasTattoos ? (
+          <ParallaxScroll images={tattoos} />
+        ) : (
+          <span>Tattoos Not Found</span>
+        )}
       </section>
     </section>
   );

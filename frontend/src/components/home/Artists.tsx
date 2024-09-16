@@ -4,8 +4,14 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { IArtist } from "@/types/global";
+import { DEFAULT_IMAGE } from "@/utils/constants";
 
-export const Artists = () => {
+interface Props {
+  artists: IArtist[];
+}
+
+export const Artists = ({ artists }: Props) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -31,28 +37,28 @@ export const Artists = () => {
           <h2 className="text-6xl font-bold mb-8 text-center">ARTISTS</h2>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Array(5).fill("").map((_, index) => (
+          {artists.map((artists, index) => (
             <motion.div
-              key={index}
+              key={artists.id}
               className="p-6 border shadow-md bg-neutral-800"
               variants={itemVariants}
               initial="hidden"
               animate={controls}
               transition={{
                 duration: 0.5,
-                delay: index * 2,
+                delay: index * 0.2,
                 ease: "easeOut",
               }}
             >
               <Image
-                src="/example.jpg"
-                alt={`Artist ${index + 1}`}
+                src={artists.image || DEFAULT_IMAGE}
+                alt={artists.name}
                 width={300}
                 height={200}
                 className="w-full h-48 object-cover mb-4"
               />
-              <h3 className="text-xl font-bold text-white">Artist {index + 1}</h3>
-              <p className="text-gray-400">Especialista en tatuajes de estilo tradicional.</p>
+              <h3 className="text-xl font-bold text-white">{artists.name}</h3>
+              <p className="text-gray-400">{artists.description}</p>
             </motion.div>
           ))}
         </div>

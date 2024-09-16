@@ -3,9 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { serviceItems } from "@/utils/constants";
+import { IService } from "@/types/global";
+import { DEFAULT_IMAGE } from "@/utils/constants";
 
-export const Services = () => {
+interface Props {
+  services: IService[];
+}
+export const Services = ({ services }: Props) => {
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -19,7 +23,7 @@ export const Services = () => {
           <h2 className="text-6xl font-bold text-white">Services</h2>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {serviceItems.map((service) => {
+          {services.map((service) => {
             const { ref, inView } = useInView({
               triggerOnce: true,
               threshold: 0.1,
@@ -37,7 +41,7 @@ export const Services = () => {
                   <div className="absolute inset-0 bg-primary"></div>
                   <div className="absolute inset-0 bg-neutral-dark">
                     <Image
-                      src={service.image}
+                      src={service.image || DEFAULT_IMAGE}
                       alt={service.name}
                       fill
                       style={{ objectFit: "cover" }}
