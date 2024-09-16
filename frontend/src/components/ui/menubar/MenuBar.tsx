@@ -36,19 +36,17 @@ export const MenuBar = () => {
     };
   }, [handleScroll]);
 
+  const shouldBlur = isScrolled || isMenuOpen;
+
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="xl"
-      isBlurred={isScrolled}
-      className={`fixed z-50 transition-colors duration-300 ${isScrolled ? "" : "bg-transparent blur-0"
-        }`}
+      isBordered={shouldBlur}
+      isBlurred={shouldBlur}
+      className={`fixed z-50 transition-colors duration-300 ${shouldBlur ? "" : "bg-transparent blur-0"}`}
     >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
         <Link color="foreground" href="/">
           <NavbarBrand>
             <Bird />
@@ -103,8 +101,7 @@ export const MenuBar = () => {
             <Instagram />
           </a>
         </NavbarItem>
-
-        <NavbarItem>
+        <NavbarItem className="hidden sm:flex">
           <Button
             as={Link}
             href={NAV_CTA.href}
@@ -113,9 +110,16 @@ export const MenuBar = () => {
             {NAV_CTA.label}
           </Button>
         </NavbarItem>
+
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
       </NavbarContent>
 
-      <NavbarMenu >
+      <NavbarMenu
+        className={`${shouldBlur ? "" : "bg-transparent blur-0"}`}
+      >
         {MENU_ITEMS.map((item) => {
           const isActive = pathname === item.href;
 
