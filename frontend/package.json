@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/accordion": "^2.0.40",
     "@nextui-org/badge": "^2.0.31",
     "@nextui-org/checkbox": "^2.1.4",
     "@nextui-org/navbar": "^2.0.36",

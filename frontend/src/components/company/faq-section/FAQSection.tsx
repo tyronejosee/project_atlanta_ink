@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { CircleHelp } from "lucide-react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
+import { CircleHelp, ChevronLeft } from "lucide-react";
 import { IFaq } from "@/interfaces";
 
 interface Props {
@@ -38,11 +39,20 @@ export const FAQSection = ({ faqs }: Props) => {
                 variants={variants}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                <article className="relative bg-neutral-darkgrey p-6 flex flex-col items-center justify-center overflow-hidden rounded-xl">
-                  <h4 className="font-bold text-primary">{faq.question}</h4>
-                  <p className="text-neutral-gray">{faq.answer}</p>
-                  <CircleHelp className="rotate-12 size-14 opacity-10 absolute -top-2 -right-2" />
-                </article>
+                <Accordion variant="splitted">
+                  <AccordionItem
+                    key={faq.id}
+                    aria-label={faq.question}
+                    title={faq.question}
+                    startContent={<CircleHelp className="stroke-primary" />}
+                    indicator={({ isOpen }) => (isOpen ? <ChevronLeft className="stroke-primary" /> : <ChevronLeft />)}
+                    className="bg-neutral-darkgrey shadow-none"
+                  >
+                    <p className="text-sm text-neutral-gray">
+                      {faq.answer}
+                    </p>
+                  </AccordionItem>
+                </Accordion>
               </motion.div>
             );
           })}
