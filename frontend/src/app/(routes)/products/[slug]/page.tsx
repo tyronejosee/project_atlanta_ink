@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { Truck } from "lucide-react";
+import { DEFAULT_IMAGE } from "@/config/constants";
 import { getProduct } from "@/lib/api";
 import { ProductCounter } from "@/components";
-import { DEFAULT_IMAGE } from "@/utils/constants";
 
 interface Props {
   params: { slug: string };

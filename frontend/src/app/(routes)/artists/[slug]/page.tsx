@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { getArtist, getTattoosByArtist } from "@/lib/api";
 import { Badge, ParallaxScroll, Instagram, YouTube } from "@/components";
-import { DEFAULT_IMAGE } from "@/utils/constants";
-import { IStyle } from "@/types/global";
+import { IStyle } from "@/interfaces";
+import { DEFAULT_IMAGE } from "@/config/constants";
 
 interface Props {
   params: { slug: string };

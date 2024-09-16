@@ -1,4 +1,4 @@
-import { ProductHeader, ProductList, ProductPagination, Sidebar } from "@/components";
+import { PaginationItem, ProductHeader, ProductList, Sidebar } from "@/components";
 import { getProducts } from "@/lib/api";
 
 export default async function ProductsPage() {
@@ -12,7 +12,7 @@ export default async function ProductsPage() {
           <section className="pl-56 ml-4">
             <ProductHeader />
             <ProductList products={products} />
-            <ProductPagination />
+            <PaginationItem />
           </section>
         </div>
       </div>

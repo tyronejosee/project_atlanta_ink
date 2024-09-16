@@ -1,14 +1,14 @@
 import {
-  Artists,
-  FAQs,
-  FinalCTA,
-  Hero,
-  Location,
-  Pricing,
-  Products,
-  Promotion,
-  Services,
-  Works
+  ArtistSection,
+  FAQSection,
+  FinalCTASection,
+  HeroSection,
+  LocationSection,
+  PriceSection,
+  ProductSection,
+  PromotionSection,
+  ServiceSection,
+  TattooSection
 } from "@/components";
 import { getArtists, getFaqs, getServices } from "@/lib/api";
 
@@ -21,16 +21,16 @@ export default async function HomePage() {
 
   return (
     <main>
-      <Hero />
-      <Promotion />
-      <Services services={services} />
-      <Works />
-      <Artists artists={artists} />
-      <Pricing />
-      <Products />
-      <FAQs faqs={faqs} />
-      <Location />
-      <FinalCTA />
+      <HeroSection />
+      <PromotionSection />
+      <ServiceSection services={services} />
+      <TattooSection />
+      <ArtistSection artists={artists} />
+      <PriceSection />
+      <ProductSection />
+      <FAQSection faqs={faqs} />
+      <LocationSection />
+      <FinalCTASection />
     </main>
   );
 }

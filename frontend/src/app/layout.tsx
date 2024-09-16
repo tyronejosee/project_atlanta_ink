@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import "../styles/globals.css";
-import { MenuBar, Footer, WhatsAppButton, BackToTop, DataProvider } from "@/components";
+import { mainFont } from "@/config/fonts";
 import { getCompany } from "@/lib/api";
+import { MenuBar, Footer, WhatsAppButton, BackToTop, DataProvider } from "@/components";
 
-const space = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Atlanta Ink - Tattoo Studio",
@@ -21,7 +20,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="dark">
-      <body className={space.className}>
+      <body className={mainFont.className}>
         <NextUIProvider>
           <DataProvider initialData={company}>
             <MenuBar />
