@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { DEFAULT_IMAGE } from "@/config/constants";
 import { IService } from "@/interfaces";
+import { HeaderSection } from "@/components";
 
 interface Props {
   services: IService[];
@@ -19,11 +20,8 @@ export const ServiceSection = ({ services }: Props) => {
   return (
     <section className="py-16">
       <div className="max-w-screen-xl mx-auto text-center">
-        <header className="space-y-4 mb-8">
-          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
-          <h2 className="text-6xl font-bold text-white">Services</h2>
-        </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <HeaderSection title="Services" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0">
           {services.map((service) => {
             const { ref, inView } = useInView({
               triggerOnce: true,

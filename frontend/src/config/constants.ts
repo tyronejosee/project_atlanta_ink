@@ -37,10 +37,11 @@ export const NAV_ITEMS = [
 ];
 
 export const MENU_ITEMS = [
-  { id: 1, label: "Artists", href: "/artists" },
-  { id: 2, label: "Prices", href: "/prices" },
-  { id: 3, label: "Products", href: "/products" },
-  { id: 4, label: "Bookings", href: "/bookings" },
+  { id: 1, label: "Homepage", href: "/" },
+  { id: 2, label: "Artists", href: "/artists" },
+  { id: 3, label: "Prices", href: "/prices" },
+  { id: 4, label: "Products", href: "/products" },
+  { id: 5, label: "Bookings", href: "/bookings" },
 ];
 
 export const TATTOO_EXAMPLE = [

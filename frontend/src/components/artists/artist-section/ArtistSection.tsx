@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { IArtist } from "@/interfaces";
 import { DEFAULT_IMAGE } from "@/config/constants";
+import { HeaderSection } from "@/components";
 
 interface Props {
   artists: IArtist[];
@@ -32,11 +33,8 @@ export const ArtistSection = ({ artists }: Props) => {
   return (
     <section id="artists" className="py-16" ref={ref}>
       <div className="max-w-screen-xl mx-auto text-center">
-        <header className="space-y-4 mb-8">
-          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
-          <h2 className="text-6xl font-bold mb-8 text-center">ARTISTS</h2>
-        </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <HeaderSection title="Artists" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 xl:px-0">
           {artists.map((artists, index) => (
             <motion.div
               key={artists.id}

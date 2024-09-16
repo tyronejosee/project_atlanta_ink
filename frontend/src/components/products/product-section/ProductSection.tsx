@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { HeaderSection } from "@/components";
 
 export const ProductSection = () => {
   const controls = useAnimation();
@@ -26,11 +27,8 @@ export const ProductSection = () => {
   return (
     <section id="products" className="py-16" ref={ref}>
       <div className="max-w-screen-xl mx-auto">
-        <header className="space-y-4 mb-8 text-center">
-          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
-          <h2 className="text-6xl font-bold">Products</h2>
-        </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <HeaderSection title="Products" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0">
           {Array(5).fill("").map((_, index) => (
             <motion.div
               key={index}

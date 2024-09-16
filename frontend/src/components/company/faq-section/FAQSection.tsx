@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { CircleHelp, ChevronLeft } from "lucide-react";
 import { IFaq } from "@/interfaces";
+import { HeaderSection } from "@/components";
 
 interface Props {
   faqs: IFaq[]
@@ -18,12 +19,9 @@ export const FAQSection = ({ faqs }: Props) => {
 
   return (
     <section className="py-16">
-      <div className="max-w-screen-xl mx-auto text-center">
-        <header className="space-y-4 mb-8">
-          <span className="text-xl font-bold text-primary">Lorem ipsum dolor sit</span>
-          <h2 className="text-6xl font-bold">Frequently Asked Questions</h2>
-        </header>
-        <div className="grid grid-cols-2 gap-4">
+      <div className="max-w-screen-xl mx-auto">
+        <HeaderSection title="Frequently Asked Questions" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 xl:px-0">
           {faqs.map((faq, index) => {
             const { ref, inView } = useInView({
               triggerOnce: true,
