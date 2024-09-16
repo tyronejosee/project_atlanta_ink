@@ -1,5 +1,5 @@
 import React from "react"
-import { tattoosExample } from "@/utils/constants"
+import { TATTOO_EXAMPLE } from "@/utils/constants"
 import { ParallaxScrollMain } from "../common/ParallaxScrollMain"
 
 export const Works = () => {
@@ -11,7 +11,7 @@ export const Works = () => {
           <h2 className="text-6xl font-bold text-white">Works</h2>
         </header>
         <div>
-          <ParallaxScrollMain images={tattoosExample} />
+          <ParallaxScrollMain images={TATTOO_EXAMPLE} />
         </div>
       </div>
     </section>

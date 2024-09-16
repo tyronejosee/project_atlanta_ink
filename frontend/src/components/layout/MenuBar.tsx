@@ -14,10 +14,12 @@ import {
   Button
 } from "@nextui-org/react";
 import { Bird } from "lucide-react";
-import { menuItems, navItems, socialLinks, navCTA, navBrand } from "@/utils/constants";
+import { MENU_ITEMS, NAV_ITEMS, NAV_CTA, COMPANY_NAME } from "@/utils/constants";
 import { Instagram, YouTube, Twitch } from "@/components";
+import { useCompanyStore } from "@/store/company";
 
 export const MenuBar = () => {
+  const { companyData } = useCompanyStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -51,14 +53,14 @@ export const MenuBar = () => {
           <NavbarBrand>
             <Bird />
             <span className="font-bold ml-2">
-              {navBrand}
+              {companyData?.name || COMPANY_NAME}
             </span>
           </NavbarBrand>
         </Link>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {navItems.map((item) => {
+        {NAV_ITEMS.map((item) => {
           const isActive = pathname === item.href;
           return (
             <NavbarItem key={item.id}>
@@ -76,7 +78,7 @@ export const MenuBar = () => {
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <a
-            href={socialLinks.youtube}
+            href={companyData?.facebook}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,7 +87,7 @@ export const MenuBar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <a
-            href={socialLinks.twitch}
+            href={companyData?.instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,7 +96,7 @@ export const MenuBar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <a
-            href={socialLinks.instagram}
+            href={companyData?.instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -105,16 +107,16 @@ export const MenuBar = () => {
         <NavbarItem>
           <Button
             as={Link}
-            href={navCTA.href}
+            href={NAV_CTA.href}
             className="bg-primary text-neutral-light font-medium rounded-xl"
           >
-            {navCTA.label}
+            {NAV_CTA.label}
           </Button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarMenu >
-        {menuItems.map((item) => {
+        {MENU_ITEMS.map((item) => {
           const isActive = pathname === item.href;
 
           return (

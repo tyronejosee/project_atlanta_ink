@@ -2,8 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { HR } from "@/components";
+import { useCompanyStore } from "@/store/company";
 
 export const Footer = () => {
+  const { companyData } = useCompanyStore();
   const pathname = usePathname();
 
   if (pathname.startsWith("/products")) {
@@ -18,7 +20,7 @@ export const Footer = () => {
         </div>
         <HR />
         <div className="text-neutral-gray">
-          <p>&copy; {new Date().getFullYear()} Created with ❤️ by <span className="hover:underline hover:text-primary">Tyrone José</span>. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {companyData?.rights}</p>
         </div>
       </div>
     </footer>
