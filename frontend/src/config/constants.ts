@@ -10,6 +10,14 @@ export const COMPANY_NAME = "Company Name"
 
 export const NAV_CTA = { label: "Book Now", href: "/bookings" }
 
+
+export const SORT_CHOICES = [
+  { key: "latest", label: "Latest Products" },
+  { key: "oldest", label: "Oldest Products" },
+  { key: "lowest_price", label: "Lowest Price" },
+  { key: "highest_price", label: "Highest Price" },
+];
+
 export const PLACEMENT_CHOICES = [
   { key: "arm", label: "Arm" },
   { key: "leg", label: "Leg" },
@@ -21,13 +29,6 @@ export const PLACEMENT_CHOICES = [
   { key: "hand", label: "Hand" },
   { key: "neck", label: "Neck" },
   { key: "other", label: "Other" },
-];
-
-export const PRODUCT_FILTER_CHOICES = [
-  { key: 1, value: "popularity", label: "Popularity" },
-  { key: 2, value: "latest", label: "Latest" },
-  { key: 3, value: "price_low", label: "Price: Low to high" },
-  { key: 4, value: "price_high", label: "Pprice: Hight to low" },
 ];
 
 export const NAV_ITEMS = [

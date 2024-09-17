@@ -18,3 +18,10 @@ export interface IProduct {
   updated_at: string;
   created_at: string;
 }
+
+export interface IProductQueryParams {
+  sort_by?: string;
+  search?: string;
+  category?: string;
+  price?: string;
+}
