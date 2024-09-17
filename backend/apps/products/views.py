@@ -9,6 +9,7 @@ from .serializers import (
     ProductReadSerializer,
     ProductMinimalSerializer,
 )
+from .filters import ProductFilter
 
 
 class BrandListView(ListAPIView):
@@ -48,6 +49,8 @@ class ProductListView(ListAPIView):
     """
 
     serializer_class = ProductMinimalSerializer
+    search_fields = ["name"]
+    filterset_class = ProductFilter
 
     def get_queryset(self):
         return Product.objects.get_list()

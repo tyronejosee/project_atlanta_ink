@@ -4,20 +4,27 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 from apps.utils.models import BaseModel
+from apps.utils.validators import validate_phone
 from apps.products.choices import CurrencyTypeChoices
-from .managers import CompanyManager, ServiceManager
+from .managers import CompanyManager, ServiceManager, FaqManager
 
 
 class Company(BaseModel):
     """Model definition for Company."""
 
     name = models.CharField(max_length=50, unique=True)
-    logo = models.FileField(upload_to="company/", blank=True)
     description = models.TextField()
-    facebook = models.URLField()
-    instagram = models.URLField()
-    tiktok = models.URLField()
-    rights = models.TextField()
+    instagram = models.URLField(unique=True)
+    youtube = models.URLField(blank=True, unique=True)
+    twitch = models.URLField(blank=True, unique=True)
+    tiktok = models.URLField(blank=True, unique=True)
+    whatsapp = models.CharField(
+        max_length=15,
+        validators=[validate_phone],
+        blank=True,
+        unique=True,
+    )
+    rights = models.CharField(max_length=255)
     location = models.CharField(max_length=100, unique=True)
 
     objects = CompanyManager()
@@ -76,6 +83,8 @@ class Faq(BaseModel):
 
     question = models.CharField(max_length=100)
     answer = models.TextField()
+
+    objects = FaqManager()
 
     class Meta:
         ordering = ["created_at"]

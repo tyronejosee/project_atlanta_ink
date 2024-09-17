@@ -51,7 +51,7 @@ class ArtistTattooListView(APIView):
         except Artist.DoesNotExist:
             raise NotFound("Artist not found.")
 
-        tattoos = Tattoo.objects.filter(artist_id=artist)
+        tattoos = Tattoo.objects.get_available().filter(artist_id=artist)
 
         if not tattoos.exists():
             return Response(

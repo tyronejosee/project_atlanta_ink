@@ -12,11 +12,12 @@ class CompanySerializer(serializers.ModelSerializer):
         model = Company
         fields = [
             "name",
-            "logo",
             "description",
-            "facebook",
             "instagram",
+            "youtube",
+            "twitch",
             "tiktok",
+            "whatsapp",
             "rights",
             "location",
         ]
@@ -43,6 +44,8 @@ class PriceSerializer(serializers.ModelSerializer):
 class ServiceSerializer(serializers.ModelSerializer):
     """Serializer for Service model."""
 
+    image = serializers.SerializerMethodField()
+
     class Meta:
         model = Service
         fields = [
@@ -54,6 +57,9 @@ class ServiceSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             field.name: {"read_only": True} for field in Service._meta.fields
         }
+
+    def get_image(self, obj):
+        return obj.image.url
 
 
 class FaqSerializer(serializers.ModelSerializer):

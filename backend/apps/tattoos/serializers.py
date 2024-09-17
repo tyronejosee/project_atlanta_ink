@@ -13,6 +13,7 @@ class TattooSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tattoo
         fields = [
+            "id",
             "name",
             "slug",
             "image",

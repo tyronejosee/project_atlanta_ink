@@ -15,3 +15,11 @@ class CurrencyTypeChoices(models.TextChoices):
     CNY = "cny", "Chinese Yuan"
     SEK = "sek", "Swedish Krona"
     NZD = "nzd", "New Zealand Dollar"
+
+
+class SortChoices(models.TextChoices):
+
+    LOWEST_PRICE = "lowest_price", "Lowest Price"
+    HIGHEST_PRICE = "highest_price", "Highest Price"
+    LATEST = "latest", "Latest Products"
+    OLDEST = "oldest", "Oldest Products"

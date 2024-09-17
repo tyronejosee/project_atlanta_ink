@@ -25,4 +25,6 @@ class FaqManager(BaseManager):
     """Manager for Faq model."""
 
     def get_list(self):
-        return self.get_available().exclude("created_at", "updated_at")
+        return self.get_available()
+
+    # .exclude("created_at", "updated_at")
