@@ -8,10 +8,20 @@ import { validateBudget, validatePhone } from "@/utils/validators";
 import { FormError } from "@/components";
 import { IBookingValues } from "@/interfaces";
 
+interface Props {
+  initialPhone?: string;
+  initialfirstTime?: boolean;
+}
 
-export const BookingForm = () => {
-  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<IBookingValues>();
+export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
+  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<IBookingValues>({
+    defaultValues: {
+      phone: initialPhone,
+      firstTimeSession: initialfirstTime,
+    },
+  });
 
+  // TODO: Move attbs
   const notify = () => toast.success("Wow so easy!", {
     theme: "dark",
     position: "top-center",
@@ -74,6 +84,7 @@ export const BookingForm = () => {
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         <Input
           label="First Name"
+          size="sm"
           type="text"
           radius="md"
           required
@@ -84,6 +95,7 @@ export const BookingForm = () => {
 
         <Input
           label="Last Name"
+          size="sm"
           type="text"
           radius="md"
           required
@@ -93,6 +105,7 @@ export const BookingForm = () => {
 
         <Input
           label="Phone"
+          size="sm"
           type="phone"
           radius="md"
           required
@@ -103,18 +116,11 @@ export const BookingForm = () => {
 
         <Textarea
           label="Notes"
+          size="sm"
           radius="md"
           {...register("notes", { required: "Notes are required" })}
         />
         {errors.notes?.message && <FormError>* {errors.notes?.message}</FormError>}
-
-        <div>
-          <input
-            type="file"
-            className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
-            {...register("file")}
-          />
-        </div>
 
         {/* <Select
           label="Select an Artist"
@@ -129,6 +135,7 @@ export const BookingForm = () => {
 
         <Input
           label="Estimated Budget"
+          size="sm"
           type="decimal"
           radius="md"
           {...register("budget", { validate: validateBudget })}
@@ -137,8 +144,9 @@ export const BookingForm = () => {
 
         <Select
           label="Select a tattoo placement"
-          className="max-w-xs"
+          size="sm"
           radius="md"
+          className="max-w-xs"
           {...register("placement", { required: "Tattoo placement is required" })}
         >
           {PLACEMENT_CHOICES.map((choice) => (
@@ -161,6 +169,15 @@ export const BookingForm = () => {
             First-time session
           </Checkbox>
         </div>
+
+        <div>
+          <input
+            type="file"
+            className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
+            {...register("file")}
+          />
+        </div>
+
         <Button
           type="submit"
           color="primary"

@@ -9,3 +9,8 @@ export interface IBookingValues {
   firstTimeSession: boolean;
   file: FileList;
 }
+
+export interface IBookingQueryParams {
+  phone?: string;
+  firstTime?: boolean;
+}

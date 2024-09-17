@@ -2,8 +2,15 @@ import { ToastContainer } from "react-toastify";
 import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
 import { BookingForm, BookingCard, Hours } from "@/components";
+import { IBookingQueryParams } from "@/interfaces";
 
-export default function BookingsPage() {
+interface Props {
+  searchParams: IBookingQueryParams;
+}
+
+export default function BookingsPage({ searchParams }: Props) {
+  const { phone, firstTime } = searchParams;
+
   return (
     <section className="max-w-screen-xl mx-auto mt-16">
       <div className="grid grid-cols-2 gap-4 p-4">
@@ -37,7 +44,10 @@ export default function BookingsPage() {
           </div>
           <Hours />
         </section>
-        <BookingForm />
+        <BookingForm
+          initialPhone={phone ? decodeURIComponent(phone as string) : ""}
+          initialfirstTime={firstTime}
+        />
       </div>
       <ToastContainer />
     </section >
