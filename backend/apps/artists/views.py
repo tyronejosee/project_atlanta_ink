@@ -5,15 +5,27 @@ from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from rest_framework.response import Response
 from rest_framework import status
+from drf_spectacular.utils import extend_schema_view
 
 from apps.tattoos.models import Tattoo
 from apps.tattoos.serializers import TattooImageSerializer
 from .models import Artist
 from .serializers import ArtistSerializer
+from .schemas import (
+    artist_list_schema,
+    artist_detail_schema,
+    artist_tattoo_list_schema,
+)
 
 
+@extend_schema_view(**artist_list_schema)
 class ArtistListView(ListAPIView):
-    """View to list all available artists."""
+    """
+    View to list all available artists.
+
+    Endpoints:
+    - GET /api/artists
+    """
 
     serializer_class = ArtistSerializer
 
@@ -25,8 +37,14 @@ class ArtistListView(ListAPIView):
         )
 
 
+@extend_schema_view(**artist_detail_schema)
 class ArtistDetailView(RetrieveAPIView):
-    """View to retrieve a specific artist by ID."""
+    """
+    View to retrieve a specific artist by ID.
+
+    Endpoints:
+    - GET /api/artists/{slug}
+    """
 
     serializer_class = ArtistSerializer
     lookup_field = "slug"
@@ -40,8 +58,14 @@ class ArtistDetailView(RetrieveAPIView):
         )
 
 
+@extend_schema_view(**artist_tattoo_list_schema)
 class ArtistTattooListView(APIView):
-    """View retrieve all tattoos of an artist (images only)."""
+    """
+    View retrieve all tattoos of an artist (images only).
+
+    Endpoints:
+    - GET /api/artists/{slug}/tattoos
+    """
 
     serializer_class = TattooImageSerializer
 

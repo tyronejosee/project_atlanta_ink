@@ -18,17 +18,17 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # Docs urls
     path(
-        "api/schema/swagger/",
+        "docs",
         SpectacularSwaggerView.as_view(url_name="schema"),
         name="swagger",
     ),
     path(
-        "api/schema/redoc/",
+        "redoc",
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
     path(
-        "api/schema/",
+        "schema",
         SpectacularAPIView.as_view(),
         name="schema",
     ),

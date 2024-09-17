@@ -4,10 +4,13 @@ from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
+from drf_spectacular.utils import extend_schema_view
 
 from .serializers import BookingSerializer
+from .schemas import create_booking_schema
 
 
+@extend_schema_view(**create_booking_schema)
 class CreateBookingView(APIView):
     """
     View to create a reservation or booking

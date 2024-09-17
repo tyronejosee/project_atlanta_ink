@@ -3,12 +3,20 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from drf_spectacular.utils import extend_schema_view
 
 from .serializers import ApplicantSerializer
+from .schemas import create_applicantion_schema
 
 
+@extend_schema_view(**create_applicantion_schema)
 class CreateApplicantionView(APIView):
-    """View for Create Application."""
+    """
+    View for Create Application.
+
+    Endpoints:
+    - POST /api/applicants
+    """
 
     serializer_class = ApplicantSerializer
 
@@ -17,7 +25,7 @@ class CreateApplicantionView(APIView):
         if serializer.is_valid:
             serializer.save()
             return Response(
-                {"detail": "Aplicacion created succeful."},
+                {"detail": "Application created successfully."},
                 status=status.HTTP_201_CREATED,
             )
         return Response(

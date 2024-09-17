@@ -205,8 +205,11 @@ APPEND_SLASH = False
 VALID_IMAGE_EXTENSIONS = [".webp", ".jpg", ".jpeg", ".png"]
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Example API",
-    "DESCRIPTION": "Example decription.",
+    "TITLE": "Atlanta Ink API",
+    "DESCRIPTION": (
+        "An API for managing content at Atlanta Ink."
+        "A tattoo studio."
+    ),
     "VERSION": "v1",
     "LICENSE": {
         "name": env("LICENCE_NAME"),
@@ -218,24 +221,38 @@ SPECTACULAR_SETTINGS = {
     },
     "SERVE_INCLUDE_SCHEMA": False,
     "SWAGGER_UI_DIST": "SIDECAR",
-    "SWAGGER_UI_FAVICON_HREF": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724775927/Drop%20Dash%20API/fb9ai97yagzqsimsdg4q.png",
+    "SWAGGER_UI_FAVICON_HREF": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726608844/Atlanta%20Ink%20API/loog_jspiml.png",
     "REDOC_DIST": "SIDECAR",
     "REDOC_UI_SETTINGS": {
         "hideHostname": True,
         "theme": {
-            "colors": {"primary": {"main": "#16FF00"}},
-        },
-    },
-    "EXTENSIONS_INFO": {
-        "x-logo": {
-            "url": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1724788246/Drop%20Dash%20API/pyqqdznrcqofiuxd4l4e.png",
-            "altText": "API Logo",
+            "colors": {"primary": {"main": "#FF4200"}},
         },
     },
     "TAGS": [
         {
+            "name": "company",
+            "description": "Operations related to company",
+        },
+        {
+            "name": "applicants",
+            "description": "Operations related to applicants",
+        },
+        {
             "name": "artists",
             "description": "Operations related to artists",
+        },
+        {
+            "name": "bookings",
+            "description": "Operations related to bookings",
+        },
+        {
+            "name": "products",
+            "description": "Operations related to products",
+        },
+        {
+            "name": "tattoos",
+            "description": "Operations related to tattoos",
         },
     ],
 }

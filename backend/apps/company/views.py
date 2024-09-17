@@ -4,6 +4,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_404_NOT_FOUND
+from drf_spectacular.utils import extend_schema_view
 
 from .models import Company, Price, Service, Faq
 from .serializers import (
@@ -12,13 +13,20 @@ from .serializers import (
     ServiceSerializer,
     FaqSerializer,
 )
+from .schemas import (
+    company_data_schema,
+    price_list_schema,
+    service_list_schema,
+    faq_list_schema,
+)
 
 
+@extend_schema_view(**company_data_schema)
 class CompanyDataView(APIView):
     """
     View to retrieve the Company record.
 
-    Enpoints:
+    Endpoints:
     - GET /api/company
     """
 
@@ -35,6 +43,7 @@ class CompanyDataView(APIView):
         )
 
 
+@extend_schema_view(**price_list_schema)
 class PriceListView(ListAPIView):
     """
     View for listing all prices.
@@ -49,6 +58,7 @@ class PriceListView(ListAPIView):
         return Price.objects.get_list()
 
 
+@extend_schema_view(**service_list_schema)
 class ServiceListView(ListAPIView):
     """
     View for listing all services.
@@ -63,6 +73,7 @@ class ServiceListView(ListAPIView):
         return Service.objects.get_list()
 
 
+@extend_schema_view(**faq_list_schema)
 class FaqListView(ListAPIView):
     """
     View for listing all faqs.
