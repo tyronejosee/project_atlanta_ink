@@ -1,7 +1,7 @@
-import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 import { ToastContainer } from "react-toastify";
+import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
-import { BookingForm, FormCard, Hours } from "@/components";
+import { BookingForm, BookingCard, Hours } from "@/components";
 
 export default function BookingsPage() {
   return (
@@ -14,22 +14,22 @@ export default function BookingsPage() {
             <p className="text-neutral-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit.</p>
           </header>
           <div className="grid grid-cols-2 gap-4">
-            <FormCard
+            <BookingCard
               title="Phone"
               text="+123123123"
               icon={<Phone className="size-10" />}
             />
-            <FormCard
+            <BookingCard
               title="Website"
               text="atlantaink.com"
               icon={<WholeWord />}
             />
-            <FormCard
+            <BookingCard
               title="Email"
               text="support@atlantaink.com"
               icon={<Mail />}
             />
-            <FormCard
+            <BookingCard
               title="Address"
               text="Example"
               icon={<LocateFixedIcon />}

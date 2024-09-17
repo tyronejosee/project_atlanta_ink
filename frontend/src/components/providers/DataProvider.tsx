@@ -2,19 +2,11 @@
 
 import { useEffect } from "react";
 import { useCompanyStore } from "@/store";
+import { ICompany } from "@/interfaces";
 
 
 interface DataProviderProps {
-  initialData: {
-    name: string;
-    logo: string | null;
-    description: string;
-    facebook: string;
-    instagram: string;
-    tiktok: string;
-    rights: string;
-    location: string;
-  } | null;
+  initialData: ICompany | null;
   children: React.ReactNode;
 }
 
