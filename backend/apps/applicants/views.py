@@ -12,7 +12,7 @@ from .schemas import create_applicantion_schema
 @extend_schema_view(**create_applicantion_schema)
 class CreateApplicantionView(APIView):
     """
-    View for Create Application.
+    View for create application.
 
     Endpoints:
     - POST /api/applicants

@@ -1,3 +1,5 @@
+"""Entrypoint for Artists App."""
+
 from django.apps import AppConfig
 
 

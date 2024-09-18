@@ -9,11 +9,13 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 env = environ.Env()
 environ.Env.read_env("backend/.env")
+
+
+PROYECT_NAME = env("PROYECT_NAME", default="Django Project")
 
 SECRET_KEY = env("SECRET_KEY")
 

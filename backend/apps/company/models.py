@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 from apps.utils.models import BaseModel
 from apps.utils.validators import validate_phone
 from apps.products.choices import CurrencyTypeChoices
-from .managers import CompanyManager, ServiceManager, FaqManager
+from .managers import CompanyManager, PriceManager, ServiceManager, FaqManager
 
 
 class Company(BaseModel):
@@ -50,6 +50,8 @@ class Price(BaseModel):
         help_text="Select the currency in which service price is displayed.",
     )
     is_featured = models.BooleanField(default=False)
+
+    objects = PriceManager()
 
     class Meta:
         ordering = ["pk"]

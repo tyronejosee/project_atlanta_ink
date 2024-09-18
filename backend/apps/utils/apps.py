@@ -1,4 +1,4 @@
-"""Module config for Utils App."""
+"""Entrypoint for Utils App."""
 
 from django.apps import AppConfig
 

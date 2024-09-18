@@ -1,3 +1,5 @@
+"""Entrypoint for Tattoos App."""
+
 from django.apps import AppConfig
 
 

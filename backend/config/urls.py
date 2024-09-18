@@ -55,6 +55,6 @@ if settings.DEBUG:
 
 
 # AdminSite props.
-admin.site.site_header = "Atlanta Ink"
-admin.site.site_title = "Atlanta Ink"
+admin.site.site_header = settings.PROYECT_NAME
+admin.site.site_title = settings.PROYECT_NAME
 admin.site.index_title = "Admin"

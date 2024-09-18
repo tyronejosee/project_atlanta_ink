@@ -15,4 +15,3 @@ class BookingAdmin(admin.ModelAdmin):
     list_filter = ["status", "is_first_time", "estimated_budget"]
     list_editable = ["status"]
     readonly_fields = ["pk", "created_at"]
-    ordering = ["pk"]

@@ -5,8 +5,8 @@ from rest_framework import serializers
 from .models import Brand, Category, Product
 
 
-class BrandReadSerializer(serializers.ModelSerializer):
-    """Serializer for Brand model (List/retrieve)."""
+class BrandSerializer(serializers.ModelSerializer):
+    """Serializer for Brand model."""
 
     class Meta:
         model = Brand
@@ -19,8 +19,8 @@ class BrandReadSerializer(serializers.ModelSerializer):
         }
 
 
-class CategoryReadSerializer(serializers.ModelSerializer):
-    """Serializer for Category model (List/retrieve)."""
+class CategorySerializer(serializers.ModelSerializer):
+    """Serializer for Category model."""
 
     class Meta:
         model = Category
@@ -33,8 +33,8 @@ class CategoryReadSerializer(serializers.ModelSerializer):
         }
 
 
-class ProductReadSerializer(serializers.ModelSerializer):
-    """Serializer for Product model (List/retrieve)."""
+class ProductSerializer(serializers.ModelSerializer):
+    """Serializer for Product model."""
 
     image = serializers.SerializerMethodField()
     brand = serializers.StringRelatedField(source="brand_id")

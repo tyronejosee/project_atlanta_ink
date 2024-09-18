@@ -1,3 +1,5 @@
+"""Entrypoint for Company App."""
+
 from django.apps import AppConfig
 
 

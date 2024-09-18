@@ -21,7 +21,7 @@ from .schemas import (
 @extend_schema_view(**artist_list_schema)
 class ArtistListView(ListAPIView):
     """
-    View to list all available artists.
+    View for listing all artists.
 
     Endpoints:
     - GET /api/artists
@@ -30,11 +30,7 @@ class ArtistListView(ListAPIView):
     serializer_class = ArtistSerializer
 
     def get_queryset(self):
-        return (
-            Artist.objects.filter(is_available=True)
-            .select_related("user_id")
-            .prefetch_related("styles")
-        )
+        return Artist.objects.get_list()
 
 
 @extend_schema_view(**artist_detail_schema)
@@ -51,17 +47,13 @@ class ArtistDetailView(RetrieveAPIView):
     lookup_url_kwarg = "slug"
 
     def get_queryset(self):
-        return (
-            Artist.objects.filter(is_available=True)
-            .select_related("user_id")
-            .prefetch_related("styles")
-        )
+        return Artist.objects.get_detail()
 
 
 @extend_schema_view(**artist_tattoo_list_schema)
 class ArtistTattooListView(APIView):
     """
-    View retrieve all tattoos of an artist (images only).
+    View for listing all tattoos of an artist (images only).
 
     Endpoints:
     - GET /api/artists/{slug}/tattoos
@@ -75,7 +67,7 @@ class ArtistTattooListView(APIView):
         except Artist.DoesNotExist:
             raise NotFound("Artist not found.")
 
-        tattoos = Tattoo.objects.get_available().filter(artist_id=artist)
+        tattoos = Tattoo.objects.get_by_artist(artist)
 
         if not tattoos.exists():
             return Response(

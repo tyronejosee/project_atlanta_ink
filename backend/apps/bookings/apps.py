@@ -1,3 +1,5 @@
+"""Entrypoint for Bookings App."""
+
 from django.apps import AppConfig
 
 

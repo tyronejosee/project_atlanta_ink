@@ -35,7 +35,6 @@ class BookingSerializer(serializers.ModelSerializer):
                     "The file size must not exceed 1 MB.",
                 )
             # Validate file extension
-
             extension = value.name.split(".")[-1].lower()
             if f".{extension}" not in settings.VALID_IMAGE_EXTENSIONS:
                 raise serializers.ValidationError(

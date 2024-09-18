@@ -36,7 +36,10 @@ class ProductManager(BaseManager):
         )
 
     def get_detail(self):
-        return self.get_available().select_related("category_id", "brand_id")
+        return self.get_available().select_related(
+            "category_id",
+            "brand_id",
+        )
 
     def get_featured(self):
         return (

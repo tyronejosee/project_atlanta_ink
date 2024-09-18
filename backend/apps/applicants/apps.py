@@ -1,3 +1,5 @@
+"""Entrypoint for Applicants App."""
+
 from django.apps import AppConfig
 
 
