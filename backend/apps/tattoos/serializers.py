@@ -2,10 +2,11 @@
 
 from rest_framework import serializers
 
+from apps.utils.mixins import ReadOnlyFieldsMixin
 from .models import Tattoo
 
 
-class TattooSerializer(serializers.ModelSerializer):
+class TattooSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Tattoo model."""
 
     artist = serializers.CharField(source="artist_id.name", read_only=True)
@@ -19,10 +20,9 @@ class TattooSerializer(serializers.ModelSerializer):
             "image",
             "artist",
         ]
-        read_only_fields = fields
 
 
-class TattooImageSerializer(serializers.ModelSerializer):
+class TattooImageSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Tattoo model (only image field)."""
 
     image = serializers.SerializerMethodField()

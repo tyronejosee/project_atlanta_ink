@@ -2,10 +2,11 @@
 
 from rest_framework import serializers
 
+from apps.utils.mixins import ReadOnlyFieldsMixin
 from .models import Company, Price, Service, Faq
 
 
-class CompanySerializer(serializers.ModelSerializer):
+class CompanySerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Company model."""
 
     class Meta:
@@ -21,12 +22,9 @@ class CompanySerializer(serializers.ModelSerializer):
             "rights",
             "location",
         ]
-        extra_kwargs = {
-            field.name: {"read_only": True} for field in Company._meta.fields
-        }
 
 
-class PriceSerializer(serializers.ModelSerializer):
+class PriceSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Price model."""
 
     class Meta:
@@ -38,10 +36,9 @@ class PriceSerializer(serializers.ModelSerializer):
             "currency",
             "is_featured",
         ]
-        extra_kwargs = {field.name: {"read_only": True} for field in Price._meta.fields}
 
 
-class ServiceSerializer(serializers.ModelSerializer):
+class ServiceSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Service model."""
 
     image = serializers.SerializerMethodField()
@@ -54,15 +51,12 @@ class ServiceSerializer(serializers.ModelSerializer):
             "image",
             "description",
         ]
-        extra_kwargs = {
-            field.name: {"read_only": True} for field in Service._meta.fields
-        }
 
     def get_image(self, obj):
         return obj.image.url
 
 
-class FaqSerializer(serializers.ModelSerializer):
+class FaqSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Faq model."""
 
     class Meta:
@@ -72,4 +66,3 @@ class FaqSerializer(serializers.ModelSerializer):
             "question",
             "answer",
         ]
-        extra_kwargs = {field.name: {"read_only": True} for field in Faq._meta.fields}

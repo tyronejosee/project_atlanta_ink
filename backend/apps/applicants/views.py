@@ -21,14 +21,20 @@ class CreateApplicantionView(APIView):
     serializer_class = ApplicantSerializer
 
     def post(self, request, *args, **kwargs):
-        serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid:
-            serializer.save()
+        try:
+            serializer = self.serializer_class(data=request.data)
+            if serializer.is_valid:
+                serializer.save()
+                return Response(
+                    {"detail": "Application created successfully."},
+                    status=status.HTTP_201_CREATED,
+                )
             return Response(
-                {"detail": "Application created successfully."},
-                status=status.HTTP_201_CREATED,
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST,
             )
-        return Response(
-            serializer.errors,
-            status=status.HTTP_400_BAD_REQUEST,
-        )
+        except Exception as e:
+            return Response(
+                {"errors": f"{e}"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )

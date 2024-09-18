@@ -2,10 +2,11 @@
 
 from rest_framework import serializers
 
+from apps.utils.mixins import ReadOnlyFieldsMixin
 from .models import Style, Artist
 
 
-class StyleSerializer(serializers.ModelSerializer):
+class StyleSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Style model."""
 
     class Meta:
@@ -16,10 +17,9 @@ class StyleSerializer(serializers.ModelSerializer):
             "updated_at",
             "created_at",
         ]
-        read_only_fields = fields
 
 
-class ArtistSerializer(serializers.ModelSerializer):
+class ArtistSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Artist model."""
 
     image = serializers.SerializerMethodField()
@@ -40,7 +40,6 @@ class ArtistSerializer(serializers.ModelSerializer):
             "updated_at",
             "created_at",
         ]
-        read_only_fields = fields
 
     def get_image(self, obj):
         return obj.image.url

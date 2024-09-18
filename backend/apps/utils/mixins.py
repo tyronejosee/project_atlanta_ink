@@ -15,3 +15,12 @@ class SlugMixin(models.Model):
 
     class Meta:
         abstract = True
+
+
+class ReadOnlyFieldsMixin:
+    """Mixin to make all serializer fields read-only."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].read_only = True

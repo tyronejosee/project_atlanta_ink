@@ -2,10 +2,11 @@
 
 from rest_framework import serializers
 
+from apps.utils.mixins import ReadOnlyFieldsMixin
 from .models import Brand, Category, Product
 
 
-class BrandSerializer(serializers.ModelSerializer):
+class BrandSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Brand model."""
 
     class Meta:
@@ -14,12 +15,9 @@ class BrandSerializer(serializers.ModelSerializer):
             "id",
             "name",
         ]
-        extra_kwargs = {
-            field.name: {"read_only": True} for field in Brand._meta.fields
-        }
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class CategorySerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Category model."""
 
     class Meta:
@@ -28,12 +26,9 @@ class CategorySerializer(serializers.ModelSerializer):
             "id",
             "name",
         ]
-        extra_kwargs = {
-            field.name: {"read_only": True} for field in Category._meta.fields
-        }
 
 
-class ProductSerializer(serializers.ModelSerializer):
+class ProductSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Product model."""
 
     image = serializers.SerializerMethodField()
@@ -58,15 +53,15 @@ class ProductSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         ]
-        extra_kwargs = {
-            field.name: {"read_only": True} for field in Product._meta.fields
-        }
 
     def get_image(self, obj):
         return obj.image.url
 
 
-class ProductMinimalSerializer(serializers.ModelSerializer):
+class ProductMinimalSerializer(
+    ReadOnlyFieldsMixin,
+    serializers.ModelSerializer,
+):
     """Serializer for Product model (Minimal)."""
 
     image = serializers.SerializerMethodField()
@@ -84,9 +79,6 @@ class ProductMinimalSerializer(serializers.ModelSerializer):
             "image",
             "category",
         ]
-        extra_kwargs = {
-            field.name: {"read_only": True} for field in Product._meta.fields
-        }
 
     def get_image(self, obj):
         return obj.image.url
