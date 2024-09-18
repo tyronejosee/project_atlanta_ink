@@ -45,6 +45,7 @@ THIRD_APPS = [
     "rest_framework",
     "cloudinary",
     "corsheaders",
+    "import_export",
     "drf_spectacular",
     "drf_spectacular_sidecar",
 ]
@@ -208,10 +209,7 @@ VALID_IMAGE_EXTENSIONS = [".webp", ".jpg", ".jpeg", ".png"]
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Atlanta Ink API",
-    "DESCRIPTION": (
-        "An API for managing content at Atlanta Ink."
-        "A tattoo studio."
-    ),
+    "DESCRIPTION": ("An API for managing content at Atlanta Ink." "A tattoo studio."),
     "VERSION": "v1",
     "LICENSE": {
         "name": env("LICENCE_NAME"),

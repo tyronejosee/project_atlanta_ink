@@ -1,12 +1,14 @@
 """Admin for Artists App."""
 
 from django.contrib import admin
+from import_export.admin import ImportExportModelAdmin
 
 from .models import Style, Artist
+from .resources import StyleResource, ArtistResource
 
 
 @admin.register(Style)
-class StyleAdmin(admin.ModelAdmin):
+class StyleAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     """Admin for Style model."""
 
     list_per_page = 25
@@ -14,11 +16,11 @@ class StyleAdmin(admin.ModelAdmin):
     list_display = ["name", "created_at", "is_available"]
     list_editable = ["is_available"]
     readonly_fields = ["pk", "created_at", "updated_at"]
-    ordering = ["pk"]
+    resource_class = StyleResource
 
 
 @admin.register(Artist)
-class ArtistAdmin(admin.ModelAdmin):
+class ArtistAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     """Admin for Artist model."""
 
     list_per_page = 25
@@ -27,7 +29,7 @@ class ArtistAdmin(admin.ModelAdmin):
     list_filter = ["is_team"]
     list_editable = ["is_team"]
     readonly_fields = ["pk", "slug", "created_at", "updated_at"]
-    ordering = ["pk"]
+    resource_class = ArtistResource
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)

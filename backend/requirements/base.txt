@@ -17,4 +17,5 @@ cloudinary==1.38.0
 
 # Utilities
 pillow==10.3.0
+django-import-export==4.0.7
 Markdown==3.6

@@ -3,15 +3,17 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group, Permission
+from import_export.admin import ImportExportModelAdmin
 
 from apps.artists.models import Artist
 from .models import User
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .choices import RoleChoices
+from .resources import UserResource
 
 
 @admin.register(User)
-class UserAdmin(BaseUserAdmin):
+class UserAdmin(ImportExportModelAdmin, BaseUserAdmin):
     """Admin for User model."""
 
     model = User
@@ -24,7 +26,10 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ["is_staff", "is_superuser"]
     readonly_fields = ["pk", "created_at", "updated_at"]
     ordering = ["email"]
+    resource_class = UserResource
+
     actions = ["assign_artist", "assign_administrator"]
+
     fieldsets = (
         (None, {"fields": ("name", "email", "username", "password")}),
         (
