@@ -7,6 +7,7 @@ from .views import (
     CategoryListView,
     ProductListView,
     ProductDetailView,
+    RelatedProductsListView,
     FeaturedProductsListView,
 )
 
@@ -31,6 +32,11 @@ urlpatterns = [
         "products/<str:slug>",
         ProductDetailView.as_view(),
         name="product-detail",
+    ),
+    path(
+        "products/<uuid:pk>/related",
+        RelatedProductsListView.as_view(),
+        name="related-products-lis",
     ),
     path(
         "products/featured",

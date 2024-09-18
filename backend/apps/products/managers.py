@@ -41,6 +41,17 @@ class ProductManager(BaseManager):
             "brand_id",
         )
 
+    def get_related(self, product):
+        return (
+            self.get_available()
+            .select_related("category_id", "brand_id")
+            .filter(
+                brand_id=product.brand_id,
+                category_id=product.category_id,
+            )
+            .exclude(id=product.id)
+        )[:10]
+
     def get_featured(self):
         return (
             self.get_available()

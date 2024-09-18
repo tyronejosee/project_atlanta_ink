@@ -1,6 +1,7 @@
 """Models for Bookings App."""
 
 from django.db import models
+from django.utils import timezone
 from cloudinary.models import CloudinaryField
 
 from apps.utils.models import BaseModel
@@ -65,3 +66,35 @@ class Booking(BaseModel):
 
     def __str__(self):
         return str(f"{self.first_name} {self.last_name}")
+
+
+class Schedule(BaseModel):
+    """Model definition for Schedule model."""
+
+    booking_id = models.OneToOneField(
+        Booking,
+        related_name="schedule",
+        on_delete=models.CASCADE,
+        help_text="The booking associated with this schedule",
+    )
+    start_time = models.DateTimeField(
+        default=timezone.now,
+        help_text="The start time of the booking.",
+    )
+    end_time = models.DateTimeField(
+        blank=True,
+        null=True,
+        help_text="The end time of the booking. Optional.",
+    )
+    is_confirmed = models.BooleanField(
+        default=False,
+        help_text="Indicates if the schedule has been confirmed.",
+    )
+
+    class Meta:
+        ordering = ["start_time"]
+        verbose_name = "schedule"
+        verbose_name_plural = "schedules"
+
+    def __str__(self):
+        return str(f"Schedule for Booking ID: {self.booking.id}")

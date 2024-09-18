@@ -1,6 +1,9 @@
 """Views for Products App."""
 
 from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
 from drf_spectacular.utils import extend_schema_view
 
 from .models import Brand, Category, Product
@@ -16,6 +19,7 @@ from .schemas import (
     category_list_schema,
     product_list_schema,
     product_detail_schema,
+    related_products_list_schema,
     featured_products_list_schema,
 )
 
@@ -82,6 +86,26 @@ class ProductDetailView(RetrieveAPIView):
 
     def get_queryset(self):
         return Product.objects.get_detail()
+
+
+@extend_schema_view(**related_products_list_schema)
+class RelatedProductsListView(APIView):
+    """
+    View for listing all related products.
+
+    Endpoints:
+    - GET /api/products/{id}/related
+    """
+
+    def get(self, request, pk):
+        try:
+            product = Product.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            raise NotFound("Product not found")
+
+        related_products = Product.objects.get_related(product)
+        serializer = ProductMinimalSerializer(related_products, many=True)
+        return Response(serializer.data)
 
 
 @extend_schema_view(**featured_products_list_schema)
