@@ -1,4 +1,4 @@
-import { nextui } from '@nextui-org/theme';
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,26 +11,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#FF4200',
-        secondary: '#FF9100',
+        primary: "#FF4200",
+        secondary: "#FF9100",
         neutral: {
-          light: '#fafafa',
-          lightgray: '#f5f5f5',
-          gray: '#737373',
-          darkgrey: '#171717',
-          dark: '#0a0a0a'
-        }
+          light: "#fafafa",
+          lightgray: "#f5f5f5",
+          gray: "#737373",
+          darkgrey: "#171717",
+          dark: "#0a0a0a",
+        },
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
-      }
-    }
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+    },
   },
   darkMode: ["class"],
   plugins: [nextui(), require("tailwindcss-animate")],

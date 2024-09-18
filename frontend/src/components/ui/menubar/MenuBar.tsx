@@ -11,10 +11,15 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Button
+  Button,
 } from "@nextui-org/react";
 import { Bird } from "lucide-react";
-import { MENU_ITEMS, NAV_ITEMS, NAV_CTA, COMPANY_NAME } from "@/config/constants";
+import {
+  MENU_ITEMS,
+  NAV_ITEMS,
+  NAV_CTA,
+  COMPANY_NAME,
+} from "@/config/constants";
 import { Instagram, YouTube, Twitch } from "@/components";
 import { useCompanyStore } from "@/store";
 
@@ -23,7 +28,7 @@ export const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 0);
@@ -64,7 +69,9 @@ export const MenuBar = () => {
             <NavbarItem key={item.id}>
               <Link
                 href={item.href}
-                className={isActive ? "font-bold text-primary" : "hover:font-bold"}
+                className={
+                  isActive ? "font-bold text-primary" : "hover:font-bold"
+                }
               >
                 {item.label}
               </Link>
@@ -117,9 +124,7 @@ export const MenuBar = () => {
         />
       </NavbarContent>
 
-      <NavbarMenu
-        className={`${shouldBlur ? "" : "bg-transparent blur-0"}`}
-      >
+      <NavbarMenu className={`${shouldBlur ? "" : "bg-transparent blur-0"}`}>
         {MENU_ITEMS.map((item) => {
           const isActive = pathname === item.href;
 
@@ -127,7 +132,9 @@ export const MenuBar = () => {
             <NavbarMenuItem key={item.id}>
               <Link
                 href={item.href}
-                className={isActive ? "font-bold text-primary" : "hover:font-bold"}
+                className={
+                  isActive ? "font-bold text-primary" : "hover:font-bold"
+                }
               >
                 {item.label}
               </Link>
@@ -135,6 +142,6 @@ export const MenuBar = () => {
           );
         })}
       </NavbarMenu>
-    </Navbar >
+    </Navbar>
   );
-}
+};

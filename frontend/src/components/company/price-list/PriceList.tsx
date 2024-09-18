@@ -1,4 +1,4 @@
-import { PriceItem } from "@/components"
+import { PriceItem } from "@/components";
 
 export const PriceList = () => {
   return (
@@ -27,5 +27,5 @@ export const PriceList = () => {
         </article>
       </div>
     </section>
-  )
-}
+  );
+};

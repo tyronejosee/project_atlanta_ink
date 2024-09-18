@@ -1,5 +1,3 @@
 export const ArtistCard = () => {
-  return (
-    <div>ArtistCard</div>
-  )
-}
+  return <div>ArtistCard</div>;
+};

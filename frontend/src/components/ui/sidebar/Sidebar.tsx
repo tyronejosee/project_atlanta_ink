@@ -1,39 +1,44 @@
-"use client"
+"use client";
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Input, Slider, CheckboxGroup, Checkbox } from "@nextui-org/react"
+import { Input, Slider, CheckboxGroup, Checkbox } from "@nextui-org/react";
 import { DEFAULT_IMAGE } from "@/config/constants";
-import { categories } from "@/utils/data"
+import { categories } from "@/utils/data";
 
 export const Sidebar = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") || "");
-  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [debounceTimeout, setDebounceTimeout] = useState<NodeJS.Timeout | null>(
+    null,
+  );
 
   // Update the search state when the URL changes
   useEffect(() => {
     setSearch(searchParams.get("search") || "");
   }, [searchParams]);
 
-  const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchValue = e.target.value;
-    setSearch(searchValue);
+  const handleSearchChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const searchValue = e.target.value;
+      setSearch(searchValue);
 
-    // Clear the previous timeout
-    if (debounceTimeout) {
-      clearTimeout(debounceTimeout);
-    }
+      // Clear the previous timeout
+      if (debounceTimeout) {
+        clearTimeout(debounceTimeout);
+      }
 
-    // Set a new timeout
-    const timeout = setTimeout(() => {
-      updateQueryParams({ search: searchValue });
-    }, 1000); // 1000ms delay
+      // Set a new timeout
+      const timeout = setTimeout(() => {
+        updateQueryParams({ search: searchValue });
+      }, 1000); // 1000ms delay
 
-    setDebounceTimeout(timeout);
-  }, [debounceTimeout]);
+      setDebounceTimeout(timeout);
+    },
+    [debounceTimeout],
+  );
 
   const updateQueryParams = (newParams: Record<string, string>) => {
     const currentParams = new URLSearchParams(window.location.search);
@@ -77,13 +82,11 @@ export const Sidebar = () => {
           <CheckboxGroup
             label="Categories"
             color="primary"
-          // value={selected}
-          // onValueChange={setSelected}
+            // value={selected}
+            // onValueChange={setSelected}
           >
             {categories.map((categories) => (
-              <Checkbox
-                key={categories.id}
-                value={categories.id}>
+              <Checkbox key={categories.id} value={categories.id}>
                 {categories.name}
               </Checkbox>
             ))}
@@ -100,5 +103,5 @@ export const Sidebar = () => {
         </div>
       </nav>
     </aside>
-  )
-}
+  );
+};

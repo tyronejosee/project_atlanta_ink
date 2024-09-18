@@ -8,7 +8,7 @@ import { IFaq } from "@/interfaces";
 import { HeaderSection } from "@/components";
 
 interface Props {
-  faqs: IFaq[]
+  faqs: IFaq[];
 }
 
 export const FAQSection = ({ faqs }: Props) => {
@@ -43,12 +43,16 @@ export const FAQSection = ({ faqs }: Props) => {
                     aria-label={faq.question}
                     title={faq.question}
                     startContent={<CircleHelp className="stroke-primary" />}
-                    indicator={({ isOpen }) => (isOpen ? <ChevronLeft className="stroke-primary" /> : <ChevronLeft />)}
+                    indicator={({ isOpen }) =>
+                      isOpen ? (
+                        <ChevronLeft className="stroke-primary" />
+                      ) : (
+                        <ChevronLeft />
+                      )
+                    }
                     className="bg-neutral-darkgrey shadow-none"
                   >
-                    <p className="text-sm text-neutral-gray">
-                      {faq.answer}
-                    </p>
+                    <p className="text-sm text-neutral-gray">{faq.answer}</p>
                   </AccordionItem>
                 </Accordion>
               </motion.div>

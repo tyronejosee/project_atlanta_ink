@@ -26,7 +26,9 @@ export const ProductList = ({ products }: Props) => {
             />
           </div>
           <div className="p-4">
-            <h3 className="text-center text-xl font-semibold pb-2 mb-2 border-b border-b-neutral-gray">{product.name}</h3>
+            <h3 className="text-center text-xl font-semibold pb-2 mb-2 border-b border-b-neutral-gray">
+              {product.name}
+            </h3>
             <span>{product.price}</span>
           </div>
         </Link>
@@ -34,4 +36,3 @@ export const ProductList = ({ products }: Props) => {
     </article>
   );
 };
-

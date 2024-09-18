@@ -36,7 +36,10 @@ export const ParallaxScrollMain = ({
 
   return (
     <div
-      className={cn("h-[40rem] items-start overflow-y-auto w-full px-4", className)}
+      className={cn(
+        "h-[40rem] items-start overflow-y-auto w-full px-4",
+        className,
+      )}
       ref={gridRef}
     >
       <div
@@ -45,10 +48,7 @@ export const ParallaxScrollMain = ({
       >
         <div className="grid gap-4">
           {firstPart.map((el, idx) => (
-            <motion.div
-              style={{ y: translateFirst }}
-              key={"grid-1" + idx}
-            >
+            <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
               <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"

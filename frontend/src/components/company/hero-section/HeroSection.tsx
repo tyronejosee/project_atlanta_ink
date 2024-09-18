@@ -28,20 +28,28 @@ export const HeroSection = () => {
         }}
         className="max-w-screen-xl mx-auto px-4 md:px-0 flex flex-col items-center justify-center h-full text-center relative z-10 space-y-4"
       >
-        <span className="text-md md:text-xl text-primary font-bold">Tattoo Studio</span>
+        <span className="text-md md:text-xl text-primary font-bold">
+          Tattoo Studio
+        </span>
         <h2 className="text-5xl md:text-7xl font-bold">ATLANTA INK</h2>
-        <p className="text-md md:text-lg max-w-screen-lg mb-6">Trust our experts for your next tattoo. With years of experience and a passion for detail, we’re here to bring your vision to life with precision and professionalism. Experience the difference of well-crafted art.</p>
+        <p className="text-md md:text-lg max-w-screen-lg mb-6">
+          Trust our experts for your next tattoo. With years of experience and a
+          passion for detail, we’re here to bring your vision to life with
+          precision and professionalism. Experience the difference of
+          well-crafted art.
+        </p>
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 1 }}
-        >
-        </motion.div>
+        ></motion.div>
       </motion.div>
-      <span className="absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2 text-neutral-light animate-pulse">Explore</span>
+      <span className="absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2 text-neutral-light animate-pulse">
+        Explore
+      </span>
       <div className="hidden md:block absolute bottom-20 left-20">
         <Logo />
       </div>
     </section>
-  )
-}
+  );
+};

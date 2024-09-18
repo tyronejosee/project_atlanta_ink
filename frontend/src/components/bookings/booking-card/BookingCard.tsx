@@ -11,9 +11,11 @@ export const BookingCard = ({ title, text, icon }: Props) => {
         {icon}
       </div>
       <div className="ml-4">
-        <p className="text-lg font-bold text-primary group-hover:text-neutral-dark">{title}</p>
+        <p className="text-lg font-bold text-primary group-hover:text-neutral-dark">
+          {title}
+        </p>
         <p className="text-neutral-light text-sm">{text}</p>
       </div>
     </div>
-  )
-}
+  );
+};

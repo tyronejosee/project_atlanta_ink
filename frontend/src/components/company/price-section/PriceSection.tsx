@@ -36,5 +36,5 @@ export const PriceSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

@@ -6,10 +6,9 @@ if (!API_URL) {
 
 export const DEFAULT_IMAGE = "/images/no-image.webp";
 
-export const COMPANY_NAME = "Company Name"
+export const COMPANY_NAME = "Company Name";
 
-export const NAV_CTA = { label: "Book Now", href: "/bookings" }
-
+export const NAV_CTA = { label: "Book Now", href: "/bookings" };
 
 export const SORT_CHOICES = [
   { key: "latest", label: "Latest Products" },
@@ -70,5 +69,5 @@ export const TATTOO_EXAMPLE = [
   "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725560726/qfmmxblvlctpjtkrg0km.jpg",
   "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725560785/gwojsaglfb78ubmqgqzc.webp",
   "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725560726/qfmmxblvlctpjtkrg0km.jpg",
-  "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725560785/gwojsaglfb78ubmqgqzc.webp"
-]
+  "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1725560785/gwojsaglfb78ubmqgqzc.webp",
+];

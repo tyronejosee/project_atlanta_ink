@@ -1,6 +1,6 @@
-import React from "react"
-import { TATTOO_EXAMPLE } from "@/config/constants"
-import { HeaderSection, ParallaxScrollMain } from "@/components"
+import React from "react";
+import { TATTOO_EXAMPLE } from "@/config/constants";
+import { HeaderSection, ParallaxScrollMain } from "@/components";
 
 export const TattooSection = () => {
   return (
@@ -12,5 +12,5 @@ export const TattooSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

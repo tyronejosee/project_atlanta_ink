@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 import { Button } from "@nextui-org/react";
@@ -16,8 +16,14 @@ export const PromotionSection = () => {
       style={{ backgroundImage: `url("/images/hero.webp")` }}
     >
       <header className="flex flex-col justify-center items-center space-y-4">
-        <h2 className="text-4xl md:text-6xl font-bold">Get <span className="text-primary font-black">15%</span> discount for your first tattoo</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque eveniet accusamus nulla non nam magnam.</p>
+        <h2 className="text-4xl md:text-6xl font-bold">
+          Get <span className="text-primary font-black">15%</span> discount for
+          your first tattoo
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque
+          eveniet accusamus nulla non nam magnam.
+        </p>
         <Button
           onClick={handleButtonClick}
           variant="flat"

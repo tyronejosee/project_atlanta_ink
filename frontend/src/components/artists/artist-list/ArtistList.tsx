@@ -27,12 +27,16 @@ export const ArtistList = ({ artists }: Props) => {
             />
           </div>
           <div className="p-4">
-            <h3 className="text-center text-xl font-semibold pb-2 mb-2 border-b border-b-neutral-gray">{artist.name}</h3>
+            <h3 className="text-center text-xl font-semibold pb-2 mb-2 border-b border-b-neutral-gray">
+              {artist.name}
+            </h3>
             <div className="flex justify-center items-center h-10">
               <ul className="flex space-x-1">
                 {artist.styles.map((style) => (
                   <li key={style.id}>
-                    <Badge variant={"secondary"} className="text-xs">{style.name}</Badge>
+                    <Badge variant={"secondary"} className="text-xs">
+                      {style.name}
+                    </Badge>
                   </li>
                 ))}
               </ul>

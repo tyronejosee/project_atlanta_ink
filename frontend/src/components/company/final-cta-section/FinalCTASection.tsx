@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -18,7 +18,9 @@ export const FinalCTASection = () => {
     <section className="py-16 bg-primary">
       <div className="max-w-screen-xl mx-auto text-center">
         <header>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-white">What are you waiting for, schedule your time!</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-white">
+            What are you waiting for, schedule your time!
+          </h2>
         </header>
         <form
           className="max-w-screen-sm mx-auto flex flex-col space-y-4 px-4 xl:px-0"
@@ -40,5 +42,5 @@ export const FinalCTASection = () => {
         </form>
       </div>
     </section>
-  )
-}
+  );
+};

@@ -18,7 +18,9 @@ export default function BookingsPage({ searchParams }: Props) {
           <header>
             <span className="text-primary">Contact Us</span>
             <h1 className="text-7xl">Get in Touch</h1>
-            <p className="text-neutral-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit.</p>
+            <p className="text-neutral-gray">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit.
+            </p>
           </header>
           <div className="grid grid-cols-2 gap-4">
             <BookingCard
@@ -50,6 +52,6 @@ export default function BookingsPage({ searchParams }: Props) {
         />
       </div>
       <ToastContainer />
-    </section >
+    </section>
   );
-};
+}

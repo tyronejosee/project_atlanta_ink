@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Button, Checkbox, Input, Select, SelectItem, Textarea } from "@nextui-org/react";
+import {
+  Button,
+  Checkbox,
+  Input,
+  Select,
+  SelectItem,
+  Textarea,
+} from "@nextui-org/react";
 import { toast } from "react-toastify";
 import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
 import { validateBudget, validatePhone } from "@/utils/validators";
@@ -14,7 +21,13 @@ interface Props {
 }
 
 export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
-  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<IBookingValues>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+    reset,
+  } = useForm<IBookingValues>({
     defaultValues: {
       phone: initialPhone,
       firstTimeSession: initialfirstTime,
@@ -22,22 +35,23 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
   });
 
   // TODO: Move attbs
-  const notify = () => toast.success("Wow so easy!", {
-    theme: "dark",
-    position: "top-center",
-    hideProgressBar: true,
-    closeButton: false,
-    icon: false,
-    pauseOnFocusLoss: false,
-    style: {
-      backgroundColor: "#FF4200",
-      color: "#fafafa",
-      border: "none",
-      textAlign: "center",
-      padding: "16px 24px",
-      borderRadius: "8px"
-    }
-  });
+  const notify = () =>
+    toast.success("Wow so easy!", {
+      theme: "dark",
+      position: "top-center",
+      hideProgressBar: true,
+      closeButton: false,
+      icon: false,
+      pauseOnFocusLoss: false,
+      style: {
+        backgroundColor: "#FF4200",
+        color: "#fafafa",
+        border: "none",
+        textAlign: "center",
+        padding: "16px 24px",
+        borderRadius: "8px",
+      },
+    });
 
   const onSubmit: SubmitHandler<IBookingValues> = async (data) => {
     const formData = new FormData();
@@ -48,7 +62,10 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
     formData.append("notes", data.notes);
     formData.append("estimated_budget", data.budget);
     formData.append("tattoo_placement", data.placement);
-    formData.append("is_work_in_progress", data.hasWorkInProgress ? "true" : "false");
+    formData.append(
+      "is_work_in_progress",
+      data.hasWorkInProgress ? "true" : "false",
+    );
     formData.append("is_first_time", data.firstTimeSession ? "true" : "false");
 
     if (data.file.length > 0) {
@@ -65,15 +82,18 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
       }
       toast.success("Booking created successfully.", {
         theme: "dark",
-        style: { backgroundColor: "#333", color: "#fff" }
+        style: { backgroundColor: "#333", color: "#fff" },
       });
       reset();
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
-      toast.error("There was a problem with the submission. Please try again.", {
-        theme: "dark",
-        style: { backgroundColor: "#333", color: "#fff" }
-      });
+      toast.error(
+        "There was a problem with the submission. Please try again.",
+        {
+          theme: "dark",
+          style: { backgroundColor: "#333", color: "#fff" },
+        },
+      );
     }
   };
 
@@ -91,7 +111,9 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           {...register("firstName", { required: "First name is required" })}
         />
 
-        {errors.firstName?.message && <FormError>* {errors.firstName?.message}</FormError>}
+        {errors.firstName?.message && (
+          <FormError>* {errors.firstName?.message}</FormError>
+        )}
 
         <Input
           label="Last Name"
@@ -101,7 +123,9 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           required
           {...register("lastName", { required: "Last name is required" })}
         />
-        {errors.lastName?.message && <FormError>* {errors.lastName?.message}</FormError>}
+        {errors.lastName?.message && (
+          <FormError>* {errors.lastName?.message}</FormError>
+        )}
 
         <Input
           label="Phone"
@@ -112,7 +136,9 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           isClearable
           {...register("phone", { validate: validatePhone })}
         />
-        {errors.phone?.message && <FormError>* {errors.phone?.message}</FormError>}
+        {errors.phone?.message && (
+          <FormError>* {errors.phone?.message}</FormError>
+        )}
 
         <Textarea
           label="Notes"
@@ -120,7 +146,9 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           radius="md"
           {...register("notes", { required: "Notes are required" })}
         />
-        {errors.notes?.message && <FormError>* {errors.notes?.message}</FormError>}
+        {errors.notes?.message && (
+          <FormError>* {errors.notes?.message}</FormError>
+        )}
 
         {/* <Select
           label="Select an Artist"
@@ -140,14 +168,18 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           radius="md"
           {...register("budget", { validate: validateBudget })}
         />
-        {errors.budget?.message && <FormError>* {errors.budget?.message}</FormError>}
+        {errors.budget?.message && (
+          <FormError>* {errors.budget?.message}</FormError>
+        )}
 
         <Select
           label="Select a tattoo placement"
           size="sm"
           radius="md"
           className="max-w-xs"
-          {...register("placement", { required: "Tattoo placement is required" })}
+          {...register("placement", {
+            required: "Tattoo placement is required",
+          })}
         >
           {PLACEMENT_CHOICES.map((choice) => (
             <SelectItem key={choice.key} value={choice.key}>
@@ -155,17 +187,15 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
             </SelectItem>
           ))}
         </Select>
-        {errors.placement?.message && <FormError>* {errors.placement?.message}</FormError>}
+        {errors.placement?.message && (
+          <FormError>* {errors.placement?.message}</FormError>
+        )}
 
         <div className="flex flex-col space-y-2">
-          <Checkbox
-            {...register("hasWorkInProgress")}
-          >
+          <Checkbox {...register("hasWorkInProgress")}>
             I have a work in progress tattoo
           </Checkbox>
-          <Checkbox
-            {...register("firstTimeSession")}
-          >
+          <Checkbox {...register("firstTimeSession")}>
             First-time session
           </Checkbox>
         </div>
@@ -188,5 +218,5 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
         </Button>
       </form>
     </section>
-  )
-}
+  );
+};

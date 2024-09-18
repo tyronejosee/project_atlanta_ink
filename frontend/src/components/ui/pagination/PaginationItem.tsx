@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Pagination } from "@nextui-org/react";
 
@@ -13,5 +13,5 @@ export const PaginationItem = () => {
         initialPage={1}
       />
     </nav>
-  )
-}
+  );
+};

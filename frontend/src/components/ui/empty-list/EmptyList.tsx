@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
 interface Props {
-  content: string
+  content: string;
 }
 
 export const EmptyList = ({ content = "content" }: Props) => {
@@ -35,6 +35,5 @@ export const EmptyList = ({ content = "content" }: Props) => {
         Go back to home
       </motion.button>
     </section>
-  )
-}
-
+  );
+};

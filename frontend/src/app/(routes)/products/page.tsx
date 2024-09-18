@@ -1,6 +1,11 @@
 import { useRouter } from "next/router";
 import { getProducts } from "@/lib/api";
-import { PaginationItem, ProductHeader, ProductList, Sidebar } from "@/components";
+import {
+  PaginationItem,
+  ProductHeader,
+  ProductList,
+  Sidebar,
+} from "@/components";
 import { IProductQueryParams } from "@/interfaces";
 
 interface Props {
@@ -26,7 +31,8 @@ export default async function ProductsPage({ searchParams }: Props) {
             <ProductHeader />
             {products.length === 0 ? (
               <p className="text-center text-gray-500">
-                No products found for <span className="font-semibold">"{search}"</span>
+                No products found for{" "}
+                <span className="font-semibold">"{search}"</span>
               </p>
             ) : (
               <>
@@ -38,5 +44,5 @@ export default async function ProductsPage({ searchParams }: Props) {
         </div>
       </div>
     </>
-  )
+  );
 }

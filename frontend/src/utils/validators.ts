@@ -4,5 +4,7 @@ export const validatePhone = (value: string) => {
 };
 
 export const validateBudget = (value: string) => {
-  return value === "" || /^\d+(\.\d{1,2})?$/.test(value) || "Invalid budget format";
+  return (
+    value === "" || /^\d+(\.\d{1,2})?$/.test(value) || "Invalid budget format"
+  );
 };

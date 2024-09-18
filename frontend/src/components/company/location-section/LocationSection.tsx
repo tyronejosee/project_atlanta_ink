@@ -1,4 +1,4 @@
-import { HeaderSection } from "@/components"
+import { HeaderSection } from "@/components";
 
 export const LocationSection = () => {
   return (
@@ -7,12 +7,25 @@ export const LocationSection = () => {
         <HeaderSection title="Location" />
         <div className="flex flex-col lg:flex-row">
           <div className="relative lg:w-1/2 flex flex-col justify-center items-center bg-neutral-darkgrey overflow-x-hidden h-[400px] md:h-96">
-            <h3 className="text-3xl text-primary font-bold mb-2">Contact Information</h3>
-            <span className="text-lg text-neutral-gray font-bold mb-4">Dont wait any longer contact us</span>
-            <p><strong>Address:</strong> 1039 Grant St SE A10, Atlanta, GA 30315, US</p>
-            <p><strong>Hours:</strong> Monday to Saturday, 12:00 PM - 20:00 PM</p>
-            <p><strong>Phone:</strong> +1 404-123-1234</p>
-            <p><strong>Email:</strong> contact@atlantaink.com</p>
+            <h3 className="text-3xl text-primary font-bold mb-2">
+              Contact Information
+            </h3>
+            <span className="text-lg text-neutral-gray font-bold mb-4">
+              Dont wait any longer contact us
+            </span>
+            <p>
+              <strong>Address:</strong> 1039 Grant St SE A10, Atlanta, GA 30315,
+              US
+            </p>
+            <p>
+              <strong>Hours:</strong> Monday to Saturday, 12:00 PM - 20:00 PM
+            </p>
+            <p>
+              <strong>Phone:</strong> +1 404-123-1234
+            </p>
+            <p>
+              <strong>Email:</strong> contact@atlantaink.com
+            </p>
           </div>
           <iframe
             className="lg:w-1/2 h-64 md:h-96"
@@ -21,7 +34,7 @@ export const LocationSection = () => {
             height="100%"
             style={{
               border: "16px",
-              filter: "invert(1) brightness(1) grayscale(100%)"
+              filter: "invert(1) brightness(1) grayscale(100%)",
             }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -29,5 +42,5 @@ export const LocationSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

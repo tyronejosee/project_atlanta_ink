@@ -39,10 +39,7 @@ export const ParallaxScroll = ({
       >
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (
-            <motion.div
-              style={{ y: translateFirst }}
-              key={"grid-1" + idx}
-            >
+            <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
               <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"

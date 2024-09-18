@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useCompanyStore } from "@/store";
 import { ICompany } from "@/interfaces";
 
-
 interface DataProviderProps {
   initialData: ICompany | null;
   children: React.ReactNode;

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 import { Select, SelectItem } from "@nextui-org/react";
@@ -28,5 +28,5 @@ export const ProductHeader = () => {
         ))}
       </Select>
     </nav>
-  )
-}
+  );
+};

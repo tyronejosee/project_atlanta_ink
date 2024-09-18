@@ -71,7 +71,10 @@ export const BackToTop = () => {
           "flex max-w-fit z-40 fixed top-16 inset-x-0 mx-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] mt-2",
         )}
       >
-        <Button onClick={scrollToTop} className="bg-primary text-neutral-light font-bold rounded-xl">
+        <Button
+          onClick={scrollToTop}
+          className="bg-primary text-neutral-light font-bold rounded-xl"
+        >
           <ChevronUp />
           Back to top
         </Button>

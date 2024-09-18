@@ -58,14 +58,30 @@ export default async function ProductDetailPage({ params }: Props) {
               </p>
               <header className="flex flex-col space-y-4">
                 <h1 className="font-bold text-3xl">{product.name}</h1>
-                <span className="font-bold text-primary text-3xl">${product.price}</span>
+                <span className="font-bold text-primary text-3xl">
+                  ${product.price}
+                </span>
               </header>
               <div>
-                <h2 className="font-bold text-2xl text-neutral-gray">Details</h2>
-                <p><span className="font-bold text-primary">SKU:</span> {product.sku}</p>
-                <p><span className="font-bold text-primary">Stock:</span> {product.stock}</p>
-                <p><span className="font-bold text-primary">Currency:</span> {product.currency}</p>
-                <p><span className="font-bold text-primary">Category:</span> {product.category}</p>
+                <h2 className="font-bold text-2xl text-neutral-gray">
+                  Details
+                </h2>
+                <p>
+                  <span className="font-bold text-primary">SKU:</span>{" "}
+                  {product.sku}
+                </p>
+                <p>
+                  <span className="font-bold text-primary">Stock:</span>{" "}
+                  {product.stock}
+                </p>
+                <p>
+                  <span className="font-bold text-primary">Currency:</span>{" "}
+                  {product.currency}
+                </p>
+                <p>
+                  <span className="font-bold text-primary">Category:</span>{" "}
+                  {product.category}
+                </p>
               </div>
               <ProductCounter />
               <div className="space-x-4">
@@ -77,7 +93,8 @@ export default async function ProductDetailPage({ params }: Props) {
               <Truck />
               <span className="font-normal text-xs text-neutral-gray">
                 <strong>Free Home Delivery:</strong>
-                Place your order and receive it conveniently at your doorstep, with no additional cost.
+                Place your order and receive it conveniently at your doorstep,
+                with no additional cost.
               </span>
             </div>
           </article>
@@ -85,8 +102,18 @@ export default async function ProductDetailPage({ params }: Props) {
 
         <aside>
           <nav className="flex space-x-4" id="product-tabs">
-            <a href="#description-tab" className="flex items-center justify-center type-base--url h-10 bg-neutral-100 dark:bg-neutral-800 rounded-xl w-full">Description</a>
-            <a href="#specifications-tab" className="flex items-center justify-center type-base--url h-10 bg-neutral-100 dark:bg-neutral-800 rounded-xl w-full">Specifications</a>
+            <a
+              href="#description-tab"
+              className="flex items-center justify-center type-base--url h-10 bg-neutral-100 dark:bg-neutral-800 rounded-xl w-full"
+            >
+              Description
+            </a>
+            <a
+              href="#specifications-tab"
+              className="flex items-center justify-center type-base--url h-10 bg-neutral-100 dark:bg-neutral-800 rounded-xl w-full"
+            >
+              Specifications
+            </a>
           </nav>
           <section className="bg-neutral-100 dark:bg-neutral-800 rounded-xl p-4 mt-4">
             <article id="description-tab" className="tab-content">
@@ -99,7 +126,7 @@ export default async function ProductDetailPage({ params }: Props) {
             </article>
           </section>
         </aside>
-      </div >
+      </div>
     </>
   );
-};
+}

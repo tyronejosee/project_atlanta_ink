@@ -1,5 +1,3 @@
 export const ApplicantForm = () => {
-  return (
-    <div>ApplicantForm</div>
-  )
-}
+  return <div>ApplicantForm</div>;
+};

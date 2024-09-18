@@ -8,7 +8,7 @@ import {
   ProductSection,
   PromotionSection,
   ServiceSection,
-  TattooSection
+  TattooSection,
 } from "@/components";
 import { getArtists, getFaqs, getServices } from "@/lib/api";
 
