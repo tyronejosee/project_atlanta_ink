@@ -4,14 +4,13 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { ITattoo } from "@/interfaces";
 
-export const ParallaxScrollMain = ({
-  images,
-  className,
-}: {
-  images: { id: number; name: string; image: string; artist: string }[];
-  className?: string;
-}) => {
+interface Props {
+  tattoos: ITattoo[];
+}
+
+export const ParallaxScrollMain = ({ tattoos }: Props) => {
   const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     container: gridRef, // remove this if your container is not fixed height
@@ -26,20 +25,17 @@ export const ParallaxScrollMain = ({
   const translateFifth = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   // Divide images into 5 equal parts
-  const partSize = Math.ceil(images.length / 5);
+  const partSize = Math.ceil(tattoos.length / 5);
 
-  const firstPart = images.slice(0, partSize);
-  const secondPart = images.slice(partSize, 2 * partSize);
-  const thirdPart = images.slice(2 * partSize, 3 * partSize);
-  const fourthPart = images.slice(3 * partSize, 4 * partSize);
-  const fifthPart = images.slice(4 * partSize);
+  const firstPart = tattoos.slice(0, partSize);
+  const secondPart = tattoos.slice(partSize, 2 * partSize);
+  const thirdPart = tattoos.slice(2 * partSize, 3 * partSize);
+  const fourthPart = tattoos.slice(3 * partSize, 4 * partSize);
+  const fifthPart = tattoos.slice(4 * partSize);
 
   return (
     <div
-      className={cn(
-        "h-[40rem] items-start overflow-y-auto w-full px-4",
-        className,
-      )}
+      className="h-[40rem] items-start overflow-y-auto w-full px-4"
       ref={gridRef}
     >
       <div
@@ -48,10 +44,14 @@ export const ParallaxScrollMain = ({
       >
         <div className="grid gap-4">
           {firstPart.map((firstPart, idx) => (
-            <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
+            <motion.div
+              key={"grid-1" + idx}
+              style={{ y: translateFirst }}
+              className="group overflow-hidden rounded-xl"
+            >
               <Image
                 src={firstPart.image}
-                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 transform transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 height="400"
                 width="400"
                 alt={`${firstPart.name} by ${firstPart.artist}`}
@@ -61,10 +61,14 @@ export const ParallaxScrollMain = ({
         </div>
         <div className="grid gap-4">
           {secondPart.map((secondPart, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
+            <motion.div
+              key={"grid-2" + idx}
+              style={{ y: translateSecond }}
+              className="group overflow-hidden rounded-xl"
+            >
               <Image
                 src={secondPart.image}
-                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 transform transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 height="400"
                 width="400"
                 alt={`${secondPart.name} by ${secondPart.artist}`}
@@ -74,10 +78,14 @@ export const ParallaxScrollMain = ({
         </div>
         <div className="grid gap-4">
           {thirdPart.map((thirdPart, idx) => (
-            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
+            <motion.div
+              key={"grid-3" + idx}
+              style={{ y: translateThird }}
+              className="group overflow-hidden rounded-xl"
+            >
               <Image
                 src={thirdPart.image}
-                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 transform transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 height="400"
                 width="400"
                 alt={`${thirdPart.name} by ${thirdPart.artist}`}
@@ -87,10 +95,14 @@ export const ParallaxScrollMain = ({
         </div>
         <div className="grid gap-4">
           {fourthPart.map((fourthPart, idx) => (
-            <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
+            <motion.div
+              key={"grid-4" + idx}
+              style={{ y: translateFourth }}
+              className="group overflow-hidden rounded-xl"
+            >
               <Image
                 src={fourthPart.image}
-                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 transform transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 height="400"
                 width="400"
                 alt={`${fourthPart.name} by ${fourthPart.artist}`}
@@ -100,10 +112,14 @@ export const ParallaxScrollMain = ({
         </div>
         <div className="grid gap-4">
           {fifthPart.map((fifthPart, idx) => (
-            <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
+            <motion.div
+              key={"grid-5" + idx}
+              style={{ y: translateFifth }}
+              className="group overflow-hidden rounded-xl"
+            >
               <Image
                 src={fifthPart.image}
-                className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
+                className="h-80 w-full object-cover object-left-top gap-10 !m-0 !p-0 transform transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 height="400"
                 width="400"
                 alt={`${fifthPart.name} by ${fifthPart.artist}`}

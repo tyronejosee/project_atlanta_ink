@@ -93,7 +93,7 @@ export default async function ArtistDetailPage({ params }: Props) {
       </section>
       <section className="w-full p-4">
         {hasTattoos ? (
-          <ParallaxScroll images={tattoos} />
+          <ParallaxScroll tattoos={tattoos} />
         ) : (
           <span>Tattoos Not Found</span>
         )}

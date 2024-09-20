@@ -10,11 +10,18 @@ import {
   ServiceSection,
   TattooSection,
 } from "@/components";
-import { getArtists, getFaqs, getPrices, getServices } from "@/lib/api";
+import {
+  getArtists,
+  getFaqs,
+  getPrices,
+  getServices,
+  getTattoos,
+} from "@/lib/api";
 
 export default async function HomePage() {
-  const [services, artists, prices, faqs] = await Promise.all([
+  const [services, tattoos, artists, prices, faqs] = await Promise.all([
     getServices(),
+    getTattoos(),
     getArtists(),
     getPrices({ is_featured: true }),
     getFaqs(),
@@ -25,7 +32,7 @@ export default async function HomePage() {
       <HeroSection />
       <PromotionSection />
       <ServiceSection services={services} />
-      <TattooSection />
+      <TattooSection tattoos={tattoos} />
       <ArtistSection artists={artists} />
       <PriceSection prices={prices} />
       <ProductSection />

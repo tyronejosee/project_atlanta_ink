@@ -2,7 +2,7 @@ export interface ITattoo {
   id: string;
   name: string;
   slug: string;
-  image?: string | null;
+  image: string;
   artist: string;
 }
 

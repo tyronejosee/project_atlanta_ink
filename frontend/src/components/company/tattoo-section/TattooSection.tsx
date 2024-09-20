@@ -1,11 +1,16 @@
 import { TATTOO_EXAMPLE_OBJ } from "@/config/constants";
 import { HeaderSection, ParallaxScrollMain } from "@/components";
+import { ITattoo } from "@/interfaces";
 
-export const TattooSection = () => {
+interface Props {
+  tattoos: ITattoo[];
+}
+
+export const TattooSection = ({ tattoos }: Props) => {
   return (
     <section className="py-16">
       <HeaderSection title="Tattoos" />
-      <ParallaxScrollMain images={TATTOO_EXAMPLE_OBJ} />
+      <ParallaxScrollMain tattoos={tattoos} />
     </section>
   );
 };
