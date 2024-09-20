@@ -8,7 +8,7 @@ from rest_framework import status
 from drf_spectacular.utils import extend_schema_view
 
 from apps.tattoos.models import Tattoo
-from apps.tattoos.serializers import TattooImageSerializer
+from apps.tattoos.serializers import TattooSerializer
 from .models import Artist
 from .serializers import ArtistSerializer
 from .schemas import (
@@ -59,8 +59,6 @@ class ArtistTattooListView(APIView):
     - GET /api/artists/{slug}/tattoos
     """
 
-    serializer_class = TattooImageSerializer
-
     def get(self, request, slug, *args, **kwargs):
         try:
             artist = Artist.objects.get(slug=slug)
@@ -68,13 +66,10 @@ class ArtistTattooListView(APIView):
             raise NotFound("Artist not found.")
 
         tattoos = Tattoo.objects.get_by_artist(artist)
-
-        if not tattoos.exists():
-            return Response(
-                {"detail": "No tattoos found."},
-                status=status.HTTP_404_NOT_FOUND,
-            )
-
-        serializer = self.serializer_class(tattoos, many=True)
-        image_urls = [tattoo["image"] for tattoo in serializer.data]
-        return Response(image_urls)
+        if tattoos.exists():
+            serializer = TattooSerializer(tattoos, many=True)
+            return Response(serializer.data)
+        return Response(
+            {"detail": "Tattoos not found."},
+            status=status.HTTP_404_NOT_FOUND,
+        )

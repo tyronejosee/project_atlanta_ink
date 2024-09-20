@@ -2,7 +2,7 @@
 
 from drf_spectacular.utils import extend_schema, OpenApiResponse
 
-from apps.tattoos.serializers import TattooImageSerializer
+from apps.tattoos.serializers import TattooSerializer
 from .serializers import ArtistSerializer
 
 
@@ -56,7 +56,7 @@ artist_tattoo_list_schema = {
         description="Get a list of tattoos from an artist.",
         responses={
             200: OpenApiResponse(
-                response=TattooImageSerializer,
+                response=TattooSerializer,
                 description="OK (List of tattoo found)",
             ),
             400: OpenApiResponse(

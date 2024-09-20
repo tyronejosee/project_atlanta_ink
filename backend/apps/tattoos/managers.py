@@ -13,6 +13,7 @@ class TattooManager(BaseManager):
         return (
             self.get_available()
             .select_related("artist_id")
-            .filter(artist_id=artist)
-            .only("image")
+            .filter(
+                artist_id=artist,
+            )
         )

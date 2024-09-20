@@ -9,6 +9,7 @@ from .models import Tattoo
 class TattooSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
     """Serializer for Tattoo model."""
 
+    image = serializers.SerializerMethodField()
     artist = serializers.CharField(source="artist_id.name", read_only=True)
 
     class Meta:
@@ -20,16 +21,6 @@ class TattooSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
             "image",
             "artist",
         ]
-
-
-class TattooImageSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
-    """Serializer for Tattoo model (only image field)."""
-
-    image = serializers.SerializerMethodField()
-
-    class Meta:
-        model = Tattoo
-        fields = ["image"]
 
     def get_image(self, obj):
         return obj.image.url

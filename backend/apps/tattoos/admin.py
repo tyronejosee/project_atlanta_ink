@@ -14,7 +14,7 @@ class TattooAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
     list_per_page = 25
     search_fields = ["name", "artist_id"]
-    list_display = ["name", "is_available"]
+    list_display = ["name", "artist_id__name", "is_available"]
     list_filter = ["artist_id"]
     list_editable = ["is_available"]
     readonly_fields = ["pk", "slug", "created_at", "updated_at"]
