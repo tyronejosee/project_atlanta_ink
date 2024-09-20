@@ -12,7 +12,9 @@ export const HeaderSection = ({
       <span className="text-lg md:text-xl font-bold text-primary">
         {subtitle}
       </span>
-      <h2 className="text-5xl md:text-6xl font-bold text-white">{title}</h2>
+      <h2 className="text-5xl md:text-6xl font-bold text-neutral-light">
+        {title}
+      </h2>
     </header>
   );
 };

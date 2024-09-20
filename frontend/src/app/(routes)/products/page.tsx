@@ -32,7 +32,7 @@ export default async function ProductsPage({ searchParams }: Props) {
             {products.length === 0 ? (
               <p className="text-center text-gray-500">
                 No products found for{" "}
-                <span className="font-semibold">"{search}"</span>
+                <span className="font-semibold">&quot{search}&quot</span>
               </p>
             ) : (
               <>

@@ -28,10 +28,10 @@ export const FinalCTASection = () => {
         >
           <Input
             type="text"
+            size="lg"
             placeholder="+14040000000"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="bg-primary border-2 border-neutral-dark py-2.5 px-4 placeholder-neutral-darkgrey rounded-xl"
           />
           <Button
             type="submit"

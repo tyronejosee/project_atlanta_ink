@@ -10,6 +10,14 @@ export interface ICompany {
   location: string;
 }
 
+export interface IPrice {
+  id: string;
+  name: string;
+  description: string;
+  price_range: string;
+  is_featured: boolean;
+}
+
 export interface IFaq {
   id: string;
   question: string;

@@ -45,14 +45,14 @@ export default async function ArtistDetailPage({ params }: Props) {
   const hasTattoos = tattoos && tattoos.length > 0;
 
   return (
-    <section className="bg-neutral-dark max-w-screen-xl mx-auto flex mt-16 min-h-screen">
+    <section className="max-w-screen-xl mx-auto flex mt-16 min-h-screen">
       <section className="w-96 flex flex-col p-4 space-y-4">
         <Image
           src={artist.image || DEFAULT_IMAGE}
           alt={artist.name}
           width={300}
           height={300}
-          className="w-full rounded-full mb-4"
+          className="w-full rounded-xl mb-4"
         />
         <div>
           <h1 className="text-4xl font-bold mb-2">{artist.name}</h1>

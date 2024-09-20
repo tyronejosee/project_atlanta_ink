@@ -6,6 +6,26 @@ html {
   @apply font-sans dark:bg-neutral-dark dark:text-neutral-100 dark:selection:bg-primary dark:selection:text-neutral-light;
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fade-in {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 ::-webkit-scrollbar {
   width: 0;
   height: 0;

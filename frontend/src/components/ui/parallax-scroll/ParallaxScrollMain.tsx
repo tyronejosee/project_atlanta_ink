@@ -9,7 +9,7 @@ export const ParallaxScrollMain = ({
   images,
   className,
 }: {
-  images: string[];
+  images: { id: number; name: string; image: string; artist: string }[];
   className?: string;
 }) => {
   const gridRef = useRef<any>(null);
@@ -47,66 +47,66 @@ export const ParallaxScrollMain = ({
         ref={gridRef}
       >
         <div className="grid gap-4">
-          {firstPart.map((el, idx) => (
+          {firstPart.map((firstPart, idx) => (
             <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
               <Image
-                src={el}
+                src={firstPart.image}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt={`${firstPart.name} by ${firstPart.artist}`}
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-4">
-          {secondPart.map((el, idx) => (
+          {secondPart.map((secondPart, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <Image
-                src={el}
+                src={secondPart.image}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt={`${secondPart.name} by ${secondPart.artist}`}
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-4">
-          {thirdPart.map((el, idx) => (
+          {thirdPart.map((thirdPart, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <Image
-                src={el}
+                src={thirdPart.image}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt={`${thirdPart.name} by ${thirdPart.artist}`}
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-4">
-          {fourthPart.map((el, idx) => (
+          {fourthPart.map((fourthPart, idx) => (
             <motion.div style={{ y: translateFourth }} key={"grid-4" + idx}>
               <Image
-                src={el}
+                src={fourthPart.image}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt={`${fourthPart.name} by ${fourthPart.artist}`}
               />
             </motion.div>
           ))}
         </div>
         <div className="grid gap-4">
-          {fifthPart.map((el, idx) => (
+          {fifthPart.map((fifthPart, idx) => (
             <motion.div style={{ y: translateFifth }} key={"grid-5" + idx}>
               <Image
-                src={el}
+                src={fifthPart.image}
                 className="h-80 w-full object-cover object-left-top rounded-xl gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
-                alt="thumbnail"
+                alt={`${fifthPart.name} by ${fifthPart.artist}`}
               />
             </motion.div>
           ))}
