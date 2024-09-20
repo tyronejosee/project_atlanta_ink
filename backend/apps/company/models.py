@@ -5,7 +5,6 @@ from cloudinary.models import CloudinaryField
 
 from apps.utils.models import BaseModel
 from apps.utils.validators import validate_phone
-from apps.products.choices import CurrencyTypeChoices
 from .managers import CompanyManager, PriceManager, ServiceManager, FaqManager
 
 
@@ -41,13 +40,12 @@ class Company(BaseModel):
 class Price(BaseModel):
     """Model definition for Price model."""
 
-    name = models.CharField(max_length=25, unique=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    currency = models.CharField(
-        max_length=3,
-        choices=CurrencyTypeChoices.choices,
-        default=CurrencyTypeChoices.USD,
-        help_text="Select the currency in which service price is displayed.",
+    name = models.CharField(max_length=100, unique=True)
+    description = models.CharField(max_length=255, blank=True)
+    price_range = models.CharField(
+        max_length=25,
+        blank=True,
+        help_text="Example: $250 - $500",
     )
     is_featured = models.BooleanField(default=False)
 

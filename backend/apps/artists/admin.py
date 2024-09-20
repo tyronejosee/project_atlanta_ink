@@ -25,10 +25,11 @@ class ArtistAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
     list_per_page = 25
     search_fields = ["name"]
-    list_display = ["name", "is_team"]
+    list_display = ["name", "instagram", "is_team"]
     list_filter = ["is_team"]
     list_editable = ["is_team"]
     readonly_fields = ["pk", "slug", "created_at", "updated_at"]
+    filter_horizontal = ["styles"]
     resource_class = ArtistResource
 
     def get_queryset(self, request):

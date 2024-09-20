@@ -26,7 +26,7 @@ class CompanyAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 class PriceAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     """Admin for Price model."""
 
-    list_display = ["name", "price", "is_available"]
+    list_display = ["name", "price_range", "is_available"]
     readonly_fields = ["pk", "created_at", "updated_at"]
     ordering = ["name"]
     resource_class = PriceResource

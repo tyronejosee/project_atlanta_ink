@@ -32,8 +32,8 @@ class PriceSerializer(ReadOnlyFieldsMixin, serializers.ModelSerializer):
         fields = [
             "id",
             "name",
-            "price",
-            "currency",
+            "description",
+            "price_range",
             "is_featured",
         ]
 

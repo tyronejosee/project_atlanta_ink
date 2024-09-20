@@ -13,6 +13,7 @@ from .serializers import (
     ServiceSerializer,
     FaqSerializer,
 )
+from .filters import PriceFilter
 from .schemas import (
     company_data_schema,
     price_list_schema,
@@ -53,6 +54,7 @@ class PriceListView(ListAPIView):
     """
 
     serializer_class = PriceSerializer
+    filterset_class = PriceFilter
 
     def get_queryset(self):
         return Price.objects.get_list()

@@ -47,7 +47,6 @@ class Artist(BaseModel):
     )
     instagram = models.URLField(
         max_length=100,
-        unique=True,
         blank=True,
         help_text=(
             "Use the full Instagram URL, for example: "
@@ -56,7 +55,6 @@ class Artist(BaseModel):
     )
     whatsapp = models.CharField(
         max_length=12,
-        unique=True,
         blank=True,
         help_text=(
             "Use your full number including the area code, "
