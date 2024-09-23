@@ -11,7 +11,7 @@ export default async function ArtistsPage() {
   const artists = await getArtists();
 
   return (
-    <section className="max-w-screen-xl px-4 mx-auto my-16">
+    <section className="max-w-screen-xl mx-auto my-16">
       {artists.length > 0 ? (
         <>
           <HeaderPage title="Our Artists" />

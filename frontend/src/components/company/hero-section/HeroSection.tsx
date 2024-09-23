@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Logo } from "@/components";
+import { COMPANY_NAME, COMPANY_DESCRIPTION } from "@/config/constants";
 
 export const HeroSection = () => {
   return (
@@ -31,12 +32,11 @@ export const HeroSection = () => {
         <span className="text-md md:text-xl text-primary font-bold">
           Tattoo Studio
         </span>
-        <h2 className="text-5xl md:text-7xl font-bold">ATLANTA INK</h2>
+        <h2 className="text-5xl md:text-7xl font-bold">
+          {COMPANY_NAME.toUpperCase()}
+        </h2>
         <p className="text-md md:text-lg max-w-screen-lg mb-6">
-          Trust our experts for your next tattoo. With years of experience and a
-          passion for detail, we’re here to bring your vision to life with
-          precision and professionalism. Experience the difference of
-          well-crafted art.
+          {COMPANY_DESCRIPTION}
         </p>
         <motion.div
           initial={{ opacity: 0, y: 100 }}

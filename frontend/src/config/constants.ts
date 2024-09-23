@@ -4,9 +4,16 @@ if (!API_URL) {
   throw new Error("API base URL is not defined in .env");
 }
 
-export const DEFAULT_IMAGE = "/images/no-image.webp";
+export const COMPANY_NAME = "Atlanta Ink";
 
-export const COMPANY_NAME = "Company Name";
+export const COMPANY_DESCRIPTION = `
+Trust our experts for your next tattoo. With years of experience and a
+passion for detail, we’re here to bring your vision to life with
+precision and professionalism. Experience the difference of
+well-crafted art.
+`;
+
+export const DEFAULT_IMAGE = "/images/no-image.webp";
 
 export const NAV_CTA = { label: "Book Now", href: "/bookings" };
 

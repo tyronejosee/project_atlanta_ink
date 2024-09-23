@@ -26,6 +26,7 @@ export const ServiceSection = ({ services }: Props) => {
             triggerOnce: true,
             threshold: 0.1,
           });
+
           return (
             <motion.div
               key={service.id}

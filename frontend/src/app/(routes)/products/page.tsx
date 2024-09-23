@@ -1,10 +1,9 @@
-import { useRouter } from "next/router";
-import { getProducts } from "@/lib/api";
+import { getCategories, getProducts } from "@/lib/api";
 import {
+  HeaderPage,
   PaginationItem,
-  ProductHeader,
   ProductList,
-  Sidebar,
+  ProductToolbar,
 } from "@/components";
 import { IProductQueryParams } from "@/interfaces";
 
@@ -20,28 +19,30 @@ export default async function ProductsPage({ searchParams }: Props) {
     ...(category && { category }),
     ...(price && { price }),
   };
-  const products = await getProducts(params);
+
+  const [products, categories] = await Promise.all([
+    getProducts(params),
+    getCategories(),
+  ]);
 
   return (
     <>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-16">
-        <div className="flex">
-          <Sidebar />
-          <section className="pl-56 ml-4">
-            <ProductHeader />
-            {products.length === 0 ? (
-              <p className="text-center text-gray-500">
-                No products found for{" "}
-                <span className="font-semibold">&quot{search}&quot</span>
-              </p>
-            ) : (
-              <>
-                <ProductList products={products} />
-                <PaginationItem />
-              </>
-            )}
-          </section>
-        </div>
+        <HeaderPage title="Products" />
+        <>
+          <ProductToolbar categories={categories} />
+          {products.length === 0 ? (
+            <p className="text-center text-gray-500">
+              No products found for{" "}
+              <span className="font-semibold text-primary">{search}</span>
+            </p>
+          ) : (
+            <>
+              <ProductList products={products} />
+              <PaginationItem />
+            </>
+          )}
+        </>
       </div>
     </>
   );

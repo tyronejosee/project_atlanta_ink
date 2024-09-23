@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Input, Button, Textarea, Checkbox } from "@nextui-org/react";
+import { HeaderPage } from "@/components";
 
 export default function ApplyPage() {
   return (
     <section className="max-w-screen-xl mx-auto mt-16">
       <div className="grid grid-cols-2 gap-4 p-4">
-        <form className="space-y-4 px-12">
-          {/* <HeaderSection title="Apply for job" /> */}
+        <form className="space-y-4">
+          <HeaderPage title="Apply for Job" />
           <Input
             label="Name"
             size="sm"

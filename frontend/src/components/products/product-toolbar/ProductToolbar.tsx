@@ -1,13 +1,16 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Input, Slider, CheckboxGroup, Checkbox } from "@nextui-org/react";
-import { DEFAULT_IMAGE } from "@/config/constants";
-import { categories } from "@/utils/data";
+import { Input, Select, SelectItem } from "@nextui-org/react";
+import { SORT_CHOICES } from "@/config/constants";
+import { ICategory } from "@/interfaces";
 
-export const Sidebar = () => {
+interface Props {
+  categories: ICategory[];
+}
+
+export const ProductToolbar = ({ categories }: Props) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") || "");
@@ -54,9 +57,13 @@ export const Sidebar = () => {
     router.push(`?${currentParams.toString()}`);
   };
 
+  const handleChange = (value: string) => {
+    router.push(`/products?sort_by=${value}`);
+  };
+
   return (
-    <aside className="fixed top-16 w-56 h-[620px] border-r border-r-neutral-darkgrey z-20 space-y-4 p-4 overflow-y-auto">
-      <nav className="space-y-8">
+    <aside className="z-20 pb-8">
+      <nav className="flex space-x-4">
         <Input
           label="Search"
           type="text"
@@ -64,43 +71,32 @@ export const Sidebar = () => {
           size="sm"
           value={search}
           onChange={handleSearchChange}
+          className="w-full"
         />
-        <div>
-          <Slider
-            size="md"
-            step={25}
-            color="primary"
-            label="Price"
-            showSteps={true}
-            maxValue={100}
-            minValue={25}
-            defaultValue={25}
-            className="max-w-md"
-          />
-        </div>
-        <div className="flex flex-col gap-3">
-          <CheckboxGroup
-            label="Categories"
-            color="primary"
-            // value={selected}
-            // onValueChange={setSelected}
-          >
-            {categories.map((categories) => (
-              <Checkbox key={categories.id} value={categories.id}>
-                {categories.name}
-              </Checkbox>
-            ))}
-          </CheckboxGroup>
-        </div>
-        <div>
-          <Image
-            src={DEFAULT_IMAGE}
-            alt="Reference image"
-            width={200}
-            height={100}
-            className="rounded-xl"
-          />
-        </div>
+        <Select
+          size="sm"
+          label="Select category"
+          className="w-60"
+          onChange={(e) => handleChange(e.target.value)}
+        >
+          {categories.map((category) => (
+            <SelectItem key={category.id} value={category.id}>
+              {category.name}
+            </SelectItem>
+          ))}
+        </Select>
+        <Select
+          size="sm"
+          label="Sort by"
+          className="w-60"
+          onChange={(e) => handleChange(e.target.value)}
+        >
+          {SORT_CHOICES.map((choices) => (
+            <SelectItem key={choices.key} value={choices.key}>
+              {choices.label}
+            </SelectItem>
+          ))}
+        </Select>
       </nav>
     </aside>
   );

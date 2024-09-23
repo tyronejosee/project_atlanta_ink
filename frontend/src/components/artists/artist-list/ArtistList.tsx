@@ -27,12 +27,15 @@ export const ArtistList = ({ artists }: Props) => {
   }, [inView, controls]);
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: 0 },
     visible: { opacity: 1, x: 0 },
   };
 
   return (
-    <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-4" ref={ref}>
+    <section
+      className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 xl:px-0"
+      ref={ref}
+    >
       {artists.map((artist, index) => (
         <motion.div
           key={artist.id}
@@ -41,8 +44,8 @@ export const ArtistList = ({ artists }: Props) => {
           initial="hidden"
           animate={controls}
           transition={{
-            duration: 0.5,
-            delay: index * 0.2,
+            duration: 0.3,
+            delay: index * 0.1,
             ease: "easeOut",
           }}
         >

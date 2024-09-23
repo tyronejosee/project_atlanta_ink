@@ -24,9 +24,9 @@ export * from "./company/tattoo-section/TattooSection";
 
 // Products
 export * from "./products/product-counter/ProductCounter";
-export * from "./products/product-header/ProductHeader";
 export * from "./products/product-list/ProductList";
 export * from "./products/product-section/ProductSection";
+export * from "./products/product-toolbar/ProductToolbar";
 
 // Providers
 export * from "./providers/DataProvider";
@@ -39,7 +39,6 @@ export * from "./ui/footer/Footer";
 export * from "./ui/form-error/FormError";
 export * from "./ui/header/HeaderSection";
 export * from "./ui/header/HeaderPage";
-export * from "./ui/headline/Headline";
 export * from "./ui/hr/HR";
 export * from "./ui/instagram/Instagram";
 export * from "./ui/logo/Logo";
@@ -47,7 +46,6 @@ export * from "./ui/menubar/MenuBar";
 export * from "./ui/pagination/PaginationItem";
 export * from "./ui/parallax-scroll/ParallaxScroll";
 export * from "./ui/parallax-scroll/ParallaxScrollMain";
-export * from "./ui/sidebar/Sidebar";
 export * from "./ui/twitch/Twitch";
 export * from "./ui/whatsapp/WhatsApp";
 export * from "./ui/whatsapp/WhatsAppButton";

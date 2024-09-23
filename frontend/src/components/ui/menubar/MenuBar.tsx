@@ -15,10 +15,10 @@ import {
 } from "@nextui-org/react";
 import { Bird } from "lucide-react";
 import {
+  COMPANY_NAME,
   MENU_ITEMS,
   NAV_ITEMS,
   NAV_CTA,
-  COMPANY_NAME,
 } from "@/config/constants";
 import { Instagram, YouTube, Twitch } from "@/components";
 import { useCompanyStore } from "@/store";
@@ -55,9 +55,7 @@ export const MenuBar = () => {
         <Link color="foreground" href="/">
           <NavbarBrand>
             <Bird />
-            <span className="font-bold ml-2">
-              {companyData?.name || COMPANY_NAME}
-            </span>
+            <span className="font-bold ml-2">{COMPANY_NAME.toUpperCase()}</span>
           </NavbarBrand>
         </Link>
       </NavbarContent>
@@ -83,7 +81,7 @@ export const MenuBar = () => {
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <a
-            href={companyData?.facebook}
+            href={companyData?.youtube}
             target="_blank"
             rel="noopener noreferrer"
           >

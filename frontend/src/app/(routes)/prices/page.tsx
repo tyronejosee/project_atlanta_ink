@@ -17,22 +17,12 @@ export default async function PricesPage() {
           <article className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <ul className="grid grid-col-1 divide-y-4 divide-dashed divide-neutral-darkgrey">
               {firstColumnPrices.map((price: IPrice) => (
-                <PriceItem
-                  key={prices.id}
-                  name={price.name}
-                  description={price.description}
-                  price_range={price.price_range}
-                />
+                <PriceItem key={prices.id} price={price} />
               ))}
             </ul>
             <ul className="grid grid-col-1 divide-y-4 divide-dashed divide-neutral-darkgrey">
               {secondColumnPrices.map((price: IPrice) => (
-                <PriceItem
-                  key={prices.id}
-                  name={price.name}
-                  description={price.description}
-                  price_range={price.price_range}
-                />
+                <PriceItem key={prices.id} price={price} />
               ))}
             </ul>
           </article>

@@ -22,8 +22,8 @@ export const EmptyList = ({ content = "content" }: Props) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <p className="text-7xl font-bold text-primary mb-4">Upps!</p>
-        <p>No {content} available at the moment.</p>
+        <p className="text-7xl font-bold text-primary mb-4">200</p>
+        <p>{content} not found.</p>
       </motion.header>
       <motion.button
         initial={{ opacity: 0, y: 20 }}

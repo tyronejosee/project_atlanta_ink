@@ -1,7 +1,13 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { getArtist, getTattoosByArtist } from "@/lib/api";
-import { Badge, ParallaxScroll, Instagram, YouTube } from "@/components";
+import {
+  Badge,
+  ParallaxScroll,
+  Instagram,
+  YouTube,
+  EmptyList,
+} from "@/components";
 import { IStyle } from "@/interfaces";
 import { DEFAULT_IMAGE } from "@/config/constants";
 
@@ -95,7 +101,7 @@ export default async function ArtistDetailPage({ params }: Props) {
         {hasTattoos ? (
           <ParallaxScroll tattoos={tattoos} />
         ) : (
-          <span>Tattoos Not Found</span>
+          <EmptyList content="Tattoos" />
         )}
       </section>
     </section>
