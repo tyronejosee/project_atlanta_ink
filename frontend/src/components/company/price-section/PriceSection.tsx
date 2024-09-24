@@ -17,17 +17,17 @@ export const PriceSection = ({ prices }: Props) => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section id="pricing" className="py-16 bg-primary">
       <div className="max-w-screen-xl mx-auto text-center">
         <HeaderSection title="Prices" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0">
           {prices.map((price) => {
-            const { ref, inView } = useInView({
-              triggerOnce: true,
-              threshold: 0.1,
-            });
-
             return (
               <motion.div
                 key={price.id}

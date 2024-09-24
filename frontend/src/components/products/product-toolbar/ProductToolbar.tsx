@@ -33,6 +33,20 @@ export const ProductToolbar = ({ categories }: Props) => {
         clearTimeout(debounceTimeout);
       }
 
+      const updateQueryParams = (newParams: Record<string, string>) => {
+        const currentParams = new URLSearchParams(window.location.search);
+
+        Object.entries(newParams).forEach(([key, value]) => {
+          if (value) {
+            currentParams.set(key, value);
+          } else {
+            currentParams.delete(key);
+          }
+        });
+
+        router.push(`?${currentParams.toString()}`);
+      };
+
       // Set a new timeout
       const timeout = setTimeout(() => {
         updateQueryParams({ search: searchValue });
@@ -40,22 +54,8 @@ export const ProductToolbar = ({ categories }: Props) => {
 
       setDebounceTimeout(timeout);
     },
-    [debounceTimeout],
+    [debounceTimeout, router],
   );
-
-  const updateQueryParams = (newParams: Record<string, string>) => {
-    const currentParams = new URLSearchParams(window.location.search);
-
-    Object.entries(newParams).forEach(([key, value]) => {
-      if (value) {
-        currentParams.set(key, value);
-      } else {
-        currentParams.delete(key);
-      }
-    });
-
-    router.push(`?${currentParams.toString()}`);
-  };
 
   const handleChange = (value: string) => {
     router.push(`/products?sort_by=${value}`);

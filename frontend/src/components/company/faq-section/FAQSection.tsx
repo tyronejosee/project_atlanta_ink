@@ -17,17 +17,17 @@ export const FAQSection = ({ faqs }: Props) => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section className="py-16">
       <div className="max-w-screen-xl mx-auto">
         <HeaderSection title="Frequently Asked Questions" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 xl:px-0">
           {faqs.map((faq, index) => {
-            const { ref, inView } = useInView({
-              triggerOnce: true,
-              threshold: 0.1,
-            });
-
             return (
               <motion.div
                 key={faq.id}

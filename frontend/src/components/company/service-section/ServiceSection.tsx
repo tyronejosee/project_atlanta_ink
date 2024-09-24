@@ -17,16 +17,16 @@ export const ServiceSection = ({ services }: Props) => {
     visible: { opacity: 1, y: 0 },
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <section className="max-w-screen-xl mx-auto text-center py-16">
       <HeaderSection title="Services" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0">
         {services.map((service) => {
-          const { ref, inView } = useInView({
-            triggerOnce: true,
-            threshold: 0.1,
-          });
-
           return (
             <motion.div
               key={service.id}
