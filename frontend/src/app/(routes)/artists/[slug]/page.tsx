@@ -1,15 +1,12 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getArtist, getTattoosByArtist } from "@/lib/api";
-import {
-  Badge,
-  ParallaxScroll,
-  Instagram,
-  YouTube,
-  EmptyList,
-} from "@/components";
-import { IStyle } from "@/interfaces";
+import { Button, Chip } from "@nextui-org/react";
+
 import { DEFAULT_IMAGE } from "@/config/constants";
+import { getArtist, getTattoosByArtist } from "@/lib/api";
+import { Instagram, EmptyList, WhatsApp, ArtistGallery } from "@/components";
+import { IStyle } from "@/interfaces";
+import Link from "next/link";
 
 interface Props {
   params: { slug: string };
@@ -51,55 +48,66 @@ export default async function ArtistDetailPage({ params }: Props) {
   const hasTattoos = tattoos && tattoos.length > 0;
 
   return (
-    <section className="max-w-screen-xl mx-auto flex mt-16 min-h-screen">
-      <section className="w-96 flex flex-col p-4 space-y-4">
+    <section className="max-w-screen-xl mx-auto sm:flex mt-16 min-h-screen">
+      <section className="flex justify-center items-center sm:flex-col sm:justify-normal sm:w-96 p-4 space-y-4">
         <Image
           src={artist.image || DEFAULT_IMAGE}
           alt={artist.name}
           width={300}
           height={300}
-          className="w-full rounded-xl mb-4"
+          className="object-cover size-40 rounded-xl sm:size-64 sm:w-full border border-neutral-darkgrey"
         />
-        <div>
-          <h1 className="text-4xl font-bold mb-2">{artist.name}</h1>
-          <p className="text-sm text-neutral-gray line-clamp-4">
+        <div className="px-4 sm:px-0 space-y-2">
+          <h1 className="text-3xl sm:text-4xl font-bold text-neutral-light">
+            {artist.name}
+          </h1>
+          <div>
+            <ul className="flex space-x-1">
+              {artist.styles.map((style: IStyle) => (
+                <li key={style.id}>
+                  <Chip
+                    color="primary"
+                    variant="bordered"
+                    size="sm"
+                    className="text-xs rounded-sm"
+                  >
+                    {style.name}
+                  </Chip>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="text-xs sm:text-sm text-neutral-gray line-clamp-4">
             {artist.description}
           </p>
-        </div>
-        <div>
-          <h2 className="text-2xl font-semibold">Styles:</h2>
-          <ul className="flex space-x-1">
-            {artist.styles.map((style: IStyle) => (
-              <li key={style.id}>
-                <Badge>{style.name}</Badge>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex justify-center">
-          {artist.instagram && (
-            <a
-              href={artist.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram />
-            </a>
-          )}
-          {artist.whatsapp && (
-            <a
-              href={`https://wa.me/${artist.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <YouTube />
-            </a>
-          )}
+          <div className="flex items-center space-x-2">
+            <Button as={Link} color="primary" href="/bookings">
+              Book artist
+            </Button>
+            {artist.instagram && (
+              <Link
+                href={artist.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram />
+              </Link>
+            )}
+            {artist.whatsapp && (
+              <a
+                href={`https://wa.me/${artist.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsApp />
+              </a>
+            )}
+          </div>
         </div>
       </section>
       <section className="w-full p-4">
         {hasTattoos ? (
-          <ParallaxScroll tattoos={tattoos} />
+          <ArtistGallery tattoos={tattoos} />
         ) : (
           <EmptyList content="Tattoos" />
         )}

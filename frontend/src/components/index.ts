@@ -5,6 +5,7 @@ export * from "./applicants/applicant-form/ApplicantForm";
 export * from "./artists/artist-card/ArtistCard";
 export * from "./artists/artist-list/ArtistList";
 export * from "./artists/artist-section/ArtistSection";
+export * from "./artists/artist-gallery/ArtistGallery";
 
 // Bookings
 export * from "./bookings/booking-card/BookingCard";
