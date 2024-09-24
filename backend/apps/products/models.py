@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 
 from apps.utils.mixins import SlugMixin
 from apps.utils.models import BaseModel
+from apps.utils.validators import validate_file_size, validate_image_dimensions
 from .managers import BrandManager, CategoryManager, ProductManager
 from .choices import CurrencyTypeChoices
 
@@ -85,6 +86,10 @@ class Product(SlugMixin, BaseModel):
 
     objects = ProductManager()
 
+    MAX_FILE_SIZE_MB = 1
+    MAX_WIDTH = 1080
+    MAX_HEIGHT = 1080
+
     class Meta:
         ordering = ["pk"]
         verbose_name = "product"
@@ -96,6 +101,19 @@ class Product(SlugMixin, BaseModel):
 
     def __str__(self):
         return str(self.name)
+
+    def clean(self):
+        super().clean()
+        if self.image:
+            validate_file_size(
+                self.image,
+                max_size_mb=self.MAX_FILE_SIZE_MB,
+            )
+            validate_image_dimensions(
+                self.image,
+                max_width=self.MAX_WIDTH,
+                max_height=self.MAX_HEIGHT,
+            )
 
     def save(self, *args, **kwargs):
         from .services import ProductService
