@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
 import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,6 +8,14 @@ import { IBookingQueryParams } from "@/interfaces";
 interface Props {
   searchParams: IBookingQueryParams;
 }
+
+export const metadata: Metadata = {
+  title: "Products - Atlanta Ink",
+  description:
+    "Book an appointment at our tattoo studio. Get in touch with us easily by phone, email, or visit our website.",
+  keywords:
+    "book appointment, tattoo studio, contact, phone, email, hours, atlanta",
+};
 
 export default function BookingsPage({ searchParams }: Props) {
   const { phone, firstTime } = searchParams;

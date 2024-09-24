@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { Input, Button, Textarea, Checkbox } from "@nextui-org/react";
 import { HeaderPage } from "@/components";
+
+export const metadata: Metadata = {
+  title: "Apply for Job | Tattoo Studio",
+  description:
+    "Submit your application to work at our tattoo studio. Fill out the form and well get in touch with you for future opportunities.",
+};
 
 export default function ApplyPage() {
   return (

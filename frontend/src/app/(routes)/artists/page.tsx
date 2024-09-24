@@ -4,7 +4,9 @@ import { ArtistList, EmptyList, HeaderPage } from "@/components";
 
 export const metadata: Metadata = {
   title: "Artists - Atlanta Ink",
-  description: "List of our team of artists",
+  description:
+    "Meet our tattoo artists. Each has their own style and is ready to help you create the tattoo you want. Browse their portfolios and find the perfect artist for your next design",
+  keywords: "artists, tattoo artists, atlanta",
 };
 
 export default async function ArtistsPage() {

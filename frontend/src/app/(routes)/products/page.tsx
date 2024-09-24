@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { getCategories, getProducts } from "@/lib/api";
 import {
   HeaderPage,
@@ -10,6 +11,13 @@ import { IProductQueryParams } from "@/interfaces";
 interface Props {
   searchParams: IProductQueryParams;
 }
+
+export const metadata: Metadata = {
+  title: "Products - Atlanta Ink",
+  description:
+    "Discover our exclusive range of high-quality tattoo products designed for professional artists and enthusiasts alike. From premium inks and needles to innovative tools and accessories, we offer everything you need to create stunning body art.",
+  keywords: "tattoos, tattoo products, atlanta",
+};
 
 export default async function ProductsPage({ searchParams }: Props) {
   const { sort_by, search, category, price } = searchParams;

@@ -1,6 +1,15 @@
+import { Metadata } from "next";
 import { EmptyList, HeaderPage, PriceItem } from "@/components";
 import { getPrices } from "@/lib/api";
 import { IPrice } from "@/interfaces";
+
+export const metadata: Metadata = {
+  title: "Prices - Atlanta Ink",
+  description:
+    "Check out our tattoo prices at Atlanta Ink. Affordable rates for various tattoo styles and sizes.",
+  keywords:
+    "tattoo prices, affordable tattoos, tattoo styles, tattoo sizes, atlanta",
+};
 
 export default async function PricesPage() {
   const prices = await getPrices();
@@ -17,12 +26,12 @@ export default async function PricesPage() {
           <article className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <ul className="grid grid-col-1 divide-y-4 divide-dashed divide-neutral-darkgrey">
               {firstColumnPrices.map((price: IPrice) => (
-                <PriceItem key={prices.id} price={price} />
+                <PriceItem key={price.id} price={price} />
               ))}
             </ul>
             <ul className="grid grid-col-1 divide-y-4 divide-dashed divide-neutral-darkgrey">
               {secondColumnPrices.map((price: IPrice) => (
-                <PriceItem key={prices.id} price={price} />
+                <PriceItem key={price.id} price={price} />
               ))}
             </ul>
           </article>
