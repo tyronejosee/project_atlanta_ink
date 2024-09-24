@@ -136,11 +136,11 @@ else:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
-            "NAME": env("POSTGRES_DB"),
-            "USER": env("POSTGRES_USER"),
-            "PASSWORD": env("POSTGRES_PASSWORD"),
-            "HOST": "db",
-            "PORT": "5432",
+            "NAME": env("DB_NAME"),
+            "USER": env("DB_USER"),
+            "PASSWORD": env("DB_PASSWORD"),
+            "HOST": env("DB_HOST"),
+            "PORT": env("DB_PORT"),
         }
     }
 
@@ -148,21 +148,21 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
     ],
-    # "DEFAULT_THROTTLE_CLASSES": [
-    #     "rest_framework.throttling.AnonRateThrottle",
-    #     "rest_framework.throttling.UserRateThrottle",
-    # ],
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+    ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_CONTENT_LANGUAGE": "en",
     "DEFAULT_FILTER_BACKENDS": [
         "rest_framework.filters.SearchFilter",
         "django_filters.rest_framework.DjangoFilterBackend",
     ],
-    # "DEFAULT_THROTTLE_RATES": {
-    #     "anon": "3/second",
-    #     "user": "60/minute",
-    #     "daily": "1000/day",
-    # },
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": "5/second",
+        "user": "60/minute",
+        "daily": "1000/day",
+    },
     "NUM_PROXIES": None,
     "SEARCH_PARAM": "search",
 }

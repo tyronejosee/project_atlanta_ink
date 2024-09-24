@@ -15,6 +15,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 SECURE_SSL_REDIRECT = True
 
 SECURE_HSTS_SECONDS = 31536000  # 1 year
