@@ -4,13 +4,14 @@ import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Input, Select, SelectItem } from "@nextui-org/react";
 import { SORT_CHOICES } from "@/config/constants";
-import { ICategory } from "@/interfaces";
+import { IBrand, ICategory } from "@/interfaces";
 
 interface Props {
+  brands: IBrand[];
   categories: ICategory[];
 }
 
-export const ProductToolbar = ({ categories }: Props) => {
+export const ProductToolbar = ({ brands, categories }: Props) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") || "");
@@ -57,12 +58,20 @@ export const ProductToolbar = ({ categories }: Props) => {
     [debounceTimeout, router],
   );
 
-  const handleChange = (value: string) => {
+  const handleBrandChange = (value: string) => {
+    router.push(`/products?brand=${value}`);
+  };
+
+  const handleCategoryChange = (value: string) => {
+    router.push(`/products?category=${value}`);
+  };
+
+  const handleSortChange = (value: string) => {
     router.push(`/products?sort_by=${value}`);
   };
 
   return (
-    <aside className="z-20 pb-8">
+    <aside className="pb-8">
       <nav className="flex space-x-4">
         <Input
           label="Search"
@@ -71,13 +80,25 @@ export const ProductToolbar = ({ categories }: Props) => {
           size="sm"
           value={search}
           onChange={handleSearchChange}
-          className="w-full"
+          className="w-1/4"
         />
         <Select
           size="sm"
+          label="Select brand"
+          className="w-1/4"
+          onChange={(e) => handleBrandChange(e.target.value)}
+        >
+          {brands.map((brand) => (
+            <SelectItem key={brand.id} value={brand.id}>
+              {brand.name}
+            </SelectItem>
+          ))}
+        </Select>
+        <Select
+          size="sm"
           label="Select category"
-          className="w-60"
-          onChange={(e) => handleChange(e.target.value)}
+          className="w-1/4"
+          onChange={(e) => handleCategoryChange(e.target.value)}
         >
           {categories.map((category) => (
             <SelectItem key={category.id} value={category.id}>
@@ -88,8 +109,8 @@ export const ProductToolbar = ({ categories }: Props) => {
         <Select
           size="sm"
           label="Sort by"
-          className="w-60"
-          onChange={(e) => handleChange(e.target.value)}
+          className="w-1/4"
+          onChange={(e) => handleSortChange(e.target.value)}
         >
           {SORT_CHOICES.map((choices) => (
             <SelectItem key={choices.key} value={choices.key}>

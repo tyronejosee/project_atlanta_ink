@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getCategories, getProducts } from "@/lib/api";
+import { getBrands, getCategories, getProducts } from "@/lib/api";
 import {
   HeaderPage,
   PaginationItem,
@@ -20,38 +20,49 @@ export const metadata: Metadata = {
 };
 
 export default async function ProductsPage({ searchParams }: Props) {
-  const { sort_by, search, category, price } = searchParams;
+  const { sort_by, search, category, brand, page = 1 } = searchParams;
+
   const params = {
     ...(sort_by && { sort_by }),
     ...(search && { search }),
     ...(category && { category }),
-    ...(price && { price }),
+    ...(brand && { brand }),
+    page,
   };
 
-  const [products, categories] = await Promise.all([
+  const [productsData, brands, categories] = await Promise.all([
     getProducts(params),
+    getBrands(),
     getCategories(),
   ]);
 
+  const { results: products, count } = productsData;
+
+  const totalPages = Math.ceil(count / 10);
+
   return (
-    <>
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-16">
-        <HeaderPage title="Products" />
-        <>
-          <ProductToolbar categories={categories} />
-          {products.length === 0 ? (
-            <p className="text-center text-gray-500">
+    <main className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-16 mb-10">
+      <HeaderPage title="Products" />
+      <>
+        <ProductToolbar brands={brands} categories={categories} />
+        {/* !TODO: Add component */}
+        {products.length === 0 ? (
+          <section className=" relative flex justify-center items-center w-full h-[400px] rounded-xl overflow-hidden">
+            <div className="z-10 text-center text-gray-500">
               No products found for{" "}
-              <span className="font-semibold text-primary">{search}</span>
-            </p>
-          ) : (
-            <>
-              <ProductList products={products} />
-              <PaginationItem />
-            </>
-          )}
-        </>
-      </div>
-    </>
+              <span className="ml-2 font-semibold text-primary">
+                {search?.toUpperCase()}
+              </span>
+            </div>
+            <div className="absolute z-5 w-full h-full bg-neutral-darkgrey animate-pulse"></div>
+          </section>
+        ) : (
+          <>
+            <PaginationItem totalPages={totalPages} currentPage={page} />
+            <ProductList products={products} />
+          </>
+        )}
+      </>
+    </main>
   );
 }

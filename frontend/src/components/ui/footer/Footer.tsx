@@ -1,16 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { HR } from "@/components";
 import { useCompanyStore } from "@/store";
+import { HR } from "@/components";
 
 export const Footer = () => {
   const { companyData } = useCompanyStore();
-  const pathname = usePathname();
-
-  if (pathname.startsWith("/products")) {
-    return null;
-  }
 
   return (
     <footer className="mt-auto bg-neutral-darkgrey">

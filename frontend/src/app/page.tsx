@@ -10,6 +10,7 @@ import {
   PromotionSection,
   ServiceSection,
   TattooSection,
+  BackToTop,
 } from "@/components";
 import {
   getArtists,
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [services, tattoos, artists, prices, products, faqs] =
+  const [services, tattoos, artists, prices, productsData, faqs] =
     await Promise.all([
       getServices(),
       getTattoos(),
@@ -38,6 +39,8 @@ export default async function HomePage() {
       getProducts(),
       getFaqs(),
     ]);
+
+  const { results: products } = productsData;
 
   return (
     <main>
@@ -51,6 +54,7 @@ export default async function HomePage() {
       <FAQSection faqs={faqs} />
       <LocationSection />
       <FinalCTASection />
+      <BackToTop />
     </main>
   );
 }

@@ -1,3 +1,8 @@
+export interface IBrand {
+  id: string;
+  name: string;
+}
+
 export interface ICategory {
   id: string;
   name: string;
@@ -8,6 +13,7 @@ export interface IProduct {
   name: string;
   slug: string;
   sku: string;
+  brand: string;
   description?: string;
   price: number;
   currency: string;
@@ -23,5 +29,7 @@ export interface IProductQueryParams {
   sort_by?: string;
   search?: string;
   category?: string;
-  price?: string;
+  brand?: string;
+  page?: number;
+  page_size?: number;
 }

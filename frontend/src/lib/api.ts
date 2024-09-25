@@ -56,13 +56,17 @@ export async function getProducts(params?: {
   sort_by?: string;
   search?: string;
   category?: string;
-  price?: string;
+  brand?: string;
 }) {
   return fetchData("products", params);
 }
 
 export async function getProduct(slug: string) {
   return fetchData(`products/${slug}`);
+}
+
+export async function getBrands() {
+  return fetchData("brands");
 }
 
 export async function getCategories() {

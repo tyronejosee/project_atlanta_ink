@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
@@ -15,15 +15,17 @@ interface Props {
 export const ProductList = ({ products }: Props) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
-  }, [inView, controls]);
+  }, [inView, controls, products]);
 
   const itemVariants = {
     hidden: { opacity: 0, x: 0 },
@@ -38,35 +40,34 @@ export const ProductList = ({ products }: Props) => {
       {products.map((product, index) => (
         <motion.div
           key={product.id}
-          className="bg-neutral-darkgrey rounded-xl p-2 group"
+          className="group"
           variants={itemVariants}
           initial="hidden"
-          animate={controls}
+          animate={inView ? "visible" : "hidden"}
           transition={{
             duration: 0.3,
             delay: index * 0.1,
             ease: "easeOut",
           }}
         >
-          <Link
-            key={product.id}
-            href={`/products/${product.slug}`}
-            className="bg-neutral-darkgrey shadow-lg rounded-xl overflow-hidden"
-          >
+          <Link href={`/products/${product.slug}`}>
             <figure className="w-full h-60 relative rounded-lg overflow-hidden">
               <Image
                 src={product.image || DEFAULT_IMAGE}
                 alt={product.name}
                 fill
                 style={{ objectFit: "cover" }}
-                className="object-cover rounded-b-xl"
+                className="object-cover transform transition-transform duration-300 group-hover:scale-110"
               />
             </figure>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold pb-2 mb-2 border-b border-b-neutral-gray group-hover:border-b-primary line-clamp-2">
+            <div className="pt-4">
+              <h3 className="line-clamp-2 group-hover:font-bold">
                 {product.name}
               </h3>
-              <span>{product.price}</span>
+              <p className="text-neutral-gray line-clamp-1">{product.brand}</p>
+              <p className="text-xl font-extrabold text-primary">
+                ${product.price}
+              </p>
             </div>
           </Link>
         </motion.div>
