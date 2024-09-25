@@ -3,13 +3,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import "../styles/globals.css";
 import { mainFont } from "@/config/fonts";
 import { getCompany } from "@/lib/api";
-import {
-  MenuBar,
-  Footer,
-  WhatsAppButton,
-  BackToTop,
-  DataProvider,
-} from "@/components";
+import { MenuBar, Footer, BackToTop, DataProvider } from "@/components";
 
 export const metadata: Metadata = {
   title: "Atlanta Ink - Tattoo Studio",
@@ -31,7 +25,6 @@ export default async function RootLayout({
             <MenuBar />
             {children}
             <Footer />
-            <WhatsAppButton />
             <BackToTop />
           </DataProvider>
         </NextUIProvider>

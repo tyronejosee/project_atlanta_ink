@@ -37,7 +37,7 @@ export const PriceSection = ({ prices }: Props) => {
                 variants={variants}
                 transition={{ duration: 0.5 }}
               >
-                <article className="p-6 shadow-md bg-neutral-darkgrey rounded-xl">
+                <article className="p-6 shadow-md bg-neutral-darkgrey hover:bg-neutral-dark rounded-xl">
                   <h3 className="text-xl font-bold mb-2">{price.name}</h3>
                   <p className="text-4xl font-bold text-primary">
                     {price.price_range}

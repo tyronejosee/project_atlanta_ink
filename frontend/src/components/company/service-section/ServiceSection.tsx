@@ -36,18 +36,18 @@ export const ServiceSection = ({ services }: Props) => {
               variants={variants}
               transition={{ duration: 0.5 }}
             >
-              <article className="relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl">
-                <div className="absolute inset-0 bg-primary"></div>
+              <article className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl">
+                {/* <div className="absolute inset-0 bg-primary"></div> */}
                 <div className="absolute inset-0 bg-neutral-dark">
                   <Image
                     src={service.image || DEFAULT_IMAGE}
                     alt={service.name}
                     fill
                     style={{ objectFit: "cover" }}
-                    className="z-10 opacity-25"
+                    className="z-10 opacity-25 transform transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="relative z-20 p-4 space-y-2 text-center">
+                <div className="z-20 p-4 space-y-2 text-center">
                   <h4 className="text-xl font-bold text-primary">
                     {service.name}
                   </h4>

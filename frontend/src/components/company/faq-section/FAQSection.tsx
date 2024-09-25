@@ -37,7 +37,7 @@ export const FAQSection = ({ faqs }: Props) => {
                 variants={variants}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                <Accordion variant="splitted">
+                <Accordion variant="splitted" className="group">
                   <AccordionItem
                     key={faq.id}
                     aria-label={faq.question}
@@ -47,7 +47,7 @@ export const FAQSection = ({ faqs }: Props) => {
                       isOpen ? (
                         <ChevronLeft className="stroke-primary" />
                       ) : (
-                        <ChevronLeft />
+                        <ChevronLeft className="group-hover:stroke-primary" />
                       )
                     }
                     className="bg-neutral-darkgrey shadow-none"
