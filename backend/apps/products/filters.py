@@ -2,7 +2,7 @@
 
 from django_filters import rest_framework as filters
 
-from .models import Product
+from .models import Product, Brand, Category
 from .choices import SortChoices
 
 
@@ -14,10 +14,18 @@ class ProductFilter(filters.FilterSet):
         method="filter_by_order",
         label="Search query sort direction, ex `/?=sort_by=latest`",
     )
+    brand = filters.ModelChoiceFilter(
+        queryset=Brand.objects.get_available(),
+        field_name="brand_id",
+    )
+    category = filters.ModelChoiceFilter(
+        queryset=Category.objects.get_available(),
+        field_name="category_id",
+    )
 
     class Meta:
         model = Product
-        fields = []
+        fields = ["brand", "category"]
 
     def filter_by_order(self, queryset, name, value):
         if value == SortChoices.LATEST:

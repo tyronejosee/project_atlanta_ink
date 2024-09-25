@@ -14,6 +14,7 @@ from .serializers import (
     ProductMinimalSerializer,
 )
 from .filters import ProductFilter
+from .pagination import ProductPagination
 from .schemas import (
     brand_list_schema,
     category_list_schema,
@@ -66,6 +67,7 @@ class ProductListView(ListAPIView):
     serializer_class = ProductMinimalSerializer
     search_fields = ["name"]
     filterset_class = ProductFilter
+    pagination_class = ProductPagination
 
     def get_queryset(self):
         return Product.objects.get_list()
