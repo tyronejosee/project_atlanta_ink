@@ -1,0 +1,233 @@
+[
+  {
+    "id": "04b0d4b2-6195-43b1-abb3-13dbb3b504c8",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:38",
+    "updated_at": "2024-09-19 17:45:38",
+    "name": "Graffiti"
+  },
+  {
+    "id": "062a185f-b79b-448b-b12f-352bf31f7dcd",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:46:11",
+    "updated_at": "2024-09-19 17:46:11",
+    "name": "Hyperrealism"
+  },
+  {
+    "id": "0f652da1-5373-4d9e-b1a8-b251a82d966c",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:09",
+    "updated_at": "2024-09-19 17:44:09",
+    "name": "Realism"
+  },
+  {
+    "id": "17d78288-41b9-4748-ba99-488d28a4c8b9",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:35",
+    "updated_at": "2024-09-19 17:44:35",
+    "name": "Tech Art"
+  },
+  {
+    "id": "1907bab4-53c9-40b2-9ce0-75e9417f315f",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:42",
+    "updated_at": "2024-09-19 17:45:42",
+    "name": "Calligraphy"
+  },
+  {
+    "id": "1c7acd2b-1632-4394-8214-0b0bf93c4895",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:13",
+    "updated_at": "2024-09-19 17:45:13",
+    "name": "Minimalism"
+  },
+  {
+    "id": "275e5e06-10d7-401a-974b-f55da3678065",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:09",
+    "updated_at": "2024-09-19 17:45:09",
+    "name": "Impressionism"
+  },
+  {
+    "id": "2bd386e7-c587-4f3d-ad3d-1062607a0735",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:53",
+    "updated_at": "2024-09-19 17:44:53",
+    "name": "Landscape"
+  },
+  {
+    "id": "2c9d7293-6b94-456b-8b8d-63c70df2b497",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:49",
+    "updated_at": "2024-09-19 17:46:40",
+    "name": "Anime/Manga"
+  },
+  {
+    "id": "32afc720-3c40-49ee-876b-39c7aded26f6",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:43:39",
+    "updated_at": "2024-09-19 17:43:39",
+    "name": "Floral"
+  },
+  {
+    "id": "34dae381-3a37-4e21-9fcb-76a37b30f0b2",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:46",
+    "updated_at": "2024-09-19 17:44:46",
+    "name": "Portrait"
+  },
+  {
+    "id": "3908f18e-166b-4de3-a741-6cf4c14eec55",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:02",
+    "updated_at": "2024-09-19 17:45:02",
+    "name": "Pop Art"
+  },
+  {
+    "id": "631c188c-377a-42ee-82ed-2bfaaa7a7a87",
+    "is_available": "1",
+    "created_at": "2024-09-15 20:12:20",
+    "updated_at": "2024-09-15 20:12:20",
+    "name": "Traditional"
+  },
+  {
+    "id": "74b42022-7343-4b90-97a5-e43e504cd5db",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:00",
+    "updated_at": "2024-09-19 17:44:00",
+    "name": "Fantasy"
+  },
+  {
+    "id": "75b6ce4f-bee8-4ff1-96e2-ec948b7fff51",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:30",
+    "updated_at": "2024-09-19 17:44:30",
+    "name": "Multimedia"
+  },
+  {
+    "id": "7a8bc4b7-fb48-4d8d-b942-e2137f9df3d2",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:43:47",
+    "updated_at": "2024-09-19 17:43:47",
+    "name": "Contemporary"
+  },
+  {
+    "id": "920d4e90-4652-482c-90da-638dc0fbf150",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:05",
+    "updated_at": "2024-09-19 17:44:05",
+    "name": "Concept Art"
+  },
+  {
+    "id": "973c599e-1140-4ca7-98e2-c8c18a51449f",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:47:18",
+    "updated_at": "2024-09-19 17:47:18",
+    "name": "Line Art"
+  },
+  {
+    "id": "9998fcab-318b-4677-8949-c74b2c3b24a3",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:43",
+    "updated_at": "2024-09-19 17:44:43",
+    "name": "Metalwork"
+  },
+  {
+    "id": "9e75e18c-f9f5-4a4a-95fb-f65310feddec",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:43:43",
+    "updated_at": "2024-09-19 17:43:43",
+    "name": "Abstract"
+  },
+  {
+    "id": "a389bc56-9b0e-49f0-90c3-2e9f91272422",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:26",
+    "updated_at": "2024-09-19 17:44:26",
+    "name": "Graphic Design"
+  },
+  {
+    "id": "ad7d02bf-4535-4746-a5f1-b662ac37f8b6",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:05",
+    "updated_at": "2024-09-19 17:45:05",
+    "name": "Cubism"
+  },
+  {
+    "id": "bd58505c-1f25-45ef-aba1-3845b25fd471",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:43:55",
+    "updated_at": "2024-09-19 17:43:55",
+    "name": "Illustration"
+  },
+  {
+    "id": "be6ed628-916f-4417-b239-96cc95a9b7a3",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:18",
+    "updated_at": "2024-09-19 17:45:18",
+    "name": "Expressionism"
+  },
+  {
+    "id": "c307337d-7740-47ed-b207-51d2df70fa50",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:57",
+    "updated_at": "2024-09-19 17:44:57",
+    "name": "Surrealism"
+  },
+  {
+    "id": "c3d9a02a-7a9b-415e-aa4b-c8ff6d862a89",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:43:52",
+    "updated_at": "2024-09-19 17:43:52",
+    "name": "Character Design"
+  },
+  {
+    "id": "cdd8b5e7-317e-420f-8553-c69adefd494c",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:19",
+    "updated_at": "2024-09-19 17:44:19",
+    "name": "Street Art"
+  },
+  {
+    "id": "d3e9af27-53be-4097-81f4-c8f27f33a0dc",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:38",
+    "updated_at": "2024-09-19 17:44:38",
+    "name": "Sculpture"
+  },
+  {
+    "id": "dbfa20c7-7638-496a-bf3c-340199f7767f",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:46",
+    "updated_at": "2024-09-19 17:45:46",
+    "name": "Typography"
+  },
+  {
+    "id": "dbfb8c53-8567-4eee-9c67-b8224cb07597",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:46:00",
+    "updated_at": "2024-09-19 17:46:00",
+    "name": "Cartoon"
+  },
+  {
+    "id": "df5c2275-4b1f-4a39-8314-e6b92318be28",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:44:14",
+    "updated_at": "2024-09-19 17:44:14",
+    "name": "Black and Grey"
+  },
+  {
+    "id": "e5077e5a-64a9-4058-9945-9aec44b9077b",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:43:34",
+    "updated_at": "2024-09-19 17:43:34",
+    "name": "Watercolor"
+  },
+  {
+    "id": "f206c5d7-230b-428c-ac91-edba2cd24277",
+    "is_available": "1",
+    "created_at": "2024-09-19 17:45:30",
+    "updated_at": "2024-09-19 17:45:30",
+    "name": "Digital Art"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "200d989b-06bf-4ecf-93bb-31fc432ba2bc",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:35:00",
+    "updated_at": "2024-09-20 01:35:00",
+    "name": "3D Tattoo",
+    "description": "Designs that appear to have depth and dimension, creating a lifelike effect.",
+    "price_range": "$250 - $500 per session",
+    "is_featured": "0"
+  },
+  {
+    "id": "f7db999c-81f4-4669-b232-e82fcba2863a",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:33:12",
+    "updated_at": "2024-09-20 01:33:12",
+    "name": "Black and Grey Tattoo",
+    "description": "Shaded designs with a more classic or realistic look.",
+    "price_range": "$100 - $250 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "da2bbbe5-9fef-426d-87bd-26c869665f69",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:32:39",
+    "updated_at": "2024-09-20 01:32:39",
+    "name": "Color Tattoo",
+    "description": "Tattoos with multiple colors, requiring more time and skill.",
+    "price_range": "$150 - $300 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "45b7b368-ac33-43c4-be74-8cba674bc608",
+    "is_available": "1",
+    "created_at": "2024-09-20 02:05:38",
+    "updated_at": "2024-09-20 02:05:38",
+    "name": "Cosmetic Tattooing (Permanent Makeup)",
+    "description": "Makeup-like designs for eyebrows, eyeliner, or lips, often semi-permanent.",
+    "price_range": "$300 - $700",
+    "is_featured": "0"
+  },
+  {
+    "id": "315fa61c-6ad7-4e20-9bc4-845be58f28df",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:40:03",
+    "updated_at": "2024-09-20 01:40:03",
+    "name": "Cover-Up Tattoo",
+    "description": "Tattoos designed to cover or replace an existing tattoo.",
+    "price_range": "$200 - $300 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "4e0c1299-8f2a-4ca7-b8b0-9e01712059f9",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:34:11",
+    "updated_at": "2024-09-20 01:34:11",
+    "name": "Custom Tattoo",
+    "description": "Unique, personalized designs created specifically for the client.",
+    "price_range": "$200 - $400 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "41bc04a0-aaa6-4971-89a3-2d8c4d23b3a1",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:59:27",
+    "updated_at": "2024-09-20 01:59:27",
+    "name": "Dotwork Tattoo",
+    "description": "Designs created with dot shading, often intricate and detailed.",
+    "price_range": "$150 - $300 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "26751387-ab85-4195-85e1-4b83e0773a8a",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:51:07",
+    "updated_at": "2024-09-20 01:51:07",
+    "name": "Geometric Tattoo",
+    "description": "Designs focusing on shapes and symmetry, requiring precision.",
+    "price_range": "$150 - $300 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "43de525c-7deb-4fb8-805f-0fc422e072f9",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:50:48",
+    "updated_at": "2024-09-20 01:50:48",
+    "name": "Japanese Traditional Tattoo",
+    "description": "Large, colorful designs with traditional themes, often covering significant body areas.",
+    "price_range": "$500 - $1,000+",
+    "is_featured": "0"
+  },
+  {
+    "id": "64b663ed-576f-458b-a04a-9c976a7b939d",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:30:47",
+    "updated_at": "2024-09-20 01:30:47",
+    "name": "Large Tattoo",
+    "description": "Complex designs covering larger areas like the back, chest, or full sleeve.",
+    "price_range": "$500 - $1,000+",
+    "is_featured": "1"
+  },
+  {
+    "id": "3ec04130-b114-4434-bb00-40460bbbbed1",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:30:25",
+    "updated_at": "2024-09-20 01:30:25",
+    "name": "Medium Tattoo",
+    "description": "Larger designs with more detail, typically fitting on the forearm or upper arm.",
+    "price_range": "$250 - $500",
+    "is_featured": "1"
+  },
+  {
+    "id": "e0ce1616-904b-4980-977b-754ab4b15f3e",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:58:48",
+    "updated_at": "2024-09-20 01:58:48",
+    "name": "Minimalist Tattoo",
+    "description": "Simple, clean designs with few lines and no shading.",
+    "price_range": "$100 - $200",
+    "is_featured": "0"
+  },
+  {
+    "id": "44c345d1-d328-43ef-8bd5-2c02d21a07b8",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:34:28",
+    "updated_at": "2024-09-20 01:34:28",
+    "name": "Portrait Tattoo",
+    "description": "Realistic portraits, requiring a high level of detail and skill.",
+    "price_range": "$300 - $600+",
+    "is_featured": "0"
+  },
+  {
+    "id": "8441398a-3174-4321-abc9-ca41e3da1965",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:59:04",
+    "updated_at": "2024-09-20 01:59:04",
+    "name": "Script/Lettering Tattoo",
+    "description": "Text-based designs, varying with font choice and size.",
+    "price_range": "$100 - $300",
+    "is_featured": "0"
+  },
+  {
+    "id": "328d6fa4-8253-4ed8-817b-0228e8161eb4",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:35:24",
+    "updated_at": "2024-09-20 01:35:24",
+    "name": "Sleeve Tattoo",
+    "description": "Full-arm or leg designs covering a large area with complex elements.",
+    "price_range": "$1,500 - $4,000+",
+    "is_featured": "0"
+  },
+  {
+    "id": "3ea19953-8ec7-43f2-ac25-32796be0856b",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:59:47",
+    "updated_at": "2024-09-20 01:59:47",
+    "name": "Sleeve Touch-Up or Enhancement",
+    "description": "Enhancing or freshening up an existing tattoo sleeve.",
+    "price_range": "$100 - $200 per hour",
+    "is_featured": "0"
+  },
+  {
+    "id": "134332cc-292a-4592-ad72-7709893aff63",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:29:41",
+    "updated_at": "2024-09-20 01:29:41",
+    "name": "Small Tattoo",
+    "description": "Basic, simple designs like a small symbol, word, or outline.",
+    "price_range": "$100 - $250",
+    "is_featured": "1"
+  },
+  {
+    "id": "0fbf6bd9-e70a-466a-b145-f8c42ed364f3",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:48:51",
+    "updated_at": "2024-09-20 01:48:51",
+    "name": "Tribal Tattoo",
+    "description": "Bold, black designs often representing cultural heritage.",
+    "price_range": "$200 - $400",
+    "is_featured": "0"
+  },
+  {
+    "id": "32510b7e-bb24-48a5-8ae5-92f5fbedeeab",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:33:55",
+    "updated_at": "2024-09-20 01:33:55",
+    "name": "Visible Area Tattoo",
+    "description": "Smaller designs in visible locations, often requiring more precision.",
+    "price_range": "$150 - $400",
+    "is_featured": "0"
+  },
+  {
+    "id": "ab09ca48-0c1b-46ee-b01b-66b6a5304931",
+    "is_available": "1",
+    "created_at": "2024-09-20 01:34:45",
+    "updated_at": "2024-09-20 01:34:45",
+    "name": "Watercolor Tattoo",
+    "description": "A style mimicking watercolor paintings, often colorful and abstract.",
+    "price_range": "$200 - $400 per session",
+    "is_featured": "0"
+  }
+]

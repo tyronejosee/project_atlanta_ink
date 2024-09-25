@@ -29,6 +29,6 @@ python manage.py collectstatic --noinput
 # python manage.py runserver 0.0.0.0:8100
 
 # Start the Gunicorn server, which is a production WSGI HTTP server for Django,
-echo -e "${bold}${red}Starting Gunicorn server on port 8000...${normal}"
+echo -e "${bold}${red}Starting Gunicorn server on port 8100...${normal}"
 # binding to all network interfaces on port 8000
-exec gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
+gunicorn config.wsgi:application --bind 0.0.0.0:$PORT

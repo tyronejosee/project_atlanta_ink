@@ -1,10 +1,7 @@
 -r base.txt
 
 # Web server
-gunicorn
-
-# Store
-django-storages
+gunicorn==23.0.0
 
 # Databases
 psycopg==3.1.18

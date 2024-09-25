@@ -1,0 +1,30 @@
+[
+  {
+    "id": "18366257-8f46-47b5-ac9c-d4ef267d5821",
+    "is_available": "1",
+    "created_at": "2024-09-17 15:41:03",
+    "updated_at": "2024-09-17 15:41:03",
+    "name": "Cheyenne"
+  },
+  {
+    "id": "1a6bb747-5c64-4c54-bd5c-e642baf6c408",
+    "is_available": "1",
+    "created_at": "2024-09-13 16:21:14",
+    "updated_at": "2024-09-13 16:21:14",
+    "name": "Tattoo Goo"
+  },
+  {
+    "id": "8ba8eaf8-5bed-49c5-904d-a42723729e27",
+    "is_available": "1",
+    "created_at": "2024-09-17 15:53:41",
+    "updated_at": "2024-09-17 15:53:41",
+    "name": "Dragonhawk"
+  },
+  {
+    "id": "d2786e11-581c-450d-b248-6affb1fb028c",
+    "is_available": "1",
+    "created_at": "2024-09-17 15:46:31",
+    "updated_at": "2024-09-17 15:46:31",
+    "name": "Bishop"
+  }
+]

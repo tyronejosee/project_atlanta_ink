@@ -1,0 +1,222 @@
+[
+  {
+    "id": "160e69db-8a1f-4c0c-a243-b6040adf2f4c",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:28:20",
+    "updated_at": "2024-09-21 02:28:20",
+    "name": "Abstract 233",
+    "slug": "abstract-233",
+    "image": "ygpqmpkgchi6ertywytf",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "3512614d-9c77-497f-a475-8fc6023e03e5",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:25:50",
+    "updated_at": "2024-09-21 02:25:50",
+    "name": "Abstract 024",
+    "slug": "abstract-024",
+    "image": "e8mtznz0uwm5dmvhrhzn",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "38a4c3f0-0d87-48bb-9524-4e3370fc3a99",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:27:04",
+    "updated_at": "2024-09-21 02:27:04",
+    "name": "Faces Abstract",
+    "slug": "faces-abstract",
+    "image": "mf53loqnaip4394k1nsb",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "4d5c6fd1-522b-48f7-9c24-a4b4e969f9b1",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:53:56",
+    "updated_at": "2024-09-20 19:53:56",
+    "name": "Astronaut Dinosaur Asteroid Pterodactyl",
+    "slug": "astronaut-dinosaur-asteroid-pterodactyl",
+    "image": "bopbvlqovc5ozgixszgy",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  },
+  {
+    "id": "5b051fa3-cc27-46fd-8133-dc78371015a8",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:51:07",
+    "updated_at": "2024-09-20 19:51:07",
+    "name": "From Within",
+    "slug": "from-within",
+    "image": "ws9k1esuuxesj86d6yck",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  },
+  {
+    "id": "6b080c69-eb60-4588-8302-a0b52bebbdb1",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:26:40",
+    "updated_at": "2024-09-21 02:26:40",
+    "name": "Lineart Religion",
+    "slug": "lineart-religion",
+    "image": "nzub9x1y4d8cgotlulra",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "82b71bc0-a1e0-4424-9a8e-fb79b1a4650d",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:52:34",
+    "updated_at": "2024-09-20 19:52:34",
+    "name": "The Lion King",
+    "slug": "the-lion-king",
+    "image": "wun6cmglaltceowpjyje",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  },
+  {
+    "id": "890588de-690e-477f-bdbe-e57dd4cb2996",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:26:10",
+    "updated_at": "2024-09-21 02:26:10",
+    "name": "Lineart Abstract",
+    "slug": "lineart-abstract",
+    "image": "fdutvqxpet2zq7r9u3lw",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "89e597f8-e1ac-4489-878a-c7d6d0ea3f07",
+    "is_available": "1",
+    "created_at": "2024-09-20 17:59:41",
+    "updated_at": "2024-09-20 18:00:09",
+    "name": "Tech Lines",
+    "slug": "tech-lines",
+    "image": "faclsumzpid9ddtxdzps",
+    "artist_id": "5a31b925-6d32-4d26-9e90-438ab6ac2929"
+  },
+  {
+    "id": "9d394c67-98f0-48e5-ac5e-b3f15e82fd03",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:24:21",
+    "updated_at": "2024-09-21 02:24:21",
+    "name": "Fragmented Dream",
+    "slug": "fragmented-dream",
+    "image": "qwtn8fok94ifyefytrih",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "ab55584d-5408-4872-a5a4-3897639b857f",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:23:38",
+    "updated_at": "2024-09-21 02:23:38",
+    "name": "Temporal Ripple",
+    "slug": "temporal-ripple",
+    "image": "uwscuxutk7gyuckrsezj",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "b3f79071-6e14-44ff-b6e8-10383634d5ef",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:52:08",
+    "updated_at": "2024-09-20 19:52:08",
+    "name": "Lions and Flowers",
+    "slug": "lions-and-flowers",
+    "image": "w2ocbrqmfxrhxtbp26yt",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  },
+  {
+    "id": "b5444453-7ac8-4f3c-a2cb-68a53a4a46ec",
+    "is_available": "1",
+    "created_at": "2024-09-20 18:00:53",
+    "updated_at": "2024-09-20 18:00:53",
+    "name": "Mitat Ink",
+    "slug": "mitat-ink",
+    "image": "dw5uv6d6hkczuxmjleni",
+    "artist_id": "5a31b925-6d32-4d26-9e90-438ab6ac2929"
+  },
+  {
+    "id": "bf4c0557-4bce-484d-9455-37b8f9f567f8",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:54:37",
+    "updated_at": "2024-09-20 19:54:37",
+    "name": "Female Wolf",
+    "slug": "female-wolf",
+    "image": "jthsh0dx4vi761tuwwwu",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  },
+  {
+    "id": "cfea602c-85cd-48f0-a9a2-2c1686362fa6",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:27:36",
+    "updated_at": "2024-09-21 02:27:36",
+    "name": "Points of View",
+    "slug": "points-of-view",
+    "image": "uqfssafgfje1lhbwcbvx",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "dafd38b4-2f89-4244-a45c-2b123597a873",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:52:49",
+    "updated_at": "2024-09-20 19:52:49",
+    "name": "Origins of America",
+    "slug": "origins-of-america",
+    "image": "bqtnlqatfj24mborns8t",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  },
+  {
+    "id": "dcceb47e-9374-4482-a869-07beb52854e6",
+    "is_available": "1",
+    "created_at": "2024-09-20 18:01:09",
+    "updated_at": "2024-09-20 18:01:09",
+    "name": "Campbell",
+    "slug": "campbell",
+    "image": "zuvrvrm8hqncyckxxyrk",
+    "artist_id": "5a31b925-6d32-4d26-9e90-438ab6ac2929"
+  },
+  {
+    "id": "df787798-6372-4ccd-a39b-dd88749117a4",
+    "is_available": "1",
+    "created_at": "2024-09-20 18:00:35",
+    "updated_at": "2024-09-20 18:00:35",
+    "name": "Hi Tech Circuits",
+    "slug": "hi-tech-circuits",
+    "image": "bm1hhafh0u3iobhpuacg",
+    "artist_id": "5a31b925-6d32-4d26-9e90-438ab6ac2929"
+  },
+  {
+    "id": "e23b03fb-0824-4e9a-bb8d-24a727a64299",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:25:09",
+    "updated_at": "2024-09-21 02:25:09",
+    "name": "Modern Style",
+    "slug": "modern-style",
+    "image": "xw1j8tzxym9nggfzzfqu",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "e698dd43-59d0-48cc-bcb8-4de77e33fc82",
+    "is_available": "1",
+    "created_at": "2024-09-20 18:01:29",
+    "updated_at": "2024-09-20 18:01:29",
+    "name": "Female Robot",
+    "slug": "female-robot",
+    "image": "ko73wwb8x2jyr3516jwx",
+    "artist_id": "5a31b925-6d32-4d26-9e90-438ab6ac2929"
+  },
+  {
+    "id": "efe7c186-da39-4a58-ba23-b2ae822e1cba",
+    "is_available": "1",
+    "created_at": "2024-09-21 02:28:00",
+    "updated_at": "2024-09-21 02:28:00",
+    "name": "Female Abstract",
+    "slug": "female-abstract",
+    "image": "k0bcaeom7oszy5odd6l5",
+    "artist_id": "3b84f231-0cfb-45f1-9046-4691edf29a43"
+  },
+  {
+    "id": "fd726003-24a5-4eb0-99e3-0dd74487bf54",
+    "is_available": "1",
+    "created_at": "2024-09-20 19:53:15",
+    "updated_at": "2024-09-20 19:53:15",
+    "name": "Miami Memories",
+    "slug": "miami-memories",
+    "image": "s7cl5fhx2p0tzpzhqooz",
+    "artist_id": "d77a274b-a39b-4f49-82cd-97d7491db5f8"
+  }
+]

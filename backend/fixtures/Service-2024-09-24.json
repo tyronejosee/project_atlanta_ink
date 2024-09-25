@@ -1,0 +1,56 @@
+[
+  {
+    "id": "8978b5ec-dd92-4d04-a319-2a30de46505f",
+    "is_available": "1",
+    "created_at": "2024-09-15 23:48:55",
+    "updated_at": "2024-09-15 23:48:55",
+    "name": "Handpoke Tattoo",
+    "image": "aw2mrwhjwfjearru5b9w",
+    "description": "Experience handpoke tattoos, a traditional method using needle and ink without a machine. It's a unique way to get your tattoo done."
+  },
+  {
+    "id": "43fb66cf-f379-4c36-a526-6f1e208f57fe",
+    "is_available": "1",
+    "created_at": "2024-09-15 23:49:18",
+    "updated_at": "2024-09-15 23:49:18",
+    "name": "Piercing",
+    "image": "juahpicgeq3lnbas5byz",
+    "description": "We provide professional piercing services for ears, nose, and body. We ensure the process is safe and clean."
+  },
+  {
+    "id": "d2596131-1a16-447a-93f1-e82cb44a8698",
+    "is_available": "1",
+    "created_at": "2024-09-15 23:48:04",
+    "updated_at": "2024-09-15 23:48:04",
+    "name": "Realistic Tattoo",
+    "image": "i0grbv9qvlgj8phuxxhn",
+    "description": "Get lifelike tattoos with precise details that resemble real-life objects. Perfect for those looking for highly detailed artwork."
+  },
+  {
+    "id": "303094a6-3619-4e2c-8fc4-fe4946f81134",
+    "is_available": "1",
+    "created_at": "2024-09-15 23:47:36",
+    "updated_at": "2024-09-15 23:47:36",
+    "name": "Tattoo Design",
+    "image": "ubt1lho0b0td6ojoukol",
+    "description": "We create custom tattoo designs based on your preferences. Work with us to come up with a unique design that matches your vision."
+  },
+  {
+    "id": "cc840e19-9c78-4cca-885e-a00d3e256944",
+    "is_available": "1",
+    "created_at": "2024-09-15 20:56:39",
+    "updated_at": "2024-09-15 23:49:30",
+    "name": "Tattoo Removal",
+    "image": "gd3iljselh0sd4tdeywn",
+    "description": "Looking to remove or modify an existing tattoo? We offer advanced removal services to do it effectively."
+  },
+  {
+    "id": "848fa333-503b-430c-a7b7-0a9bf9318784",
+    "is_available": "1",
+    "created_at": "2024-09-15 23:48:28",
+    "updated_at": "2024-09-15 23:48:28",
+    "name": "Tribal Tattoo",
+    "image": "iiupbo230hhdn5mhleaj",
+    "description": "We offer tribal tattoos with traditional or modern patterns. Ideal for those who prefer strong lines and geometric shapes."
+  }
+]
