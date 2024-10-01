@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { IArtist } from "@/interfaces";
 import { DEFAULT_IMAGE } from "@/config/constants";
+import { useAnimateOnView } from "@/hooks";
 import { Badge } from "@/components";
 
 interface Props {
@@ -14,38 +13,22 @@ interface Props {
 }
 
 export const ArtistList = ({ artists }: Props) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: 0 },
-    visible: { opacity: 1, x: 0 },
-  };
+  const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
     <section
-      className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 xl:px-0"
+      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4 xl:px-0"
       ref={ref}
     >
-      {artists.map((artist, index) => (
+      {artists.map((artist, idx) => (
         <motion.div
           key={artist.id}
-          className="bg-neutral-darkgrey rounded-xl p-2 group"
           variants={itemVariants}
           initial="hidden"
           animate={controls}
           transition={{
             duration: 0.3,
-            delay: index * 0.1,
+            delay: idx * 0.1,
             ease: "easeOut",
           }}
         >

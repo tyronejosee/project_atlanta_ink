@@ -2,40 +2,38 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { Button } from "@nextui-org/react";
-import { HeaderSection } from "@/components";
+import { useAnimateOnView } from "@/hooks";
 import { IPrice } from "@/interfaces";
+import { HeaderSection } from "@/components";
 
 interface Props {
   prices: IPrice[];
 }
 
 export const PriceSection = ({ prices }: Props) => {
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
-    <section id="pricing" className="py-16 bg-primary">
+    <section className="py-16 bg-primary">
       <div className="max-w-screen-xl mx-auto text-center">
         <HeaderSection title="Prices" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0">
-          {prices.map((price) => {
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0"
+          ref={ref}
+        >
+          {prices.map((price, idx) => {
             return (
               <motion.div
                 key={price.id}
-                ref={ref}
+                variants={itemVariants}
                 initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                variants={variants}
-                transition={{ duration: 0.5 }}
+                animate={controls}
+                transition={{
+                  duration: 0.3,
+                  delay: idx * 0.1,
+                  ease: "easeOut",
+                }}
               >
                 <article className="p-6 shadow-md bg-neutral-darkgrey hover:bg-neutral-dark rounded-xl">
                   <h3 className="text-xl font-bold mb-2">{price.name}</h3>

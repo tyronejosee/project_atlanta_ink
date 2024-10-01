@@ -17,7 +17,7 @@ export * from "./company/faq-section/FAQSection";
 export * from "./company/final-cta-section/FinalCTASection";
 export * from "./company/hero-section/HeroSection";
 export * from "./company/location-section/LocationSection";
-export * from "./company/price-item/PriceItem";
+export * from "./company/price-list/PriceItem";
 export * from "./company/price-section/PriceSection";
 export * from "./company/promotion-section/PromotionSection";
 export * from "./company/service-section/ServiceSection";

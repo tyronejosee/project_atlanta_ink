@@ -41,6 +41,10 @@ export const MenuBar = () => {
     };
   }, [handleScroll]);
 
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
   const shouldBlur = isScrolled || isMenuOpen;
 
   return (
@@ -130,6 +134,7 @@ export const MenuBar = () => {
             <NavbarMenuItem key={item.id}>
               <Link
                 href={item.href}
+                onClick={handleMenuClose}
                 className={
                   isActive ? "font-bold text-primary" : "hover:font-bold"
                 }

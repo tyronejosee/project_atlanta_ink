@@ -21,7 +21,6 @@ class BookingSerializer(serializers.ModelSerializer):
             "artist_id",
             "estimated_budget",
             "tattoo_placement",
-            "status",
             "is_first_time",
             "is_work_in_progress",
         ]

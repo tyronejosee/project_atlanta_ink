@@ -2,42 +2,39 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { DEFAULT_IMAGE } from "@/config/constants";
 import { IService } from "@/interfaces";
 import { HeaderSection } from "@/components";
+import { useAnimateOnView } from "@/hooks";
 
 interface Props {
   services: IService[];
 }
 
 export const ServiceSection = ({ services }: Props) => {
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
     <section className="max-w-screen-xl mx-auto text-center py-16">
       <HeaderSection title="Services" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0">
-        {services.map((service) => {
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0"
+        ref={ref}
+      >
+        {services.map((service, idx) => {
           return (
             <motion.div
               key={service.id}
-              ref={ref}
+              variants={itemVariants}
               initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={variants}
-              transition={{ duration: 0.5 }}
+              animate={controls}
+              transition={{
+                duration: 0.3,
+                delay: idx * 0.1,
+                ease: "easeOut",
+              }}
             >
               <article className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl">
-                {/* <div className="absolute inset-0 bg-primary"></div> */}
                 <div className="absolute inset-0 bg-neutral-dark">
                   <Image
                     src={service.image || DEFAULT_IMAGE}
