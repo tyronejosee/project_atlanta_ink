@@ -40,7 +40,7 @@ export const HeroSection = () => {
           {COMPANY_DESCRIPTION}
         </p>
       </motion.header>
-      <div className="absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2  animate-pulse">
+      <div className="absolute bottom-20 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-pulse">
         <div className="flex flex-col justify-center items-center">
           <ChevronsDown />
           <span className="text-neutral-light text-sm">Explore</span>
