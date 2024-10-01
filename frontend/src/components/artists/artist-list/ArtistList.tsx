@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Chip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { IArtist } from "@/interfaces";
 import { DEFAULT_IMAGE } from "@/config/constants";
 import { useAnimateOnView } from "@/hooks";
-import { Badge } from "@/components";
 
 interface Props {
   artists: IArtist[];
@@ -31,28 +31,33 @@ export const ArtistList = ({ artists }: Props) => {
             delay: idx * 0.1,
             ease: "easeOut",
           }}
+          className="group"
         >
           <Link href={`/artists/${artist.slug}`}>
-            <figure className="w-full h-60 relative rounded-lg overflow-hidden">
+            <figure className="relative w-full h-0 pb-[100%] border border-neutral-800 rounded-xl overflow-hidden">
               <Image
                 src={artist.image || DEFAULT_IMAGE}
                 alt={artist.name}
                 fill
-                style={{ objectFit: "cover" }}
-                className="transform transition-transform duration-300 group-hover:scale-110 object-cover"
+                className="transform transition-transform duration-300 group-hover:scale-110"
               />
             </figure>
-            <div className="px-4 pt-4 text-center">
-              <h3 className="text-xl font-semibold pb-2 mb-2 border-b border-b-neutral-gray group-hover:border-b-primary">
+            <div className="p-4 text-center space-y-4">
+              <h3 className="group-hover:font-bold line-clamp-1">
                 {artist.name}
               </h3>
               <div className="flex justify-center items-center h-10">
-                <ul className="flex space-x-1">
+                <ul className="flex flex-col space-y-1 sm:space-y-0 sm:flex-row sm:space-x-1">
                   {artist.styles.map((style) => (
                     <li key={style.id}>
-                      <Badge variant="secondary" className="text-xs">
+                      <Chip
+                        color="primary"
+                        variant="bordered"
+                        size="sm"
+                        className="text-xs rounded-sm"
+                      >
                         {style.name}
-                      </Badge>
+                      </Chip>
                     </li>
                   ))}
                 </ul>

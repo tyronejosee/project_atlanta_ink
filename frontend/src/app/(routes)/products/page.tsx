@@ -1,3 +1,4 @@
+import React from "react";
 import { Metadata } from "next";
 import { getBrands, getCategories, getProducts } from "@/lib/api";
 import {
@@ -45,7 +46,6 @@ export default async function ProductsPage({ searchParams }: Props) {
       <HeaderPage title="Products" />
       <>
         <ProductToolbar brands={brands} categories={categories} />
-        {/* !TODO: Add component */}
         {products.length === 0 ? (
           <section className=" relative flex justify-center items-center w-full h-[400px] rounded-xl overflow-hidden">
             <div className="z-10 text-center text-gray-500">

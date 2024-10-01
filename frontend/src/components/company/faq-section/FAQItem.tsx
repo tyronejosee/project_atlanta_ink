@@ -1,3 +1,5 @@
+"use client";
+
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { CircleHelp, ChevronLeft } from "lucide-react";
 import { IFaq } from "@/interfaces";
@@ -21,7 +23,7 @@ export const FAQItem = ({ faq }: Props) => {
             <ChevronLeft className="group-hover:stroke-primary" />
           )
         }
-        className="bg-neutral-darkgrey shadow-none line-clamp-1"
+        className="bg-neutral-darkgrey shadow-none"
       >
         <p className="text-sm text-neutral-gray">{faq.answer}</p>
       </AccordionItem>

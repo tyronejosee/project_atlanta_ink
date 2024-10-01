@@ -20,7 +20,7 @@ export const PriceList = ({ prices }: Props) => {
 
   return (
     <>
-      <article className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <section className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-4">
         <ul
           className="grid grid-col-1 divide-y-4 divide-dashed divide-neutral-darkgrey"
           ref={firstColumnAnimation.ref}
@@ -61,8 +61,8 @@ export const PriceList = ({ prices }: Props) => {
             </motion.div>
           ))}
         </ul>
-      </article>
-      <article className="lg:hidden">
+      </section>
+      <section className="lg:hidden">
         <ul
           className="grid grid-col-1 divide-y-4 divide-dashed divide-neutral-darkgrey"
           ref={secondColumnAnimation.ref}
@@ -83,7 +83,7 @@ export const PriceList = ({ prices }: Props) => {
             </motion.div>
           ))}
         </ul>
-      </article>
+      </section>
     </>
   );
 };

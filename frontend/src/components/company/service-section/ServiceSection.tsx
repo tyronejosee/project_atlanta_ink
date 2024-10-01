@@ -34,7 +34,7 @@ export const ServiceSection = ({ services }: Props) => {
                 ease: "easeOut",
               }}
             >
-              <article className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl">
+              <article className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl border border-neutral-800">
                 <div className="absolute inset-0 bg-neutral-dark">
                   <Image
                     src={service.image || DEFAULT_IMAGE}

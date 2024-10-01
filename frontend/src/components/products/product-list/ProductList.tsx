@@ -34,7 +34,7 @@ export const ProductList = ({ products }: Props) => {
 
   return (
     <section
-      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4 xl:px-0"
+      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
       ref={ref}
     >
       {products.map((product, index) => (
@@ -51,13 +51,12 @@ export const ProductList = ({ products }: Props) => {
           }}
         >
           <Link href={`/products/${product.slug}`}>
-            <figure className="w-full h-60 relative rounded-lg overflow-hidden">
+            <figure className="relative w-full h-0 pb-[100%] border border-neutral-800 rounded-xl overflow-hidden">
               <Image
                 src={product.image || DEFAULT_IMAGE}
                 alt={product.name}
                 fill
-                style={{ objectFit: "cover" }}
-                className="object-cover transform transition-transform duration-300 group-hover:scale-110"
+                className="transform transition-transform duration-300 group-hover:scale-110"
               />
             </figure>
             <div className="pt-4">

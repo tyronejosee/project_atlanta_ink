@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { useAnimateOnView } from "@/hooks";
 import { IFaq } from "@/interfaces";
@@ -10,48 +11,70 @@ interface Props {
 }
 
 export const FAQList = ({ faqs }: Props) => {
-  const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
+  const firstColumnAnimation = useAnimateOnView(0.1, false);
+  const secondColumnAnimation = useAnimateOnView(0.1, false);
 
   const middleIndex = Math.ceil(faqs.length / 2);
   const firstColumnFaqs = faqs.slice(0, middleIndex);
   const secondColumnFaqs = faqs.slice(middleIndex);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 xl:px-0">
-      <div className="grid grid-col-1 gap-2" ref={ref}>
-        {firstColumnFaqs.map((faq, idx) => (
-          <motion.div
-            key={faq.id}
-            variants={itemVariants}
-            initial="hidden"
-            animate={controls}
-            transition={{
-              duration: 0.3,
-              delay: idx * 0.1,
-              ease: "easeOut",
-            }}
-          >
-            <FAQItem faq={faq} />
-          </motion.div>
-        ))}
-      </div>
-      <div className="grid grid-col-1 gap-2" ref={ref}>
-        {secondColumnFaqs.map((faq, idx) => (
-          <motion.div
-            key={faq.id}
-            variants={itemVariants}
-            initial="hidden"
-            animate={controls}
-            transition={{
-              duration: 0.3,
-              delay: idx * 0.1,
-              ease: "easeOut",
-            }}
-          >
-            <FAQItem faq={faq} />
-          </motion.div>
-        ))}
-      </div>
-    </div>
+    <>
+      <section className="hidden lg:grid sm:grid-cols-2">
+        <div className="grid grid-col-1 gap-4" ref={firstColumnAnimation.ref}>
+          {firstColumnFaqs.map((faq, idx) => (
+            <motion.div
+              key={faq.id}
+              variants={firstColumnAnimation.itemVariants}
+              initial="hidden"
+              animate={firstColumnAnimation.controls}
+              transition={{
+                duration: 0.3,
+                delay: idx * 0.1,
+                ease: "easeOut",
+              }}
+            >
+              <FAQItem faq={faq} />
+            </motion.div>
+          ))}
+        </div>
+        <div className="grid grid-col-1 gap-4" ref={firstColumnAnimation.ref}>
+          {secondColumnFaqs.map((faq, idx) => (
+            <motion.div
+              key={faq.id}
+              variants={firstColumnAnimation.itemVariants}
+              initial="hidden"
+              animate={firstColumnAnimation.controls}
+              transition={{
+                duration: 0.3,
+                delay: idx * 0.1,
+                ease: "easeOut",
+              }}
+            >
+              <FAQItem faq={faq} />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+      <section className="lg:hidden px-2 xl:px-0">
+        <div className="grid grid-col-1 gap-4" ref={secondColumnAnimation.ref}>
+          {faqs.map((faq, idx) => (
+            <motion.div
+              key={faq.id}
+              variants={secondColumnAnimation.itemVariants}
+              initial="hidden"
+              animate={secondColumnAnimation.controls}
+              transition={{
+                duration: 0.3,
+                delay: idx * 0.1,
+                ease: "easeOut",
+              }}
+            >
+              <FAQItem faq={faq} />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };

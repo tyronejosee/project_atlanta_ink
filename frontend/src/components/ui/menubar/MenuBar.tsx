@@ -46,12 +46,13 @@ export const MenuBar = () => {
   };
 
   const shouldBlur = isScrolled || isMenuOpen;
+  const isHomePage = pathname === "/";
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="xl"
-      isBordered={shouldBlur}
+      isBordered={isHomePage ? shouldBlur : true}
       isBlurred={shouldBlur}
       className={`fixed z-50 transition-colors duration-300 ${shouldBlur ? "" : "bg-transparent blur-0"}`}
     >

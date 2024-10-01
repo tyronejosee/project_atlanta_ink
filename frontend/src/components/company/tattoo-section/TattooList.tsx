@@ -21,9 +21,9 @@ export const TattooList = ({ tattoos, className }: Props) => {
       ref={ref}
     >
       {tattoos.map((tattoo, idx) => (
-        <motion.figure
+        <motion.div
           key={tattoo.id}
-          className="relative border border-neutral-darkgrey rounded-xl overflow-hidden group"
+          className="relative border border-neutral-800 rounded-xl overflow-hidden group"
           variants={itemVariants}
           initial="hidden"
           animate={controls}
@@ -48,7 +48,7 @@ export const TattooList = ({ tattoos, className }: Props) => {
           >
             {tattoo.name}
           </Chip>
-        </motion.figure>
+        </motion.div>
       ))}
     </section>
   );

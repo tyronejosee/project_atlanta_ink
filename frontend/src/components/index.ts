@@ -33,7 +33,6 @@ export * from "./providers/DataProvider";
 
 // UI - Common
 export * from "./ui/back-to-top/BackToTop";
-export * from "./ui/badge/Badge";
 export * from "./ui/empty-list/EmptyList";
 export * from "./ui/footer/Footer";
 export * from "./ui/form-error/FormError";

@@ -7,7 +7,7 @@ interface Props {
 
 export const ProductSection = ({ products }: Props) => {
   return (
-    <section className="py-16">
+    <section className="py-16 px-4 xl:px-0">
       <div className="max-w-screen-xl mx-auto">
         <HeaderSection title="Our Products" />
         <ProductList products={products} />

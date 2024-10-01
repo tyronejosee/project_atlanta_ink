@@ -55,7 +55,7 @@ export default async function ArtistDetailPage({ params }: Props) {
           alt={artist.name}
           width={300}
           height={300}
-          className="object-cover size-40 rounded-xl sm:size-64 sm:w-full border border-neutral-darkgrey"
+          className="object-cover size-40 rounded-xl sm:size-64 sm:w-full border border-neutral-800"
         />
         <div className="px-4 sm:px-0 space-y-2">
           <h1 className="text-3xl sm:text-4xl font-bold text-neutral-light">
