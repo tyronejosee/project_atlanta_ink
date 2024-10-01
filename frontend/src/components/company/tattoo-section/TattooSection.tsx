@@ -1,5 +1,4 @@
-import { TATTOO_EXAMPLE_OBJ } from "@/config/constants";
-import { HeaderSection, ParallaxScrollMain } from "@/components";
+import { HeaderSection, TattooList } from "@/components";
 import { ITattoo } from "@/interfaces";
 
 interface Props {
@@ -8,9 +7,9 @@ interface Props {
 
 export const TattooSection = ({ tattoos }: Props) => {
   return (
-    <section className="py-16">
+    <section className="py-16 px-4">
       <HeaderSection title="Tattoos" />
-      <ParallaxScrollMain tattoos={tattoos} />
+      <TattooList tattoos={tattoos} />
     </section>
   );
 };

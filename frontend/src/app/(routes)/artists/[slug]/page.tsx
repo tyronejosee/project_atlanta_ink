@@ -4,7 +4,7 @@ import { Button, Chip } from "@nextui-org/react";
 
 import { DEFAULT_IMAGE } from "@/config/constants";
 import { getArtist, getTattoosByArtist } from "@/lib/api";
-import { Instagram, EmptyList, WhatsApp, ArtistGallery } from "@/components";
+import { Instagram, EmptyList, WhatsApp, TattooList } from "@/components";
 import { IStyle } from "@/interfaces";
 import Link from "next/link";
 
@@ -107,7 +107,7 @@ export default async function ArtistDetailPage({ params }: Props) {
       </section>
       <section className="w-full p-4">
         {hasTattoos ? (
-          <ArtistGallery tattoos={tattoos} />
+          <TattooList tattoos={tattoos} className="md:grid-cols-3" />
         ) : (
           <EmptyList content="Tattoos" />
         )}

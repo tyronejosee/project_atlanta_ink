@@ -2,10 +2,8 @@
 export * from "./applicants/applicant-form/ApplicantForm";
 
 // Artists
-export * from "./artists/artist-card/ArtistCard";
 export * from "./artists/artist-list/ArtistList";
 export * from "./artists/artist-section/ArtistSection";
-export * from "./artists/artist-gallery/ArtistGallery";
 
 // Bookings
 export * from "./bookings/booking-card/BookingCard";
@@ -22,6 +20,7 @@ export * from "./company/price-section/PriceSection";
 export * from "./company/promotion-section/PromotionSection";
 export * from "./company/service-section/ServiceSection";
 export * from "./company/tattoo-section/TattooSection";
+export * from "./company/tattoo-section/TattooList";
 
 // Products
 export * from "./products/product-counter/ProductCounter";
@@ -45,8 +44,6 @@ export * from "./ui/instagram/Instagram";
 export * from "./ui/logo/Logo";
 export * from "./ui/menubar/MenuBar";
 export * from "./ui/pagination/PaginationItem";
-export * from "./ui/parallax-scroll/ParallaxScroll";
-export * from "./ui/parallax-scroll/ParallaxScrollMain";
 export * from "./ui/twitch/Twitch";
 export * from "./ui/whatsapp/WhatsApp";
 export * from "./ui/whatsapp/WhatsAppButton";
