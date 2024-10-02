@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import {
   Button,
   Checkbox,
@@ -13,14 +14,22 @@ import { toast } from "react-toastify";
 import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
 import { validateBudget, validatePhone } from "@/utils/validators";
 import { FormError } from "@/components";
-import { IBookingValues } from "@/interfaces";
+import { IArtist, IBookingValues } from "@/interfaces";
 
 interface Props {
+  artists: IArtist[];
   initialPhone?: string;
   initialfirstTime?: boolean;
+  initialArtist?: string;
 }
 
-export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
+export const BookingForm = ({
+  artists,
+  initialPhone,
+  initialfirstTime,
+  initialArtist,
+}: Props) => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -31,27 +40,9 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
     defaultValues: {
       phone: initialPhone,
       firstTimeSession: initialfirstTime,
+      artist: initialArtist,
     },
   });
-
-  // TODO: Move attbs
-  const notify = () =>
-    toast.success("Wow so easy!", {
-      theme: "dark",
-      position: "top-center",
-      hideProgressBar: true,
-      closeButton: false,
-      icon: false,
-      pauseOnFocusLoss: false,
-      style: {
-        backgroundColor: "#FF4200",
-        color: "#fafafa",
-        border: "none",
-        textAlign: "center",
-        padding: "16px 24px",
-        borderRadius: "8px",
-      },
-    });
 
   const onSubmit: SubmitHandler<IBookingValues> = async (data) => {
     const formData = new FormData();
@@ -60,6 +51,7 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
     formData.append("last_name", data.lastName);
     formData.append("phone", data.phone);
     formData.append("notes", data.notes);
+    formData.append("artist_id", data.artist);
     formData.append("estimated_budget", data.budget);
     formData.append("tattoo_placement", data.placement);
     formData.append(
@@ -80,11 +72,8 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
-      toast.success("Booking created successfully.", {
-        theme: "dark",
-        style: { backgroundColor: "#333", color: "#fff" },
-      });
       reset();
+      router.push("/bookings/thank-you");
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
       toast.error(
@@ -100,14 +89,12 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
   return (
     <section className="w-full p-4">
       <h1 className="text-3xl font-bold mb-4">Send your message</h1>
-      <button onClick={notify}>Notify!</button>
-      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <Input
           label="First Name"
           size="sm"
           type="text"
           radius="md"
-          required
           {...register("firstName", { required: "First name is required" })}
         />
 
@@ -120,7 +107,6 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           size="sm"
           type="text"
           radius="md"
-          required
           {...register("lastName", { required: "Last name is required" })}
         />
         {errors.lastName?.message && (
@@ -132,34 +118,38 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
           size="sm"
           type="phone"
           radius="md"
-          required
           isClearable
-          {...register("phone", { validate: validatePhone })}
+          {...register("phone", {
+            required: "Phone is required",
+            validate: validatePhone,
+          })}
         />
         {errors.phone?.message && (
           <FormError>* {errors.phone?.message}</FormError>
         )}
 
-        <Textarea
-          label="Notes"
-          size="sm"
-          radius="md"
-          {...register("notes", { required: "Notes are required" })}
-        />
+        <Textarea label="Notes" size="sm" radius="md" {...register("notes")} />
         {errors.notes?.message && (
           <FormError>* {errors.notes?.message}</FormError>
         )}
 
-        {/* <Select
-          label="Select an Artist"
-          className="max-w-xs"
+        <Select
+          label="Select an Artist *"
+          size="sm"
+          radius="md"
+          {...register("artist", {
+            required: "Artist is required",
+          })}
         >
-          {ARTISTS_CHOICES.map((choices) => (
-            <SelectItem key={choices.key} value={choices.key}>
-              {choices.label}
+          {artists.map((artist) => (
+            <SelectItem key={artist.id} value={artist.id}>
+              {artist.name}
             </SelectItem>
           ))}
-        </Select> */}
+        </Select>
+        {errors.artist?.message && (
+          <FormError>* {errors.artist?.message}</FormError>
+        )}
 
         <Input
           label="Estimated Budget"
@@ -173,10 +163,9 @@ export const BookingForm = ({ initialPhone, initialfirstTime }: Props) => {
         )}
 
         <Select
-          label="Select a tattoo placement"
+          label="Select a tattoo placement *"
           size="sm"
           radius="md"
-          className="max-w-xs"
           {...register("placement", {
             required: "Tattoo placement is required",
           })}

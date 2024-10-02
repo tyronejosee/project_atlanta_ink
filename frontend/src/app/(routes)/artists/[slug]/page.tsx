@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Button, Chip } from "@nextui-org/react";
+import { Chip } from "@nextui-org/react";
 
 import { DEFAULT_IMAGE } from "@/config/constants";
 import { getArtist, getTattoosByArtist } from "@/lib/api";
 import { Instagram, EmptyList, WhatsApp, TattooList } from "@/components";
 import { IStyle } from "@/interfaces";
 import Link from "next/link";
+import { BookingButton } from "@/components";
 
 interface Props {
   params: { slug: string };
@@ -81,9 +82,7 @@ export default async function ArtistDetailPage({ params }: Props) {
             {artist.description}
           </p>
           <div className="flex items-center space-x-2">
-            <Button as={Link} color="primary" href="/bookings">
-              Book artist
-            </Button>
+            <BookingButton artistID={artist.id} />
             {artist.instagram && (
               <Link
                 href={artist.instagram}
@@ -94,13 +93,13 @@ export default async function ArtistDetailPage({ params }: Props) {
               </Link>
             )}
             {artist.whatsapp && (
-              <a
+              <Link
                 href={`https://wa.me/${artist.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <WhatsApp />
-              </a>
+              </Link>
             )}
           </div>
         </div>

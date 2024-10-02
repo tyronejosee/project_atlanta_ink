@@ -4,6 +4,7 @@ import { LocateFixedIcon, Mail, Phone, WholeWord } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
 import { BookingForm, BookingCard, Hours } from "@/components";
 import { IBookingQueryParams } from "@/interfaces";
+import { getArtists } from "@/lib/api";
 
 interface Props {
   searchParams: IBookingQueryParams;
@@ -17,8 +18,9 @@ export const metadata: Metadata = {
     "book appointment, tattoo studio, contact, phone, email, hours, atlanta",
 };
 
-export default function BookingsPage({ searchParams }: Props) {
-  const { phone, firstTime } = searchParams;
+export default async function BookingsPage({ searchParams }: Props) {
+  const artists = await getArtists();
+  const { phone, firstTime, artist } = searchParams;
 
   return (
     <section className="max-w-screen-xl mx-auto mt-16">
@@ -56,8 +58,10 @@ export default function BookingsPage({ searchParams }: Props) {
           <Hours />
         </section>
         <BookingForm
+          artists={artists}
           initialPhone={phone ? decodeURIComponent(phone as string) : ""}
           initialfirstTime={firstTime}
+          initialArtist={artist}
         />
       </div>
       <ToastContainer />

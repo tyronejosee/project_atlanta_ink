@@ -17,7 +17,7 @@ export const ArtistList = ({ artists }: Props) => {
 
   return (
     <section
-      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4 xl:px-0"
+      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
       ref={ref}
     >
       {artists.map((artist, idx) => (

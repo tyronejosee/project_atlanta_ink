@@ -8,6 +8,7 @@ export * from "./artists/artist-section/ArtistSection";
 // Bookings
 export * from "./bookings/booking-card/BookingCard";
 export * from "./bookings/booking-form/BookingForm";
+export * from "./bookings/booking-button/BookingButton";
 export * from "./bookings/hours/Hours";
 
 // Company

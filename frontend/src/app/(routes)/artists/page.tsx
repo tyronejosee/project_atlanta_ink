@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { getArtists } from "@/lib/api";
 import { ArtistList, EmptyList, HeaderPage } from "@/components";
@@ -13,7 +14,7 @@ export default async function ArtistsPage() {
   const artists = await getArtists();
 
   return (
-    <section className="max-w-screen-xl mx-auto my-16">
+    <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0">
       {artists.length > 0 ? (
         <>
           <HeaderPage title="Our Artists" />
@@ -22,6 +23,6 @@ export default async function ArtistsPage() {
       ) : (
         <EmptyList content="artists" />
       )}
-    </section>
+    </main>
   );
 }

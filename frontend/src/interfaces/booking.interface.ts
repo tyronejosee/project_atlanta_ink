@@ -3,6 +3,7 @@ export interface IBookingValues {
   lastName: string;
   phone: string;
   notes: string;
+  artist: string;
   budget: string;
   placement: string;
   hasWorkInProgress: boolean;
@@ -11,6 +12,7 @@ export interface IBookingValues {
 }
 
 export interface IBookingQueryParams {
+  artist?: string;
   phone?: string;
   firstTime?: boolean;
 }
