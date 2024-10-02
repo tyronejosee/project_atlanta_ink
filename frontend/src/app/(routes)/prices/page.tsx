@@ -17,7 +17,7 @@ export default async function PricesPage() {
   const prices = await getPrices();
 
   return (
-    <section className="max-w-screen-xl mx-auto mt-16 px-4">
+    <main className="max-w-screen-xl mx-auto mt-16 px-4 xl:px-0">
       {prices.length > 0 ? (
         <>
           <HeaderPage title="Our Prices" />
@@ -26,6 +26,6 @@ export default async function PricesPage() {
       ) : (
         <EmptyList content="prices" />
       )}
-    </section>
+    </main>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
-import { useForm, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import { useForm, SubmitHandler } from "react-hook-form";
 import {
   Button,
   Checkbox,

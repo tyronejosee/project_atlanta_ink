@@ -23,8 +23,8 @@ export default async function BookingsPage({ searchParams }: Props) {
   const { phone, firstTime, artist } = searchParams;
 
   return (
-    <section className="max-w-screen-xl mx-auto mt-16">
-      <div className="grid grid-cols-2 gap-4 p-4">
+    <main className="max-w-screen-xl mx-auto mt-16 px-4 xl:px-0">
+      <div className="grid grid-cols-2 gap-10">
         <section className="space-y-8">
           <header>
             <span className="text-primary">Contact Us</span>
@@ -65,6 +65,6 @@ export default async function BookingsPage({ searchParams }: Props) {
         />
       </div>
       <ToastContainer />
-    </section>
+    </main>
   );
 }

@@ -42,8 +42,8 @@ export default async function ProductsPage({ searchParams }: Props) {
   const totalPages = Math.ceil(count / 10);
 
   return (
-    <main className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mt-16 mb-10">
-      <HeaderPage title="Products" />
+    <main className="max-w-screen-xl mx-auto mt-16 mt.px-4 xl:px-0">
+      <HeaderPage title="Our Products" />
       <>
         <ProductToolbar brands={brands} categories={categories} />
         {products.length === 0 ? (
