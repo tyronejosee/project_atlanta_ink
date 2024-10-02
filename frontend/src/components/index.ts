@@ -24,7 +24,9 @@ export * from "./company/tattoo-section/TattooSection";
 export * from "./company/tattoo-section/TattooList";
 
 // Products
+export * from "./products/product-content/ProductContent";
 export * from "./products/product-counter/ProductCounter";
+export * from "./products/product-header/ProductHeader";
 export * from "./products/product-list/ProductList";
 export * from "./products/product-section/ProductSection";
 export * from "./products/product-toolbar/ProductToolbar";
