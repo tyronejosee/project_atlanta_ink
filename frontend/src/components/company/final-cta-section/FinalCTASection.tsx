@@ -5,13 +5,13 @@ import { useRouter } from "next/navigation";
 import { Input, Button } from "@nextui-org/react";
 
 export const FinalCTASection = () => {
-  const [phone, setPhone] = useState("");
+  const [firstName, setFirstName] = useState("");
   const router = useRouter();
 
   // TODO: Add types
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    router.push(`/bookings?phone=${encodeURIComponent(phone)}`);
+    router.push(`/bookings?firstName=${firstName}`);
   };
 
   return (
@@ -29,9 +29,9 @@ export const FinalCTASection = () => {
           <Input
             type="text"
             size="lg"
-            placeholder="+14040000000"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            placeholder="Enter your first name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
           />
           <Button
             type="submit"

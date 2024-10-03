@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ApplyPage() {
   return (
-    <main className="max-w-screen-xl mx-auto mt-16 px-4 xl:px-0">
+    <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <section className="pb-8">
           <HeaderPage

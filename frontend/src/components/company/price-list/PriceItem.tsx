@@ -17,7 +17,7 @@ export const PriceItem = ({ price }: Props) => {
             {price.name}
           </span>
           <span className="group-hover:font-bold group-hover:text-primary">
-            ${price.price_range}
+            {price.price_range}
           </span>
         </div>
         <span className="text-xs text-neutral-gray line-clamp-1">

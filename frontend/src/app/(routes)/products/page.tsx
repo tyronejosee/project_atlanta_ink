@@ -42,7 +42,7 @@ export default async function ProductsPage({ searchParams }: Props) {
   const totalPages = Math.ceil(count / 10);
 
   return (
-    <main className="max-w-screen-xl mx-auto mt-16 mt.px-4 xl:px-0">
+    <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0">
       <HeaderPage
         title="Our Products"
         subtitle="Discover our selection of aftercare products and tattoo supplies."

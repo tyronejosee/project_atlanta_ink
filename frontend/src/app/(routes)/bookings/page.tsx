@@ -17,20 +17,20 @@ export const metadata: Metadata = {
 
 export default async function BookingsPage({ searchParams }: Props) {
   const artists = await getArtists();
-  const { phone, firstTime, artist } = searchParams;
+  const { firstName, firstTime, artist } = searchParams;
 
   return (
     <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <section>
           <HeaderPage
-            title="Bookings"
+            title={firstName ? `Hi, ${firstName}!` : "Bookings"}
             subtitle="Schedule your appointment easily and secure your spot today!"
           />
           <BookingForm
             artists={artists}
-            initialPhone={phone ? decodeURIComponent(phone as string) : ""}
-            initialfirstTime={firstTime}
+            initialFirstName={firstName}
+            initialFirstTime={firstTime}
             initialArtist={artist}
           />
         </section>

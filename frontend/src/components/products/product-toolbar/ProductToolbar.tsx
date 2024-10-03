@@ -72,7 +72,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
 
   return (
     <aside className="pb-8">
-      <nav className="flex space-x-4">
+      <nav className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
         <Input
           label="Search"
           type="text"
@@ -80,12 +80,12 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           size="sm"
           value={search}
           onChange={handleSearchChange}
-          className="w-1/4"
+          className="w-full md:w-1/4"
         />
         <Select
           size="sm"
           label="Select brand"
-          className="w-1/4"
+          className="w-full md:w-1/4"
           onChange={(e) => handleBrandChange(e.target.value)}
         >
           {brands.map((brand) => (
@@ -97,7 +97,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
         <Select
           size="sm"
           label="Select category"
-          className="w-1/4"
+          className="w-full md:w-1/4"
           onChange={(e) => handleCategoryChange(e.target.value)}
         >
           {categories.map((category) => (
@@ -109,7 +109,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
         <Select
           size="sm"
           label="Sort by"
-          className="w-1/4"
+          className="w-full md:w-1/4"
           onChange={(e) => handleSortChange(e.target.value)}
         >
           {SORT_CHOICES.map((choices) => (

@@ -13,6 +13,6 @@ export interface IBookingValues {
 
 export interface IBookingQueryParams {
   artist?: string;
-  phone?: string;
+  firstName?: string;
   firstTime?: boolean;
 }

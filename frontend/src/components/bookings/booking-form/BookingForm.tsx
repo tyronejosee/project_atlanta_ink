@@ -18,15 +18,15 @@ import { IArtist, IBookingValues } from "@/interfaces";
 
 interface Props {
   artists: IArtist[];
-  initialPhone?: string;
-  initialfirstTime?: boolean;
+  initialFirstName?: string;
+  initialFirstTime?: boolean;
   initialArtist?: string;
 }
 
 export const BookingForm = ({
   artists,
-  initialPhone,
-  initialfirstTime,
+  initialFirstName,
+  initialFirstTime,
   initialArtist,
 }: Props) => {
   const router = useRouter();
@@ -38,8 +38,8 @@ export const BookingForm = ({
   } = useForm<IBookingValues>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
-      phone: initialPhone,
-      firstTimeSession: initialfirstTime,
+      firstName: initialFirstName,
+      firstTimeSession: initialFirstTime,
       artist: initialArtist,
     },
   });

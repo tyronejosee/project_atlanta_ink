@@ -44,7 +44,6 @@ export const metadata: Metadata = {
   },
 };
 
-// https://res.cloudinary.com/dwyvfa5dj/image/upload/v1727889010/Atlanta%20Ink%20API/atlanta-ink-seo.webp
 export default async function HomePage() {
   const [services, tattoos, artists, prices, productsData, faqs] =
     await Promise.all([

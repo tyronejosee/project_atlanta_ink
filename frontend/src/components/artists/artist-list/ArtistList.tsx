@@ -16,10 +16,7 @@ export const ArtistList = ({ artists }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
-    <section
-      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
-      ref={ref}
-    >
+    <section className="grid grid-cols-2 lg:grid-cols-4 gap-4" ref={ref}>
       {artists.map((artist, idx) => (
         <motion.div
           key={artist.id}

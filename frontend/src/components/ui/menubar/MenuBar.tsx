@@ -96,7 +96,7 @@ export const MenuBar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <a
-            href={companyData?.instagram}
+            href={companyData?.twitch}
             target="_blank"
             rel="noopener noreferrer"
           >

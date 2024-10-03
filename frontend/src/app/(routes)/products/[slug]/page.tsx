@@ -39,8 +39,8 @@ export default async function ProductDetailPage({ params }: Props) {
   const product = await getProduct(slug);
 
   return (
-    <main className="max-w-screen-xl mx-auto p-4 mt-16">
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0 pt-4">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="sm:hidden">
           <ProductHeader product={product} />
         </div>

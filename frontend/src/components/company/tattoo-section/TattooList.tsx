@@ -15,13 +15,13 @@ export const TattooList = ({ tattoos, className }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
-    <section
+    <div
       className={`${className}
         grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4`}
       ref={ref}
     >
       {tattoos.map((tattoo, idx) => (
-        <motion.div
+        <motion.article
           key={tattoo.id}
           className="relative border border-neutral-800 rounded-xl overflow-hidden group"
           variants={itemVariants}
@@ -48,8 +48,8 @@ export const TattooList = ({ tattoos, className }: Props) => {
           >
             {tattoo.name}
           </Chip>
-        </motion.div>
+        </motion.article>
       ))}
-    </section>
+    </div>
   );
 };

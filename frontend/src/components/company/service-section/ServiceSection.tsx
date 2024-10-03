@@ -26,7 +26,7 @@ export const ServiceSection = ({ services }: Props) => {
       >
         {services.map((service, idx) => {
           return (
-            <motion.div
+            <motion.article
               key={service.id}
               variants={itemVariants}
               initial="hidden"
@@ -36,27 +36,24 @@ export const ServiceSection = ({ services }: Props) => {
                 delay: idx * 0.1,
                 ease: "easeOut",
               }}
+              className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl border border-neutral-800"
             >
-              <article className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl border border-neutral-800">
-                <div className="absolute inset-0 bg-neutral-dark">
-                  <Image
-                    src={service.image || DEFAULT_IMAGE}
-                    alt={service.name}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="z-10 opacity-25 transform transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-                <div className="z-20 p-4 space-y-2 text-center">
-                  <h4 className="text-xl font-bold text-primary">
-                    {service.name}
-                  </h4>
-                  <p className="text-neutral-lightgray">
-                    {service.description}
-                  </p>
-                </div>
-              </article>
-            </motion.div>
+              <div className="absolute inset-0 bg-neutral-dark">
+                <Image
+                  src={service.image || DEFAULT_IMAGE}
+                  alt={service.name}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="z-10 opacity-25 transform transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <div className="z-20 p-4 space-y-2 text-center">
+                <h4 className="text-xl font-bold text-primary">
+                  {service.name}
+                </h4>
+                <p className="text-neutral-lightgray">{service.description}</p>
+              </div>
+            </motion.article>
           );
         })}
       </div>

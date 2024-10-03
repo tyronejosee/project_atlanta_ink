@@ -27,7 +27,7 @@ export const PriceSection = ({ prices }: Props) => {
         >
           {prices.map((price, idx) => {
             return (
-              <motion.div
+              <motion.article
                 key={price.id}
                 variants={itemVariants}
                 initial="hidden"
@@ -37,15 +37,14 @@ export const PriceSection = ({ prices }: Props) => {
                   delay: idx * 0.1,
                   ease: "easeOut",
                 }}
+                className="p-6 shadow-md bg-neutral-darkgrey hover:bg-neutral-dark rounded-xl"
               >
-                <article className="p-6 shadow-md bg-neutral-darkgrey hover:bg-neutral-dark rounded-xl">
-                  <h3 className="text-xl font-bold mb-2">{price.name}</h3>
-                  <p className="text-4xl font-bold text-primary">
-                    {price.price_range}
-                  </p>
-                  <p className="text-neutral-gray mt-2">{price.description}</p>
-                </article>
-              </motion.div>
+                <h3 className="text-xl font-bold mb-2">{price.name}</h3>
+                <p className="text-4xl font-bold text-primary">
+                  {price.price_range}
+                </p>
+                <p className="text-neutral-gray mt-2">{price.description}</p>
+              </motion.article>
             );
           })}
         </div>
