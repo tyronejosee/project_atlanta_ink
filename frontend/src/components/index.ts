@@ -9,7 +9,7 @@ export * from "./artists/artist-section/ArtistSection";
 export * from "./bookings/booking-card/BookingCard";
 export * from "./bookings/booking-form/BookingForm";
 export * from "./bookings/booking-button/BookingButton";
-export * from "./bookings/hours/Hours";
+export * from "./bookings/schedule-List/ScheduleList";
 
 // Company
 export * from "./company/faq-section/FAQSection";

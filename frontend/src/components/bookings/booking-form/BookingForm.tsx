@@ -10,7 +10,6 @@ import {
   SelectItem,
   Textarea,
 } from "@nextui-org/react";
-import { toast } from "react-toastify";
 import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
 import { validateBudget, validatePhone } from "@/utils/validators";
 import { FormError } from "@/components";
@@ -76,136 +75,136 @@ export const BookingForm = ({
       router.push("/bookings/thank-you");
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
-      toast.error(
-        "There was a problem with the submission. Please try again.",
-        {
-          theme: "dark",
-          style: { backgroundColor: "#333", color: "#fff" },
-        },
-      );
+      // TODO: Add sentry
     }
   };
 
   return (
-    <section className="w-full p-4">
-      <h1 className="text-3xl font-bold mb-4">Send your message</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        <Input
-          label="First Name"
-          size="sm"
-          type="text"
-          radius="md"
-          {...register("firstName", { required: "First name is required" })}
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      {/* First Name field */}
+      <Input
+        label="First Name *"
+        size="sm"
+        type="text"
+        radius="md"
+        {...register("firstName", { required: "First name is required" })}
+      />
+
+      {errors.firstName?.message && (
+        <FormError>* {errors.firstName?.message}</FormError>
+      )}
+
+      {/* Last Name field */}
+      <Input
+        label="Last Name *"
+        size="sm"
+        type="text"
+        radius="md"
+        {...register("lastName", { required: "Last name is required" })}
+      />
+      {errors.lastName?.message && (
+        <FormError>* {errors.lastName?.message}</FormError>
+      )}
+
+      {/* Phone field */}
+      <Input
+        label="Phone *"
+        size="sm"
+        type="phone"
+        radius="md"
+        isClearable
+        {...register("phone", {
+          required: "Phone is required",
+          validate: validatePhone,
+        })}
+      />
+      {errors.phone?.message && (
+        <FormError>* {errors.phone?.message}</FormError>
+      )}
+
+      {/* Notes field */}
+      <Textarea label="Notes *" size="sm" radius="md" {...register("notes")} />
+      {errors.notes?.message && (
+        <FormError>* {errors.notes?.message}</FormError>
+      )}
+
+      {/* Artist field */}
+      <Select
+        label="Select an Artist *"
+        size="sm"
+        radius="md"
+        {...register("artist", {
+          required: "Artist is required",
+        })}
+      >
+        {artists.map((artist) => (
+          <SelectItem key={artist.id} value={artist.id}>
+            {artist.name}
+          </SelectItem>
+        ))}
+      </Select>
+      {errors.artist?.message && (
+        <FormError>* {errors.artist?.message}</FormError>
+      )}
+
+      {/* Estimated Bullet field */}
+      <Input
+        label="Estimated Budget"
+        size="sm"
+        type="decimal"
+        radius="md"
+        {...register("budget", { validate: validateBudget })}
+      />
+      {errors.budget?.message && (
+        <FormError>* {errors.budget?.message}</FormError>
+      )}
+
+      {/* Placement field */}
+      <Select
+        label="Select a tattoo placement *"
+        size="sm"
+        radius="md"
+        {...register("placement", {
+          required: "Tattoo placement is required",
+        })}
+      >
+        {PLACEMENT_CHOICES.map((choice) => (
+          <SelectItem key={choice.key} value={choice.key}>
+            {choice.label}
+          </SelectItem>
+        ))}
+      </Select>
+      {errors.placement?.message && (
+        <FormError>* {errors.placement?.message}</FormError>
+      )}
+
+      {/* Checkbox fields */}
+      <div className="flex flex-col space-y-2">
+        <Checkbox size="sm" {...register("hasWorkInProgress")}>
+          I have a work in progress tattoo
+        </Checkbox>
+        <Checkbox size="sm" {...register("firstTimeSession")}>
+          First-time session
+        </Checkbox>
+      </div>
+
+      {/* References field */}
+      <div>
+        <input
+          type="file"
+          className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
+          {...register("file")}
         />
+      </div>
 
-        {errors.firstName?.message && (
-          <FormError>* {errors.firstName?.message}</FormError>
-        )}
-
-        <Input
-          label="Last Name"
-          size="sm"
-          type="text"
-          radius="md"
-          {...register("lastName", { required: "Last name is required" })}
-        />
-        {errors.lastName?.message && (
-          <FormError>* {errors.lastName?.message}</FormError>
-        )}
-
-        <Input
-          label="Phone"
-          size="sm"
-          type="phone"
-          radius="md"
-          isClearable
-          {...register("phone", {
-            required: "Phone is required",
-            validate: validatePhone,
-          })}
-        />
-        {errors.phone?.message && (
-          <FormError>* {errors.phone?.message}</FormError>
-        )}
-
-        <Textarea label="Notes" size="sm" radius="md" {...register("notes")} />
-        {errors.notes?.message && (
-          <FormError>* {errors.notes?.message}</FormError>
-        )}
-
-        <Select
-          label="Select an Artist *"
-          size="sm"
-          radius="md"
-          {...register("artist", {
-            required: "Artist is required",
-          })}
-        >
-          {artists.map((artist) => (
-            <SelectItem key={artist.id} value={artist.id}>
-              {artist.name}
-            </SelectItem>
-          ))}
-        </Select>
-        {errors.artist?.message && (
-          <FormError>* {errors.artist?.message}</FormError>
-        )}
-
-        <Input
-          label="Estimated Budget"
-          size="sm"
-          type="decimal"
-          radius="md"
-          {...register("budget", { validate: validateBudget })}
-        />
-        {errors.budget?.message && (
-          <FormError>* {errors.budget?.message}</FormError>
-        )}
-
-        <Select
-          label="Select a tattoo placement *"
-          size="sm"
-          radius="md"
-          {...register("placement", {
-            required: "Tattoo placement is required",
-          })}
-        >
-          {PLACEMENT_CHOICES.map((choice) => (
-            <SelectItem key={choice.key} value={choice.key}>
-              {choice.label}
-            </SelectItem>
-          ))}
-        </Select>
-        {errors.placement?.message && (
-          <FormError>* {errors.placement?.message}</FormError>
-        )}
-
-        <div className="flex flex-col space-y-2">
-          <Checkbox {...register("hasWorkInProgress")}>
-            I have a work in progress tattoo
-          </Checkbox>
-          <Checkbox {...register("firstTimeSession")}>
-            First-time session
-          </Checkbox>
-        </div>
-
-        <div>
-          <input
-            type="file"
-            className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
-            {...register("file")}
-          />
-        </div>
-
-        <Button
-          type="submit"
-          color="primary"
-          radius="md"
-          className="font-medium"
-        >
-          Create Booking
-        </Button>
-      </form>
-    </section>
+      <Button
+        type="submit"
+        color="primary"
+        radius="lg"
+        className="w-full text-neutral-light font-medium"
+      >
+        Create Booking
+      </Button>
+    </form>
   );
 };

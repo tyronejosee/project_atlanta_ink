@@ -51,3 +51,41 @@ export const MENU_ITEMS = [
   { id: 4, href: "/applicants/apply", label: "Applicants" },
   { id: 4, href: "/bookings", label: "Bookings" },
 ];
+
+export const SCHEDULE_LIST = [
+  {
+    id: 1,
+    day: "Monday",
+    schedule: "09:00 AM to 10:30 PM",
+  },
+  {
+    id: 2,
+    day: "Tuesday",
+    schedule: "09:00 AM to 10:30 PM",
+  },
+  {
+    id: 3,
+    day: "Wednesday",
+    schedule: "09:00 AM to 10:30 PM",
+  },
+  {
+    id: 4,
+    day: "Thursday",
+    schedule: "09:00 AM to 10:30 PM",
+  },
+  {
+    id: 5,
+    day: "Friday",
+    schedule: "09:00 AM to 10:30 PM",
+  },
+  {
+    id: 6,
+    day: "Saturday",
+    schedule: "10:00 AM to 10:30 PM",
+  },
+  {
+    id: 7,
+    day: "Sunday",
+    schedule: "Closed",
+  },
+];
