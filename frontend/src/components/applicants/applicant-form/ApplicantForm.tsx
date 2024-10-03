@@ -1,20 +1,25 @@
 "use client";
 
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { Input, Button, Textarea, Checkbox } from "@nextui-org/react";
-import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
-import { validateBudget, validatePhone } from "@/utils/validators";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { API_URL } from "@/config/constants";
+import { applicantSchema } from "@/validations/applicantSchema";
+import { IApplicantValues } from "@/interfaces";
 import { FormError } from "@/components";
-import { IApplicantValues, IArtist, IBookingValues } from "@/interfaces";
 
 export const ApplicantForm = () => {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
-  } = useForm<IApplicantValues>();
+  } = useForm<IApplicantValues>({
+    resolver: zodResolver(applicantSchema),
+  });
 
   const onSubmit: SubmitHandler<IApplicantValues> = async (data) => {
     const formData = new FormData();
@@ -37,7 +42,7 @@ export const ApplicantForm = () => {
         throw new Error("Network response was not ok.");
       }
       reset();
-      // router.push("/applicants/application-submitted");
+      router.push("/applicants/application-submitted");
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
       // TODO: Add sentry
@@ -46,48 +51,53 @@ export const ApplicantForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      {/* Name field */}
       <Input
         label="Name *"
         size="sm"
         type="text"
         radius="md"
         required
-        {...register("name", { required: "Name is required" })}
+        {...register("name")}
       />
       {errors.name?.message && <FormError>* {errors.name?.message}</FormError>}
 
+      {/* Email field */}
       <Input
         label="Email *"
         size="sm"
         type="email"
         radius="md"
-        {...register("email", { required: "Email is required" })}
+        {...register("email")}
       />
       {errors.email?.message && (
         <FormError>* {errors.email?.message}</FormError>
       )}
 
+      {/* Phone field */}
       <Input
         label="Phone *"
         size="sm"
         type="phone"
         radius="md"
-        {...register("phone", { required: "Phone is required" })}
+        {...register("phone")}
       />
       {errors.phone?.message && (
         <FormError>* {errors.phone?.message}</FormError>
       )}
 
+      {/* Message field */}
       <Textarea
         label="Message"
         size="sm"
         radius="md"
-        {...register("message", { required: "Message are required" })}
+        {...register("message")}
       />
       {errors.message?.message && (
         <FormError>* {errors.message?.message}</FormError>
       )}
 
+      {/* CV field */}
       <div>
         <label className="subpixel-antialiased block text-foreground-500 text-small pb-0.5 pe-2 text-ellipsis">
           Your CV *
@@ -97,11 +107,13 @@ export const ApplicantForm = () => {
           className="block w-full text-xs text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
           {...register("cv")}
         />
+        {errors.cv?.message && <FormError>* {errors.cv?.message}</FormError>}
       </div>
-      {errors.cv?.message && <FormError>* {errors.cv?.message}</FormError>}
 
+      {/* Checkbox field */}
       <Checkbox
         className="block"
+        size="sm"
         // {...register("isEmail")}
       >
         I wish to receive emails in case of a hiring process.
@@ -115,6 +127,10 @@ export const ApplicantForm = () => {
       >
         Apply now
       </Button>
+
+      <p className="text-xs text-neutral-gray text-center">
+        * Fields marked with an asterisk are required.
+      </p>
     </form>
   );
 };

@@ -34,7 +34,6 @@ export const BookingForm = ({
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm<IBookingValues>({
     resolver: zodResolver(bookingSchema),
@@ -173,6 +172,21 @@ export const BookingForm = ({
         <FormError>* {errors.placement?.message}</FormError>
       )}
 
+      {/* References field */}
+      <div>
+        <label className="subpixel-antialiased block text-foreground-500 text-small pb-0.5 pe-2 text-ellipsis">
+          References *
+        </label>
+        <input
+          type="file"
+          className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
+          {...register("file")}
+        />
+        {errors.file?.message && (
+          <FormError>* {errors.file?.message}</FormError>
+        )}
+      </div>
+
       {/* Checkbox fields */}
       <div className="flex flex-col space-y-2">
         <Checkbox size="sm" {...register("hasWorkInProgress")}>
@@ -182,18 +196,6 @@ export const BookingForm = ({
         <Checkbox size="sm" {...register("firstTimeSession")}>
           First-time session
         </Checkbox>
-      </div>
-
-      {/* References field */}
-      <div>
-        <input
-          type="file"
-          className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
-          {...register("file")}
-        />
-        {errors.file?.message && (
-          <FormError>* {errors.file?.message}</FormError>
-        )}
       </div>
 
       <Button
