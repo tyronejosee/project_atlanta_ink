@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import "react-toastify/dist/ReactToastify.css";
 import { BookingForm, HeaderPage, ScheduleList } from "@/components";
 import { IBookingQueryParams } from "@/interfaces";
 import { getArtists } from "@/lib/api";

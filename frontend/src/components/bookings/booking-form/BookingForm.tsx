@@ -10,8 +10,9 @@ import {
   SelectItem,
   Textarea,
 } from "@nextui-org/react";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
-import { validateBudget, validatePhone } from "@/utils/validators";
+import { bookingSchema } from "@/validations/bookingSchema";
 import { FormError } from "@/components";
 import { IArtist, IBookingValues } from "@/interfaces";
 
@@ -36,6 +37,7 @@ export const BookingForm = ({
     watch,
     reset,
   } = useForm<IBookingValues>({
+    resolver: zodResolver(bookingSchema),
     defaultValues: {
       phone: initialPhone,
       firstTimeSession: initialfirstTime,
@@ -87,7 +89,7 @@ export const BookingForm = ({
         size="sm"
         type="text"
         radius="md"
-        {...register("firstName", { required: "First name is required" })}
+        {...register("firstName")}
       />
 
       {errors.firstName?.message && (
@@ -100,7 +102,7 @@ export const BookingForm = ({
         size="sm"
         type="text"
         radius="md"
-        {...register("lastName", { required: "Last name is required" })}
+        {...register("lastName")}
       />
       {errors.lastName?.message && (
         <FormError>* {errors.lastName?.message}</FormError>
@@ -110,13 +112,10 @@ export const BookingForm = ({
       <Input
         label="Phone *"
         size="sm"
-        type="phone"
+        type="text"
         radius="md"
         isClearable
-        {...register("phone", {
-          required: "Phone is required",
-          validate: validatePhone,
-        })}
+        {...register("phone")}
       />
       {errors.phone?.message && (
         <FormError>* {errors.phone?.message}</FormError>
@@ -133,9 +132,7 @@ export const BookingForm = ({
         label="Select an Artist *"
         size="sm"
         radius="md"
-        {...register("artist", {
-          required: "Artist is required",
-        })}
+        {...register("artist")}
       >
         {artists.map((artist) => (
           <SelectItem key={artist.id} value={artist.id}>
@@ -153,7 +150,7 @@ export const BookingForm = ({
         size="sm"
         type="decimal"
         radius="md"
-        {...register("budget", { validate: validateBudget })}
+        {...register("budget")}
       />
       {errors.budget?.message && (
         <FormError>* {errors.budget?.message}</FormError>
@@ -164,9 +161,7 @@ export const BookingForm = ({
         label="Select a tattoo placement *"
         size="sm"
         radius="md"
-        {...register("placement", {
-          required: "Tattoo placement is required",
-        })}
+        {...register("placement")}
       >
         {PLACEMENT_CHOICES.map((choice) => (
           <SelectItem key={choice.key} value={choice.key}>
@@ -183,6 +178,7 @@ export const BookingForm = ({
         <Checkbox size="sm" {...register("hasWorkInProgress")}>
           I have a work in progress tattoo
         </Checkbox>
+
         <Checkbox size="sm" {...register("firstTimeSession")}>
           First-time session
         </Checkbox>
@@ -195,6 +191,9 @@ export const BookingForm = ({
           className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
           {...register("file")}
         />
+        {errors.file?.message && (
+          <FormError>* {errors.file?.message}</FormError>
+        )}
       </div>
 
       <Button
@@ -205,6 +204,10 @@ export const BookingForm = ({
       >
         Create Booking
       </Button>
+
+      <p className="text-xs text-neutral-gray text-center">
+        * Fields marked with an asterisk are required.
+      </p>
     </form>
   );
 };
