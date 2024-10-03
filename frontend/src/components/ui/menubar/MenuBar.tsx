@@ -54,6 +54,7 @@ export const MenuBar = () => {
       maxWidth="xl"
       isBordered={isHomePage ? shouldBlur : true}
       isBlurred={shouldBlur}
+      // position="static"
       className={`fixed z-50 transition-colors duration-300 ${shouldBlur ? "" : "bg-transparent blur-0"}`}
     >
       <NavbarContent>
@@ -115,7 +116,8 @@ export const MenuBar = () => {
           <Button
             as={Link}
             href={NAV_CTA.href}
-            className="bg-primary text-neutral-light font-medium rounded-xl"
+            color="primary"
+            className="text-neutral-light font-medium"
           >
             {NAV_CTA.label}
           </Button>

@@ -17,7 +17,10 @@ export default async function ArtistsPage() {
     <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0">
       {artists.length > 0 ? (
         <>
-          <HeaderPage title="Our Artists" />
+          <HeaderPage
+            title="Our Artists"
+            subtitle="Meet the talented artists who bring your designs to life."
+          />
           <ArtistList artists={artists} />
         </>
       ) : (

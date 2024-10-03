@@ -14,7 +14,10 @@ export default function ApplyPage() {
     <main className="max-w-screen-xl mx-auto mt-16 px-4 xl:px-0">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <section className="pb-8">
-          <HeaderPage title="Apply for Job" />
+          <HeaderPage
+            title="Join Our Team"
+            subtitle="We're always looking for talented artists and passionate individuals."
+          />
           <ApplicantForm />
         </section>
         <section className="hidden md:block overflow-hidden rounded-xl py-4">

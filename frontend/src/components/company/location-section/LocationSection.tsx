@@ -3,7 +3,10 @@ import { HeaderSection } from "@/components";
 export const LocationSection = () => {
   return (
     <section className="mx-auto py-16">
-      <HeaderSection title="Location" />
+      <HeaderSection
+        title="Our Location"
+        subtitle="Visit us at our studio, conveniently located for your comfort."
+      />
       <div className="flex flex-col lg:flex-row bg-neutral-darkgrey">
         <div className="relative lg:w-1/2 flex flex-col justify-center items-center overflow-x-hidden h-[400px] md:h-96">
           <h3 className="text-3xl text-primary font-bold mb-2">

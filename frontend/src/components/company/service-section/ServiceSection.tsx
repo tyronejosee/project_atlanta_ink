@@ -16,7 +16,10 @@ export const ServiceSection = ({ services }: Props) => {
 
   return (
     <section className="max-w-screen-xl mx-auto text-center py-16">
-      <HeaderSection title="Services" />
+      <HeaderSection
+        title="Our Services"
+        subtitle="Explore our diverse range of tattoo styles and customization options."
+      />
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0"
         ref={ref}

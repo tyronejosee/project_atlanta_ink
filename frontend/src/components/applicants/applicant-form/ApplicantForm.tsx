@@ -113,7 +113,7 @@ export const ApplicantForm = () => {
         radius="md"
         className="font-medium w-full"
       >
-        Submit Data
+        Apply now
       </Button>
     </form>
   );

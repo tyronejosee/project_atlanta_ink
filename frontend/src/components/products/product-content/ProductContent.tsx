@@ -89,7 +89,7 @@ export const ProductContent = ({ product }: Props) => {
         </AccordionItem>
         <AccordionItem key="3" aria-label="Share" title="Share"></AccordionItem>
       </Accordion>
-      <nav className="w-full fixed left-0 bottom-0 bg-neutral-darkgrey py-2 px-4">
+      <nav className="z-40 w-full fixed left-0 bottom-0 bg-neutral-darkgrey py-2 px-4">
         <Button size="lg" color="primary" className="w-full">
           Buy Now
         </Button>

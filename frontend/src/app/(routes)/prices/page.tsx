@@ -20,7 +20,10 @@ export default async function PricesPage() {
     <main className="max-w-screen-xl mx-auto mt-16 px-4 xl:px-0">
       {prices.length > 0 ? (
         <>
-          <HeaderPage title="Our Prices" />
+          <HeaderPage
+            title="Our Pricing"
+            subtitle="Check out our price list for tattoo services and consultations."
+          />
           <PriceList prices={prices} />
         </>
       ) : (

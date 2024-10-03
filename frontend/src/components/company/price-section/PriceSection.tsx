@@ -17,7 +17,10 @@ export const PriceSection = ({ prices }: Props) => {
   return (
     <section className="py-16 bg-primary">
       <div className="max-w-screen-xl mx-auto text-center">
-        <HeaderSection title="Prices" />
+        <HeaderSection
+          title="Our Pricing"
+          subtitle="Check out our price list for tattoo services and consultations."
+        />
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 xl:px-0"
           ref={ref}
