@@ -41,4 +41,5 @@ class ProductAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_filter = ["is_featured", "category_id"]
     list_editable = ["is_featured", "is_available"]
     readonly_fields = ["pk", "slug", "created_at", "updated_at"]
+    ordering = ["updated_at"]
     resource_class = ProductResource
