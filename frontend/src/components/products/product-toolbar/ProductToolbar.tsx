@@ -35,15 +35,13 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
       }
 
       const updateQueryParams = (newParams: Record<string, string>) => {
-        const currentParams = new URLSearchParams(window.location.search);
+        // Clear all existing parameters
+        const currentParams = new URLSearchParams();
 
-        Object.entries(newParams).forEach(([key, value]) => {
-          if (value) {
-            currentParams.set(key, value);
-          } else {
-            currentParams.delete(key);
-          }
-        });
+        // Add only the new search parameter
+        if (newParams.search) {
+          currentParams.set("search", newParams.search);
+        }
 
         router.push(`?${currentParams.toString()}`);
       };
@@ -51,7 +49,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
       // Set a new timeout
       const timeout = setTimeout(() => {
         updateQueryParams({ search: searchValue });
-      }, 1000); // 1000ms delay
+      }, 0.8); // 800ms delay
 
       setDebounceTimeout(timeout);
     },
@@ -73,6 +71,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
   return (
     <aside className="pb-8">
       <nav className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        {/* Search field */}
         <Input
           label="Search"
           type="text"
@@ -82,6 +81,8 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           onChange={handleSearchChange}
           className="w-full md:w-1/4"
         />
+
+        {/* Brand field */}
         <Select
           size="sm"
           label="Select brand"
@@ -89,11 +90,13 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           onChange={(e) => handleBrandChange(e.target.value)}
         >
           {brands.map((brand) => (
-            <SelectItem key={brand.id} value={brand.id}>
+            <SelectItem key={brand.name} value={brand.name}>
               {brand.name}
             </SelectItem>
           ))}
         </Select>
+
+        {/* Category field */}
         <Select
           size="sm"
           label="Select category"
@@ -101,11 +104,13 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           onChange={(e) => handleCategoryChange(e.target.value)}
         >
           {categories.map((category) => (
-            <SelectItem key={category.id} value={category.id}>
+            <SelectItem key={category.name} value={category.name}>
               {category.name}
             </SelectItem>
           ))}
         </Select>
+
+        {/* Sort_by field */}
         <Select
           size="sm"
           label="Sort by"
