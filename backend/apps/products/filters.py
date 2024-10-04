@@ -2,7 +2,7 @@
 
 from django_filters import rest_framework as filters
 
-from .models import Product, Brand, Category
+from .models import Product
 from .choices import SortChoices
 
 
@@ -14,13 +14,15 @@ class ProductFilter(filters.FilterSet):
         method="filter_by_order",
         label="Search query sort direction, ex `/?=sort_by=latest`",
     )
-    brand = filters.ModelChoiceFilter(
-        queryset=Brand.objects.get_available(),
-        field_name="brand_id",
+    brand = filters.CharFilter(
+        field_name="brand__name",
+        lookup_expr="icontains",
+        label="Brand name, ex `/?brand=Sorry Mom`",
     )
-    category = filters.ModelChoiceFilter(
-        queryset=Category.objects.get_available(),
-        field_name="category_id",
+    category = filters.CharFilter(
+        field_name="category__name",
+        lookup_expr="icontains",
+        label="Category name, ex `/?category=Studio Supplies`",
     )
 
     class Meta:

@@ -104,16 +104,17 @@ class Product(SlugMixin, BaseModel):
 
     def clean(self):
         super().clean()
-        if self.image:
-            validate_file_size(
-                self.image,
-                max_size_mb=self.MAX_FILE_SIZE_MB,
-            )
-            validate_image_dimensions(
-                self.image,
-                max_width=self.MAX_WIDTH,
-                max_height=self.MAX_HEIGHT,
-            )
+        if self.pk is None:
+            if self.image:
+                validate_file_size(
+                    self.image,
+                    max_size_mb=self.MAX_FILE_SIZE_MB,
+                )
+                validate_image_dimensions(
+                    self.image,
+                    max_width=self.MAX_WIDTH,
+                    max_height=self.MAX_HEIGHT,
+                )
 
     def save(self, *args, **kwargs):
         from .services import ProductService

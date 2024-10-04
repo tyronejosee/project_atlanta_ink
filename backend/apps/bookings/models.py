@@ -20,7 +20,7 @@ class Booking(BaseModel):
         max_length=15,
         validators=[validate_phone],
     )
-    notes = models.TextField()
+    notes = models.TextField(blank=True, null=True)
     references = CloudinaryField(
         blank=True,
         help_text="Upload images or references.",
