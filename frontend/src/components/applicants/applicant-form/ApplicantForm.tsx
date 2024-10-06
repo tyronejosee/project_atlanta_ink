@@ -38,10 +38,17 @@ export const ApplicantForm = () => {
         method: "POST",
         body: formData,
       });
+
+      // ! TODO: Fix temporary patch
+      if (response.status === 422) {
+        router.push("/bookings/thank-you");
+        return;
+      }
+
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
-      reset();
+
       router.push("/applicants/application-submitted");
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);

@@ -48,9 +48,9 @@ export const ServiceSection = ({ services }: Props) => {
                 />
               </div>
               <div className="z-20 p-4 space-y-2 text-center">
-                <h4 className="text-xl font-bold text-primary">
+                <h3 className="text-xl font-bold text-primary">
                   {service.name}
-                </h4>
+                </h3>
                 <p className="text-neutral-lightgray">{service.description}</p>
               </div>
             </motion.article>

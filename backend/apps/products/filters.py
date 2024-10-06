@@ -15,12 +15,12 @@ class ProductFilter(filters.FilterSet):
         label="Search query sort direction, ex `/?=sort_by=latest`",
     )
     brand = filters.CharFilter(
-        field_name="brand__name",
+        field_name="brand_id__name",
         lookup_expr="icontains",
         label="Brand name, ex `/?brand=Sorry Mom`",
     )
     category = filters.CharFilter(
-        field_name="category__name",
+        field_name="category_id__name",
         lookup_expr="icontains",
         label="Category name, ex `/?category=Studio Supplies`",
     )

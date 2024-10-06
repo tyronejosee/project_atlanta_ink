@@ -44,16 +44,16 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="sm:hidden">
           <ProductHeader product={product} />
         </div>
-        <figure className="flex flex-col items-center justify-center space-y-4 bg-white border border-neutral-800 rounded-xl px-20">
-          <div className="relative w-full h-0 pb-[100%] rounded-xl overflow-hidden group">
+        <figure className="z-5 flex flex-col items-center justify-center space-y-4 bg-white border border-neutral-800 rounded-xl px-20 overflow-hidden">
+          <div className="relative w-full h-0 pb-[100%] rounded-xl group">
             <Image
               src={product?.image || DEFAULT_IMAGE}
               alt={product.name}
               fill
-              className="transform transition-transform duration-300 group-hover:scale-110"
+              className="transform transition-transform duration-300 group-hover:scale-125"
             />
           </div>
-          <div className="grid grid-cols-4 gap-4 py-4">
+          <div className="z-10 grid grid-cols-4 gap-4 py-4">
             <Image
               src={product?.image || DEFAULT_IMAGE}
               alt={product.name}

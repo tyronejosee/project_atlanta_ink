@@ -13,9 +13,9 @@ export const PriceItem = ({ price }: Props) => {
       </figure>
       <div className="w-full space-y-2">
         <div className="flex justify-between">
-          <span className="group-hover:font-bold group-hover:text-primary">
+          <h2 className="group-hover:font-bold group-hover:text-primary">
             {price.name}
-          </span>
+          </h2>
           <span className="group-hover:font-bold group-hover:text-primary">
             {price.price_range}
           </span>

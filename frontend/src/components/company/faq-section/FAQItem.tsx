@@ -15,6 +15,7 @@ export const FAQItem = ({ faq }: Props) => {
         key={faq.id}
         aria-label={faq.question}
         title={faq.question}
+        HeadingComponent="h3"
         startContent={<CircleHelp className="stroke-primary" />}
         indicator={({ isOpen }) =>
           isOpen ? (
