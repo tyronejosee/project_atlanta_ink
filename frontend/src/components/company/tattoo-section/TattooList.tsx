@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Chip, Button } from "@nextui-org/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Asterisk } from "lucide-react";
+import { Asterisk, Scale } from "lucide-react";
 import { useAnimateOnView } from "@/hooks";
 import { ITattoo } from "@/interfaces";
 
@@ -26,9 +26,9 @@ export const TattooList = ({ tattoos, className }: Props) => {
   };
 
   const modalVariants = {
-    hidden: { opacity: 0, y: 50 }, // Comienza fuera de la pantalla
-    visible: { opacity: 1, y: 0 }, // Llega al centro de la pantalla
-    exit: { opacity: 0, y: 50 }, // Desaparece deslizándose hacia abajo
+    hidden: { scale: 0.5, opacity: 0, y: 200 },
+    visible: { scale: 1, opacity: 1, y: 0 },
+    exit: { scale: 0.5, opacity: 0, y: 200 },
   };
 
   return (

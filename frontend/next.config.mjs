@@ -11,12 +11,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
-      },
-      // TODO: Remove this
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
+      }
     ],
   },
 };
