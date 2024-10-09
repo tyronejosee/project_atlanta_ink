@@ -48,6 +48,10 @@ export async function getTattoos() {
   return fetchData("tattoos");
 }
 
+export async function getRandomTattoos() {
+  return fetchData("tattoos/random");
+}
+
 export async function getTattoosByArtist(slug: string) {
   return fetchData(`artists/${slug}/tattoos`);
 }

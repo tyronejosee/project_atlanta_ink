@@ -2,7 +2,7 @@
 
 from django.urls import path
 
-from .views import TattooListView
+from .views import TattooListView, TattooRandomListView
 
 
 urlpatterns = [
@@ -10,5 +10,10 @@ urlpatterns = [
         "tattoos",
         TattooListView.as_view(),
         name="tattoo-list",
+    ),
+    path(
+        "tattoos/random",
+        TattooRandomListView.as_view(),
+        name="tattoo-random-list",
     ),
 ]

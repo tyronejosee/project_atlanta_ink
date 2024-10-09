@@ -63,9 +63,10 @@ export const TattooList = ({ tattoos, className }: Props) => {
             <Chip
               variant="flat"
               size="sm"
+              startContent={<Asterisk size={16} />}
               className="invisible group-hover:visible transition-all duration-100 text-xs rounded-sm absolute z-30 bottom-2 left-2 shadow-xl"
             >
-              {tattoo.name}
+              {tattoo.name} by {tattoo.artist}
             </Chip>
           </motion.article>
         ))}
@@ -102,7 +103,7 @@ export const TattooList = ({ tattoos, className }: Props) => {
                 startContent={<Asterisk size={16} />}
                 className="bottom-4 left-4 text-xs absolute z-30 shadow-xl"
               >
-                {selectedTattoo.name}
+                {selectedTattoo.name} by {selectedTattoo.artist}
               </Chip>
               <Button
                 size="sm"

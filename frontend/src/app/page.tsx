@@ -18,7 +18,7 @@ import {
   getPrices,
   getProducts,
   getServices,
-  getTattoos,
+  getRandomTattoos,
 } from "@/lib/api";
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default async function HomePage() {
   const [services, tattoos, artists, prices, productsData, faqs] =
     await Promise.all([
       getServices(),
-      getTattoos(),
+      getRandomTattoos(),
       getArtists(),
       getPrices({ is_featured: true }),
       getProducts(),
