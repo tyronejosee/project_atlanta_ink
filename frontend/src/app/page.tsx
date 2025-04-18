@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+
 import {
   ArtistSection,
   FAQSection,
@@ -12,14 +13,11 @@ import {
   TattooSection,
   BackToTop,
 } from "@/components";
-import {
-  getArtists,
-  getFaqs,
-  getPrices,
-  getProducts,
-  getServices,
-  getRandomTattoos,
-} from "@/lib/api";
+import { getFaqs, getPrices, getServices } from "@/lib/api/company";
+import { getArtists } from "@/lib/api/artists";
+import { getRandomTattoos } from "@/lib/api/tattoos";
+import { getProducts } from "@/lib/api/products";
+// import { getProducts } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: "Atlanta Ink - Tattoo Studio",

@@ -1,0 +1,62 @@
+[
+	{
+		"id": "dfbd2c85-1340-4ae0-8ac6-4c7a44440310",
+		"question": "How can I book an appointment for a tattoo?",
+		"answer": "You can book an appointment directly on our website or by calling the studio. We recommend booking in advance, especially if you have a large or custom design in mind."
+	},
+	{
+		"id": "aa70599d-bac9-401d-ac56-0a62fd163b6c",
+		"question": "How much does a tattoo cost?",
+		"answer": "The price of a tattoo depends on the size, complexity of the design, and placement on the body. We offer personalized quotes during an initial consultation with one of our artists."
+	},
+	{
+		"id": "8a418a98-3615-4008-9457-34ba0e9d05d0",
+		"question": "Can I bring my own design?",
+		"answer": "Absolutely! We love working with custom ideas. If you have your own design, bring it to your consultation, and our team will work with you to make any necessary adjustments to ensure it looks amazing on your skin."
+	},
+	{
+		"id": "f2f45797-322f-4fc7-8d94-c650de4b4ba2",
+		"question": "Does getting a tattoo hurt?",
+		"answer": "Pain is subjective and varies depending on the location of the tattoo and your personal tolerance. Areas with more nerve endings, like the ribs or wrists, tend to be more painful."
+	},
+	{
+		"id": "b29df42a-dfc1-45e4-8021-837bd6c09c5f",
+		"question": "Is it safe to get a tattoo?",
+		"answer": "Yes, we follow strict hygiene and sterilization standards in our studio. We use disposable needles and high-quality products to ensure the safety of our clients."
+	},
+	{
+		"id": "9b3491ac-5a39-4617-a0d1-d579370d4d86",
+		"question": "How long does it take for a tattoo to heal?",
+		"answer": "Healing time can vary depending on the size of the tattoo and your skin type, but generally, it takes 2 to 4 weeks for a tattoo to heal completely. It's important to follow the aftercare instructions we provide."
+	},
+	{
+		"id": "4cf76612-6830-4fd1-8053-f42ffaa55cf5",
+		"question": "Do you offer temporary tattoos or henna?",
+		"answer": "We specialize in permanent tattoos, but we also offer temporary tattoos and henna upon request. These are great if you want to test out a design before committing."
+	},
+	{
+		"id": "fa5e5cd1-3988-4400-8c15-2ffc186345db",
+		"question": "Do you have an age limit for getting a tattoo?",
+		"answer": "Our minimum age for getting a tattoo is 18 years old. If you're under 18, you'll need to come with a parent or legal guardian and have their written consent."
+	},
+	{
+		"id": "fb4c9071-308f-4a2f-a92f-db99fa7d8461",
+		"question": "What tattoo styles do you offer?",
+		"answer": "Our artists are skilled in a variety of styles, including realism, traditional, neo-traditional, minimalism, blackwork, and more. During the consultation, you can discuss the style you want with your artist."
+	},
+	{
+		"id": "72a08de8-1d00-49ce-88ce-bcd3523cc088",
+		"question": "How should I take care of my tattoo after getting it?",
+		"answer": "We will provide you with detailed aftercare instructions, which include keeping the tattoo clean and dry, applying a recommended moisturizer, and avoiding sun exposure and water for the first few weeks."
+	},
+	{
+		"id": "6313321b-7f98-434c-9fbd-da46d90b7906",
+		"question": "Can I get a tattoo if I'm pregnant or breastfeeding?",
+		"answer": "For safety reasons, we don’t recommend getting a tattoo while pregnant or breastfeeding. It’s best to wait until after this period to minimize any risks."
+	},
+	{
+		"id": "2f46593e-7890-4796-a66e-0b44318482b4",
+		"question": "What should I do if I have allergies?",
+		"answer": "If you have known allergies, especially to inks or metals, please inform us before your appointment. We offer hypoallergenic alternatives and will work with you to ensure your safety."
+	}
+]

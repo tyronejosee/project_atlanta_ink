@@ -1,8 +1,7 @@
-import React from "react";
-import { Metadata } from "next";
-import { EmptyList, HeaderPage, PriceItem } from "@/components";
-import { getPrices } from "@/lib/api";
-import { IPrice } from "@/interfaces";
+import type { Metadata } from "next";
+
+import { getPrices } from "@/lib/api/company";
+import { EmptyList, HeaderPage } from "@/components";
 import { PriceList } from "@/components/company/price-list/PriceList";
 
 export const metadata: Metadata = {

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "303094a6-3619-4e2c-8fc4-fe4946f81134",
+    "name": "Tattoo Design",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726444056/ubt1lho0b0td6ojoukol.webp",
+    "description": "We create custom tattoo designs based on your preferences. Work with us to come up with a unique design that matches your vision."
+  },
+  {
+    "id": "43fb66cf-f379-4c36-a526-6f1e208f57fe",
+    "name": "Piercing",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726444158/juahpicgeq3lnbas5byz.webp",
+    "description": "We provide professional piercing services for ears, nose, and body. We ensure the process is safe and clean."
+  },
+  {
+    "id": "848fa333-503b-430c-a7b7-0a9bf9318784",
+    "name": "Tribal Tattoo",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726444109/iiupbo230hhdn5mhleaj.webp",
+    "description": "We offer tribal tattoos with traditional or modern patterns. Ideal for those who prefer strong lines and geometric shapes."
+  },
+  {
+    "id": "8978b5ec-dd92-4d04-a319-2a30de46505f",
+    "name": "Handpoke Tattoo",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726444135/aw2mrwhjwfjearru5b9w.webp",
+    "description": "Experience handpoke tattoos, a traditional method using needle and ink without a machine. It's a unique way to get your tattoo done."
+  },
+  {
+    "id": "cc840e19-9c78-4cca-885e-a00d3e256944",
+    "name": "Tattoo Removal",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726443970/gd3iljselh0sd4tdeywn.webp",
+    "description": "Looking to remove or modify an existing tattoo? We offer advanced removal services to do it effectively."
+  },
+  {
+    "id": "d2596131-1a16-447a-93f1-e82cb44a8698",
+    "name": "Realistic Tattoo",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726444084/i0grbv9qvlgj8phuxxhn.webp",
+    "description": "Get lifelike tattoos with precise details that resemble real-life objects. Perfect for those looking for highly detailed artwork."
+  }
+]

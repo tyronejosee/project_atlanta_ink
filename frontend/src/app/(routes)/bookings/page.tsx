@@ -1,7 +1,8 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+
+import { getArtists } from "@/lib/api/artists";
 import { BookingForm, HeaderPage, ScheduleList } from "@/components";
 import { IBookingQueryParams } from "@/interfaces";
-import { getArtists } from "@/lib/api";
 
 interface Props {
   searchParams: IBookingQueryParams;
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
 };
 
 export default async function BookingsPage({ searchParams }: Props) {
-  const artists = await getArtists();
   const { firstName, firstTime, artist } = searchParams;
+  const artists = await getArtists();
 
   return (
     <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0">

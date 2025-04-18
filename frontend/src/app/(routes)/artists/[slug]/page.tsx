@@ -1,13 +1,11 @@
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import { Chip } from "@nextui-org/react";
-
-import { DEFAULT_IMAGE } from "@/config/constants";
-import { getArtist, getTattoosByArtist } from "@/lib/api";
-import { Instagram, EmptyList, WhatsApp, TattooList } from "@/components";
-import { IStyle } from "@/interfaces";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Chip, Image } from "@nextui-org/react";
+import { getArtistBySlug, getTattoosByArtist } from "@/lib/api/artists";
+import { Instagram, EmptyList, WhatsApp, TattooList } from "@/components";
 import { BookingButton } from "@/components";
+import { DEFAULT_IMAGE } from "@/config/constants";
+import { IStyle } from "@/interfaces";
 
 interface Props {
   params: { slug: string };
@@ -17,7 +15,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = params;
 
   try {
-    const artist = await getArtist(slug);
+    const artist = await getArtistBySlug(slug);
 
     if (!artist) {
       return {
@@ -41,7 +39,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function ArtistDetailPage({ params }: Props) {
   const { slug } = params;
   const [artist, tattoos] = await Promise.all([
-    getArtist(slug),
+    getArtistBySlug(slug),
     getTattoosByArtist(slug),
   ]);
 
@@ -52,10 +50,12 @@ export default async function ArtistDetailPage({ params }: Props) {
     <section className="max-w-screen-xl mx-auto sm:flex mt-16 min-h-screen">
       <section className="flex justify-center items-center sm:flex-col sm:justify-normal sm:w-96 p-4 space-y-4">
         <Image
+          isBlurred
           src={artist.image || DEFAULT_IMAGE}
           alt={artist.name}
           width={300}
           height={300}
+          loading="eager"
           className="object-cover size-40 rounded-xl sm:size-64 sm:w-full border border-neutral-800"
         />
         <div className="px-4 sm:px-0 space-y-2">

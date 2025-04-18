@@ -1,0 +1,674 @@
+[
+  {
+    "id": "01dd4e94-73b2-4928-8f58-123453785a76",
+    "name": "Fingerprint",
+    "slug": "fingerprint",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343705/wrsbdg0rfghauptlzn5g.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "035ad27d-7ac6-4588-a927-dd7d3365d90f",
+    "name": "Stone Guardian",
+    "slug": "stone-guardian",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487256/drqtguxmyp3llvwuz8lv.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "0360c0ab-3da2-4cae-af29-06ed33e8f614",
+    "name": "Infinite Ripple",
+    "slug": "infinite-ripple",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186802/t48qt7rcxywrkihrdnd2.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "0970ec53-03a6-4c72-b7c9-d4610d248265",
+    "name": "Symmetry Breaker",
+    "slug": "symmetry-breaker",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186945/kuqetogsvigqdvrknbss.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "0e1255f9-eb1c-47a6-bbac-cff0cec34b7c",
+    "name": "Cosmic Symphony",
+    "slug": "cosmic-symphony",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186815/frjyje92biaqyapptaf7.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "11840266-fa78-4462-a35b-ea1ca33652cc",
+    "name": "Monumental Essence",
+    "slug": "monumental-essence",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487225/rlp5ufntsjmwvs4ypcul.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "13568680-15fa-47d3-aca0-cbfcce3693d7",
+    "name": "Black Owl",
+    "slug": "black-owl",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163299/kdclxo6jhqhpmknu5j24.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "160e69db-8a1f-4c0c-a243-b6040adf2f4c",
+    "name": "Abstract 233",
+    "slug": "abstract-233",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885700/ygpqmpkgchi6ertywytf.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "177558f3-d878-4d21-b6a6-583710dca32a",
+    "name": "Watercolor Wonders",
+    "slug": "watercolor-wonders",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343922/pwk1hgdlot74vn7kneiq.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "1971692b-1b7a-410a-b07d-13ddbdec0b97",
+    "name": "Garden of Memories",
+    "slug": "garden-of-memories",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343751/dxedqdepjkrp7cdgigfu.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "1ea19f67-0b0a-4633-806b-61ca8bc7b473",
+    "name": "Warrior Spirit",
+    "slug": "warrior-spirit",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487278/uihnmobczobovcdahx4b.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "1f7e0289-2017-4d1e-80d5-96cf11e080b3",
+    "name": "Eternal Spring",
+    "slug": "eternal-spring",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343690/mnc8pypmnlnvtihemglf.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "2231fbe1-e1b1-4a97-8193-e28596453c96",
+    "name": "Pochita",
+    "slug": "pochita",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178514/ar0jjsqbraqwbjs432mq.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "22f1420d-3e0f-4e68-8f12-f87ea8567186",
+    "name": "Patron 1124",
+    "slug": "patron-1124",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088325/nk08gs2wlyajq43h7civ.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "25e2f3bb-a57b-4c26-b553-e58432d26afe",
+    "name": "Eye",
+    "slug": "eye",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163313/qc8lwcrkhsiesryjq8of.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "2f56bbd9-c06c-441c-9f36-2bd329be3ce0",
+    "name": "Sleeve London",
+    "slug": "sleeve-london",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186908/pra8qfoxh9t7lgyzvpjk.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "2fc26813-55de-46ca-aa53-0cd492a4d6bd",
+    "name": "Laconic Pride",
+    "slug": "laconic-pride",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487215/ntl5605uhw1lxqoebyk5.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "30cb2ecf-3e2a-4695-b828-337b4ce20037",
+    "name": "Granite Grace",
+    "slug": "granite-grace",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487189/tiq1kp1unmyod5g6ajem.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "3512614d-9c77-497f-a475-8fc6023e03e5",
+    "name": "Abstract 024",
+    "slug": "abstract-024",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885551/e8mtznz0uwm5dmvhrhzn.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "35889f49-fe4b-43f9-a6e7-4e5bcf1c78ef",
+    "name": "Carved Eternity",
+    "slug": "carved-eternity",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487153/shgevfyldbvuv8qgguvn.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "365a2ceb-40d2-4247-836a-4eef99842982",
+    "name": "Dog Lines",
+    "slug": "dog-lines",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088051/fsi3d68ov6qrflmn2aio.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "36e6e357-3060-41bb-89ad-dc5d88db5dec",
+    "name": "Sharingan",
+    "slug": "sharingan",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178533/rew4axrvkyii3hroywyi.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "38a4c3f0-0d87-48bb-9524-4e3370fc3a99",
+    "name": "Faces Abstract",
+    "slug": "faces-abstract",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885625/mf53loqnaip4394k1nsb.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "4599bd6a-392e-4ba4-b43a-85de5f03f9f2",
+    "name": "Denji",
+    "slug": "denji",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178381/bzzpupt607jxwdoabtor.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "499951eb-4899-476c-9d5c-a5a554b12967",
+    "name": "Itachi",
+    "slug": "itachi",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178447/nixuudtmt1jtxnuzuddh.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "4a98ee9d-569c-474b-a105-17a13d7c8075",
+    "name": "Nona Female",
+    "slug": "nona-female",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178476/e13zeluafnmfgmpz3dwp.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "4aeb314d-3ab8-4867-b98c-d7628542b64f",
+    "name": "Ships Fox",
+    "slug": "ships-fox",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088072/mpujphkmfsjphapxrajy.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "4bbc8812-b7ed-42fd-92be-05f6e3320f43",
+    "name": "Silent Vortex",
+    "slug": "silent-vortex",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186932/sxinunouwstqza5mjg7c.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "4d5c6fd1-522b-48f7-9c24-a4b4e969f9b1",
+    "name": "Astronaut Dinosaur Asteroid Pterodactyl",
+    "slug": "astronaut-dinosaur-asteroid-pterodactyl",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726862037/bopbvlqovc5ozgixszgy.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "4ea956ba-8c1f-44e8-9e52-21895a845165",
+    "name": "Floral Harmony",
+    "slug": "floral-harmony",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343735/n102jgnsej8irfrxmaep.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "50b4b411-59b2-4cb9-8c77-26d0105a1329",
+    "name": "Fractured Echoes",
+    "slug": "fractured-echoes",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186874/sjzvirhks12vurgtxqds.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "58649274-dacf-4bc0-a874-8078af4610c2",
+    "name": "Digital Gaze",
+    "slug": "digital-gaze",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487323/g2eg12c5z13dokbxebro.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "5acf1e1a-217e-4cb2-b615-f26e20256040",
+    "name": "Lion Patron",
+    "slug": "lion-patron",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088004/iv1wjjea0fmayaihsk85.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "5b051fa3-cc27-46fd-8133-dc78371015a8",
+    "name": "From Within",
+    "slug": "from-within",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726861870/ws9k1esuuxesj86d6yck.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "5dd11e8f-18a9-41c9-a161-4b8074f92060",
+    "name": "Gojo x Toji",
+    "slug": "gojo-x-toji",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178430/i4ikf0faba6awcohubz6.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "6364dcea-829d-40e6-bec0-e8bd874984f1",
+    "name": "Waves and Lines",
+    "slug": "waves-and-lines",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088394/f2y6eltccurili0atp9n.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "636c17db-358c-4b6b-bd9b-e4b330871fc9",
+    "name": "Yuki",
+    "slug": "yuki",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178611/ghmjpb9ymnhytpzy5mpj.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "638a36c0-3e68-4c1c-87c7-60feb6ab791b",
+    "name": "Ghibli Characters",
+    "slug": "ghibli-characters",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178407/ajphzdtjkasoocyckqzg.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "6b080c69-eb60-4588-8302-a0b52bebbdb1",
+    "name": "Lineart Religion",
+    "slug": "lineart-religion",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885600/nzub9x1y4d8cgotlulra.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "788865fa-9225-422c-a514-e884482578d3",
+    "name": "Eternal Marble",
+    "slug": "eternal-marble",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487166/pnudnwuumym4w47obvif.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "82b71bc0-a1e0-4424-9a8e-fb79b1a4650d",
+    "name": "The Lion King",
+    "slug": "the-lion-king",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726861955/wun6cmglaltceowpjyje.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "82bb0b24-1c30-466a-8a63-1f2b54fb3411",
+    "name": "Binary Flow",
+    "slug": "binary-flow",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487301/zpmtxvgqmqneu7p9sv4b.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "88b74d6c-1aa0-43d8-87f8-eef43bc84b90",
+    "name": "Bronze Spirit",
+    "slug": "bronze-spirit",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487119/ubx62zmeejdupy8mpwjz.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "890588de-690e-477f-bdbe-e57dd4cb2996",
+    "name": "Lineart Abstract",
+    "slug": "lineart-abstract",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885571/fdutvqxpet2zq7r9u3lw.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "89e597f8-e1ac-4489-878a-c7d6d0ea3f07",
+    "name": "Tech Lines",
+    "slug": "tech-lines",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726855184/faclsumzpid9ddtxdzps.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "8d767e90-34ad-4516-b65c-94351633b0e3",
+    "name": "Vanishing Point",
+    "slug": "vanishing-point",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186862/jnu1b9szfz7gb4sp1wcg.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "921cc1f5-6cbc-4e5f-9522-3f86ac3ca436",
+    "name": "Brotherly Love",
+    "slug": "brotherly-love",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163631/wom4o3frbustaduuotgf.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "9bb139e5-b33c-4b09-85db-2b102978a677",
+    "name": "Digital Palm",
+    "slug": "digital-palm",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487334/fnm0hxeux10zcmwabvvx.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "9d394c67-98f0-48e5-ac5e-b3f15e82fd03",
+    "name": "Fragmented Dream",
+    "slug": "fragmented-dream",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885462/qwtn8fok94ifyefytrih.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "9d5cbee9-608f-4e42-89fa-f0e4e51d0391",
+    "name": "Hot Air Balloon",
+    "slug": "hot-air-balloon",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343816/ermnnymqedmpqqxrb9n9.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "9e18f353-72d5-4aab-9db7-86a338ac84d9",
+    "name": "Floral Breeze",
+    "slug": "floral-breeze",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343722/sakp2zglgpm8w60f7ahu.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "a485b044-a81c-4212-9d3d-e28dfe508ba5",
+    "name": "Singing Frog",
+    "slug": "singing-frog",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178581/iwv2n5ire4gyq4520csd.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "aa626b7d-969b-4f99-b6ea-bef7c37a94e7",
+    "name": "Watercolor Fox",
+    "slug": "watercolor-fox",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343876/d3yinvclig9etybxptrj.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "ab55584d-5408-4872-a5a4-3897639b857f",
+    "name": "Temporal Ripple",
+    "slug": "temporal-ripple",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885423/uwscuxutk7gyuckrsezj.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "ab7eeed0-f1bb-408c-906f-deef7ad61b78",
+    "name": "Colibri",
+    "slug": "colibri",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343651/ekfy0qj52zhbkrcoojdv.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "ada39de7-bbf1-4359-b38a-71953af687bd",
+    "name": "Japanese Lady",
+    "slug": "japanese-lady",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088152/zzbdchegarhz5ytv63sn.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "b10585ef-9b9d-4a3b-a662-c389fefa7847",
+    "name": "Skull Abstract",
+    "slug": "skull-abstract",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088033/tebjmuwrjrjdweemmjgr.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "b10e8d20-f5ff-43d8-8523-cb9abc1b2d9d",
+    "name": "Abstract Lines",
+    "slug": "abstract-lines",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088185/flfcd8uhvdww5ihmkjfx.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "b3f79071-6e14-44ff-b6e8-10383634d5ef",
+    "name": "Lions and Flowers",
+    "slug": "lions-and-flowers",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726861929/w2ocbrqmfxrhxtbp26yt.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "b47a53ce-cf42-4216-9848-3bcfde97e085",
+    "name": "Avatar Ang",
+    "slug": "avatar-ang",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088091/gzugg6exzyyfteftd1qd.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "b5444453-7ac8-4f3c-a2cb-68a53a4a46ec",
+    "name": "Mitat Ink",
+    "slug": "mitat-ink",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726855253/dw5uv6d6hkczuxmjleni.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "b7cd345a-8da7-4dc9-aa35-655155fd761d",
+    "name": "Phalanx Formation",
+    "slug": "phalanx-formation",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487235/m6py6gy6fpvub0yhg9lt.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "b7fdb479-4e7a-4a46-b846-d6cce85aa83e",
+    "name": "Lucid Chaos",
+    "slug": "lucid-chaos",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186921/lj2a01rjhkxmbfq8hvlq.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "b8bebecc-926a-4257-bee6-134ec90dfbc5",
+    "name": "Sculpted Soul",
+    "slug": "sculpted-soul",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487246/qveq17waxds1huhwk1hn.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "bd5e23aa-048c-432d-b76c-04a29bcfb3c2",
+    "name": "Abstract Shapes in Colors",
+    "slug": "abstract-shapes-in-colors",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163610/eqlzrqgikq26nilkijdg.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "bf4c0557-4bce-484d-9455-37b8f9f567f8",
+    "name": "Female Wolf",
+    "slug": "female-wolf",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726862078/jthsh0dx4vi761tuwwwu.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "c4933e02-6321-459b-86a7-b560c9a0d49c",
+    "name": "Techno Grip",
+    "slug": "techno-grip",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487357/czuua6mdtigioym87nng.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "ca3656bc-889f-4b25-8df4-a1e4feb9dc30",
+    "name": "Fragmented Reality",
+    "slug": "fragmented-reality",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186833/sgiuzmo5jb3z0vmpkvyk.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "cbc0b079-a9a3-451c-848a-ac95fcb9f940",
+    "name": "Shreron Dragon Ball",
+    "slug": "shreron-dragon-ball",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178559/ujr7seotf7grp9rd4gb2.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "cd28e0a6-a040-4f68-8657-a001176ab65b",
+    "name": "Watercolor Tiger",
+    "slug": "watercolor-tiger",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343895/nwbugcmeflvdugm53oab.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "ce028b5d-3802-481e-b9ca-9ddf3f326602",
+    "name": "Bunny Anime",
+    "slug": "bunny-anime",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178352/z92wxwpq0c3muy0xcvue.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "cfea602c-85cd-48f0-a9a2-2c1686362fa6",
+    "name": "Points of View",
+    "slug": "points-of-view",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885656/uqfssafgfje1lhbwcbvx.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "d1485162-5d95-4553-ae15-20c3fdbfd6cf",
+    "name": "Gray Scale Fish",
+    "slug": "gray-scale-fish",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163406/r6xz36t0oclaxz6jvqf5.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "d41a8bd3-3d3b-46da-8147-3d4c37b76a1f",
+    "name": "Wild Spirit",
+    "slug": "wild-spirit",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186884/nbafi3qhrps6iefbbvly.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "d43e3f6e-16ee-4a60-b445-948bce6783b3",
+    "name": "Sacred Geometry",
+    "slug": "sacred-geometry",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186785/mtmwbuml1ocwonfcow6e.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "d90bc88b-4272-442d-8394-9ebb14074b55",
+    "name": "Black Hand",
+    "slug": "black-hand",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163769/njvnjk8rt4fewrbw4ose.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "d981383d-2cd0-4cad-8e48-154d10266a7f",
+    "name": "Mecha Collar",
+    "slug": "mecha-collar",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487346/phzosnzk5ryksspn1ts4.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "dafd38b4-2f89-4244-a45c-2b123597a873",
+    "name": "Origins of America",
+    "slug": "origins-of-america",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726861969/bqtnlqatfj24mborns8t.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "dc3e09c8-2aac-40c4-99d4-cd6619988ddc",
+    "name": "Ethereal Fragments",
+    "slug": "ethereal-fragments",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728186848/shlu0dbyva7s64rmrt3l.webp",
+    "artist": "John Smith"
+  },
+  {
+    "id": "dcceb47e-9374-4482-a869-07beb52854e6",
+    "name": "Campbell",
+    "slug": "campbell",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726855269/zuvrvrm8hqncyckxxyrk.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "dd761ce3-7d5b-457b-b5a8-570f2c84069c",
+    "name": "Flesh and Stone",
+    "slug": "flesh-and-stone",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487177/jyb86albkn4ybrgu03gj.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "deb223bd-072b-4bae-817f-86b345987690",
+    "name": "Eiffel Tower",
+    "slug": "eiffel-tower",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343672/kx9aucrtns6ugxj8uy3y.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "def80a35-8eea-4626-abdf-6b1cf03d7fc9",
+    "name": "Hope",
+    "slug": "hope",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728343788/hfyyb6zmmxhpyygynqh0.webp",
+    "artist": "Deanna James"
+  },
+  {
+    "id": "df67b906-38fc-44bd-a31e-db49c76d77b2",
+    "name": "The Statue of Liberty",
+    "slug": "the-statue-of-liberty",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487267/jpuojvt9sn71xarvk7bm.webp",
+    "artist": "Sebastian Cole"
+  },
+  {
+    "id": "df787798-6372-4ccd-a39b-dd88749117a4",
+    "name": "Hi Tech Circuits",
+    "slug": "hi-tech-circuits",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726855235/bm1hhafh0u3iobhpuacg.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "dffc305a-bc63-4ba2-85e3-8896029a2211",
+    "name": "Bear Head",
+    "slug": "bear-head",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163279/p6yybccdq7rpuk1rzt8v.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "e23b03fb-0824-4e9a-bb8d-24a727a64299",
+    "name": "Modern Style",
+    "slug": "modern-style",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885510/xw1j8tzxym9nggfzzfqu.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "e53dfb95-20af-446f-9fb8-5e3ca97bb435",
+    "name": "Techno Spectrum",
+    "slug": "techno-spectrum",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487370/uw9mrfhggfgtnrotpgcb.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "e58d3db5-fc1e-4a41-83c0-678420e2ecdc",
+    "name": "Pain Yahiko",
+    "slug": "pain-yahiko",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728178496/j0xf8kbba1rijyi7tnfr.webp",
+    "artist": "Zara Moon"
+  },
+  {
+    "id": "e698dd43-59d0-48cc-bcb8-4de77e33fc82",
+    "name": "Female Robot",
+    "slug": "female-robot",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726855290/ko73wwb8x2jyr3516jwx.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "ebdf478c-f177-4fb4-b19b-fcdafdb839ea",
+    "name": "Abstract Butterfly",
+    "slug": "abstract-butterfly",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163791/euj1tspdcggvufenqqb0.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "ef5289f7-ffe5-4370-8aa7-0604697a7699",
+    "name": "Virgin Mary",
+    "slug": "virgin-mary",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728163259/j3mis2spxexrehsotcxu.webp",
+    "artist": "Michael Johnson"
+  },
+  {
+    "id": "efe7c186-da39-4a58-ba23-b2ae822e1cba",
+    "name": "Female Abstract",
+    "slug": "female-abstract",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726885680/k0bcaeom7oszy5odd6l5.webp",
+    "artist": "Emma Brown"
+  },
+  {
+    "id": "f656f681-1048-4765-9bac-f574bd98e13c",
+    "name": "Cyber Flux",
+    "slug": "cyber-flux",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728487311/r0m6rsg8dzbibvr9rmoh.webp",
+    "artist": "Owen Blake"
+  },
+  {
+    "id": "fb5b454a-5122-4d8e-bf58-b21c050112e3",
+    "name": "Boat Lines",
+    "slug": "boat-lines",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1728088378/stfqxwkpmdgtlnot8g5p.webp",
+    "artist": "Cohen Floch"
+  },
+  {
+    "id": "fd726003-24a5-4eb0-99e3-0dd74487bf54",
+    "name": "Miami Memories",
+    "slug": "miami-memories",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726861997/s7cl5fhx2p0tzpzhqooz.webp",
+    "artist": "Michael Johnson"
+  }
+]

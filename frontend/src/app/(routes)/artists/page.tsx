@@ -1,6 +1,5 @@
-import React from "react";
 import type { Metadata } from "next";
-import { getArtists } from "@/lib/api";
+import { getArtists } from "@/lib/api/artists";
 import { ArtistList, EmptyList, HeaderPage } from "@/components";
 
 export const metadata: Metadata = {

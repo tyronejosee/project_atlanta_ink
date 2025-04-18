@@ -1,0 +1,210 @@
+[
+  {
+    "id": "0c597dc2-488f-4184-bfd5-0fad1bd55e86",
+    "name": "Cohen Floch",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726769921/xvsoqadbfyvwlme7nqk7.webp",
+    "instagram": "https://www.instagram.com/cohen_floch",
+    "whatsapp": "+14045550000",
+    "description": "Graphic designer and muralist creating vibrant street art.",
+    "slug": "cohen-floch",
+    "styles": [
+      {
+        "id": "a389bc56-9b0e-49f0-90c3-2e9f91272422",
+        "name": "Graphic Design",
+        "updated_at": "2024-09-19T17:44:26.961896Z",
+        "created_at": "2024-09-19T17:44:26.961870Z"
+      },
+      {
+        "id": "cdd8b5e7-317e-420f-8553-c69adefd494c",
+        "name": "Street Art",
+        "updated_at": "2024-09-19T17:44:19.046424Z",
+        "created_at": "2024-09-19T17:44:19.046383Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:18:40.730489Z",
+    "created_at": "2024-09-19T17:49:40.781111Z"
+  },
+  {
+    "id": "3b84f231-0cfb-45f1-9046-4691edf29a43",
+    "name": "Emma Brown",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726769324/lgt8qtlede4atbfgppyb.webp",
+    "instagram": "https://www.instagram.com/emmabrownart",
+    "whatsapp": "+14045554321",
+    "description": "Renowned painter known for her contemporary abstract works.",
+    "slug": "emma-brown",
+    "styles": [
+      {
+        "id": "7a8bc4b7-fb48-4d8d-b942-e2137f9df3d2",
+        "name": "Contemporary",
+        "updated_at": "2024-09-19T17:43:47.703273Z",
+        "created_at": "2024-09-19T17:43:47.703240Z"
+      },
+      {
+        "id": "9e75e18c-f9f5-4a4a-95fb-f65310feddec",
+        "name": "Abstract",
+        "updated_at": "2024-09-19T17:43:43.160847Z",
+        "created_at": "2024-09-19T17:43:43.160819Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:25:52.213429Z",
+    "created_at": "2024-09-19T17:57:02.524581Z"
+  },
+  {
+    "id": "5a31b925-6d32-4d26-9e90-438ab6ac2929",
+    "name": "Owen Blake",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726770251/nvgizkmkazjeohnnqfwp.webp",
+    "instagram": "https://www.instagram.com/owen_blake",
+    "whatsapp": "+14045551234",
+    "description": "Multimedia artist exploring the intersection of technology and art.",
+    "slug": "owen-blake",
+    "styles": [
+      {
+        "id": "17d78288-41b9-4748-ba99-488d28a4c8b9",
+        "name": "Tech Art",
+        "updated_at": "2024-09-19T17:44:35.236550Z",
+        "created_at": "2024-09-19T17:44:35.236531Z"
+      },
+      {
+        "id": "75b6ce4f-bee8-4ff1-96e2-ec948b7fff51",
+        "name": "Multimedia",
+        "updated_at": "2024-09-19T17:44:30.800646Z",
+        "created_at": "2024-09-19T17:44:30.800627Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:24:10.682340Z",
+    "created_at": "2024-09-19T18:21:06.260714Z"
+  },
+  {
+    "id": "7173ff6f-f1c8-45b5-985d-0401bc4d6a1f",
+    "name": "Zara Moon",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726769097/tnioxj5jjkyaty6qv78l.webp",
+    "instagram": "https://www.instagram.com/zara_moon",
+    "whatsapp": "+14045558765",
+    "description": "igital artist focused on character design and illustration.",
+    "slug": "zara-moon",
+    "styles": [
+      {
+        "id": "2c9d7293-6b94-456b-8b8d-63c70df2b497",
+        "name": "Anime/Manga",
+        "updated_at": "2024-09-19T17:46:40.597911Z",
+        "created_at": "2024-09-19T17:45:49.895420Z"
+      },
+      {
+        "id": "bd58505c-1f25-45ef-aba1-3845b25fd471",
+        "name": "Illustration",
+        "updated_at": "2024-09-19T17:43:55.743646Z",
+        "created_at": "2024-09-19T17:43:55.743629Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:13:54.477574Z",
+    "created_at": "2024-09-19T17:58:03.122292Z"
+  },
+  {
+    "id": "93252bb0-ea33-4984-ab22-b05fc3b599ae",
+    "name": "Deanna James",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726769620/qyzd2toqzfravjln4l5q.webp",
+    "instagram": "https://www.instagram.com/deanna_james",
+    "whatsapp": "+14045556489",
+    "description": "A versatile artist specializing in watercolor tattoos and floral designs.",
+    "slug": "deanna-james",
+    "styles": [
+      {
+        "id": "32afc720-3c40-49ee-876b-39c7aded26f6",
+        "name": "Floral",
+        "updated_at": "2024-09-19T17:43:39.191201Z",
+        "created_at": "2024-09-19T17:43:39.191181Z"
+      },
+      {
+        "id": "e5077e5a-64a9-4058-9945-9aec44b9077b",
+        "name": "Watercolor",
+        "updated_at": "2024-09-19T17:43:34.999032Z",
+        "created_at": "2024-09-19T17:43:34.998999Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:13:38.333966Z",
+    "created_at": "2024-09-19T17:55:19.279967Z"
+  },
+  {
+    "id": "ab5f511f-a30a-4b66-97cf-887b0dc629cc",
+    "name": "Sebastian Cole",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726770333/q3aomzqabc1rpstn19v1.webp",
+    "instagram": "https://www.instagram.com/sebastian_cole",
+    "whatsapp": "+14045558735",
+    "description": "Sculptor known for his abstract metalwork and large installations.",
+    "slug": "sebastian-cole",
+    "styles": [
+      {
+        "id": "9998fcab-318b-4677-8949-c74b2c3b24a3",
+        "name": "Metalwork",
+        "updated_at": "2024-09-19T17:44:43.423429Z",
+        "created_at": "2024-09-19T17:44:43.423395Z"
+      },
+      {
+        "id": "d3e9af27-53be-4097-81f4-c8f27f33a0dc",
+        "name": "Sculpture",
+        "updated_at": "2024-09-19T17:44:38.790720Z",
+        "created_at": "2024-09-19T17:44:38.790692Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:25:32.375270Z",
+    "created_at": "2024-09-19T18:21:52.451272Z"
+  },
+  {
+    "id": "c40b3ca4-aa68-4fad-b138-15056ea2296e",
+    "name": "John Smith",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726769741/syahpwuw2xy5wgz8nbew.webp",
+    "instagram": "https://www.instagram.com/john_smith",
+    "whatsapp": "+14045550293",
+    "description": "Freelance illustrator and concept artist with a passion for fantasy art.",
+    "slug": "john-smith",
+    "styles": [
+      {
+        "id": "74b42022-7343-4b90-97a5-e43e504cd5db",
+        "name": "Fantasy",
+        "updated_at": "2024-09-19T17:44:00.162971Z",
+        "created_at": "2024-09-19T17:44:00.162942Z"
+      },
+      {
+        "id": "920d4e90-4652-482c-90da-638dc0fbf150",
+        "name": "Concept Art",
+        "updated_at": "2024-09-19T17:44:05.120593Z",
+        "created_at": "2024-09-19T17:44:05.120568Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:15:40.346597Z",
+    "created_at": "2024-09-19T17:59:47.629872Z"
+  },
+  {
+    "id": "d77a274b-a39b-4f49-82cd-97d7491db5f8",
+    "name": "Michael Johnson",
+    "image": "https://res.cloudinary.com/dwyvfa5dj/image/upload/v1726769854/cfkpz31jsip1ghksee8p.webp",
+    "instagram": "https://www.instagram.com/michael_johnson",
+    "whatsapp": "+14045555743",
+    "description": "Tattoo artist specializing in realistic black and grey portraits.",
+    "slug": "michael-johnson",
+    "styles": [
+      {
+        "id": "0f652da1-5373-4d9e-b1a8-b251a82d966c",
+        "name": "Realism",
+        "updated_at": "2024-09-19T17:44:09.093338Z",
+        "created_at": "2024-09-19T17:44:09.093307Z"
+      },
+      {
+        "id": "df5c2275-4b1f-4a39-8314-e6b92318be28",
+        "name": "Black and Grey",
+        "updated_at": "2024-09-19T17:44:14.169720Z",
+        "created_at": "2024-09-19T17:44:14.169703Z"
+      }
+    ],
+    "is_team": true,
+    "updated_at": "2024-09-19T18:17:33.372401Z",
+    "created_at": "2024-09-19T18:00:35.043824Z"
+  }
+]

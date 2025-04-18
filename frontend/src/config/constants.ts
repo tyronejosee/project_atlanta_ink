@@ -4,14 +4,18 @@ if (!API_URL) {
   throw new Error("API base URL is not defined in .env");
 }
 
-export const COMPANY_NAME = "Atlanta Ink";
+export const API_URL_LOCAL = "http://localhost:3000/api";
 
+export const COMPANY_NAME = "Atlanta Ink";
 export const COMPANY_DESCRIPTION = `
 Trust our experts for your next tattoo. With years of experience and a
 passion for detail, we’re here to bring your vision to life with
 precision and professionalism. Experience the difference of
 well-crafted art.
 `;
+
+export const USE_API = false;
+export const PAGE_SIZE = 10;
 
 export const DEFAULT_IMAGE = "/images/no-image.webp";
 

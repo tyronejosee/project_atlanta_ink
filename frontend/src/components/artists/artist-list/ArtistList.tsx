@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Chip } from "@nextui-org/react";
+import { Chip, Image } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { IArtist } from "@/interfaces";
 import { DEFAULT_IMAGE } from "@/config/constants";
@@ -33,9 +32,12 @@ export const ArtistList = ({ artists }: Props) => {
           <Link href={`/artists/${artist.slug}`}>
             <figure className="relative w-full h-0 pb-[100%] border border-neutral-800 rounded-xl overflow-hidden">
               <Image
+                isBlurred
                 src={artist.image || DEFAULT_IMAGE}
                 alt={artist.name}
-                fill
+                width={300}
+                height={300}
+                loading="lazy"
                 className="transform transition-transform duration-300 group-hover:scale-110"
               />
             </figure>

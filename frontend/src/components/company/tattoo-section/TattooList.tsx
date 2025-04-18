@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { Chip, Button } from "@nextui-org/react";
+import { useState } from "react";
+import { Chip, Button, Image } from "@nextui-org/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Asterisk, Scale } from "lucide-react";
 import { useAnimateOnView } from "@/hooks";
@@ -54,9 +53,9 @@ export const TattooList = ({ tattoos, className }: Props) => {
           >
             <figure className="relative w-full h-0 pb-[100%]">
               <Image
+                isBlurred
                 src={tattoo.image}
                 alt={tattoo.name}
-                fill
                 className="z-10 transform transition-transform duration-300 group-hover:scale-110 grayscale group-hover:grayscale-0"
               />
             </figure>
@@ -73,7 +72,6 @@ export const TattooList = ({ tattoos, className }: Props) => {
       </div>
 
       {/* Modal */}
-      {/* ! TODO: Add component */}
       <AnimatePresence>
         {selectedTattoo && (
           <motion.div
@@ -94,7 +92,6 @@ export const TattooList = ({ tattoos, className }: Props) => {
               <Image
                 src={selectedTattoo.image}
                 alt={selectedTattoo.name}
-                fill
                 className="object-cover"
               />
               <Chip
