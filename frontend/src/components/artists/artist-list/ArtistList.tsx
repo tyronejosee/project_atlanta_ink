@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Chip, Image } from "@nextui-org/react";
+import { Chip, Image } from "@heroui/react";
 import { motion } from "framer-motion";
 import { IArtist } from "@/interfaces";
 import { DEFAULT_IMAGE } from "@/config/constants";

@@ -7,7 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -17,7 +17,6 @@ export const BackToTop = () => {
   const [showing, setShowing] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 

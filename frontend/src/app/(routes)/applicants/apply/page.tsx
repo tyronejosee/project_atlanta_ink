@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import { ApplicantForm, HeaderPage } from "@/components";
 
 export const metadata: Metadata = {

@@ -7,7 +7,7 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { ChevronLeft, Heart } from "lucide-react";
 import { IProduct } from "@/interfaces";
 import { ProductCounter, ProductHeader } from "@/components";

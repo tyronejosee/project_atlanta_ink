@@ -1,27 +1,30 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Input, Button, Textarea, Checkbox } from "@nextui-org/react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { Input, Button, Textarea, Checkbox, addToast } from "@heroui/react";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { API_URL } from "@/config/constants";
-import { applicantSchema } from "@/validations/applicantSchema";
-import { IApplicantValues } from "@/interfaces";
+import { ArrowUpRight } from "lucide-react";
+import { createApplicant } from "@/lib/api/applicants";
+import { applicantSchema } from "@/lib/zod";
 import { FormError } from "@/components";
+import { IApplicantValues } from "@/interfaces";
 
 export const ApplicantForm = () => {
   const router = useRouter();
+  const [apiError, setApiError] = useState<string | null>(null);
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
     reset,
+    formState: { errors, isSubmitting },
   } = useForm<IApplicantValues>({
     resolver: zodResolver(applicantSchema),
   });
 
-  const onSubmit: SubmitHandler<IApplicantValues> = async (data) => {
+  const onSubmit = async (data: IApplicantValues) => {
     const formData = new FormData();
 
     formData.append("name", data.name);
@@ -34,83 +37,89 @@ export const ApplicantForm = () => {
     }
 
     try {
-      const response = await fetch(`${API_URL}/applicants`, {
-        method: "POST",
-        body: formData,
-      });
-
-      // ! TODO: Fix temporary patch
-      if (response.status === 422) {
-        router.push("/bookings/thank-you");
-        return;
+      const res = await createApplicant(data);
+      if (res?.status === 201) {
+        addToast({
+          title: "Application received",
+          description: "Your application has been successfully submitted.",
+        });
+        reset();
+        router.push("/");
+      } else {
+        throw new Error("Submission failed.");
       }
-
-      if (!response.ok) {
-        throw new Error("Network response was not ok.");
-      }
-
-      router.push("/applicants/application-submitted");
     } catch (error) {
-      console.error("There was a problem with the fetch operation:", error);
-      // TODO: Add sentry
+      setApiError(`${error}`);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      {/* Name field */}
-      <Input
-        label="Name *"
-        size="sm"
-        type="text"
-        radius="md"
-        required
-        {...register("name")}
-      />
-      {errors.name?.message && <FormError>* {errors.name?.message}</FormError>}
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
+      <div className="space-y-9">
+        {/* Name field */}
+        <Input
+          label="Name"
+          size="lg"
+          type="text"
+          radius="md"
+          placeholder="John Doe"
+          labelPlacement="outside"
+          isInvalid={!!errors.name?.message}
+          color={errors.name?.message ? "danger" : "default"}
+          errorMessage={errors.name?.message}
+          {...register("name")}
+        />
 
-      {/* Email field */}
-      <Input
-        label="Email *"
-        size="sm"
-        type="email"
-        radius="md"
-        {...register("email")}
-      />
-      {errors.email?.message && (
-        <FormError>* {errors.email?.message}</FormError>
-      )}
+        {/* Email field */}
+        <Input
+          label="Email"
+          size="lg"
+          type="email"
+          radius="md"
+          placeholder="john.doe@example.com"
+          labelPlacement="outside"
+          isInvalid={!!errors.email?.message}
+          color={errors.email?.message ? "danger" : "default"}
+          errorMessage={errors.email?.message}
+          {...register("email")}
+        />
 
-      {/* Phone field */}
-      <Input
-        label="Phone *"
-        size="sm"
-        type="phone"
-        radius="md"
-        {...register("phone")}
-      />
-      {errors.phone?.message && (
-        <FormError>* {errors.phone?.message}</FormError>
-      )}
+        {/* Phone field */}
+        <Input
+          label="Phone"
+          size="lg"
+          type="phone"
+          radius="md"
+          placeholder="+1 404 123 4567"
+          labelPlacement="outside"
+          isInvalid={!!errors.phone?.message}
+          color={errors.phone?.message ? "danger" : "default"}
+          errorMessage={errors.phone?.message}
+          {...register("phone")}
+        />
+      </div>
 
       {/* Message field */}
       <Textarea
         label="Message"
-        size="sm"
+        size="lg"
         radius="md"
+        placeholder="Your message here..."
+        labelPlacement="outside"
+        isInvalid={!!errors.message?.message}
+        color={errors.message?.message ? "danger" : "default"}
+        errorMessage={errors.message?.message}
         {...register("message")}
       />
-      {errors.message?.message && (
-        <FormError>* {errors.message?.message}</FormError>
-      )}
 
       {/* CV field */}
       <div>
-        <label className="subpixel-antialiased block text-foreground-500 text-small pb-0.5 pe-2 text-ellipsis">
-          Your CV *
+        <label className="text-white subpixel-antialiased block text-sm pb-1 pe-2 text-ellipsis">
+          Your CV
         </label>
         <input
           type="file"
+          accept="application/pdf"
           className="block w-full text-xs text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
           {...register("cv")}
         />
@@ -118,23 +127,24 @@ export const ApplicantForm = () => {
       </div>
 
       {/* Checkbox field */}
-      <Checkbox
-        className="block"
-        size="sm"
-        // {...register("isEmail")}
-      >
+      <Checkbox className="block" size="sm">
         I wish to receive emails in case of a hiring process.
       </Checkbox>
 
       <Button
         type="submit"
-        color="primary"
         radius="md"
+        color="primary"
         className="font-medium w-full"
+        disabled={isSubmitting}
+        endContent={<ArrowUpRight className="w-4 h-4" />}
       >
-        Apply now
+        {isSubmitting ? "Applying..." : "Apply now"}
       </Button>
 
+      {apiError && (
+        <p className="text-xs text-neutral-gray text-center">* {apiError}</p>
+      )}
       <p className="text-xs text-neutral-gray text-center">
         * Fields marked with an asterisk are required.
       </p>

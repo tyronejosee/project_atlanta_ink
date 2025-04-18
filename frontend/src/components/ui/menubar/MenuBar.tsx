@@ -12,7 +12,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Button,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { Bird } from "lucide-react";
 import {
   COMPANY_NAME,
@@ -55,7 +55,9 @@ export const MenuBar = () => {
       isBordered={isHomePage ? shouldBlur : true}
       isBlurred={shouldBlur}
       // position="static"
-      className={`fixed z-50 transition-colors duration-300 ${shouldBlur ? "" : "bg-transparent blur-0"}`}
+      className={`fixed z-50 transition-colors duration-300 ${
+        shouldBlur ? "" : "bg-transparent blur-0"
+      }`}
     >
       <NavbarContent>
         <Link color="foreground" href="/">

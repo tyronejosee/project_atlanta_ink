@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { useAnimateOnView } from "@/hooks";
 import { IPrice } from "@/interfaces";
 import { HeaderSection } from "@/components";

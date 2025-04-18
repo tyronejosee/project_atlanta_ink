@@ -9,11 +9,11 @@ import {
   Select,
   SelectItem,
   Textarea,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
-import { bookingSchema } from "@/validations/bookingSchema";
+import { bookingSchema } from "@/lib/zod";
 import { FormError } from "@/components";
+import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
 import { IArtist, IBookingValues } from "@/interfaces";
 
 interface Props {
@@ -33,8 +33,8 @@ export const BookingForm = ({
   const {
     register,
     handleSubmit,
-    formState: { errors },
     reset,
+    formState: { errors },
   } = useForm<IBookingValues>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
@@ -70,12 +70,6 @@ export const BookingForm = ({
         body: formData,
       });
 
-      // ! TODO: Fix temporary patch
-      if (response.status === 422) {
-        router.push("/bookings/thank-you");
-        return;
-      }
-
       if (!response.ok) {
         throw new Error("Network response was not ok.");
       }
@@ -83,7 +77,6 @@ export const BookingForm = ({
       router.push("/bookings/thank-you");
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
-      // ! TODO: Add sentry
     }
   };
 

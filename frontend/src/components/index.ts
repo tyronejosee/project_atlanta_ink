@@ -31,9 +31,6 @@ export * from "./products/product-list/ProductList";
 export * from "./products/product-section/ProductSection";
 export * from "./products/product-toolbar/ProductToolbar";
 
-// Providers
-export * from "./providers/DataProvider";
-
 // UI - Common
 export * from "./ui/back-to-top/BackToTop";
 export * from "./ui/empty-list/EmptyList";

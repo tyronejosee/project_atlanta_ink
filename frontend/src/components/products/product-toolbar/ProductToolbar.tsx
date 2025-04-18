@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Input, Select, SelectItem } from "@nextui-org/react";
+import { Input, Select, SelectItem } from "@heroui/react";
 import { SORT_CHOICES } from "@/config/constants";
 import { IBrand, ICategory } from "@/interfaces";
 

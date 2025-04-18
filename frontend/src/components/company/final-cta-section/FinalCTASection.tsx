@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Input, Button } from "@nextui-org/react";
+import { Input, Button } from "@heroui/react";
 
 export const FinalCTASection = () => {
   const [firstName, setFirstName] = useState("");

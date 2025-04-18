@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@heroui/react";
 import { CircleHelp, ChevronLeft } from "lucide-react";
 import { IFaq } from "@/interfaces";
 

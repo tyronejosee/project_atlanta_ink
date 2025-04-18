@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import { ProductContent, ProductHeader } from "@/components";
 import { DEFAULT_IMAGE } from "@/config/constants";
 import { IProduct } from "@/interfaces";

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-import { NextUIProvider } from "@nextui-org/react";
 import { mainFont } from "@/config/fonts";
-import { MenuBar, Footer, DataProvider } from "@/components";
+import { MenuBar, Footer } from "@/components";
 import { getCompany } from "@/lib/api/company";
+import Providers from "./providers";
+
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
@@ -21,13 +22,11 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={mainFont.className}>
-        <NextUIProvider>
-          <DataProvider initialData={company}>
-            <MenuBar />
-            {children}
-            <Footer />
-          </DataProvider>
-        </NextUIProvider>
+        <Providers initialData={company}>
+          <MenuBar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Chip, Button, Image } from "@nextui-org/react";
+import { Chip, Button, Image } from "@heroui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Asterisk, Scale } from "lucide-react";
 import { useAnimateOnView } from "@/hooks";
