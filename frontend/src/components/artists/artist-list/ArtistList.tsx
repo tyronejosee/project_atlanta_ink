@@ -15,7 +15,10 @@ export const ArtistList = ({ artists }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-4 gap-4" ref={ref}>
+    <section
+      className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+      ref={ref}
+    >
       {artists.map((artist, idx) => (
         <motion.div
           key={artist.id}
@@ -30,15 +33,15 @@ export const ArtistList = ({ artists }: Props) => {
           className="group"
         >
           <Link href={`/artists/${artist.slug}`}>
-            <figure className="relative w-full h-0 pb-[100%] border border-neutral-800 rounded-xl overflow-hidden">
+            <figure className="border border-neutral-800 rounded-xl overflow-hidden">
               <Image
-                isBlurred
+                isZoomed
                 src={artist.image || DEFAULT_IMAGE}
                 alt={artist.name}
-                width={300}
-                height={300}
                 loading="lazy"
-                className="transform transition-transform duration-300 group-hover:scale-110"
+                radius="none"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 320px"
+                className="aspect-square object-cover w-full h-auto"
               />
             </figure>
             <div className="p-4 text-center space-y-4">

@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
-import { Truck } from "lucide-react";
+import { ProductContent, ProductHeader } from "@/components";
+import { getProductBySlug } from "@/lib/api/products";
 import { DEFAULT_IMAGE } from "@/config/constants";
-import { getProduct } from "@/lib/api";
-import { ProductContent, ProductCounter, ProductHeader } from "@/components";
 
 interface Props {
   params: { slug: string };
@@ -13,7 +11,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = params;
 
   try {
-    const product = await getProduct(slug);
+    const product = await getProductBySlug(slug);
 
     if (!product) {
       return {
@@ -36,7 +34,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = params;
-  const product = await getProduct(slug);
+  const product = await getProductBySlug(slug);
 
   return (
     <main className="max-w-screen-xl mx-auto my-16 px-4 xl:px-0 pt-4">

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 
-import { getBrands, getCategories } from "@/lib/api";
 import {
   HeaderPage,
   PaginationItem,
   ProductList,
   ProductToolbar,
 } from "@/components";
-import { getProducts } from "@/lib/api/products";
+import { getBrands, getCategories, getProducts } from "@/lib/api/products";
 import { IProductQueryParams } from "@/interfaces";
 
 interface Props {

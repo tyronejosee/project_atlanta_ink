@@ -1,6 +1,6 @@
-import { Metadata } from "next";
-import Image from "next/image";
+import type { Metadata } from "next";
 
+import { Image } from "@nextui-org/react";
 import { ApplicantForm, HeaderPage } from "@/components";
 
 export const metadata: Metadata = {
@@ -22,10 +22,13 @@ export default function ApplyPage() {
         </section>
         <section className="hidden md:block overflow-hidden rounded-xl py-4">
           <Image
+            isBlurred
+            shadow="none"
             src="/images/apply-background.webp"
             alt="Apply Background"
-            width={1080}
-            height={1080}
+            width={600}
+            height={600}
+            loading="eager"
             className="object-cover w-full h-full"
           />
         </section>

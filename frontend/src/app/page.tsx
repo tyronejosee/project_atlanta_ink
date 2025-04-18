@@ -17,7 +17,6 @@ import { getFaqs, getPrices, getServices } from "@/lib/api/company";
 import { getArtists } from "@/lib/api/artists";
 import { getRandomTattoos } from "@/lib/api/tattoos";
 import { getProducts } from "@/lib/api/products";
-// import { getProducts } from "@/lib/api";
 
 export const metadata: Metadata = {
   title: "Atlanta Ink - Tattoo Studio",

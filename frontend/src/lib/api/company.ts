@@ -4,9 +4,7 @@ import { fetcher } from "@/lib/api";
 import { loadJson } from "@/lib/load-json";
 
 export async function getCompany() {
-  if (USE_API) {
-    return await fetcher<ICompany>("/company");
-  }
+  if (USE_API) return await fetcher<ICompany>("/company");
   return await loadJson<ICompany>("src/data/company.json");
 }
 
@@ -24,15 +22,11 @@ export async function getPrices(params?: Record<string, any>) {
 }
 
 export async function getServices() {
-  if (USE_API) {
-    return await fetcher<IService[]>("/services");
-  }
+  if (USE_API) return await fetcher<IService[]>("/services");
   return await loadJson<IService[]>("src/data/services.json");
 }
 
 export async function getFaqs() {
-  if (USE_API) {
-    return await fetcher<IFaq[]>("/faqs");
-  }
+  if (USE_API) return await fetcher<IFaq[]>("/faqs");
   return await loadJson<IFaq[]>("src/data/faqs.json");
 }

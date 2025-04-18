@@ -1,5 +1,5 @@
-import { IArtist } from "@/interfaces";
 import { ArtistList, HeaderSection } from "@/components";
+import { IArtist } from "@/interfaces";
 
 interface Props {
   artists: IArtist[];
