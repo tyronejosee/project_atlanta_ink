@@ -33,6 +33,6 @@
     "statusBarItem.prominentHoverBackground": "#FF4200",
     "statusBarItem.remoteBackground": "#FF4200",
     "extensionButton.prominentBackground": "#FF4200",
-    "debugConsoleInputIcon.foreground": "#FF4200",
+    "debugConsoleInputIcon.foreground": "#FF4200"
   }
 }

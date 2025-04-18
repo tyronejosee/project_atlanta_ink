@@ -2,6 +2,7 @@
 
 db.sqlite3
 .env
+.vscode/settings.json
 desktop.ini
 backend/static/admin
 backend/static/cloudinary
