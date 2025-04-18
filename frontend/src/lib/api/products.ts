@@ -1,16 +1,19 @@
 import { fetcher } from "@/lib/api";
-import { loadJson } from "@/lib/load-json";
 import { API_URL_LOCAL, PAGE_SIZE, USE_API } from "@/config/constants";
 import { IBrand, ICategory, IProduct, IProductQueryParams } from "@/interfaces";
 
+import brandsData from "@/data/brands.json";
+import categoriesData from "@/data/categories.json";
+import productsData from "@/data/products.json";
+
 export async function getBrands() {
   if (USE_API) return await fetcher<IBrand[]>("/brands");
-  return await loadJson<IBrand[]>("src/data/brands.json");
+  return brandsData;
 }
 
 export async function getCategories() {
   if (USE_API) return await fetcher<ICategory[]>("/categories");
-  return await loadJson<ICategory[]>("src/data/categories.json");
+  return categoriesData;
 }
 
 export async function getProducts(params: IProductQueryParams = {}) {
@@ -28,7 +31,7 @@ export async function getProducts(params: IProductQueryParams = {}) {
     return await fetcher<IProduct[]>(url);
   }
 
-  let products = await loadJson<IProduct[]>("src/data/products.json");
+  let products = productsData;
   const { sort_by, search, brand, category, page = 1 } = params;
 
   if (sort_by === "latest") {
@@ -78,8 +81,7 @@ export async function getProducts(params: IProductQueryParams = {}) {
 
 export async function getProductBySlug(slug: string) {
   if (USE_API) return await fetcher<IProduct>(`/products/${slug}`);
-  const products = await loadJson<IProduct[]>("src/data/products.json");
-  const artist = products.find((a) => a.slug === slug);
+  const artist = productsData.find((a) => a.slug === slug);
   if (!artist) throw new Error("Artist not found");
   return artist;
 }

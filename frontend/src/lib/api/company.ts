@@ -1,11 +1,15 @@
+import { fetcher } from "@/lib/api";
 import { USE_API } from "@/config/constants";
 import { ICompany, IFaq, IPrice, IService } from "@/interfaces";
-import { fetcher } from "@/lib/api";
-import { loadJson } from "@/lib/load-json";
+
+import companyData from "@/data/company.json";
+import pricesData from "@/data/prices.json";
+import servicesData from "@/data/services.json";
+import faqsData from "@/data/faqs.json";
 
 export async function getCompany() {
   if (USE_API) return await fetcher<ICompany>("/company");
-  return await loadJson<ICompany>("src/data/company.json");
+  return companyData;
 }
 
 export async function getPrices(params?: Record<string, any>) {
@@ -14,19 +18,18 @@ export async function getPrices(params?: Record<string, any>) {
     const url = `/prices${query ? `?${query}` : ""}`;
     return await fetcher<IPrice[]>(url);
   }
-  const prices = await loadJson<IPrice[]>("src/data/prices.json");
   if (params?.is_featured !== undefined) {
-    return prices.filter((p) => p.is_featured === true);
+    return pricesData.filter((p) => p.is_featured === true);
   }
-  return prices;
+  return pricesData;
 }
 
 export async function getServices() {
   if (USE_API) return await fetcher<IService[]>("/services");
-  return await loadJson<IService[]>("src/data/services.json");
+  return servicesData;
 }
 
 export async function getFaqs() {
   if (USE_API) return await fetcher<IFaq[]>("/faqs");
-  return await loadJson<IFaq[]>("src/data/faqs.json");
+  return faqsData;
 }
