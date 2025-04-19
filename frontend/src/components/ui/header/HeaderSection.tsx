@@ -1,7 +1,7 @@
-interface Props {
+type Props = {
   title: string;
   subtitle?: string;
-}
+};
 
 export const HeaderSection = ({
   title,

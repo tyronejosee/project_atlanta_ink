@@ -1,15 +1,16 @@
 "use client";
 
+import type { CompanyResponse } from "@/types";
+
 import { useEffect } from "react";
 import { HeroUIProvider, ToastProvider } from "@heroui/react";
 import { UserRound } from "lucide-react";
 import { useCompanyStore } from "@/store";
-import { ICompany } from "@/interfaces";
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-  initialData: ICompany | null;
-}
+  initialData: CompanyResponse | null;
+};
 
 export default function Providers({ children, initialData }: Props) {
   const { setCompanyData } = useCompanyStore();

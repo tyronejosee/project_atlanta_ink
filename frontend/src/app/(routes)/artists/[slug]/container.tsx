@@ -1,5 +1,7 @@
 "use client";
 
+import type { ArtistResponse, StyleResponse, TattooResponse } from "@/types";
+
 import Link from "next/link";
 import { Chip, Image } from "@heroui/react";
 import {
@@ -10,12 +12,11 @@ import {
   BookingButton,
 } from "@/components";
 import { DEFAULT_IMAGE } from "@/config/constants";
-import { IArtist, IStyle, ITattoo } from "@/interfaces";
 
-interface Props {
-  artist: IArtist;
-  tattoos: ITattoo[];
-}
+type Props = {
+  artist: ArtistResponse;
+  tattoos: TattooResponse[];
+};
 
 export default function ArtistsBySlugContainer({ artist, tattoos }: Props) {
   const hasTattoos = tattoos && tattoos.length > 0;
@@ -37,7 +38,7 @@ export default function ArtistsBySlugContainer({ artist, tattoos }: Props) {
           </h1>
           <div>
             <ul className="flex space-x-1">
-              {artist.styles.map((style: IStyle) => (
+              {artist.styles.map((style: StyleResponse) => (
                 <li key={style.id}>
                   <Chip
                     color="primary"

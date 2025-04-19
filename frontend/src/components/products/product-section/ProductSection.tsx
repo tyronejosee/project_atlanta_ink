@@ -1,9 +1,10 @@
-import { HeaderSection, ProductList } from "@/components";
-import { IProduct } from "@/interfaces";
+import type { ProductResponse } from "@/types";
 
-interface Props {
-  products: IProduct[];
-}
+import { HeaderSection, ProductList } from "@/components";
+
+type Props = {
+  products: ProductResponse[];
+};
 
 export const ProductSection = ({ products }: Props) => {
   return (

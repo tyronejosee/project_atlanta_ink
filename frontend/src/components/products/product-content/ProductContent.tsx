@@ -1,5 +1,7 @@
 "use client";
 
+import type { ProductResponse } from "@/types";
+
 import {
   Accordion,
   AccordionItem,
@@ -9,12 +11,11 @@ import {
   PopoverTrigger,
 } from "@heroui/react";
 import { ChevronLeft, Heart } from "lucide-react";
-import { IProduct } from "@/interfaces";
 import { ProductCounter, ProductHeader } from "@/components";
 
-interface Props {
-  product: IProduct;
-}
+type Props = {
+  product: ProductResponse;
+};
 
 export const ProductContent = ({ product }: Props) => {
   return (

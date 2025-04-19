@@ -3,9 +3,9 @@
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
-interface Props {
+type Props = {
   content: string;
-}
+};
 
 export const EmptyList = ({ content = "content" }: Props) => {
   const router = useRouter();

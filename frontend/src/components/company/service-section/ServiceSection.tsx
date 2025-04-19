@@ -1,15 +1,16 @@
 "use client";
 
+import type { ServiceResponse } from "@/types";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { DEFAULT_IMAGE } from "@/config/constants";
-import { IService } from "@/interfaces";
-import { HeaderSection } from "@/components";
 import { useAnimateOnView } from "@/hooks";
+import { HeaderSection } from "@/components";
+import { DEFAULT_IMAGE } from "@/config/constants";
 
-interface Props {
-  services: IService[];
-}
+type Props = {
+  services: ServiceResponse[];
+};
 
 export const ServiceSection = ({ services }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);

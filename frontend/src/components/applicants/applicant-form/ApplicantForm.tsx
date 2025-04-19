@@ -1,5 +1,7 @@
 "use client";
 
+import type { ApplicantValues } from "@/types";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input, Button, Textarea, Checkbox, addToast } from "@heroui/react";
@@ -9,7 +11,6 @@ import { ArrowUpRight } from "lucide-react";
 import { createApplicant } from "@/lib/api/applicants";
 import { applicantSchema } from "@/lib/zod";
 import { FormError } from "@/components";
-import { IApplicantValues } from "@/interfaces";
 
 export const ApplicantForm = () => {
   const router = useRouter();
@@ -20,11 +21,11 @@ export const ApplicantForm = () => {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<IApplicantValues>({
+  } = useForm<ApplicantValues>({
     resolver: zodResolver(applicantSchema),
   });
 
-  const onSubmit = async (data: IApplicantValues) => {
+  const onSubmit = async (data: ApplicantValues) => {
     const formData = new FormData();
 
     formData.append("name", data.name);

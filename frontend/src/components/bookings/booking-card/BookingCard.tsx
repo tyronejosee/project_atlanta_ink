@@ -1,8 +1,8 @@
-interface Props {
+type Props = {
   title: string;
   text: string;
   icon: React.ReactNode;
-}
+};
 
 export const BookingCard = ({ title, text, icon }: Props) => {
   return (

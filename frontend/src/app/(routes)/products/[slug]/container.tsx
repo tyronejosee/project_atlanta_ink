@@ -1,13 +1,14 @@
 "use client";
 
+import type { ProductResponse } from "@/types";
+
 import { Image } from "@heroui/react";
 import { ProductContent, ProductHeader } from "@/components";
 import { DEFAULT_IMAGE } from "@/config/constants";
-import { IProduct } from "@/interfaces";
 
-interface Props {
-  product: IProduct;
-}
+type Props = {
+  product: ProductResponse;
+};
 
 export default function ProductDetailContainer({ product }: Props) {
   return (

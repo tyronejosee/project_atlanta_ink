@@ -2,21 +2,17 @@
 
 import { useState } from "react";
 import { Button } from "@heroui/react";
-
 import { Plus, Minus } from "lucide-react";
+
 export const ProductCounter = () => {
   const [count, setCount] = useState(1);
 
   const increment = () => {
-    if (count < 10) {
-      setCount(count + 1);
-    }
+    if (count < 10) setCount(count + 1);
   };
 
   const decrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
+    if (count > 1) setCount(count - 1);
   };
 
   return (
@@ -25,7 +21,7 @@ export const ProductCounter = () => {
         className="bg-neutral-darkgrey"
         isIconOnly
         size="sm"
-        onClick={decrement}
+        onPress={decrement}
       >
         <Minus className="size-2" />
       </Button>
@@ -36,7 +32,7 @@ export const ProductCounter = () => {
         className="bg-neutral-darkgrey"
         isIconOnly
         size="sm"
-        onClick={increment}
+        onPress={increment}
       >
         <Plus className="size-2" />
       </Button>

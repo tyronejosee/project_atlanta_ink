@@ -1,9 +1,10 @@
-import { ArtistList, HeaderSection } from "@/components";
-import { IArtist } from "@/interfaces";
+import type { ArtistResponse } from "@/types";
 
-interface Props {
-  artists: IArtist[];
-}
+import { ArtistList, HeaderSection } from "@/components";
+
+type Props = {
+  artists: ArtistResponse[];
+};
 
 export const ArtistSection = ({ artists }: Props) => {
   return (

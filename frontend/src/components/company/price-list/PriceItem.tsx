@@ -1,9 +1,10 @@
-import { BookOpen } from "lucide-react";
-import { IPrice } from "@/interfaces";
+import type { PriceResponse } from "@/types";
 
-interface Props {
-  price: IPrice;
-}
+import { BookOpen } from "lucide-react";
+
+type Props = {
+  price: PriceResponse;
+};
 
 export const PriceItem = ({ price }: Props) => {
   return (

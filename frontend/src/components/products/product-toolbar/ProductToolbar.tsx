@@ -1,15 +1,16 @@
 "use client";
 
+import type { BrandResponse, CategoryResponse } from "@/types";
+
 import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Input, Select, SelectItem } from "@heroui/react";
 import { SORT_CHOICES } from "@/config/constants";
-import { IBrand, ICategory } from "@/interfaces";
 
-interface Props {
-  brands: IBrand[];
-  categories: ICategory[];
-}
+type Props = {
+  brands: BrandResponse[];
+  categories: CategoryResponse[];
+};
 
 export const ProductToolbar = ({ brands, categories }: Props) => {
   const router = useRouter();
@@ -19,7 +20,6 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
     null,
   );
 
-  // Update the search state when the URL changes
   useEffect(() => {
     setSearch(searchParams.get("search") || "");
   }, [searchParams]);

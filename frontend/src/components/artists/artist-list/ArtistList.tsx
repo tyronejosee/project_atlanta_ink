@@ -1,15 +1,16 @@
 "use client";
 
+import type { ArtistResponse } from "@/types";
+
 import Link from "next/link";
 import { Chip, Image } from "@heroui/react";
 import { motion } from "framer-motion";
-import { IArtist } from "@/interfaces";
-import { DEFAULT_IMAGE } from "@/config/constants";
 import { useAnimateOnView } from "@/hooks";
+import { DEFAULT_IMAGE } from "@/config/constants";
 
-interface Props {
-  artists: IArtist[];
-}
+type Props = {
+  artists: ArtistResponse[];
+};
 
 export const ArtistList = ({ artists }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);

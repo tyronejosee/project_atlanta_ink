@@ -8,8 +8,7 @@ export const FinalCTASection = () => {
   const [firstName, setFirstName] = useState("");
   const router = useRouter();
 
-  // TODO: Add types
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     router.push(`/bookings?firstName=${firstName}`);
   };

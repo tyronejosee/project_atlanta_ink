@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
-import { SCHEDULE_LIST } from "@/config/constants";
-import { HeaderPage } from "@/components";
 import { useAnimateOnView } from "@/hooks";
+import { HeaderPage } from "@/components";
+import { SCHEDULE_LIST } from "@/config/constants";
 
 export const ScheduleList = () => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);

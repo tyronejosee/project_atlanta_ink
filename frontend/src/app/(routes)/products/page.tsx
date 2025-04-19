@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ProductQueryParams } from "@/types";
 
 import {
   HeaderPage,
@@ -7,7 +8,6 @@ import {
   ProductToolbar,
 } from "@/components";
 import { getBrands, getCategories, getProducts } from "@/lib/api/products";
-import { IProductQueryParams } from "@/interfaces";
 
 export const metadata: Metadata = {
   title: "Products - Atlanta Ink",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 type Props = {
-  searchParams: Promise<IProductQueryParams>;
+  searchParams: Promise<ProductQueryParams>;
 };
 
 export default async function ProductsPage({ searchParams }: Props) {

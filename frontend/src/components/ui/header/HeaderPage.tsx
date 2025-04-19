@@ -1,8 +1,8 @@
-interface Props {
+type Props = {
   title: string;
   subtitle?: string;
   headingLevel?: "h1" | "h2" | "h3";
-}
+};
 
 export const HeaderPage = ({ title, subtitle, headingLevel = "h1" }: Props) => {
   const HeadingTag = headingLevel;

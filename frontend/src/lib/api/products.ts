@@ -1,22 +1,28 @@
+import type {
+  BrandResponse,
+  CategoryResponse,
+  ProductQueryParams,
+  ProductResponse,
+} from "@/types";
+
 import { fetcher } from "@/lib/api";
 import { API_URL_LOCAL, PAGE_SIZE, USE_API } from "@/config/constants";
-import { IBrand, ICategory, IProduct, IProductQueryParams } from "@/interfaces";
 
 import brandsData from "@/data/brands.json";
 import categoriesData from "@/data/categories.json";
 import productsData from "@/data/products.json";
 
 export async function getBrands() {
-  if (USE_API) return await fetcher<IBrand[]>("/brands");
+  if (USE_API) return await fetcher<BrandResponse[]>("/brands");
   return brandsData;
 }
 
 export async function getCategories() {
-  if (USE_API) return await fetcher<ICategory[]>("/categories");
+  if (USE_API) return await fetcher<CategoryResponse[]>("/categories");
   return categoriesData;
 }
 
-export async function getProducts(params: IProductQueryParams = {}) {
+export async function getProducts(params: ProductQueryParams = {}) {
   if (USE_API) {
     const query = Object.entries(params)
       .filter(([_, v]) => v !== undefined)
@@ -28,7 +34,7 @@ export async function getProducts(params: IProductQueryParams = {}) {
         {} as Record<string, string>,
       );
     const url = `/products?${new URLSearchParams(query)}`;
-    return await fetcher<IProduct[]>(url);
+    return await fetcher<ProductResponse[]>(url);
   }
 
   let products = productsData;
@@ -80,7 +86,7 @@ export async function getProducts(params: IProductQueryParams = {}) {
 }
 
 export async function getProductBySlug(slug: string) {
-  if (USE_API) return await fetcher<IProduct>(`/products/${slug}`);
+  if (USE_API) return await fetcher<ProductResponse>(`/products/${slug}`);
   const artist = productsData.find((a) => a.slug === slug);
   if (!artist) throw new Error("Artist not found");
   return artist;

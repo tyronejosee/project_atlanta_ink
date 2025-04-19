@@ -1,10 +1,11 @@
-import { IFaq } from "@/interfaces";
+import type { FaqResponse } from "@/types";
+
 import { HeaderSection } from "@/components";
 import { FAQList } from "./FAQList";
 
-interface Props {
-  faqs: IFaq[];
-}
+type Props = {
+  faqs: FaqResponse[];
+};
 
 export const FAQSection = ({ faqs }: Props) => {
   return (

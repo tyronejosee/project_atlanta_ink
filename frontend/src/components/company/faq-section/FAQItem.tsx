@@ -1,12 +1,13 @@
 "use client";
 
+import type { FaqResponse } from "@/types";
+
 import { Accordion, AccordionItem } from "@heroui/react";
 import { CircleHelp, ChevronLeft } from "lucide-react";
-import { IFaq } from "@/interfaces";
 
-interface Props {
-  faq: IFaq;
-}
+type Props = {
+  faq: FaqResponse;
+};
 
 export const FAQItem = ({ faq }: Props) => {
   return (

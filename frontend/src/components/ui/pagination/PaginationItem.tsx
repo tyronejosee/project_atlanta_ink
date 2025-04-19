@@ -3,15 +3,12 @@
 import { useRouter } from "next/navigation";
 import { Pagination } from "@heroui/react";
 
-interface PaginationProps {
+type Props = {
   totalPages: number;
   currentPage: number;
-}
+};
 
-export const PaginationItem = ({
-  totalPages,
-  currentPage,
-}: PaginationProps) => {
+export const PaginationItem = ({ totalPages, currentPage }: Props) => {
   const router = useRouter();
 
   const handlePageChange = (page: number) => {

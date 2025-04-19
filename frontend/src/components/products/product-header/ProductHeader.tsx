@@ -1,8 +1,8 @@
-import { IProduct } from "@/interfaces";
+import type { ProductResponse } from "@/types";
 
-interface Props {
-  product: IProduct;
-}
+type Props = {
+  product: ProductResponse;
+};
 
 export const ProductHeader = ({ product }: Props) => {
   return (

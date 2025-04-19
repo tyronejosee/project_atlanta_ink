@@ -1,7 +1,7 @@
-interface Props {
+type Props = {
   size?: string;
   color?: string;
-}
+};
 
 export const WhatsApp = ({ size = "w-6 h-6", color = "text-white" }: Props) => {
   return (

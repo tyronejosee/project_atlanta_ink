@@ -1,16 +1,17 @@
 "use client";
 
+import type { ProductResponse } from "@/types";
+
 import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { DEFAULT_IMAGE } from "@/config/constants";
-import { IProduct } from "@/interfaces";
 
-interface Props {
-  products: IProduct[];
-}
+type Props = {
+  products: ProductResponse[];
+};
 
 export const ProductList = ({ products }: Props) => {
   const controls = useAnimation();

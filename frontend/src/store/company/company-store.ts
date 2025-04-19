@@ -1,10 +1,11 @@
-import { ICompany } from "@/interfaces";
+import type { CompanyResponse } from "@/types";
+
 import { create } from "zustand";
 
-interface CompanyState {
-  companyData: ICompany | null;
+type CompanyState = {
+  companyData: CompanyResponse | null;
   setCompanyData: (data: CompanyState["companyData"]) => void;
-}
+};
 
 export const useCompanyStore = create<CompanyState>((set) => ({
   companyData: null,

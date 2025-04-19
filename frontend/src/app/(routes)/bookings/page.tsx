@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import type { BookingQueryParams } from "@/types";
 
 import { getArtists } from "@/lib/api/artists";
 import { BookingForm, HeaderPage, ScheduleList } from "@/components";
-import { IBookingQueryParams } from "@/interfaces";
 
 export const metadata: Metadata = {
   title: "Products - Atlanta Ink",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 type Props = {
-  searchParams: Promise<IBookingQueryParams>;
+  searchParams: Promise<BookingQueryParams>;
 };
 
 export default async function BookingsPage({ searchParams }: Props) {

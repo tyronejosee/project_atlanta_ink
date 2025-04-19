@@ -6,7 +6,9 @@ import { WhatsApp } from "@/components";
 export const WhatsAppButton = () => {
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_PHONE_NUMBER || "";
   const message = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE || "";
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message,
+  )}`;
 
   return (
     <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">

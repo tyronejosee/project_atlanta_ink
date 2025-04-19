@@ -3,9 +3,9 @@
 import { useRouter } from "next/navigation";
 import { Button } from "@heroui/react";
 
-interface Props {
+type Props = {
   artistID: string;
-}
+};
 
 export const BookingButton = ({ artistID }: Props) => {
   const router = useRouter();
@@ -15,7 +15,7 @@ export const BookingButton = ({ artistID }: Props) => {
   };
 
   return (
-    <Button onClick={handleButtonClick} color="primary">
+    <Button onPress={handleButtonClick} color="primary">
       Book artist
     </Button>
   );

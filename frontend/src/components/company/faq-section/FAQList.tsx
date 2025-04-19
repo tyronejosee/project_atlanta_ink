@@ -1,14 +1,15 @@
 "use client";
 
+import type { FaqResponse } from "@/types";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { useAnimateOnView } from "@/hooks";
-import { IFaq } from "@/interfaces";
 import { FAQItem } from "./FAQItem";
 
-interface Props {
-  faqs: IFaq[];
-}
+type Props = {
+  faqs: FaqResponse[];
+};
 
 export const FAQList = ({ faqs }: Props) => {
   const firstColumnAnimation = useAnimateOnView(0.1, false);

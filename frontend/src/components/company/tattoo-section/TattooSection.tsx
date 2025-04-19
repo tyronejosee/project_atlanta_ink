@@ -1,9 +1,10 @@
-import { HeaderSection, TattooList } from "@/components";
-import { ITattoo } from "@/interfaces";
+import type { TattooResponse } from "@/types";
 
-interface Props {
-  tattoos: ITattoo[];
-}
+import { HeaderSection, TattooList } from "@/components";
+
+type Props = {
+  tattoos: TattooResponse[];
+};
 
 export const TattooSection = ({ tattoos }: Props) => {
   return (

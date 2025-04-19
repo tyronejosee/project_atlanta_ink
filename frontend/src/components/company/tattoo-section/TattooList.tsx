@@ -1,22 +1,25 @@
 "use client";
 
+import type { TattooResponse } from "@/types";
+
 import { useState } from "react";
 import { Chip, Button, Image } from "@heroui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Asterisk, Scale } from "lucide-react";
+import { Asterisk } from "lucide-react";
 import { useAnimateOnView } from "@/hooks";
-import { ITattoo } from "@/interfaces";
 
-interface Props {
-  tattoos: ITattoo[];
+type Props = {
+  tattoos: TattooResponse[];
   className?: string;
-}
+};
 
 export const TattooList = ({ tattoos, className }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
-  const [selectedTattoo, setSelectedTattoo] = useState<ITattoo | null>(null);
+  const [selectedTattoo, setSelectedTattoo] = useState<TattooResponse | null>(
+    null,
+  );
 
-  const openModal = (tattoo: ITattoo) => {
+  const openModal = (tattoo: TattooResponse) => {
     setSelectedTattoo(tattoo);
   };
 

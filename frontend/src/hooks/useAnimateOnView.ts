@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 export const useAnimateOnView = (threshold = 0.1, triggerOnce = false) => {
   const controls = useAnimation();

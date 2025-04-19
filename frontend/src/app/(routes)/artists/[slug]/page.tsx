@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { notFound } from "next/navigation";
 import { getArtistBySlug, getTattoosByArtist } from "@/lib/api/artists";
 import ArtistsBySlugContainer from "./container";

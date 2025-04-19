@@ -1,7 +1,9 @@
 "use client";
 
+import type { ArtistResponse, BookingValues } from "@/types";
+
 import { useRouter } from "next/navigation";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import {
   Button,
   Checkbox,
@@ -14,14 +16,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { bookingSchema } from "@/lib/zod";
 import { FormError } from "@/components";
 import { API_URL, PLACEMENT_CHOICES } from "@/config/constants";
-import { IArtist, IBookingValues } from "@/interfaces";
 
-interface Props {
-  artists: IArtist[];
+type Props = {
+  artists: ArtistResponse[];
   initialFirstName?: string;
   initialFirstTime?: boolean;
   initialArtist?: string;
-}
+};
 
 export const BookingForm = ({
   artists,
@@ -35,7 +36,7 @@ export const BookingForm = ({
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<IBookingValues>({
+  } = useForm<BookingValues>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
       firstName: initialFirstName,
@@ -44,7 +45,7 @@ export const BookingForm = ({
     },
   });
 
-  const onSubmit: SubmitHandler<IBookingValues> = async (data) => {
+  const onSubmit = async (data: BookingValues) => {
     const formData = new FormData();
 
     formData.append("first_name", data.firstName);

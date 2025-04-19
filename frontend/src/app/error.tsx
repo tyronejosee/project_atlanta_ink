@@ -3,10 +3,10 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 
-interface Props {
+type Props = {
   error: Error;
   reset: () => void;
-}
+};
 
 export default function GlobalError({ error, reset }: Props) {
   useEffect(() => {

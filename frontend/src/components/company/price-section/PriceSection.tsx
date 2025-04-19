@@ -1,15 +1,16 @@
 "use client";
 
+import type { PriceResponse } from "@/types";
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@heroui/react";
 import { useAnimateOnView } from "@/hooks";
-import { IPrice } from "@/interfaces";
 import { HeaderSection } from "@/components";
 
-interface Props {
-  prices: IPrice[];
-}
+type Props = {
+  prices: PriceResponse[];
+};
 
 export const PriceSection = ({ prices }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);

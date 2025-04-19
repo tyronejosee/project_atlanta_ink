@@ -14,19 +14,19 @@ import {
   Button,
 } from "@heroui/react";
 import { Bird } from "lucide-react";
+import { Instagram, YouTube, Twitch } from "@/components";
+import { useCompanyStore } from "@/store";
 import {
   COMPANY_NAME,
   MENU_ITEMS,
   NAV_ITEMS,
   NAV_CTA,
 } from "@/config/constants";
-import { Instagram, YouTube, Twitch } from "@/components";
-import { useCompanyStore } from "@/store";
 
 export const MenuBar = () => {
   const { companyData } = useCompanyStore();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const pathname = usePathname();
 

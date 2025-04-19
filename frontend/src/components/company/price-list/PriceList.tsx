@@ -1,14 +1,14 @@
 "use client";
 
-import React from "react";
+import type { PriceResponse } from "@/types";
+
 import { motion } from "framer-motion";
 import { useAnimateOnView } from "@/hooks";
-import { IPrice } from "@/interfaces";
 import { PriceItem } from "@/components";
 
-interface Props {
-  prices: IPrice[];
-}
+type Props = {
+  prices: PriceResponse[];
+};
 
 export const PriceList = ({ prices }: Props) => {
   const firstColumnAnimation = useAnimateOnView(0.1, false);
