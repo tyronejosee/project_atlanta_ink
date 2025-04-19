@@ -19,6 +19,7 @@ export const PriceSection = ({ prices }: Props) => {
     <section className="py-16 bg-primary">
       <div className="max-w-screen-xl mx-auto text-center">
         <HeaderSection
+          isNegative
           title="Our Pricing"
           subtitle="Check out our price list for tattoo services and consultations."
         />

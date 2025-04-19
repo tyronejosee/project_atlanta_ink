@@ -25,10 +25,9 @@ import {
 
 export const MenuBar = () => {
   const { companyData } = useCompanyStore();
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-
-  const pathname = usePathname();
 
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 0);
@@ -41,20 +40,16 @@ export const MenuBar = () => {
     };
   }, [handleScroll]);
 
-  const handleMenuClose = () => {
-    setIsMenuOpen(false);
-  };
-
   const shouldBlur = isScrolled || isMenuOpen;
   const isHomePage = pathname === "/";
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isMenuOpen}
       maxWidth="xl"
       isBordered={isHomePage ? shouldBlur : true}
       isBlurred={shouldBlur}
-      // position="static"
       className={`fixed z-50 transition-colors duration-300 ${
         shouldBlur ? "" : "bg-transparent blur-0"
       }`}
@@ -131,7 +126,7 @@ export const MenuBar = () => {
         />
       </NavbarContent>
 
-      <NavbarMenu className={`${shouldBlur ? "" : "bg-transparent blur-0"}`}>
+      <NavbarMenu>
         {MENU_ITEMS.map((item) => {
           const isActive = pathname === item.href;
 
@@ -139,7 +134,7 @@ export const MenuBar = () => {
             <NavbarMenuItem key={item.id}>
               <Link
                 href={item.href}
-                onClick={handleMenuClose}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={
                   isActive ? "font-bold text-primary" : "hover:font-bold"
                 }

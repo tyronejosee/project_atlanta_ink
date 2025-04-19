@@ -81,7 +81,7 @@ export const TattooList = ({ tattoos, className }: Props) => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm px-6 bg-neutral-darkgrey/80 text-white"
             onClick={closeModal}
           >
             <motion.figure
@@ -109,7 +109,7 @@ export const TattooList = ({ tattoos, className }: Props) => {
                 size="sm"
                 isIconOnly
                 className="absolute top-2 right-2 invisible group-hover:visible transition-all duration-100"
-                onClick={closeModal}
+                onPress={closeModal}
               >
                 x
               </Button>

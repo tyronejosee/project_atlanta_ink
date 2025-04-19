@@ -52,7 +52,7 @@ export const ProductContent = ({ product }: Props) => {
         backdrop="blur"
         className="hidden lg:block"
       >
-        <PopoverTrigger>
+        <PopoverTrigger className="hidden lg:block">
           <Button
             size="lg"
             color="primary"

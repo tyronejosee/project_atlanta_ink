@@ -53,7 +53,7 @@ export const MENU_ITEMS = [
   { id: 2, href: "/prices", label: "Prices" },
   { id: 3, href: "/products", label: "Products" },
   { id: 4, href: "/applicants/apply", label: "Applicants" },
-  { id: 4, href: "/bookings", label: "Bookings" },
+  { id: 5, href: "/bookings", label: "Bookings" },
 ];
 
 export const SCHEDULE_LIST = [
