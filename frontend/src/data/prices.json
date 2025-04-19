@@ -17,21 +17,21 @@
     "id": "200d989b-06bf-4ecf-93bb-31fc432ba2bc",
     "name": "3D Tattoo",
     "description": "Designs that appear to have depth and dimension, creating a lifelike effect.",
-    "price_range": "$250 - $500 per session",
+    "price_range": "$250 - $500 ps",
     "is_featured": false
   },
   {
     "id": "26751387-ab85-4195-85e1-4b83e0773a8a",
     "name": "Geometric Tattoo",
     "description": "Designs focusing on shapes and symmetry, requiring precision.",
-    "price_range": "$150 - $300 per hour",
+    "price_range": "$150 - $300 ph",
     "is_featured": false
   },
   {
     "id": "315fa61c-6ad7-4e20-9bc4-845be58f28df",
     "name": "Cover-Up Tattoo",
     "description": "Tattoos designed to cover or replace an existing tattoo.",
-    "price_range": "$200 - $300 per hour",
+    "price_range": "$200 - $300 ph",
     "is_featured": false
   },
   {
@@ -52,7 +52,7 @@
     "id": "3ea19953-8ec7-43f2-ac25-32796be0856b",
     "name": "Sleeve Touch-Up or Enhancement",
     "description": "Enhancing or freshening up an existing tattoo sleeve.",
-    "price_range": "$100 - $200 per hour",
+    "price_range": "$100 - $200 ph",
     "is_featured": false
   },
   {
@@ -66,7 +66,7 @@
     "id": "41bc04a0-aaa6-4971-89a3-2d8c4d23b3a1",
     "name": "Dotwork Tattoo",
     "description": "Designs created with dot shading, often intricate and detailed.",
-    "price_range": "$150 - $300 per hour",
+    "price_range": "$150 - $300 ph",
     "is_featured": false
   },
   {
@@ -94,7 +94,7 @@
     "id": "4e0c1299-8f2a-4ca7-b8b0-9e01712059f9",
     "name": "Custom Tattoo",
     "description": "Unique, personalized designs created specifically for the client.",
-    "price_range": "$200 - $400 per hour",
+    "price_range": "$200 - $400 ph",
     "is_featured": false
   },
   {
@@ -115,14 +115,14 @@
     "id": "ab09ca48-0c1b-46ee-b01b-66b6a5304931",
     "name": "Watercolor Tattoo",
     "description": "A style mimicking watercolor paintings, often colorful and abstract.",
-    "price_range": "$200 - $400 per session",
+    "price_range": "$200 - $400 ps",
     "is_featured": false
   },
   {
     "id": "da2bbbe5-9fef-426d-87bd-26c869665f69",
     "name": "Color Tattoo",
     "description": "Tattoos with multiple colors, requiring more time and skill.",
-    "price_range": "$150 - $300 per hour",
+    "price_range": "$150 - $300 ph",
     "is_featured": false
   },
   {
@@ -136,7 +136,7 @@
     "id": "f7db999c-81f4-4669-b232-e82fcba2863a",
     "name": "Black and Grey Tattoo",
     "description": "Shaded designs with a more classic or realistic look.",
-    "price_range": "$100 - $250 per hour",
+    "price_range": "$100 - $250 ph",
     "is_featured": false
   }
 ]

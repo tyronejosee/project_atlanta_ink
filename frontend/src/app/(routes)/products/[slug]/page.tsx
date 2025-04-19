@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { getProductBySlug } from "@/lib/api/products";
 import ProductDetailContainer from "./container";
 

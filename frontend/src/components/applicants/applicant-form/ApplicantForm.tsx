@@ -40,12 +40,12 @@ export const ApplicantForm = () => {
     try {
       const res = await createApplicant(data);
       if (res?.status === 201) {
+        router.push("/");
         addToast({
           title: "Application received",
           description: "Your application has been successfully submitted.",
+          promise: new Promise((resolve) => setTimeout(resolve, 2000)),
         });
-        reset();
-        router.push("/");
       } else {
         throw new Error("Submission failed.");
       }
@@ -55,8 +55,8 @@ export const ApplicantForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
-      <div className="space-y-9">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <div className="space-y-10">
         {/* Name field */}
         <Input
           label="Name"
@@ -98,20 +98,21 @@ export const ApplicantForm = () => {
           errorMessage={errors.phone?.message}
           {...register("phone")}
         />
-      </div>
 
-      {/* Message field */}
-      <Textarea
-        label="Message"
-        size="lg"
-        radius="md"
-        placeholder="Your message here..."
-        labelPlacement="outside"
-        isInvalid={!!errors.message?.message}
-        color={errors.message?.message ? "danger" : "default"}
-        errorMessage={errors.message?.message}
-        {...register("message")}
-      />
+        {/* Message field */}
+        <Textarea
+          label="Message"
+          size="lg"
+          radius="md"
+          placeholder="Your message here..."
+          labelPlacement="outside"
+          classNames={{ base: "!mt-2" }}
+          isInvalid={!!errors.message?.message}
+          color={errors.message?.message ? "danger" : "default"}
+          errorMessage={errors.message?.message}
+          {...register("message")}
+        />
+      </div>
 
       {/* CV field */}
       <div>
@@ -132,6 +133,10 @@ export const ApplicantForm = () => {
         I wish to receive emails in case of a hiring process.
       </Checkbox>
 
+      {apiError && (
+        <p className="text-xs text-red-500 text-center">{apiError}</p>
+      )}
+
       <Button
         type="submit"
         radius="md"
@@ -142,13 +147,6 @@ export const ApplicantForm = () => {
       >
         {isSubmitting ? "Applying..." : "Apply now"}
       </Button>
-
-      {apiError && (
-        <p className="text-xs text-neutral-gray text-center">* {apiError}</p>
-      )}
-      <p className="text-xs text-neutral-gray text-center">
-        * Fields marked with an asterisk are required.
-      </p>
     </form>
   );
 };

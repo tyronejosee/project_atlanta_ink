@@ -4,7 +4,6 @@ import type { CompanyResponse } from "@/types";
 
 import { useEffect } from "react";
 import { HeroUIProvider, ToastProvider } from "@heroui/react";
-import { UserRound } from "lucide-react";
 import { useCompanyStore } from "@/store";
 
 type Props = {
@@ -22,16 +21,15 @@ export default function Providers({ children, initialData }: Props) {
   return (
     <HeroUIProvider>
       <ToastProvider
+        placement="bottom-center"
+        maxVisibleToasts={2}
         toastProps={{
+          size: "lg",
           radius: "lg",
-          variant: "bordered",
+          variant: "solid",
+          color: "primary",
           timeout: 5000,
-          classNames: {
-            base: "absolute z-[9999] w-72 h-20 bottom-6 right-6",
-          },
-          icon: <UserRound />,
         }}
-        maxVisibleToasts={4}
       />
       {children}
     </HeroUIProvider>
