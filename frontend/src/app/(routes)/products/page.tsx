@@ -9,10 +9,6 @@ import {
 import { getBrands, getCategories, getProducts } from "@/lib/api/products";
 import { IProductQueryParams } from "@/interfaces";
 
-interface Props {
-  searchParams: IProductQueryParams;
-}
-
 export const metadata: Metadata = {
   title: "Products - Atlanta Ink",
   description:
@@ -20,8 +16,12 @@ export const metadata: Metadata = {
   keywords: "tattoos, tattoo products, atlanta",
 };
 
+type Props = {
+  searchParams: Promise<IProductQueryParams>;
+};
+
 export default async function ProductsPage({ searchParams }: Props) {
-  const { sort_by, search, category, brand, page = 1 } = searchParams;
+  const { sort_by, search, category, brand, page = 1 } = await searchParams;
 
   const params = {
     ...(sort_by && { sort_by }),
@@ -38,7 +38,6 @@ export default async function ProductsPage({ searchParams }: Props) {
   ]);
 
   const { results: products, count } = productsData;
-
   const totalPages = Math.ceil(count / 10);
 
   return (

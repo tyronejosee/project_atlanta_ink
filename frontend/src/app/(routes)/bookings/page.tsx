@@ -4,10 +4,6 @@ import { getArtists } from "@/lib/api/artists";
 import { BookingForm, HeaderPage, ScheduleList } from "@/components";
 import { IBookingQueryParams } from "@/interfaces";
 
-interface Props {
-  searchParams: IBookingQueryParams;
-}
-
 export const metadata: Metadata = {
   title: "Products - Atlanta Ink",
   description:
@@ -16,8 +12,12 @@ export const metadata: Metadata = {
     "book appointment, tattoo studio, contact, phone, email, hours, atlanta",
 };
 
+type Props = {
+  searchParams: Promise<IBookingQueryParams>;
+};
+
 export default async function BookingsPage({ searchParams }: Props) {
-  const { firstName, firstTime, artist } = searchParams;
+  const { firstName, firstTime, artist } = await searchParams;
   const artists = await getArtists();
 
   return (

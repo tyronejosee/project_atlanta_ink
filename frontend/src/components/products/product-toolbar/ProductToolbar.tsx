@@ -90,9 +90,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           onChange={(e) => handleBrandChange(e.target.value)}
         >
           {brands.map((brand) => (
-            <SelectItem key={brand.name} value={brand.name}>
-              {brand.name}
-            </SelectItem>
+            <SelectItem key={brand.id}>{brand.name}</SelectItem>
           ))}
         </Select>
 
@@ -104,9 +102,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           onChange={(e) => handleCategoryChange(e.target.value)}
         >
           {categories.map((category) => (
-            <SelectItem key={category.name} value={category.name}>
-              {category.name}
-            </SelectItem>
+            <SelectItem key={category.id}>{category.name}</SelectItem>
           ))}
         </Select>
 
@@ -118,9 +114,7 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
           onChange={(e) => handleSortChange(e.target.value)}
         >
           {SORT_CHOICES.map((choices) => (
-            <SelectItem key={choices.key} value={choices.key}>
-              {choices.label}
-            </SelectItem>
+            <SelectItem key={choices.key}>{choices.label}</SelectItem>
           ))}
         </Select>
       </nav>

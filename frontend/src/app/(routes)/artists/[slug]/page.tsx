@@ -1,13 +1,14 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getArtistBySlug, getTattoosByArtist } from "@/lib/api/artists";
 import ArtistsBySlugContainer from "./container";
 
-interface Props {
-  params: { slug: string };
-}
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-export async function generateMetadata({ params }: Props) {
-  const { slug } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
 
   try {
     const artist = await getArtistBySlug(slug);
@@ -32,11 +33,12 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function ArtistDetailPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const [artist, tattoos] = await Promise.all([
     getArtistBySlug(slug),
     getTattoosByArtist(slug),
   ]);
+
   if (!artist) return notFound();
   return <ArtistsBySlugContainer artist={artist} tattoos={tattoos} />;
 }

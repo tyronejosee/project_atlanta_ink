@@ -134,9 +134,7 @@ export const BookingForm = ({
         {...register("artist")}
       >
         {artists.map((artist) => (
-          <SelectItem key={artist.id} value={artist.id}>
-            {artist.name}
-          </SelectItem>
+          <SelectItem key={artist.id}>{artist.name}</SelectItem>
         ))}
       </Select>
       {errors.artist?.message && (
@@ -163,9 +161,7 @@ export const BookingForm = ({
         {...register("placement")}
       >
         {PLACEMENT_CHOICES.map((choice) => (
-          <SelectItem key={choice.key} value={choice.key}>
-            {choice.label}
-          </SelectItem>
+          <SelectItem key={choice.key}>{choice.label}</SelectItem>
         ))}
       </Select>
       {errors.placement?.message && (
