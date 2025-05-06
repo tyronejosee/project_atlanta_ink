@@ -27,16 +27,18 @@ export const FinalCTASection = () => {
           onSubmit={handleSubmit}
         >
           <Input
-            type="text"
             size="lg"
+            type="text"
+            radius="none"
             placeholder="Enter your first name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
           <Button
-            type="submit"
             size="lg"
-            className="bg-neutral-dark w-full text-neutral-light font-medium rounded-xl"
+            type="submit"
+            radius="none"
+            className="bg-neutral-dark w-full text-neutral-light font-medium rounded-none"
           >
             Book Now
           </Button>

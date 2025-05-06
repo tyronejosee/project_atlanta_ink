@@ -15,7 +15,7 @@ export const BookingButton = ({ artistID }: Props) => {
   };
 
   return (
-    <Button onPress={handleButtonClick} color="primary">
+    <Button onPress={handleButtonClick} color="primary" radius="none">
       Book artist
     </Button>
   );

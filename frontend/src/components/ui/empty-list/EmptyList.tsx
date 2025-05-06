@@ -30,7 +30,7 @@ export const EmptyList = ({ content = "content" }: Props) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         onClick={goBackToHome}
-        className="px-4 py-2 bg-primary hover:bg-primary/50 text-neutral-light rounded-xl transition-colors"
+        className="px-4 py-2 bg-primary hover:bg-primary/50 text-neutral-light rounded-none transition-colors"
       >
         Go back to home
       </motion.button>

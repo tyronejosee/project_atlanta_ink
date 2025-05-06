@@ -113,6 +113,7 @@ export const MenuBar = () => {
           <Button
             as={Link}
             href={NAV_CTA.href}
+            radius="none"
             color="primary"
             className="text-neutral-light font-medium"
           >

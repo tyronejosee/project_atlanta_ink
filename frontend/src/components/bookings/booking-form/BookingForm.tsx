@@ -93,7 +93,7 @@ export const BookingForm = ({
           label="First Name"
           size="lg"
           type="text"
-          radius="md"
+          radius="none"
           placeholder="John"
           labelPlacement="outside"
           isInvalid={!!errors.firstName?.message}
@@ -107,7 +107,7 @@ export const BookingForm = ({
           label="Last Name"
           size="lg"
           type="text"
-          radius="md"
+          radius="none"
           placeholder="Doe"
           labelPlacement="outside"
           isInvalid={!!errors.lastName?.message}
@@ -122,7 +122,7 @@ export const BookingForm = ({
           label="Phone"
           size="lg"
           type="tel"
-          radius="md"
+          radius="none"
           placeholder="+1 404 123 4567"
           labelPlacement="outside"
           isInvalid={!!errors.phone?.message}
@@ -135,7 +135,7 @@ export const BookingForm = ({
         <Textarea
           size="lg"
           type="textarea"
-          radius="md"
+          radius="none"
           label="Notes"
           placeholder="Your notes here..."
           labelPlacement="outside"
@@ -149,7 +149,7 @@ export const BookingForm = ({
         {/* Artist field */}
         <Select
           size="lg"
-          radius="md"
+          radius="none"
           label="Artist"
           labelPlacement="outside"
           placeholder="Select an Artist"
@@ -157,10 +157,13 @@ export const BookingForm = ({
           isInvalid={!!errors.artist?.message}
           color={errors.artist?.message ? "danger" : "default"}
           errorMessage={errors.artist?.message}
+          classNames={{ popoverContent: "rounded-none" }}
           {...register("artist")}
         >
           {artists.map((artist) => (
-            <SelectItem key={artist.id}>{artist.name}</SelectItem>
+            <SelectItem key={artist.id} classNames={{ base: "rounded-none" }}>
+              {artist.name}
+            </SelectItem>
           ))}
         </Select>
 
@@ -169,7 +172,7 @@ export const BookingForm = ({
           label="Estimated Budget"
           size="lg"
           type="number"
-          radius="md"
+          radius="none"
           placeholder="100"
           labelPlacement="outside"
           isInvalid={!!errors.budget?.message}
@@ -181,7 +184,7 @@ export const BookingForm = ({
         {/* Placement field */}
         <Select
           size="lg"
-          radius="md"
+          radius="none"
           label="Placement"
           labelPlacement="outside"
           placeholder="Select a tattoo placement"
@@ -189,10 +192,13 @@ export const BookingForm = ({
           isInvalid={!!errors.placement?.message}
           color={errors.placement?.message ? "danger" : "default"}
           errorMessage={errors.placement?.message}
+          classNames={{ popoverContent: "rounded-none" }}
           {...register("placement")}
         >
           {PLACEMENT_CHOICES.map((choice) => (
-            <SelectItem key={choice.key}>{choice.label}</SelectItem>
+            <SelectItem key={choice.key} classNames={{ base: "rounded-none" }}>
+              {choice.label}
+            </SelectItem>
           ))}
         </Select>
       </div>
@@ -204,7 +210,7 @@ export const BookingForm = ({
         </label>
         <input
           type="file"
-          className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
+          className="block w-full text-sm text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-none file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
           {...register("file")}
         />
         {errors.file?.message && <FormError>{errors.file?.message}</FormError>}
@@ -212,11 +218,11 @@ export const BookingForm = ({
 
       {/* Checkbox fields */}
       <div className="flex flex-col space-y-2">
-        <Checkbox size="md" {...register("hasWorkInProgress")}>
+        <Checkbox size="md" radius="none" {...register("hasWorkInProgress")}>
           I have a work in progress tattoo
         </Checkbox>
 
-        <Checkbox size="md" {...register("firstTimeSession")}>
+        <Checkbox size="md" radius="none" {...register("firstTimeSession")}>
           First-time session
         </Checkbox>
       </div>
@@ -227,7 +233,7 @@ export const BookingForm = ({
 
       <Button
         type="submit"
-        radius="md"
+        radius="none"
         color="primary"
         className="font-medium w-full"
         disabled={isSubmitting}

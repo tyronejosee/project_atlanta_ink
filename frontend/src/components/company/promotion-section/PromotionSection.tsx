@@ -25,8 +25,9 @@ export const PromotionSection = () => {
           clients. Its the perfect time to start your next tattoo.
         </p>
         <Button
-          onPress={handleButtonClick}
           color="primary"
+          radius="none"
+          onPress={handleButtonClick}
           className="text-neutral-light font-medium"
         >
           Make an Appointment

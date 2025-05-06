@@ -37,13 +37,13 @@ export const ServiceSection = ({ services }: Props) => {
                 delay: idx * 0.1,
                 ease: "easeOut",
               }}
-              className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-xl border border-neutral-800"
+              className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-none border border-neutral-800"
             >
               <div className="absolute inset-0 bg-neutral-dark">
                 <Image
-                  src={service.image || DEFAULT_IMAGE}
-                  alt={service.name}
                   fill
+                  alt={service.name}
+                  src={service.image || DEFAULT_IMAGE}
                   style={{ objectFit: "cover" }}
                   className="z-10 opacity-25 transform transition-transform duration-300 group-hover:scale-110"
                 />

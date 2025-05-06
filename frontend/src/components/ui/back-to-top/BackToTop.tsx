@@ -71,8 +71,9 @@ export const BackToTop = () => {
         )}
       >
         <Button
+          radius="none"
           onPress={scrollToTop}
-          className="bg-primary text-neutral-light font-bold rounded-xl"
+          className="bg-primary text-neutral-light font-bold rounded-none shadow-md"
         >
           <ChevronUp />
           Back to top

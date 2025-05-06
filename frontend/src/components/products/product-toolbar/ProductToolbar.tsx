@@ -73,10 +73,10 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
       <nav className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
         {/* Search field */}
         <Input
-          label="Search"
-          type="text"
-          radius="md"
           size="sm"
+          type="text"
+          radius="none"
+          label="Search"
           value={search}
           onChange={handleSearchChange}
           className="w-full md:w-1/4"
@@ -85,36 +85,48 @@ export const ProductToolbar = ({ brands, categories }: Props) => {
         {/* Brand field */}
         <Select
           size="sm"
+          radius="none"
           label="Select brand"
           className="w-full md:w-1/4"
+          classNames={{ popoverContent: "rounded-none" }}
           onChange={(e) => handleBrandChange(e.target.value)}
         >
           {brands.map((brand) => (
-            <SelectItem key={brand.id}>{brand.name}</SelectItem>
+            <SelectItem key={brand.id} classNames={{ base: "rounded-none" }}>
+              {brand.name}
+            </SelectItem>
           ))}
         </Select>
 
         {/* Category field */}
         <Select
           size="sm"
+          radius="none"
           label="Select category"
           className="w-full md:w-1/4"
+          classNames={{ popoverContent: "rounded-none" }}
           onChange={(e) => handleCategoryChange(e.target.value)}
         >
           {categories.map((category) => (
-            <SelectItem key={category.id}>{category.name}</SelectItem>
+            <SelectItem key={category.id} classNames={{ base: "rounded-none" }}>
+              {category.name}
+            </SelectItem>
           ))}
         </Select>
 
         {/* Sort_by field */}
         <Select
           size="sm"
+          radius="none"
           label="Sort by"
           className="w-full md:w-1/4"
+          classNames={{ popoverContent: "rounded-none" }}
           onChange={(e) => handleSortChange(e.target.value)}
         >
           {SORT_CHOICES.map((choices) => (
-            <SelectItem key={choices.key}>{choices.label}</SelectItem>
+            <SelectItem key={choices.key} classNames={{ base: "rounded-none" }}>
+              {choices.label}
+            </SelectItem>
           ))}
         </Select>
       </nav>

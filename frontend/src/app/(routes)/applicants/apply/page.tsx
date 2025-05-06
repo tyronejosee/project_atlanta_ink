@@ -20,9 +20,10 @@ export default function ApplyPage() {
           />
           <ApplicantForm />
         </section>
-        <section className="hidden md:block overflow-hidden rounded-xl py-4">
+        <section className="hidden md:block overflow-hidden rounded-none py-4">
           <Image
             isBlurred
+            radius="none"
             shadow="none"
             src="/images/apply-background.webp"
             alt="Apply Background"

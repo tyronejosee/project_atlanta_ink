@@ -39,7 +39,7 @@ export const PriceSection = ({ prices }: Props) => {
                   delay: idx * 0.1,
                   ease: "easeOut",
                 }}
-                className="p-6 shadow-md bg-neutral-darkgrey hover:bg-neutral-dark rounded-xl"
+                className="p-6 shadow-md bg-neutral-darkgrey hover:bg-neutral-dark rounded-none"
               >
                 <h3 className="text-xl font-bold mb-2">{price.name}</h3>
                 <p className="text-4xl font-bold text-primary">
@@ -54,7 +54,8 @@ export const PriceSection = ({ prices }: Props) => {
           <Button
             as={Link}
             href="/prices"
-            className="bg-neutral-darkgrey text-neutral-light font-medium rounded-xl"
+            radius="none"
+            className="bg-neutral-darkgrey text-neutral-light font-medium rounded-none"
           >
             See more
           </Button>

@@ -19,6 +19,7 @@ export const PaginationItem = ({ totalPages, currentPage }: Props) => {
     <nav className="flex justify-end items-center pb-4">
       <Pagination
         loop
+        radius="none"
         showControls
         color={"primary"}
         total={totalPages}

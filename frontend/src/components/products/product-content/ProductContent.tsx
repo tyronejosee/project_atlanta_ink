@@ -55,6 +55,7 @@ export const ProductContent = ({ product }: Props) => {
         <PopoverTrigger className="hidden lg:block">
           <Button
             size="lg"
+            radius="none"
             color="primary"
             className="text-neutral-light font-medium w-full"
           >
@@ -77,6 +78,7 @@ export const ProductContent = ({ product }: Props) => {
         <PopoverTrigger>
           <Button
             size="lg"
+            radius="none"
             variant="bordered"
             className="w-full"
             endContent={<Heart className="size-4" />}
@@ -96,7 +98,7 @@ export const ProductContent = ({ product }: Props) => {
         </PopoverContent>
       </Popover>
 
-      <div className="bg-neutral-darkgrey flex flex-col items-center justify-center space-y-2 rounded-xl p-4">
+      <div className="bg-neutral-darkgrey flex flex-col items-center justify-center space-y-2 rounded-none p-4">
         <p className="font-medium">Shipping cost: From $5.54 USD</p>
         <p className="text-primary font-medium">
           Free shipping for members from: $55.56 USD
@@ -164,7 +166,7 @@ export const ProductContent = ({ product }: Props) => {
       <nav className="lg:hidden z-40 w-full fixed left-0 bottom-0 bg-neutral-darkgrey py-2 px-4">
         <Popover placement="top" color="primary" size="lg" backdrop="blur">
           <PopoverTrigger>
-            <Button size="lg" color="primary" className="w-full">
+            <Button size="lg" color="primary" radius="none" className="w-full">
               Add to bag
             </Button>
           </PopoverTrigger>

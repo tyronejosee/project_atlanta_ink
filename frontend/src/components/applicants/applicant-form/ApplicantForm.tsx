@@ -62,7 +62,7 @@ export const ApplicantForm = () => {
           label="Name"
           size="lg"
           type="text"
-          radius="md"
+          radius="none"
           placeholder="John Doe"
           labelPlacement="outside"
           isInvalid={!!errors.name?.message}
@@ -76,7 +76,7 @@ export const ApplicantForm = () => {
           label="Email"
           size="lg"
           type="email"
-          radius="md"
+          radius="none"
           placeholder="john.doe@example.com"
           labelPlacement="outside"
           isInvalid={!!errors.email?.message}
@@ -90,7 +90,7 @@ export const ApplicantForm = () => {
           label="Phone"
           size="lg"
           type="phone"
-          radius="md"
+          radius="none"
           placeholder="+1 404 123 4567"
           labelPlacement="outside"
           isInvalid={!!errors.phone?.message}
@@ -103,7 +103,7 @@ export const ApplicantForm = () => {
         <Textarea
           label="Message"
           size="lg"
-          radius="md"
+          radius="none"
           placeholder="Your message here..."
           labelPlacement="outside"
           classNames={{ base: "!mt-2" }}
@@ -122,14 +122,14 @@ export const ApplicantForm = () => {
         <input
           type="file"
           accept="application/pdf"
-          className="block w-full text-xs text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
+          className="block w-full text-xs text-neutral-gray file:mr-4 file:py-2 file:px-4 file:rounded-none file:border-0 file:text-sm file:font-semibold file:bg-neutral-darkgrey file:text-primary hover:file:text-neutral-light hover:file:bg-primary"
           {...register("cv")}
         />
         {errors.cv?.message && <FormError>* {errors.cv?.message}</FormError>}
       </div>
 
       {/* Checkbox field */}
-      <Checkbox className="block" size="sm">
+      <Checkbox className="block" size="md" radius="none">
         I wish to receive emails in case of a hiring process.
       </Checkbox>
 
@@ -139,7 +139,7 @@ export const ApplicantForm = () => {
 
       <Button
         type="submit"
-        radius="md"
+        radius="none"
         color="primary"
         className="font-medium w-full"
         disabled={isSubmitting}

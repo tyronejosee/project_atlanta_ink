@@ -34,13 +34,13 @@ export const ArtistList = ({ artists }: Props) => {
           className="group"
         >
           <Link href={`/artists/${artist.slug}`}>
-            <figure className="border border-neutral-800 rounded-xl overflow-hidden">
+            <figure className="border border-neutral-800 rounded-none overflow-hidden">
               <Image
                 isZoomed
-                src={artist.image || DEFAULT_IMAGE}
-                alt={artist.name}
-                loading="lazy"
                 radius="none"
+                loading="lazy"
+                alt={artist.name}
+                src={artist.image || DEFAULT_IMAGE}
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 320px"
                 className="aspect-square object-cover w-full h-auto"
               />
@@ -57,7 +57,7 @@ export const ArtistList = ({ artists }: Props) => {
                         color="primary"
                         variant="bordered"
                         size="sm"
-                        className="text-xs rounded-sm"
+                        className="text-xs rounded-none"
                       >
                         {style.name}
                       </Chip>

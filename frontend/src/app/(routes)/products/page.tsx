@@ -49,7 +49,7 @@ export default async function ProductsPage({ searchParams }: Props) {
       <>
         <ProductToolbar brands={brands} categories={categories} />
         {products.length === 0 ? (
-          <section className=" relative flex justify-center items-center w-full h-[400px] rounded-xl overflow-hidden">
+          <section className=" relative flex justify-center items-center w-full h-[400px] rounded-none overflow-hidden">
             <div className="z-10 text-center text-gray-500">
               No products found for{" "}
               <span className="ml-2 font-semibold text-primary">

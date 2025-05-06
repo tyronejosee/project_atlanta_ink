@@ -52,11 +52,11 @@ export const ProductList = ({ products }: Props) => {
           }}
         >
           <Link href={`/products/${product.slug}`}>
-            <figure className="relative w-full h-0 pb-[100%] border border-neutral-800 rounded-xl overflow-hidden">
+            <figure className="relative w-full h-0 pb-[100%] border border-neutral-800 rounded-none overflow-hidden">
               <Image
-                src={product.image || DEFAULT_IMAGE}
-                alt={product.name}
                 fill
+                alt={product.name}
+                src={product.image || DEFAULT_IMAGE}
                 className="transform transition-transform duration-300 group-hover:scale-110"
               />
             </figure>

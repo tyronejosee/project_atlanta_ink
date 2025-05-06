@@ -18,21 +18,23 @@ export const ProductCounter = () => {
   return (
     <div className="flex space-x-1">
       <Button
-        className="bg-neutral-darkgrey"
         isIconOnly
         size="sm"
+        radius="none"
         onPress={decrement}
+        className="bg-neutral-darkgrey"
       >
         <Minus className="size-2" />
       </Button>
-      <div className="bg-primary rounded-lg w-10 flex justify-center items-center font-extrabold">
+      <div className="bg-primary rounded-none w-10 flex justify-center items-center font-extrabold">
         {count}
       </div>
       <Button
-        className="bg-neutral-darkgrey"
         isIconOnly
         size="sm"
+        radius="none"
         onPress={increment}
+        className="bg-neutral-darkgrey"
       >
         <Plus className="size-2" />
       </Button>

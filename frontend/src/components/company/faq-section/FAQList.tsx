@@ -2,7 +2,6 @@
 
 import type { FaqResponse } from "@/types";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { useAnimateOnView } from "@/hooks";
 import { FAQItem } from "./FAQItem";

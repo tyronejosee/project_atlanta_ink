@@ -25,7 +25,7 @@ export default function Providers({ children, initialData }: Props) {
         maxVisibleToasts={2}
         toastProps={{
           size: "lg",
-          radius: "lg",
+          radius: "none",
           variant: "solid",
           color: "primary",
           timeout: 5000,
