@@ -19,7 +19,15 @@ export const Footer = () => {
         <HR />
         <div className="text-sm text-neutral-gray">
           <p>
-            &copy; {new Date().getFullYear()} {companyData?.rights}
+            &copy; {new Date().getFullYear()}{" "}
+            <a
+              href="https://github.com/tyronejose"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              {companyData?.rights}
+            </a>
           </p>
         </div>
       </div>

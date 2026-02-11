@@ -1,4 +1,4 @@
-import { HeaderSection } from "@/components";
+import { HeaderSection } from "@/components/ui/header/HeaderSection";
 
 export const LocationSection = () => {
   return (

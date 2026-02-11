@@ -1,6 +1,10 @@
+"use client";
+
 import type { TattooResponse } from "@/types";
 
-import { HeaderSection, TattooList } from "@/components";
+import { HeaderSection } from "@/components/ui/header/HeaderSection";
+
+import { TattooList } from "./TattooList";
 
 type Props = {
   tattoos: TattooResponse[];

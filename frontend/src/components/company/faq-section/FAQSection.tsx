@@ -1,6 +1,7 @@
 import type { FaqResponse } from "@/types";
 
-import { HeaderSection } from "@/components";
+import { HeaderSection } from "@/components/ui/header/HeaderSection";
+
 import { FAQList } from "./FAQList";
 
 type Props = {

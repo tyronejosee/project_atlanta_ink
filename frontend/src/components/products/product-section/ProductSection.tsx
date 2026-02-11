@@ -1,6 +1,7 @@
+import { HeaderSection } from "@/components/ui/header/HeaderSection";
 import type { ProductResponse } from "@/types";
 
-import { HeaderSection, ProductList } from "@/components";
+import { ProductList } from "../product-list/ProductList";
 
 type Props = {
   products: ProductResponse[];
