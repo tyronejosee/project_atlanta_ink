@@ -4,7 +4,7 @@ import { getArtists } from "@/lib/api/artists";
 import { ArtistList, EmptyList, HeaderPage } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Artists - Atlanta Ink",
+  title: "Artists",
   description:
     "Meet our tattoo artists. Each has their own style and is ready to help you create the tattoo you want. Browse their portfolios and find the perfect artist for your next design",
   keywords: "artists, tattoo artists, atlanta",

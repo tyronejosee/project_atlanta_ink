@@ -10,7 +10,7 @@ import {
 import { getBrands, getCategories, getProducts } from "@/lib/api/products";
 
 export const metadata: Metadata = {
-  title: "Products - Atlanta Ink",
+  title: "Products",
   description:
     "Discover our exclusive range of high-quality tattoo products designed for professional artists and enthusiasts alike. From premium inks and needles to innovative tools and accessories, we offer everything you need to create stunning body art.",
   keywords: "tattoos, tattoo products, atlanta",

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-      title: `${product.name} - Atlanta Ink`,
+      title: `${product.name}`,
       description: `Explore products by ${product.brand} at Atlanta Ink.`,
     };
   } catch {
