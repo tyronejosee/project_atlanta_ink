@@ -5,7 +5,7 @@ import { getArtists } from "@/lib/api/artists";
 import { BookingForm, HeaderPage, ScheduleList } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "Bookings - Atlanta Ink Tattoo Studio",
   description:
     "Book an appointment at our tattoo studio. Get in touch with us easily by phone, email, or visit our website.",
   keywords:

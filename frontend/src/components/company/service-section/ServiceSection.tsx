@@ -16,7 +16,7 @@ export const ServiceSection = ({ services }: Props) => {
   const { ref, controls, itemVariants } = useAnimateOnView(0.1, false);
 
   return (
-    <section className="max-w-screen-xl mx-auto text-center py-16">
+    <section className="max-w-7xl mx-auto text-center py-16">
       <HeaderSection
         title="Our Services"
         subtitle="Explore our diverse range of tattoo styles and customization options."
@@ -32,22 +32,16 @@ export const ServiceSection = ({ services }: Props) => {
               variants={itemVariants}
               initial="hidden"
               animate={controls}
-              transition={{
-                duration: 0.3,
-                delay: idx * 0.1,
-                ease: "easeOut",
-              }}
-              className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-none border border-neutral-800"
+              transition={{ duration: 0.3, delay: idx * 0.1, ease: "easeOut" }}
+              className="group relative h-64 p-4 space-y-2 flex flex-col justify-center items-center overflow-hidden rounded-none border border-neutral-800 bg-neutral-dark"
             >
-              <div className="absolute inset-0 bg-neutral-dark">
-                <Image
-                  fill
-                  alt={service.name}
-                  src={service.image || DEFAULT_IMAGE}
-                  style={{ objectFit: "cover" }}
-                  className="z-10 opacity-25 transform transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
+              <Image
+                fill
+                alt={service.name}
+                src={service.image || DEFAULT_IMAGE}
+                style={{ objectFit: "cover" }}
+                className="absolute inset-0 z-10 opacity-25 transform transition-transform duration-300 group-hover:scale-110"
+              />
               <div className="z-20 p-4 space-y-2 text-center">
                 <h3 className="text-xl font-bold text-primary">
                   {service.name}

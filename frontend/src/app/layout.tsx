@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
+import "@/app/globals.css";
 import { Footer, MenuBar } from "@/components";
 import { mainFont } from "@/config/fonts";
 import { getCompany } from "@/lib/api/company";
 
-import "../styles/globals.css";
 import Providers from "./providers";
 
 const SITE = {
@@ -21,10 +21,7 @@ const OG_IMAGES = {
 };
 
 export const metadata: Metadata = {
-  title: {
-    default: "Homepage",
-    template: `%s · ${SITE.NAME}`,
-  },
+  title: "Homepage - Atlanta Ink Tattoo Studio",
   description: `${SITE.DESCRIPTION}`,
   authors: [{ name: SITE.AUTHOR, url: SITE.AUTHOR_URL }],
   publisher: SITE.AUTHOR,

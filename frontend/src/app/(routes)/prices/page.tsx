@@ -5,7 +5,7 @@ import { EmptyList, HeaderPage } from "@/components";
 import { PriceList } from "@/components/company/price-list/PriceList";
 
 export const metadata: Metadata = {
-  title: "Prices",
+  title: "Prices - Atlanta Ink Tattoo Studio",
   description:
     "Check out our tattoo prices at Atlanta Ink. Affordable rates for various tattoo styles and sizes.",
   keywords:

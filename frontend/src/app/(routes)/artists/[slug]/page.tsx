@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-      title: `${artist.name}`,
+      title: `${artist.name} - Atlanta Ink Tattoo Studio`,
       description: `Explore tattoos by ${artist.name} at Atlanta Ink.`,
     };
   } catch {
