@@ -5,7 +5,7 @@ import type { ApplicantValues } from "@/types";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input, Button, Textarea, Checkbox, addToast } from "@heroui/react";
-import { useForm } from "react-hook-form";
+import { useForm, type Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowUpRight } from "lucide-react";
 import { createApplicant } from "@/lib/api/applicants";
@@ -22,7 +22,7 @@ export const ApplicantForm = () => {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<ApplicantValues>({
-    resolver: zodResolver(applicantSchema),
+    resolver: zodResolver(applicantSchema) as unknown as Resolver<ApplicantValues>,
   });
 
   const onSubmit = async (data: ApplicantValues) => {

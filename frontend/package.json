@@ -7,20 +7,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@heroui/react": "^2.7.6",
     "@heroui/system": "^2.4.13",
     "@heroui/theme": "^2.4.13",
-    "@hookform/resolvers": "^3.9.0",
+    "@hookform/resolvers": "^5.9.2",
     "@tailwindcss/postcss": "^4.1.18",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.6",
     "lucide-react": "^0.445.0",
-    "next": "16.1.6",
-    "postcss": "8.5.6",
+    "next": "16.4.5",
+    "postcss": "8.5.32",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-intersection-observer": "^9.13.1",
@@ -28,7 +28,7 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss": "4.1.18",
-    "zod": "^3.23.8",
+    "zod": "^4.6.7",
     "zustand": "5.0.0-rc.2"
   },
   "devDependencies": {
@@ -42,10 +42,19 @@
   "pnpm": {
     "overrides": {
       "cross-spawn@>=7.0.0 <7.0.5": ">=7.0.5",
-      "nanoid@<3.3.8": ">=3.3.8",
-      "brace-expansion": ">=2.0.2",
-      "glob@>=10.2.0 <10.5.0": ">=10.5.0",
-      "js-yaml@>=4.0.0 <4.1.1": ">=4.1.1"
+      "ajv@<6.14.0": "6.14.0",
+      "baseline-browser-mapping@<2.11.0": "2.11.0",
+      "brace-expansion@>=4.0.0 <5.0.12": "5.0.12",
+      "flatted@<3.4.2": "3.4.2",
+      "glob@>=9.0.0 <=14.0.1": "14.0.2",
+      "js-yaml@>=4.0.0 <4.3.2": "4.3.2",
+      "minimatch@<3.1.4": "3.1.4",
+      "minimatch@>=9.0.0 <11.0.1": "11.0.1",
+      "nanoid@<3.3.18": "3.3.18",
+      "nanoid@>=5.0.0 <5.1.16": "5.1.16",
+      "picomatch@>=4.0.0 <4.0.4": "4.0.4",
+      "sharp@<0.35.5": "0.35.5",
+      "source-map-js@>=1.0.0 <1.2.2": "1.2.2"
     }
   }
 }

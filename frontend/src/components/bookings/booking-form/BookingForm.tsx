@@ -4,7 +4,7 @@ import type { ArtistResponse, BookingValues } from "@/types";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
+import { useForm, type Resolver } from "react-hook-form";
 import {
   addToast,
   Button,
@@ -42,7 +42,7 @@ export const BookingForm = ({
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<BookingValues>({
-    resolver: zodResolver(bookingSchema),
+    resolver: zodResolver(bookingSchema) as unknown as Resolver<BookingValues>,
     defaultValues: {
       firstName: initialFirstName,
       firstTimeSession: initialFirstTime,
